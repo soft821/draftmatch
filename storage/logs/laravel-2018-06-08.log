@@ -7057,3 +7057,5 @@ Stack trace:
 [2018-06-08 12:59:57] local.INFO: User with specified email already exists  
 [2018-06-08 13:01:13] local.INFO: SCHEDULING for day Friday DATE : 2018-06-08 09:01:13  
 [2018-06-08 13:01:25] local.INFO: User with specified email already exists  
+[2018-06-08 15:44:14] local.INFO: SCHEDULING for day Friday DATE : 2018-06-08 11:44:14  
+[2018-06-08 15:44:21] local.INFO: User with specified email already exists  
