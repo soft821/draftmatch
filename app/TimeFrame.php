@@ -5,7 +5,9 @@ namespace App;
 class TimeFrame extends Model
 {
     public static function getCurrentTimeFrame(){
-        return TimeFrame::where('status', '=', 'current')->first();
+        // return TimeFrame::where('status', '=', 'current')->first();
+        $current = TimeFrame::where('id', 1)->first();
+        return $current;
     }
 
     public static function getPreviousTimeFrame(){

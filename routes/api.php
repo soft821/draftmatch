@@ -10,7 +10,6 @@
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
 Route::group(['middleware' =>  'cors', 'prefix' => 'v1'], function() {
     Route::post('auth/register', 'Api\v1\UsersController@register');
     Route::post('auth/login',    'Api\v1\UsersController@login');
