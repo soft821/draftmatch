@@ -1,0 +1,418 @@
+[2018-06-10 03:09:32] local.INFO: Baerer header not provided  
+[2018-06-10 03:10:20] local.INFO: Baerer header not provided  
+[2018-06-10 03:10:21] local.INFO: Baerer header not provided  
+[2018-06-10 03:10:22] local.INFO: Baerer header not provided  
+[2018-06-10 03:10:23] local.INFO: Baerer header not provided  
+[2018-06-10 03:13:14] local.INFO: Baerer header not provided  
+[2018-06-10 03:13:36] local.INFO: array (
+  0 => 'The private field must be true or false.',
+)  
+[2018-06-10 03:14:14] local.INFO: array (
+  0 => 'The private field must be true or false.',
+)  
+[2018-06-10 03:15:11] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:15:11] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:15:11] local.INFO: Inserted contests 1  
+[2018-06-10 03:17:53] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:17:53] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:17:53] local.INFO: Inserted contests 1  
+[2018-06-10 03:18:17] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:18:17] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:18:17] local.INFO: Inserted contests 1  
+[2018-06-10 03:18:40] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:18:40] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:18:40] local.INFO: Inserted contests 1  
+[2018-06-10 03:19:35] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:19:35] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:19:35] local.INFO: Inserted contests 1  
+[2018-06-10 03:20:38] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:20:38] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:20:38] local.INFO: Inserted contests 1  
+[2018-06-10 03:21:41] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:21:41] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:21:41] local.INFO: Inserted contests 1  
+[2018-06-10 03:21:55] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:21:55] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:21:55] local.INFO: Inserted contests 1  
+[2018-06-10 03:22:12] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:22:12] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:22:12] local.INFO: Inserted contests 1  
+[2018-06-10 03:22:23] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:22:23] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:22:23] local.INFO: Inserted contests 1  
+[2018-06-10 03:30:23] local.ERROR: ErrorException: Trying to get property 'fantasy_player_id' of non-object in E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\ContestsController.php:589
+Stack trace:
+#0 E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\ContestsController.php(589): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Trying to get p...', 'E:\\draftMatch\\d...', 589, Array)
+#1 E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\ContestsController.php(378): App\Http\Controllers\Api\v1\ContestsController->validateEntry(Object(App\User), Object(App\Contest), Object(App\FantasyPlayer), NULL, false)
+#2 [internal function]: App\Http\Controllers\Api\v1\ContestsController->enter(Object(Illuminate\Http\Request))
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(55): call_user_func_array(Array, Array)
+#4 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('enter', Array)
+#5 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Api\v1\ContestsController), 'enter')
+#6 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(160): Illuminate\Routing\Route->runController()
+#7 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(572): Illuminate\Routing\Route->run()
+#8 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 E:\draftMatch\draftmatch\app\Http\Middleware\VerifyJWTToken.php(91): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\VerifyJWTToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#11 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#14 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#17 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#19 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#20 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#23 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#24 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#25 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#26 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#27 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 E:\draftMatch\draftmatch\app\Http\Middleware\HttpsProtocol.php(29): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\HttpsProtocol->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#39 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#40 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#42 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#43 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#44 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#45 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#46 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#47 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#48 E:\draftMatch\draftmatch\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#49 E:\draftMatch\draftmatch\server.php(21): require_once('E:\\draftMatch\\d...')
+#50 {main}  
+[2018-06-10 03:33:42] local.ERROR: ErrorException: Trying to get property 'fantasy_player_id' of non-object in E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\ContestsController.php:589
+Stack trace:
+#0 E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\ContestsController.php(589): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Trying to get p...', 'E:\\draftMatch\\d...', 589, Array)
+#1 E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\ContestsController.php(378): App\Http\Controllers\Api\v1\ContestsController->validateEntry(Object(App\User), Object(App\Contest), Object(App\FantasyPlayer), NULL, false)
+#2 [internal function]: App\Http\Controllers\Api\v1\ContestsController->enter(Object(Illuminate\Http\Request))
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(55): call_user_func_array(Array, Array)
+#4 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('enter', Array)
+#5 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Api\v1\ContestsController), 'enter')
+#6 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(160): Illuminate\Routing\Route->runController()
+#7 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(572): Illuminate\Routing\Route->run()
+#8 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 E:\draftMatch\draftmatch\app\Http\Middleware\VerifyJWTToken.php(91): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\VerifyJWTToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#11 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#14 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#17 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#19 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#20 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#23 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#24 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#25 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#26 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#27 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 E:\draftMatch\draftmatch\app\Http\Middleware\HttpsProtocol.php(29): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\HttpsProtocol->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#39 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#40 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#42 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#43 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#44 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#45 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#46 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#47 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#48 E:\draftMatch\draftmatch\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#49 E:\draftMatch\draftmatch\server.php(21): require_once('E:\\draftMatch\\d...')
+#50 {main}  
+[2018-06-10 03:42:39] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:42:39] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:48:47] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 03:48:47] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 04:20:30] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 04:20:30] local.INFO: array (
+  0 => 'Positions for user player and opponent player do not match',
+)  
+[2018-06-10 04:20:55] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 04:20:55] local.INFO: array (
+  0 => 'Positions for user player and opponent player do not match',
+)  
+[2018-06-10 04:21:12] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 04:21:12] local.INFO: array (
+  0 => 'Positions for user player and opponent player do not match',
+)  
+[2018-06-10 04:24:44] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 04:24:44] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 04:24:44] local.INFO: Inserted contests 1  
+[2018-06-10 04:25:10] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 04:25:10] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 04:25:10] local.INFO: Inserted contests 1  
+[2018-06-10 04:29:10] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 04:29:10] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 04:29:10] local.INFO: Inserted contests 1  
+[2018-06-10 04:29:22] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 04:29:22] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 04:29:22] local.INFO: Inserted contests 1  
+[2018-06-10 04:39:48] local.INFO: array (
+  0 => 'Player is not in correct game time',
+  1 => 'Positions for user player and opponent player do not match',
+  2 => 'Player passed in playerId parameter not found in list of players for this contest',
+  3 => 'User is already registered to this contest',
+)  
+[2018-06-10 04:40:05] local.INFO: array (
+  0 => 'Player with specified id not found',
+)  
+[2018-06-10 04:40:21] local.INFO: array (
+  0 => 'User is already registered to this contest',
+)  
+[2018-06-10 04:40:34] local.INFO: array (
+  0 => 'Selected player is taken by another user',
+  1 => 'User is already registered to this contest',
+)  
+[2018-06-10 04:40:42] local.INFO: array (
+  0 => 'The player id field is required.',
+)  
+[2018-06-10 04:42:18] local.INFO: array (
+  0 => 'User is already registered to this contest',
+)  
+[2018-06-10 04:44:09] local.ERROR: ErrorException: Trying to get property 'fantasy_player_id' of non-object in E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\ContestsController.php:589
+Stack trace:
+#0 E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\ContestsController.php(589): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Trying to get p...', 'E:\\draftMatch\\d...', 589, Array)
+#1 E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\ContestsController.php(378): App\Http\Controllers\Api\v1\ContestsController->validateEntry(Object(App\User), Object(App\Contest), Object(App\FantasyPlayer), NULL, false)
+#2 [internal function]: App\Http\Controllers\Api\v1\ContestsController->enter(Object(Illuminate\Http\Request))
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(55): call_user_func_array(Array, Array)
+#4 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('enter', Array)
+#5 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Api\v1\ContestsController), 'enter')
+#6 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(160): Illuminate\Routing\Route->runController()
+#7 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(572): Illuminate\Routing\Route->run()
+#8 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 E:\draftMatch\draftmatch\app\Http\Middleware\VerifyJWTToken.php(91): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\VerifyJWTToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#11 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#14 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#17 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#19 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#20 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#23 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#24 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#25 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#26 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#27 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 E:\draftMatch\draftmatch\app\Http\Middleware\HttpsProtocol.php(29): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\HttpsProtocol->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#39 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#40 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#42 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#43 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#44 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#45 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#46 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#47 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#48 E:\draftMatch\draftmatch\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#49 E:\draftMatch\draftmatch\server.php(21): require_once('E:\\draftMatch\\d...')
+#50 {main}  
+[2018-06-10 04:45:20] local.ERROR: ErrorException: Trying to get property 'fantasy_player_id' of non-object in E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\ContestsController.php:589
+Stack trace:
+#0 E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\ContestsController.php(589): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Trying to get p...', 'E:\\draftMatch\\d...', 589, Array)
+#1 E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\ContestsController.php(378): App\Http\Controllers\Api\v1\ContestsController->validateEntry(Object(App\User), Object(App\Contest), Object(App\FantasyPlayer), NULL, false)
+#2 [internal function]: App\Http\Controllers\Api\v1\ContestsController->enter(Object(Illuminate\Http\Request))
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(55): call_user_func_array(Array, Array)
+#4 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('enter', Array)
+#5 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Api\v1\ContestsController), 'enter')
+#6 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(160): Illuminate\Routing\Route->runController()
+#7 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(572): Illuminate\Routing\Route->run()
+#8 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 E:\draftMatch\draftmatch\app\Http\Middleware\VerifyJWTToken.php(91): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\VerifyJWTToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#11 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#14 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#17 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#19 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#20 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#23 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#24 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#25 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#26 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#27 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 E:\draftMatch\draftmatch\app\Http\Middleware\HttpsProtocol.php(29): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\HttpsProtocol->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#39 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#40 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#42 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#43 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#44 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#45 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#46 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#47 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#48 E:\draftMatch\draftmatch\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#49 E:\draftMatch\draftmatch\server.php(21): require_once('E:\\draftMatch\\d...')
+#50 {main}  
+[2018-06-10 04:45:42] local.ERROR: ErrorException: Trying to get property 'fantasy_player_id' of non-object in E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\ContestsController.php:589
+Stack trace:
+#0 E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\ContestsController.php(589): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Trying to get p...', 'E:\\draftMatch\\d...', 589, Array)
+#1 E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\ContestsController.php(378): App\Http\Controllers\Api\v1\ContestsController->validateEntry(Object(App\User), Object(App\Contest), Object(App\FantasyPlayer), NULL, false)
+#2 [internal function]: App\Http\Controllers\Api\v1\ContestsController->enter(Object(Illuminate\Http\Request))
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(55): call_user_func_array(Array, Array)
+#4 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('enter', Array)
+#5 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Api\v1\ContestsController), 'enter')
+#6 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(160): Illuminate\Routing\Route->runController()
+#7 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(572): Illuminate\Routing\Route->run()
+#8 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 E:\draftMatch\draftmatch\app\Http\Middleware\VerifyJWTToken.php(91): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\VerifyJWTToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#11 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#14 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#17 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#19 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#20 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#23 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#24 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#25 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#26 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#27 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 E:\draftMatch\draftmatch\app\Http\Middleware\HttpsProtocol.php(29): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\HttpsProtocol->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#39 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#40 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#42 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#43 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#44 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#45 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#46 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#47 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#48 E:\draftMatch\draftmatch\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#49 E:\draftMatch\draftmatch\server.php(21): require_once('E:\\draftMatch\\d...')
+#50 {main}  
+[2018-06-10 04:58:23] local.INFO: Retrieving live contests for user 41  
+[2018-06-10 04:58:23] local.INFO: Successfully retrieved live matchups for user41  
+[2018-06-10 04:58:23] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 04:58:50] local.INFO: array (
+  0 => 'The selected status is invalid.',
+)  
+[2018-06-10 05:01:02] local.INFO: Getting info about slates ...  
+[2018-06-10 05:01:02] local.INFO: Retrieving available slates ...  
+[2018-06-10 05:02:19] local.INFO: Getting info about slates ...  
+[2018-06-10 05:02:19] local.INFO: Retrieving available slates ...  
+[2018-06-10 05:02:19] local.INFO: Successfully retrieved available slates ...  
+[2018-06-10 05:03:46] local.INFO: Getting info about slates ...  
+[2018-06-10 05:03:46] local.INFO: Retrieving available slates ...  
+[2018-06-10 05:03:46] local.INFO: Successfully retrieved available slates ...  
+[2018-06-10 05:04:10] local.INFO: Getting info about slates ...  
+[2018-06-10 05:04:10] local.INFO: Retrieving available slates ...  
+[2018-06-10 05:04:10] local.INFO: Successfully retrieved available slates ...  
+[2018-06-10 05:04:54] local.INFO: Getting info about slates ...  
+[2018-06-10 05:04:54] local.INFO: Retrieving available slates ...  
+[2018-06-10 05:04:55] local.INFO: Successfully retrieved available slates ...  
+[2018-06-10 05:05:38] local.INFO: Getting info about slates ...  
+[2018-06-10 05:05:38] local.INFO: Retrieving available slates ...  
+[2018-06-10 05:05:38] local.INFO: Successfully retrieved available slates ...  
+[2018-06-10 05:07:44] local.INFO: Getting info about slates ...  
+[2018-06-10 05:07:44] local.INFO: Retrieving available slates ...  
+[2018-06-10 05:07:44] local.INFO: Successfully retrieved available slates ...  
+[2018-06-10 10:41:55] local.INFO: Getting info about slates ...  
+[2018-06-10 10:41:55] local.INFO: Retrieving available slates ...  
+[2018-06-10 10:41:55] local.INFO: Successfully retrieved available slates ...  
+[2018-06-10 11:02:48] local.INFO: Getting info about slates ...  
+[2018-06-10 11:02:48] local.INFO: Retrieving available slates ...  
+[2018-06-10 11:02:49] local.INFO: Successfully retrieved available slates ...  
+[2018-06-10 11:06:22] local.INFO: Getting info about slates ...  
+[2018-06-10 11:06:22] local.INFO: Retrieving available slates ...  
+[2018-06-10 11:06:22] local.INFO: Successfully retrieved available slates ...  
+[2018-06-10 11:10:39] local.INFO: SCHEDULING for day Sunday DATE : 2018-06-10 07:10:39  
+[2018-06-10 11:10:39] local.INFO: SCHEDULING for day Sunday DATE : 2018-06-10 07:10:39  
+[2018-06-10 11:11:10] local.INFO: SCHEDULING for day Sunday DATE : 2018-06-10 07:11:10  
+[2018-06-10 11:11:27] local.INFO: Getting info about slates ...  
+[2018-06-10 11:11:27] local.INFO: Retrieving available slates ...  
+[2018-06-10 11:11:27] local.INFO: Successfully retrieved available slates ...  
+[2018-06-10 11:12:43] local.INFO: Getting info about slates ...  
+[2018-06-10 11:12:43] local.INFO: Retrieving available slates ...  
+[2018-06-10 11:12:43] local.INFO: Successfully retrieved available slates ...  
+[2018-06-10 11:33:06] local.INFO: SCHEDULING for day Sunday DATE : 2018-06-10 07:33:06  
+[2018-06-10 11:33:07] local.INFO: SCHEDULING for day Sunday DATE : 2018-06-10 07:33:07  
+[2018-06-10 11:33:09] local.INFO: SCHEDULING for day Sunday DATE : 2018-06-10 07:33:09  
+[2018-06-10 11:33:20] local.INFO: Pulling data for season from url https://api.fantasydata.net/v3/nfl/stats/JSON/TeamGameStats/2017REG/1  
+[2018-06-10 11:38:40] local.INFO: SCHEDULING for day Sunday DATE : 2018-06-10 07:38:40  
+[2018-06-10 11:38:40] local.INFO: SCHEDULING for day Sunday DATE : 2018-06-10 07:38:40  
+[2018-06-10 11:38:44] local.INFO: SCHEDULING for day Sunday DATE : 2018-06-10 07:38:44  
+[2018-06-10 11:39:34] local.INFO: Getting info about slates ...  
+[2018-06-10 11:39:34] local.INFO: Retrieving available slates ...  
+[2018-06-10 11:39:34] local.INFO: Successfully retrieved available slates ...  
+[2018-06-10 11:39:55] local.INFO: Getting info about slates ...  
+[2018-06-10 11:39:55] local.INFO: Retrieving available slates ...  
+[2018-06-10 11:39:55] local.INFO: Successfully retrieved available slates ...  
+[2018-06-10 11:44:16] local.INFO: Retrieving live contests for user 41  
+[2018-06-10 11:44:16] local.INFO: Successfully retrieved live matchups for user41  
+[2018-06-10 11:44:16] local.INFO: Rate {"id":"1","rate":"0.00014"}  
+[2018-06-10 12:13:14] local.INFO: Pulling data for season from url https://api.fantasydata.net/v3/nfl/stats/JSON/TeamGameStats/2017REG/1  

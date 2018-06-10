@@ -742,7 +742,8 @@ class ContestsController extends Controller
         return HttpResponse::ok(HttpMessage::$CONTEST_CANCELED_SUCCESSFULLY, null);
     }
 
-    public function getContestsForWeb(){
+    public function getContestsForWeb()
+    {
         $timeFrame = TimeFrame::getCurrentTimeFrame();
         $userInfo = ['week' => $timeFrame->week];
         $contests = Contest::getContestsForWeb();
