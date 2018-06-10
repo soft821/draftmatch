@@ -160,19 +160,23 @@ class Slate extends Model
 //                  ->withCount('games')->get()
 //                  ->makeHidden(['lastGame', 'lastDay'])
 //                  ->where('games_count', '>', 0)->toArray());
-
         $ret_val = Slate::with(array('games'=>function($query){
             $query->select('id','time', 'homeTeam', 'awayTeam');
         }))->
             where('active', '=', true)->where('status', '=', 'HISTORY')->orderBy('firstGame', 'ASC')->get();
         \Log::info('Successfully retrieved available slates ...');
 
+
+        
+
         foreach ($ret_val as $ret){
             foreach ($ret['games'] as $game){
                 $game['fantasy_players'] = $game->fantasyPlayers()->get();
+                
             }
         }
-
+    
+        
         return $ret_val;
     }
 

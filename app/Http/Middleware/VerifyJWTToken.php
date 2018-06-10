@@ -28,6 +28,8 @@ class VerifyJWTToken
         try
         {
             $header = $request->header('Authorization');
+            // dd("$header");
+            // return 0;
             if (!$header)
             {
                 return HttpResponse::unauthorized(HttpStatus::$ERR_AUTH_HEADER_NOT_PROVIDED,
