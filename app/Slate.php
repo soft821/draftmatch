@@ -166,7 +166,7 @@ class Slate extends Model
             where('active', '=', true)->where('status', '=', 'HISTORY')->orderBy('firstGame', 'ASC')->get();
         \Log::info('Successfully retrieved available slates ...');
 
-
+        echo $ret_val;
         
 
         foreach ($ret_val as $ret){

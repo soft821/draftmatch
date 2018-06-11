@@ -99,7 +99,6 @@ class SlatesController extends Controller
     public function getSlates()
     {
         \Log::info("Getting info about slates ...");
-        
         try{
             $slates = Slate::getNonEmptySlates();
         }
