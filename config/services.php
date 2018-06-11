@@ -15,8 +15,8 @@ return [
     */
 
     'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN'),
-        'secret' => env('MAILGUN_SECRET'),
+        'domain' => 'draftmatch.com',
+        'secret' => 'key-3c7f89a933ee037ecb4425da8a5591f0',
     ],
 
     'ses' => [

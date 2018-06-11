@@ -39,17 +39,13 @@ return [
             'prefix' => '',
         ],
 
-
-    
-
-       
-
+        
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => env('DB_HOST', 'localhost'),
+            'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '5432'),
             'database' => env('DB_DATABASE', 'draftmatch'),
-            'username' => env('DB_USERNAME', 'postgres'),
+            'username' => env('DB_USERNAME', 'JonIl'),
             'password' => env('DB_PASSWORD', 'root'),
             'charset' => 'utf8',
             'prefix' => '',

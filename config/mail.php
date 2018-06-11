@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'admin@draftmatch.com'),
-        'name' => env('MAIL_FROM_NAME', 'DraftMatch'),
+        'address' => env('MAIL_FROM_ADDRESS', 'postmaster@draftmatch.com'),
+        'name' => env('MAIL_FROM_NAME', 'DraftMatch Service'),
     ],
 
     /*
@@ -84,9 +84,9 @@ return [
     |
     */
 
-    'username' => env('admin@draftmatch.com'),
+    'username' => 'postmaster@draftmatch.com',
 
-    'password' => env('DraftMatch12'),
+    'password' => 'cea7131aa909aedd19a961e8b9fd1b88',
 
     /*
     |--------------------------------------------------------------------------

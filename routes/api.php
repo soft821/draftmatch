@@ -10,7 +10,7 @@
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
+ 
 Route::get('pullDefenseStats',           'HomeController@pullDefenseStats');
 Route::get('makeFulldata2017',           'HomeController@makeFulldata2017');
 Route::get('makeTimeFrame',           'HomeController@makeTimeFrame');
@@ -64,4 +64,5 @@ Route::group(['middleware' => ['cors', 'admin.auth'], 'prefix' => 'v1'], functio
     Route::post('admin/slates',            'Api\v1\SlatesController@createSlate');
     Route::get ('admin/slates',            'Api\v1\SlatesController@getAdminSlates');
     Route::get ('admin/pendingGames',      'Api\v1\GamesController@getPendingGames');
+    Route::post('admin/sendpromo',         'Admin\v1\MailController@sendPromoCode');
 });

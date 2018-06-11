@@ -52,6 +52,10 @@ class HttpMessage
     public static $USER_BLOCK_ADMIN_ERROR    = 'Admin user can\'t be blocked';
     public static $USER_ACTIVATE_ERROR_VALIDATE = 'User id required to activate user';
     public static $USER_ACTIVATE_ERROR       = 'Error occurred while trying to activate the user';
+    public static $USER_PROMOCODE_ERROR_VALIDATE = 'User email required to send promo code';
+    public static $USER_PROMOCODE_SUCCESS = 'Promo code sent successfully.';
+    public static $USER_PROMOCODE_INVALID = 'Promo code is not correct.';
+    public static $USER_PERMISSION_INVALID = 'Sorry, but you have not invited yet in our service.';
 
     // SlatesController messages
     public static $SLATES_SUCCESSFULLY_RETRIEVED                 = 'List of game times successfully retrieved';

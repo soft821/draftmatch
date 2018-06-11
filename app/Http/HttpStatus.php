@@ -53,4 +53,9 @@ class HttpStatus
 
     // GamesController errors
     public static $ERR_GAMES_RETRIEVE      = 90;
+
+    // MailController erros
+    public static $ERROR_EMAIL_NOT_PROVIDED =  101;
+    public static $ERROR_PROMOCODE_INVALID = 102;
+
 }

@@ -23,6 +23,7 @@ use App\Helpers\BitPayHelper;
 use Illuminate\Validation\Rule;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use GuzzleHttp\Client as HttpClient;
+use App\PromoCode;
 
 class UsersController extends Controller
 {
@@ -33,11 +34,14 @@ class UsersController extends Controller
 
     public function register(Request $request)
     {
+
+      
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'email' => 'required|email',
             'username' => 'required|min:6',
             'password' => 'required|min:6',
+            'promocode' => 'required'
         ]);
 
         if ($validator->fails()) {
@@ -55,6 +59,19 @@ class UsersController extends Controller
             return HttpResponse::serverError(HttpStatus::$ERR_USER_EXISTS, HttpMessage::$USER_USERNAME_EXISTS,
                 HttpMessage::$USER_USERNAME_EXISTS);
         }
+
+        $promoCodeChecking = PromoCode::where('email', $request->get('email'))->first();
+
+        if ($promoCodeChecking) {
+            if ($request->get('promocode') != $promoCodeChecking->code) {
+                return HttpResponse::serverError(HttpStatus::$ERROR_PROMOCODE_INVALID, HttpMessage::$USER_PROMOCODE_INVALID,
+                HttpMessage::$USER_PROMOCODE_INVALID);
+            }
+        } else {
+            return HttpResponse::serverError(HttpStatus::$ERROR_PROMOCODE_INVALID, HttpMessage::$USER_PERMISSION_INVALID,
+                HttpMessage::$USER_PERMISSION_INVALID);
+        }
+
 
         try {
             $user = $this->user->create([
