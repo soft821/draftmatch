@@ -31,6 +31,7 @@ class HttpMessage
 
     public static $USER_ERROR_CREATING       = 'Error creating user';
     public static $USER_EMAIL_EXISTS         = 'User with specified email already exists';
+    public static $USER_PROMOCODE_EXPIRED    = 'Promo code was expired.';
     public static $USER_USERNAME_EXISTS      = 'User with specified username already exists';
     public static $USER_INVALID_CREDENTIALS  = 'Invalid email or password provided';
     public static $USER_ERR_CREATING_TOKEN   = 'Error creating token';

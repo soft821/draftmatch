@@ -13,15 +13,17 @@ class PromoCodeMail extends Mailable
 
     public $promocode;
     public $logoPath;
+    public $expire;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($promocode)
+    public function __construct($promocode, $expire)
     {
         $this->promocode = $promocode;
+        $this->expire = date('M.d, y', $expire);
         $this->logoPath = './assets/images/img_mail_bg.jpg';
     }
 

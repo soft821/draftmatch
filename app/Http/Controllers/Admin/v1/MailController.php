@@ -53,12 +53,16 @@ class MailController extends Controller
           $promocode .= $chars[mt_rand(0, strlen($chars)-1)];
       }
 
-      Mail::to($request->get('email'))->send(new PromoCodeMail($promocode));
+      $date = new \DateTime();
+      $expireDate = $date->getTimestamp() + 86400 * 3;
+      
+      Mail::to($request->get('email'))->send(new PromoCodeMail($promocode, $expireDate));
 
       PromoCode::UpdateOrCreate(
                             ['email' => $request->get('email')],
                             ['email' => $request->get('email'),
-                             'code'  => $promocode
+                             'code'  => $promocode,
+                             'expired'=> $expireDate
                             ]
                         );
 

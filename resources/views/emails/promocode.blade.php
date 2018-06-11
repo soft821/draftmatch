@@ -39,7 +39,7 @@
           </div>
           <div class="container">
             <p>Use Promo Code: <span class="promo">{{$promocode}}</span></p>
-            <p class="expire">Expires: July 03, 2018</p>
+            <p class="expire">Expires: {{$expire}}</p>
           </div>
         </div>
     </body>

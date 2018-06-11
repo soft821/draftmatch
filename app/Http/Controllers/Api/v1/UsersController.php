@@ -72,6 +72,12 @@ class UsersController extends Controller
                 HttpMessage::$USER_PERMISSION_INVALID);
         }
 
+        $date = new \DateTime();
+        if ($promoCodeChecking->expired < $date->getTimestamp()) {
+           return HttpResponse::serverError(HttpStatus::$ERROR_PROMOCODE_INVALID, HttpMessage::$USER_PROMOCODE_EXPIRED,
+                HttpMessage::$USER_PROMOCODE_EXPIRED);
+        }
+
 
         try {
             $user = $this->user->create([
