@@ -15,6 +15,9 @@ Route::get('pullDefenseStats',           'HomeController@pullDefenseStats');
 Route::get('makeFulldata2017',           'HomeController@makeFulldata2017');
 Route::get('makeTimeFrame',           'HomeController@makeTimeFrame');
 Route::get('deleteAll',           'HomeController@deleteAlldata');
+Route::get('test', 'HomeController@test');
+
+
 Route::group(['middleware' =>  'cors', 'prefix' => 'v1'], function() {
     Route::post('auth/register', 'Api\v1\UsersController@register');
     Route::post('auth/login',    'Api\v1\UsersController@login');

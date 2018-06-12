@@ -47,7 +47,7 @@ class TimeFrameUpdate extends Command
         if ($previous){
             $previous->status = time();
             $previous->save();
-            \Log::info('Successfully removed previous timeframe');
+            \Log::info('Successfully removed previous timeframe'); //change previous->time
         }
 
         $current = TimeFrame::where('status', '=', 'current')->first();

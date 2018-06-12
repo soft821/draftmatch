@@ -321,6 +321,7 @@ class Contest extends Model
 
         $response = [];
 
+        
         foreach ($groupedContests as $contestGroup) {
             $contestGroup = $contestGroup[0];
             $contestGroup['count'] = $groupCounts[$contestGroup['group_id']];

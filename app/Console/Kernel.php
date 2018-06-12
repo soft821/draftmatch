@@ -62,7 +62,7 @@ class Kernel extends ConsoleKernel
             return false;
         });
 
-        $schedule->command('update:info')->everyMinute()->timezone('America/New_York')->when(function(){
+        $schedule->command('update:info')->everyFiveMinutes()->timezone('America/New_York')->when(function(){
             \Log::info('Checking conditions for update::info everyFiveMinutes');
             if (DatesHelper::getCurrentDay() === 'Tuesday' || DatesHelper::getCurrentDay() === 'Wednesday' ||
                 DatesHelper::getCurrentDay() === 'Friday' ) {
@@ -199,7 +199,7 @@ class Kernel extends ConsoleKernel
             }
         });*/
 
-        $schedule->command('liveStats:update')->everyMinute()->timezone('America/New_York')->when(function(){
+        $schedule->command('liveStats:update')->everyThirtyMinutes()->timezone('America/New_York')->when(function(){
             \Log::info('Checking condition for liveStats:update everyThirtyMinutes');
             if (DatesHelper::getCurrentDay() !== 'Tuesday' && DatesHelper::getCurrentDay() !== 'Wednesday' &&
                 DatesHelper::getCurrentDay() !== 'Friday') {

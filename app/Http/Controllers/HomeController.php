@@ -11,6 +11,9 @@ use App\Game;
 use App\TimeFrame;
 use GuzzleHttp\Client as HttpClient;
 
+use App\Contest;
+use App\Common\Consts\Contest\ContestStatusConsts;
+
 class HomeController extends Controller
 {
     /**
@@ -28,6 +31,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function test(){
+
+    }
+
     public function index()
     {
         return redirect('http://draftmatch.com');

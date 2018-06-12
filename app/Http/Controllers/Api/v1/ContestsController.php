@@ -663,6 +663,8 @@ class ContestsController extends Controller
             else if ($request->get(ContestConsts::$CONTEST_STATUS) === 'MATCHUPS') {
                 $entries = 0; $totalEntry = 0;
                 $contests = Slate::getUserMatchupContests($user->id);
+
+
                 foreach ($contests as $slate) {
                     foreach ($slate->contests as $contest) {
                         $entries++;
@@ -687,7 +689,7 @@ class ContestsController extends Controller
                 $e->getMessage());
         }
 
-
+        
         return HttpResponse::ok(HttpMessage::$CONTEST_SUCCESSFULLY_RETRIEVED, $contests, $userInfo);
     }
 
