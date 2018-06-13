@@ -33,7 +33,14 @@ class HomeController extends Controller
      */
 
     public function test(){
+        $adminEmail = 'fdsa';
+        \Mail::send('emails.admin_invoices', ['text' => 'Pending request for ' . '($amount)' . '$ for DraftMatch sent to user .',
+                                'header' => 'DraftMatch Deposit Pending'], function ($message) use ($adminEmail)
+                            {
+                                $message->subject('DraftMatch Deposit Pending');
 
+                                $message->to('jingzhang009@gmail.com');
+                            });
     }
 
     public function index()

@@ -164,10 +164,7 @@ class Slate extends Model
             $query->select('id','time', 'homeTeam', 'awayTeam');
         }))->
             where('active', '=', true)->where('status', '=', 'HISTORY')->orderBy('firstGame', 'ASC')->get();
-        \Log::info('Successfully retrieved available slates ...');
-
-        echo $ret_val;
-        
+        \Log::info('Successfully retrieved available slates ...');        
 
         foreach ($ret_val as $ret){
             foreach ($ret['games'] as $game){
