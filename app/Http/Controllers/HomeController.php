@@ -57,9 +57,8 @@ class HomeController extends Controller
         foreach ($games as $game) {
 
                 $game_week = $game['week'];
-                if ($game_week != '12') continue;
+                if ($game_week != '2') continue;
                 $game_id = $game['id']; 
-                $game_key = explode("_", $game_id)[1].explode("_", $game_id)[2];
                 $timeFrame = TimeFrame::getTimeFrame($game_week);
                 // dd($game_week);
                 $key = $timeFrame->retrieveKey();
@@ -75,7 +74,6 @@ class HomeController extends Controller
                     $players = json_decode($client->request('GET', $url)->getBody()->getContents(), true);
                     $temp_week = $game_week;
                 }
-                
                 
                 foreach($players as $player){
                     $name = $player['Name'];
@@ -134,7 +132,7 @@ class HomeController extends Controller
                     else{
                         $tier = 'A';
                     }
-                    
+                    $game_key = $team.$game['game_key'];
                     if ($game_key == $play_game_key){
 
                         
@@ -288,70 +286,79 @@ class HomeController extends Controller
     }
     public function makeFulldata2017()
     {
-        // for($i = 12; $i < 13; $i++){
-        //     $client = new HttpClient(['headers' => ['Ocp-Apim-Subscription-Key' => "234e0f8d08b14965a663ec86e7fd43d9"]]);
-        //     $url = 'https://api.fantasydata.net/v3/nfl/stats/JSON/TeamGameStats/2017REG/' . $i;
-        //     \Log::info('Pulling data for season from url '.$url);
-        //     $team_game_stats = json_decode($client->request('GET', $url)->getBody()->getContents(), true);
+        for($i = 2; $i < 3; $i++){
+            $client = new HttpClient(['headers' => ['Ocp-Apim-Subscription-Key' => "234e0f8d08b14965a663ec86e7fd43d9"]]);
+            $url = 'https://api.fantasydata.net/v3/nfl/stats/JSON/TeamGameStats/2017REG/' . $i;
+            \Log::info('Pulling data for season from url '.$url);
+            $team_game_stats = json_decode($client->request('GET', $url)->getBody()->getContents(), true);
+            $timeFrame = TimeFrame::getTimeFrame($i);
+            $key = $timeFrame->retrieveKey();
+            $game_buffer = array();
+            foreach($team_game_stats as $game){
+                $dayOfWeek = $game['DayOfWeek'];
+                $opp_game_id = $game["Team"] . '_' . $game["Opponent"] . '_' . $game["GameKey"];
+                $flag = in_array($opp_game_id, $game_buffer);
 
-        //     foreach($team_game_stats as $game){
-        //         $dayOfWeek = $game['DayOfWeek'];
-        //         $game_id = $game["Opponent"] . '_' . $game["Team"] . '_' . $game["GameKey"];
-        //         $game = Game::updateOrCreate([
-        //             'id' => $game_id,
-        //             'year' => $game["Season"],
-        //             'seasonType'=> $game["SeasonType"],
-        //             'week'=> $game["Week"],
-        //             'day' => $game["DayOfWeek"],
-        //             'date' => $game["DateTime"],
-        //             'time'=> $game["DateTime"],
-        //             'homeScore' => $game["Score"],
-        //             'awayScore' => $game["OpponentScore"],
-        //             'homeTeam' => $game["Team"],
-        //             'awayTeam' => $game["Opponent"],
-        //             'status' => "FINISHED",
-        //             'overtime' => ($game["ScoreOvertime"] > 0 || $game["OpponentScoreOvertime"] > 0) ? true : false
-        //         ]);
+                if($flag == false){
+                    $team_game_id = $game["Opponent"] . '_' . $game["Team"] . '_' . $game["GameKey"];
+                    array_push($game_buffer, $team_game_id);
+                    $game_id = $game["Opponent"] . '_' . $game["Team"] . '_' .$key;
+                    $game = Game::updateOrCreate([
+                    'id' => $game_id,
+                    'year' => $game["Season"],
+                    'seasonType'=> $game["SeasonType"],
+                    'week'=> $game["Week"],
+                    'day' => $game["DayOfWeek"],
+                    'date' => $game["DateTime"],
+                    'time'=> $game["DateTime"],
+                    'homeScore' => $game["Score"],
+                    'awayScore' => $game["OpponentScore"],
+                    'homeTeam' => $game["Team"],
+                    'awayTeam' => $game["Opponent"],
+                    'game_key' => $game["GameKey"],
+                    'status' => "FINISHED",
+                    'overtime' => ($game["ScoreOvertime"] > 0 || $game["OpponentScoreOvertime"] > 0) ? true : false
+                 ]);
+                }
 
+                $slate1 = Slate::updateOrCreate(array('id' => 'Thu-Mon_2017_'.$i.'_REG'),
+                    ["name" => "Thursday-Monday (All Games)",
+                        "firstDay" => "Thu", "lastDay" => "Mon",
+                        "active"   => true, "status" => "HISTORY"]);
+                $slate2 = Slate::updateOrCreate(array('id' => 'Thu-Sun_2017_'.$i.'_REG'),
+                    ["name" => "Thursday-Sunday",
+                        "firstDay" => "Thu", "lastDay" => "Sun",
+                        "active"   => true, "status" => "HISTORY"]);
+                $slate3 = Slate::updateOrCreate(array('id' => 'Sun_2017_'.$i.'_REG'),
+                    ["name" => "Sunday Only",
+                        "firstDay" => "Sun", "lastDay" => "Sun",
+                        "active"   => true, "status" => "HISTORY"]);
+                $slate4 = Slate::updateOrCreate(array('id' => 'Sun-Mon_2017_'.$i.'_REG'),
+                    ["name" => "Sunday-Monday",
+                        "firstDay" => "Sun", "lastDay" => "Mon",
+                        "active"   => true, "status" => "HISTORY"]);
+                $slate5 = Slate::updateOrCreate(array('id' => 'Mon_2017_'.$i.'_REG'),
+                    ["name" => "Monday Only",
+                        "firstDay" => "Mon", "lastDay" => "Mon",
+                        "active"   => true, "status" => "HISTORY"]);
 
-        //         $slate1 = Slate::updateOrCreate(array('id' => 'Thu-Mon_2017_'.$i.'_REG'),
-        //             ["name" => "Thursday-Monday (All Games)",
-        //                 "firstDay" => "Thu", "lastDay" => "Mon",
-        //                 "active"   => true, "status" => "HISTORY"]);
-        //         $slate2 = Slate::updateOrCreate(array('id' => 'Thu-Sun_2017_'.$i.'_REG'),
-        //             ["name" => "Thursday-Sunday",
-        //                 "firstDay" => "Thu", "lastDay" => "Sun",
-        //                 "active"   => true, "status" => "HISTORY"]);
-        //         $slate3 = Slate::updateOrCreate(array('id' => 'Sun_2017_'.$i.'_REG'),
-        //             ["name" => "Sunday Only",
-        //                 "firstDay" => "Sun", "lastDay" => "Sun",
-        //                 "active"   => true, "status" => "HISTORY"]);
-        //         $slate4 = Slate::updateOrCreate(array('id' => 'Sun-Mon_2017_'.$i.'_REG'),
-        //             ["name" => "Sunday-Monday",
-        //                 "firstDay" => "Sun", "lastDay" => "Mon",
-        //                 "active"   => true, "status" => "HISTORY"]);
-        //         $slate5 = Slate::updateOrCreate(array('id' => 'Mon_2017_'.$i.'_REG'),
-        //             ["name" => "Monday Only",
-        //                 "firstDay" => "Mon", "lastDay" => "Mon",
-        //                 "active"   => true, "status" => "HISTORY"]);
+                $slate1->games()->sync([$game_id], false);
+                if($dayOfWeek == "Sunday"){
+                    $slate2->games()->sync([$game_id], false);
+                    $slate3->games()->sync([$game_id], false);
+                    $slate4->games()->sync([$game_id], false);
+                }
+                else if($dayOfWeek == "Monday"){
+                    $slate4->games()->sync([$game_id], false);
+                    $slate5->games()->sync([$game_id], false);
+                }
+                else if($dayOfWeek == "Thusday"){
+                    $slate2->games()->sync([$game_id], false);
+                }
 
-        //         $slate1->games()->sync([$game_id], false);
-        //         if($dayOfWeek == "Sunday"){
-        //             $slate2->games()->sync([$game_id], false);
-        //             $slate3->games()->sync([$game_id], false);
-        //             $slate4->games()->sync([$game_id], false);
-        //         }
-        //         else if($dayOfWeek == "Monday"){
-        //             $slate4->games()->sync([$game_id], false);
-        //             $slate5->games()->sync([$game_id], false);
-        //         }
-        //         else if($dayOfWeek == "Thusday"){
-        //             $slate2->games()->sync([$game_id], false);
-        //         }
+            }
 
-        //     }
-
-        // }
+        }
 
         $slates = Slate::where('active', true)->where('status', 'HISTORY')->get();
         foreach ($slates as $slate){
