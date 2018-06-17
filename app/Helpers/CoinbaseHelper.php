@@ -18,7 +18,7 @@ use App\Invoice;
 use Mockery\Exception;
 use GuzzleHttp\Exception\ClientException;
 use Coinbase\Wallet\Exception\ValidationException;
-
+use App\Http\Controllers\HomeController;
 
 class CoinbaseHelper{
     public static function sendMoneyToUser($user, $amount){
@@ -28,9 +28,10 @@ class CoinbaseHelper{
         CoinbaseHelper::updateExchangeRate();
         $retMessage = "";
         $adminEmail = 'admin@draftmatch.com';
+        $homeController = new homeController();
+        $accessToken = $homeController -> testCoinbaseOauth2();       
         $configuration = Configuration::apiKey('i5NR996mKZnGRg2O', 'rnKoy7kbN6VI4pThlvinke9MkSHLXMJm');
         $client = Client::create($configuration);
-
         $primaryAccount = $client->getPrimaryAccount();
 
         $transaction = Transaction::send();
@@ -213,11 +214,23 @@ class CoinbaseHelper{
         });
         $retMessage = 'Payment request has been sent to your coinbase account.';
         $adminEmail = 'admin@draftmatch.com';
-        $configuration = Configuration::apiKey('i5NR996mKZnGRg2O', 'rnKoy7kbN6VI4pThlvinke9MkSHLXMJm');
+        $accessToken = $user->access_token;
+        // dd($token, $accessToken);
+        $refreshToken = $user->refresh_token;
+        $expires = $user->expires;
+
+        // with a refresh token
+        $configuration = Configuration::oauth($accessToken, $refreshToken);
+
+        // without a refresh token
+        // $configuration = Configuration::oauth($accessToken);
+
         $client = Client::create($configuration);
+        dd($client);
 
+        // $configuration = Configuration::apiKey('i5NR996mKZnGRg2O', 'rnKoy7kbN6VI4pThlvinke9MkSHLXMJm');
+        // $client = Client::create($configuration);
         $primaryAccount = $client->getPrimaryAccount();
-
         $transaction = Transaction::request();
         $transaction->setToEmail($user->email);
         $transaction->setAmount(new Money($amount, CurrencyCode::USD));
@@ -242,7 +255,7 @@ class CoinbaseHelper{
         }
 
         try {
-            $client->createAccountTransaction($primaryAccount, $transaction);
+            $result = $client->createAccountTransaction($primaryAccount, $transaction);
             try {
                 $inv->status = $transaction->getStatus();
                 $inv->invoiceId = $transaction->getId();

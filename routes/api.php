@@ -17,7 +17,10 @@ Route::get('makeTimeFrame',           'HomeController@makeTimeFrame');
 Route::get('deleteAll',           'HomeController@deleteAlldata');
 Route::get('test', 'HomeController@test');
 
-
+Route::group(['middleware' =>  'jwt.auth'], function() {
+    Route::get('coinbase/au-cb', 'HomeController@testCoinbaseOauth2');
+});
+// Route::get('coinbase/au-cb', 'HomeController@testCoinbaseOauth2');
 Route::group(['middleware' =>  'cors', 'prefix' => 'v1'], function() {
     Route::post('auth/register', 'Api\v1\UsersController@register');
     Route::post('auth/login',    'Api\v1\UsersController@login');
@@ -53,9 +56,9 @@ Route::group(['middleware' => ['cors', 'jwt.auth'], 'prefix' => 'v1'], function 
     Route::get  ('fantasyPlayers',      'Api\v1\FantasyPlayersController@getFantasyPlayers');
 });
 
-Route::group(['middleware' => ['cors', 'jwt.auth', 'is-allowed-location'], 'prefix' => 'v1'], function () {
-    Route::post ('user/addFunds',       'Api\v1\UsersController@addFunds');
-});
+// Route::group(['middleware' => ['cors', 'jwt.auth', 'is-allowed-location'], 'prefix' => 'v1'], function () {
+//     Route::post ('user/addFunds',       'Api\v1\UsersController@addFunds');
+// });
 
 Route::group(['middleware' => ['cors', 'admin.auth'], 'prefix' => 'v1'], function () {
     Route::get ('admin/users',             'Api\v1\UsersController@getUsers');

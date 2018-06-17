@@ -11,29 +11,181 @@ use App\Game;
 use App\TimeFrame;
 use GuzzleHttp\Client as HttpClient;
 
+use JWTAuth;
+use App\Http\Controllers\Controller;
+use App\User;
+use App\Invoice;
+use JWTAuthException;
+
+
 use App\Contest;
 use App\Common\Consts\Contest\ContestStatusConsts;
+use Openclerk\OAuth2\Client\Provider\Coinbase;
+use Illuminate\Routing\Redirector;
+use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+/**
+ * Create a new controller instance.
+ *
+ * @return void
+ */
+
+
+
+public function __construct()
+{
+    //$this->middleware('auth');
+}
+
+/**
+ * Show the application dashboard.
+ *
+ * @return \Illuminate\Http\Response
+ */
+    public function httpBuildQuery($params, $numeric_prefix = 0, $arg_separator = '&', $enc_type = null)
     {
-        //$this->middleware('auth');
+        if (version_compare(PHP_VERSION, '5.4.0', '>=') && !defined('HHVM_VERSION')) {
+            if ($enc_type === null) {
+                $enc_type = 1;
+            }
+            $url = http_build_query($params, $numeric_prefix, $arg_separator, $enc_type);
+        } else {
+            $url = http_build_query($params, $numeric_prefix, $arg_separator);
+        }
+
+        return $url;
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+    public function testCoinbaseOauth2(Request $request){
+
+        try {
+            $user = JWTAuth::toUser($request->token);
+        }
+        catch (Exception $exception)
+        {
+            return HttpResponse::unauthorized(HttpStatus::$ERR_AUTH_INVALID_TOKEN_PROVIDED,HttpMessage::$USER_ERROR_ADDING_FUNDS,
+                $exception->getMessage());
+        }
+
+        $provider = new Coinbase([
+        'clientId'      => 'fb93f05d512ed76a0a4d24f8de50f65f7d3ad30a4c52debce61cf50d9e091730',
+        'clientSecret'  => '43362912cf29fbbe339a343315a214dc232de81b7da03e7b2fd8f3688a593ca6',
+        'redirectUri'   => 'http://localhost:8000/api/coinbase/au-cb',
+        'scopes'        => ['user', 'balance', 'wallet:accounts:read','wallet:transactions:read',
+                            'wallet:accounts:update', 'wallet:accounts:create', 'wallet:accounts:delete',
+                            'wallet:addresses:read', 'wallet:addresses:create', 'wallet:buys:read',
+                            'wallet:buys:create', 'wallet:deposits:read', 'wallet:deposits:create',
+                            'wallet:notifications:read', 'wallet:payment-methods:read', 'wallet:payment-methods:delete',
+                            'wallet:payment-methods:limits', 'wallet:sells:read', 'wallet:sells:create', 'wallet:transactions:send',
+                            'wallet:transactions:request', 'wallet:transactions:transfer', 'wallet:user:read',
+                            'wallet:user:update', 'wallet:user:email', 'wallet:withdrawals:read', 'wallet:withdrawals:create', 
+                            // 'wallet:transactions:send:bypass-2fa',
+
+                            ],
+       
+        'authorizationHeader' => 'Bearer',
+        'account'       => 'all'
+        ]);
+
+        if (!isset($_GET['code'])) {
+
+          // If we don't have an authorization code then get one
+          $authUrl = $provider->getAuthorizationUrl();
+
+            $params = [
+
+                    'meta[send_limit_amount]' =>  '1',
+                    'meta[send_limit_currency]'=> 'USD',
+                    'meta[send_limit_period]'=> 'day'
+            ];
+
+          $auth_add_Url = $authUrl.'&'.$this->httpBuildQuery($params, '', '&');
+          $_SESSION['oauth2state'] = $provider->state;
+          header('Location: '.$auth_add_Url);
+          exit;
+
+        // Check given state against previously stored one to mitigate CSRF attack
+        // } elseif (empty($_GET['state']) || ($_GET['state'] !== $_SESSION['oauth2state'])) {
+
+        //   unset($_SESSION['oauth2state']);
+        //   exit('Invalid state');
+
+        } else {
+
+          // Try to get an access token (using the authorization code grant)
+          $token = $provider->getAccessToken('authorization_code', [
+              'code' => $_GET['code']
+          ]);
+
+          // Use this to interact with an API on the users behalf
+          $accessToken = $token->accessToken;
+
+          // Use this to get a new access token if the old one expires
+          $refreshToken = $token->refreshToken;
+
+          // Number of seconds until the access token will expire, and need refreshing
+          $expires = $token->expires;
+
+          $userId = $user->id;
+          $currentUser = User::find($userId);
+          $currentUser->access_token = $accessToken;
+          $currentUser->refresh_token = $refreshToken;
+          $currentUser->expires = $expires;
+          $currentUser->save();
+         
+          dd($currentUser);
+          return redirect()->action('Api\v1\UsersController@addFunds');
+          // Optional: Now you have a token you can look up a users profile data
+          // try {
+          //   // We got an access token, let's now get the user's details
+          //   // $userDetails = $provider->getUserDetails($token);
+          //   $client = new HttpClient(['headers' => ['Authorization' => 'Bearer '.$token->accessToken, 'CB-VERSION' => '2017-08-09']]);
+
+          //   $url = 'https://api.coinbase.com/v2/user';
+          //   $userDetails = json_decode($client->request('GET', $url)->getBody()->getContents(), true);
+
+          //   // Use these details to create a new profile
+          //   printf('Hello %s!', $userDetails->firstName);
+
+          //   // You can also get Coinbase balances
+          //   $balanceDetails = $provider->getBalanceDetails($token);
+
+          //   printf('You have %f %s', $balanceDetails['amount'], $balanceDetails['currency']);
+
+          // } catch (Exception $e) {
+
+          //   // Failed to get user details
+          //   exit('Oh dear...');
+          // }
+
+          // // Use this to interact with an API on the users behalf
+          // echo $token->accessToken;
+
+          // // Use this to get a new access token if the old one expires
+          // echo $token->refreshToken;
+
+          // // Number of seconds until the access token will expire, and need refreshing
+          // echo $token->expires;
+        }
+    }
 
     public function test(){
+        $adminEmail = 'daovu1118@gmail.com';
+        $email = 'daovu1118@gmail.com';
+        $user = 'jingZang';
+        $transaction = 'pending';
+        $amount = 10;
+        \Mail::raw('Transaction ' . '$transaction->getStatus()' . ' for user with email ' . $email . '.', function ($message) use ($user, $adminEmail) {
+            $message->subject('Failed transaction notification ' . 'soft821@outlook.com')->to($adminEmail);
+        });
 
+        \Mail::raw('Your request for adding ' . ($amount) . '$ to draftmatch is in status' . '$transaction->getStatus()', function ($message) use ($user, $transaction) {
+            $message->subject('DraftMatch Deposit Failed')->to('daovu1118@gmail.com');
+        });
     }
 
     public function index()
@@ -368,7 +520,6 @@ class HomeController extends Controller
             $this->pullPlayerStats($slate->games()->get(), $slate->id);
             // $this->pullDefenseStats($slate->games()->get());
         }
-        dd('ddd');
     }
 
     public function addPlayers($games){

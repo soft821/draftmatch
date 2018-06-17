@@ -279,7 +279,6 @@ class UsersController extends Controller
         $validator = \Validator::make($request->all(), [
             UserBalanceConsts::$AMOUNT => 'numeric|min:1|max:10000'
         ]);
-
         // if any of validation rules failed, we will fail to create contest
         if ($validator->fails()) {
             return HttpResponse::badRequest(HttpStatus::$ERR_VALIDATION, HttpMessage::$USER_ERROR_ADDING_FUNDS, $validator->errors()->all());
@@ -300,7 +299,8 @@ class UsersController extends Controller
                 HttpMessage::$USER_BLOCKED_OPERATION);
         }
         try {
-            $response = CoinbaseHelper::sendRequestToUser($user, $request->get('amount'));
+
+             $response = CoinbaseHelper::sendRequestToUser($user, $request->get('amount'));
         }
         catch (QueryException $e) {
             return HttpResponse::serverError(HttpStatus::$SQL_ERROR, HttpMessage::$USER_ERROR_ADDING_FUNDS, $e->getMessage());
