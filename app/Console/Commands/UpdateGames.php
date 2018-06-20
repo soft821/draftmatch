@@ -88,6 +88,7 @@ class UpdateGames extends Command
             $quarter = $game['Quarter'];
             $overtime = $game['IsOvertime'];
             $time_remaining = $game['TimeRemaining'];
+            $date_time = $game['DateTime'];
 
             $status = "PENDING";
             if ($is_over === true){
@@ -115,7 +116,7 @@ class UpdateGames extends Command
                 "week"           => $week,
                 "date"           => $php_date,
                 "day"            => $day,
-                "time"           => $php_time,
+                "time"           => $date_time,
                 "homeScore"      => $home_score?$home_score:0,
                 "awayScore"      => $away_score?$away_score:0,
                 "homeTeam"       => $home_team,
