@@ -163,10 +163,8 @@ class Slate extends Model
         $ret_val = Slate::with(array('games'=>function($query){
             $query->select('id','time', 'homeTeam', 'awayTeam');
         }))->
-            where('active', '=', true)->where('status', '=', 'HISTORY')->orderBy('firstGame', 'ASC')->get();
+            where('active', '=', true)->where('status', '=', 'PENDING')->orderBy('firstGame', 'ASC')->get();
         \Log::info('Successfully retrieved available slates ...');
-
-        echo $ret_val;
         
 
         foreach ($ret_val as $ret){
