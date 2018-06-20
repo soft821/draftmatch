@@ -552,3 +552,32 @@ Stack trace:
 [2018-06-20 17:34:30] local.INFO: Getting info about slates ...  
 [2018-06-20 17:34:30] local.INFO: Retrieving available slates ...  
 [2018-06-20 17:34:31] local.INFO: Successfully retrieved available slates ...  
+[2018-06-20 18:05:45] local.INFO: SCHEDULING for day Wednesday DATE : 2018-06-20 14:05:45  
+[2018-06-20 18:06:15] local.INFO: SCHEDULING for day Wednesday DATE : 2018-06-20 14:06:15  
+[2018-06-20 18:06:15] local.INFO: Updating timeframe   
+[2018-06-20 18:06:15] local.INFO: No previous  
+[2018-06-20 18:06:15] local.INFO: Retrieving timeframe from url https://draftmatch-api.com/api/fake/timeframes/current  
+[2018-06-20 18:06:16] local.INFO: Successfully retrieved timeframe from url https://draftmatch-api.com/api/fake/timeframes/current  
+[2018-06-20 18:06:16] local.INFO: Successfully created current timeframe  
+[2018-06-20 18:06:16] local.INFO: Pulling scores   
+[2018-06-20 18:06:16] local.INFO: Pulling scores from url https://draftmatch-api.com/api/fake/get_games  
+[2018-06-20 18:06:17] local.INFO: Adding games to slates Sun  
+[2018-06-20 18:06:17] local.INFO: Adding games to slates Sun  
+[2018-06-20 18:06:17] local.INFO: Adding games to slates Sun  
+[2018-06-20 18:06:17] local.INFO: Adding games to slates Sun  
+[2018-06-20 18:06:17] local.INFO: Adding games to slates Sun  
+[2018-06-20 18:06:17] local.INFO: Adding games to slates Sun  
+[2018-06-20 18:06:17] local.INFO: Adding games to slates Sun  
+[2018-06-20 18:06:17] local.INFO: Adding games to slates Sun  
+[2018-06-20 18:06:17] local.INFO: Adding games to slates Sun  
+[2018-06-20 18:06:17] local.INFO: Adding games to slates Sun  
+[2018-06-20 18:06:17] local.INFO: Adding games to slates Sun  
+[2018-06-20 18:06:17] local.INFO: Adding games to slates Sun  
+[2018-06-20 18:06:18] local.INFO: Successfully pulled all scores   
+[2018-06-20 18:06:18] local.INFO: Executing command playerInfo:update  
+[2018-06-20 18:06:18] local.INFO: Pulling player info ...  
+[2018-06-20 18:06:18] local.INFO: Retrieving data from url https://api.fantasydata.net/v3/nfl/stats/JSON/DailyFantasyPlayers/2017-09-20  
+[2018-06-20 18:06:20] local.INFO: Successfully retrieved data from url https://api.fantasydata.net/v3/nfl/stats/JSON/DailyFantasyPlayers/2017-09-20  
+[2018-06-20 18:06:27] local.INFO: Updating tiers for players ...  
+[2018-06-20 18:06:29] local.INFO: Successfully updated player info  
+[2018-06-20 18:06:29] local.INFO: Executed command playerInfo:update successfully  
