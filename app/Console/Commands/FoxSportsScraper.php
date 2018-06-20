@@ -21,7 +21,7 @@ use Coinbase\Wallet\Enum\CurrencyCode;
 use Coinbase\Wallet\Resource\Transaction;
 use Coinbase\Wallet\Value\Money;
 use GuzzleHttp\Client as HttpClient;
-
+use App\Common\Consts\Fakes\FakeConsts;
 
 class FoxSportsScraper extends Command
 {
@@ -55,19 +55,24 @@ class FoxSportsScraper extends Command
                                "Friday"    => "Fri",
                                "Saturday"  => "Sat",
                                "Sunday"    => "Sun");
+
+        
     }
 
     private function getSchedule($year, $week, $seasonType, $active)
     {
+
+        
         $testSlate = Slate::find('Thu-Mon_'.$year.'_'.$week.'_'.$seasonType);
         if ($testSlate)
         {
             return;
         }
 
-        $slate1 = Slate::updateOrCreate(array('id' => 'Thu-Mon_'.$year.'_'.$week.'_'.$seasonType), ["name" => "Thursday-Monday (All Games)",
-                                                                                          "firstDay" => "Thu", "lastDay" => "Mon",
-                                                                                          "active"   => $active]);
+        $slate1 = Slate::updateOrCreate(array('id' => 'Thu-Mon_'.$year.'_'.$week.'_'.$seasonType), 
+          [ "name" => "Thursday-Monday (All Games)",
+            "firstDay" => "Thu", "lastDay" => "Mon",
+            "active"   => $active]);
         $slate2 = Slate::updateOrCreate(array('id' => 'Thu-Sun_'.$year.'_'.$week.'_'.$seasonType), ["name" => "Thursday-Sunday",
                                                                                           "firstDay" => "Thu", "lastDay" => "Sun",
                                                                                           "active"   => $active]);
@@ -81,84 +86,89 @@ class FoxSportsScraper extends Command
                                                                                           "firstDay" => "Mon", "lastDay" => "Mon",
                                                                                           "active"   => $active]);
 
-        $crawler = GoutteFacade::request('GET', 'http://www.foxsports.com/nfl/schedule?season='.$year.'&seasonType=1&week='.($week + 1));
 
-        \Log::info('http://www.foxsports.com/nfl/schedule?season='.$year.'&seasonType=1'.'&week='.($week + 1));
-        $table  = $crawler->filter('#wisfoxbox table[class="wisbb_scheduleTable"]');
-        $theads = $table->filter('thead');
-        $tbodys = $table->filter('tbody');
 
-        $i = 0;
-        foreach ($tbodys as $tbody) {
-            $dateStr   = trim($theads->getNode($i)->nodeValue);
-            $dayMonth  = preg_split('/\s+/', trim(explode(',',$dateStr)[1]));
-            $dayAbbr   = $this->daysMap[explode(',', $dateStr)[0]];
-            $day       = trim($dayMonth[1]);
-            $month     = date_parse(trim($dayMonth[0]));
-            $month     = $month['month'];
-            foreach ($tbody->getElementsByTagName('tr') as $tr) {
-                if ($tr->getAttribute("class") || strlen($tr->getAttribute("class")) > 0) {
-                    continue;
-                }
+        $client = new HttpClient(['headers' => ['Ocp-Apim-Subscription-Key' => "234e0f8d08b14965a663ec86e7fd43d9"]]);
 
-                $tds      = $tr->getElementsByTagName('td');
-                $awayTeam = trim($tds[0]->getElementsByTagName('label')[0]->nodeValue);
-                $awayTeam = (strcmp($awayTeam, "JAX") === 0) ? "JAC" : $awayTeam;
-                $time     = explode(" ", trim($tds[1]->getElementsByTagName('span')[1]->nodeValue))[0];
-                $AM_PM    = "pm";
+        $url = FakeConsts::$CONSOL_API_DOMAIN.'get_games';
+        $games = json_decode($client->request('GET', $url)->getBody()->getContents(), true);
 
-                if (strpos($time, 'a') !== false) {
-                    $AM_PM = "am";
-                }
-                $time     = str_replace('p', '', $time);
-                $time     = str_replace('a', '', $time);
-                $time     = $time.':00';
-                $homeTeam = trim($tds[2]->getElementsByTagName('label')[0]->nodeValue);
-                $homeTeam = (strcmp($homeTeam, "JAX") === 0) ? "JAC" : $homeTeam;
+        
 
-                $gameId   = $awayTeam . '_' . $homeTeam . '_' . $year . '_' . $week . '_' . $seasonType;
-                $UTC      = new \DateTimeZone("US/Eastern");
-                \Log::info("OOOOOOO ".$year.'-'.$month.'-'.$day.' '.$time.$AM_PM);
-                $date     = new Carbon($year.'-'.$month.'-'.$day.' '.$time.$AM_PM, $UTC);
+        foreach ($games as $game){
+            $season_type = $game['SeasonType'];
+            $season = $game['Season'];
+            $week = $game['Week'];
+            $home_team = $game['HomeTeam'];
+            $away_team = $game['AwayTeam'];
+            $home_score = $game['HomeScore'];
+            $away_score = $game['AwayScore'];
+            $date = $game['Date'];
+            $has_started = $game['HasStarted'];
+            $is_over = $game['IsOver'];
+            $quarter = $game['Quarter'];
+            $overtime = $game['IsOvertime'];
+            $time_remaining = $game['TimeRemaining'];
 
-                $time = $date->hour < 10?'0'.$date->hour:$date->hour;
-                $time = $date->minute < 10? $time.':0'.$date->minute:$time.':'.$date->minute;
+            $status = "PENDING";
+            if ($is_over === true){
+                $status = "HISTORY";
+            }
+            elseif($has_started === true){
+                $status = "LIVE";
+            }
 
-                // @todo Do not change slate if game time changed
-                $game = Game::updateOrCreate(array('id' => $gameId), [
-                    "year"       => $year,
-                    "seasonType" => $seasonType,
-                    "week"       => $week,
-                    "date"       => $date,
-                    "day"        => $dayAbbr,
-                    "time"       => $time,
-                    "homeScore"  => 0,
-                    "awayScore"  => 0,
-                    "homeTeam"   => $homeTeam,
-                    "awayTeam"   => $awayTeam]);
+            $UTC      = new \DateTimeZone("US/Eastern");
+            $php_date     = new Carbon($date, $UTC);
+            $php_time = date('h:i a', strtotime($date));
+            $day = date('D', strtotime($php_date));
 
-                if (strpos($dateStr, 'Thu') !== false) {
-                    $game->slates()->syncWithoutDetaching(['Thu-Mon_' . $year . '_' . $week . '_' . $seasonType,
-                                                           'Thu-Sun_' . $year . '_' . $week . '_' . $seasonType]);
-                }
-                else if (strpos($dateStr, 'Sun') !== false) {
-                    $game->slates()->syncWithoutDetaching(['Thu-Mon_' . $year . '_' . $week . '_' . $seasonType,
-                                                           'Thu-Sun_' . $year . '_' . $week . '_' . $seasonType,
-                                                           'Sun_'     . $year . '_' . $week . '_' . $seasonType,
-                                                           'Sun-Mon_' . $year . '_' . $week . '_' . $seasonType]);
-                }
-                else if (strpos($dateStr, 'Mon') !== false) {
-                    $game->slates()->syncWithoutDetaching(['Thu-Mon_' . $year . '_' . $week . '_' . $seasonType,
-                                                           'Sun-Mon_' . $year . '_' . $week . '_' . $seasonType,
-                                                           'Mon_'     . $year . '_' . $week . '_' . $seasonType,]);
-                }
-                else
-                {
-                    $game->slates()->syncWithoutDetaching(['Thu-Mon_' . $year . '_' . $week . '_' . $seasonType]);
+            $gameId = $away_team . '_' . $home_team . '_' . $year . '_' . $week . '_' . $seasonType;
+            $game = Game::find($gameId);
+            if ($game){
+                if ($game->status !== $status){
+                    $gameChanged++;
                 }
             }
-            $i++;
-        }
+            $game = Game::updateOrCreate(array('id' => $gameId), [
+                "year"           => $season,
+                "seasonType"     => $season_type,
+                "week"           => $week,
+                "date"           => $php_date,
+                "day"            => $day,
+                "time"           => $php_time,
+                "homeScore"      => $home_score?$home_score:0,
+                "awayScore"      => $away_score?$away_score:0,
+                "homeTeam"       => $home_team,
+                "awayTeam"       => $away_team,
+                "quarter"        => $quarter?$quarter:"P",
+                "status"         => $status,
+                "overtime"       => $overtime,
+                "time_remaining" => $time_remaining]);
+
+
+            if (strpos($day, 'Thu') !== false) {
+                    $game->slates()->syncWithoutDetaching(['Thu-Mon_' . $year . '_' . $week . '_' . $seasonType,
+                                                           'Thu-Sun_' . $year . '_' . $week . '_' . $seasonType]);
+             }
+             else if (strpos($day, 'Sun') !== false) {
+                 $game->slates()->syncWithoutDetaching(['Thu-Mon_' . $year . '_' . $week . '_' . $seasonType,
+                                                        'Thu-Sun_' . $year . '_' . $week . '_' . $seasonType,
+                                                        'Sun_'     . $year . '_' . $week . '_' . $seasonType,
+                                                        'Sun-Mon_' . $year . '_' . $week . '_' . $seasonType]);
+             }
+             else if (strpos($day, 'Mon') !== false) {
+                 $game->slates()->syncWithoutDetaching(['Thu-Mon_' . $year . '_' . $week . '_' . $seasonType,
+                                                        'Sun-Mon_' . $year . '_' . $week . '_' . $seasonType,
+                                                        'Mon_'     . $year . '_' . $week . '_' . $seasonType,]);
+             }
+             else
+             {
+                 $game->slates()->syncWithoutDetaching(['Thu-Mon_' . $year . '_' . $week . '_' . $seasonType]);
+             }
+           
+        }             
+           
 
         Slate::updateOrCreate(array('id' => 'Thu-Mon_'.$year.'_'.$week.'_'.$seasonType), ["firstGame" => $slate1->firstGameDate(),
             "lastGame" => $slate1->lastGameDate()]);
@@ -179,10 +189,8 @@ class FoxSportsScraper extends Command
      */
     public function handle()
     {
-        //$this->getSchedule("2017", DatesHelper::getCurrentWeek(), DatesHelper::getCurrentRound(), true);
-        //$this->getSchedule("2017", "2", "3", true);
-        //$this->getSchedule("2017", "3", "3", false);
-        //$this->getSchedule("2017", "4", "3", false);
+        $this->getSchedule("2018", '5', '1', true);
+
 
         /*$data = [
             'title' => 'Hi student I hope you like the course',
@@ -203,14 +211,14 @@ class FoxSportsScraper extends Command
         //BitPayHelper::updateExchangeRate();
         //BitPayHelper::payToUser();
 
-        $configuration = Configuration::apiKey('i5NR996mKZnGRg2O', 'rnKoy7kbN6VI4pThlvinke9MkSHLXMJm');
-        $client = Client::create($configuration);
+        // $configuration = Configuration::apiKey('i5NR996mKZnGRg2O', 'rnKoy7kbN6VI4pThlvinke9MkSHLXMJm');
+        // $client = Client::create($configuration);
 
         //$account = new Account();
         //$account->setName('Draftmatch test wallet');
         //$client->createAccount($account);
 
-        $primaryAccount = $client->getPrimaryAccount();
+        // $primaryAccount = $client->getPrimaryAccount();
 
         //$address = new Address();
         //$client->createAccountAddress($account, $address);
@@ -224,7 +232,7 @@ class FoxSportsScraper extends Command
 
         //print_r($transaction);
 
-        $transaction = Transaction::request();
+        // $transaction = Transaction::request();
 
         //$transaction->setBitcoinAmount(0.0001);
         //$transaction->setAmount(new Money(1, CurrencyCode::USD));
@@ -236,8 +244,8 @@ class FoxSportsScraper extends Command
         //print_r($transaction);
 
 
-        $title = 'Test title';
-        $content = 'Test content';
+        // $title = 'Test title';
+        // $content = 'Test content';
 
        /* \Mail::send('emails.pending_invoice', ['amount' => 1, 'username' => 'test', 'link' => 'https://www.coinbase.com/join/598b537efeff9f031ba3d0aa'], function ($message)
         {
@@ -269,7 +277,7 @@ class FoxSportsScraper extends Command
 
         //print_r(LocationHelper::get_location( 43.8474918, 18.3718006));
 
-        print_r(LocationHelper::isUserInAllowedLocation( 40.7471786, -73.9873628));
+        // print_r(LocationHelper::isUserInAllowedLocation( 40.7471786, -73.9873628));
        // print_r(CoinbaseHelper::getExchangeRate());
         //$timestamp = strtotime('02-11-2017');
         //\Log::info($timestamp);

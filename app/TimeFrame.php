@@ -13,7 +13,7 @@ class TimeFrame extends Model
     }
 
     public static function getTimeFrame($week){
-        return TimeFrame::where('api_season', '=', '2017REG')->where('week', '=', $week)->first();
+        return TimeFrame::where('api_season', '=', '2018REG')->where('week', '=', $week)->first();
     }
 
     public function retrieveKey(){

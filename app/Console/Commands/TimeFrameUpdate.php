@@ -7,6 +7,7 @@ use Illuminate\Console\Command;
 
 use App\TimeFrame;
 use GuzzleHttp\Client as HttpClient;
+use App\Common\Consts\Fakes\FakeConsts;
 
 class TimeFrameUpdate extends Command
 {
@@ -64,11 +65,13 @@ class TimeFrameUpdate extends Command
         $client = new HttpClient(['headers' => ['Ocp-Apim-Subscription-Key' => "234e0f8d08b14965a663ec86e7fd43d9"]]);
         if (!$previous){
             \Log::info('No previous');
-            $url = 'https://api.fantasydata.net/v3/nfl/stats/JSON/Timeframes/current';
+            $url = FakeConsts::$CONSOL_API_DOMAIN.'timeframes/current';
+            // $url = 'https://api.fantasydata.net/v3/nfl/stats/JSON/Timeframes/current'
         }
         else {
             \Log::info('Found previous');
-            $url = 'https://api.fantasydata.net/v3/nfl/stats/JSON/Timeframes/upcoming';
+            $url = FakeConsts::$CONSOL_API_DOMAIN.'timeframes/upcoming';
+            // $url = 'https://api.fantasydata.net/v3/nfl/stats/JSON/Timeframes/upcoming'
         }
 
         \Log::info('Retrieving timeframe from url '.$url);

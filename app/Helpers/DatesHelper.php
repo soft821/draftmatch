@@ -26,10 +26,8 @@ class DatesHelper{
     }
 
     public static function getCurrentDate(){
-        // $estTime = (new \DateTime('America/New_York'))->format('Y-m-d H:i:s');
-        // return (Carbon::parse($estTime));
-    
-        return '2017-06-12 07:31:19';
+        $estTime = (new \DateTime('America/New_York'))->format('Y-m-d H:i:s');
+        return (Carbon::parse($estTime));
     }
 
     public static function getDateForRoundDiff(){

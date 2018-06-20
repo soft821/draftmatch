@@ -234,11 +234,11 @@ class FantasyProsScraper extends Command
      */
     public function handle()
     {
-        $this->scrapeProjections('2017', DatesHelper::getCurrentWeek(), DatesHelper::getCurrentRound(),'qb' );
-        $this->scrapeProjections('2017', DatesHelper::getCurrentWeek(), DatesHelper::getCurrentRound(),'rb' );
-        $this->scrapeProjections('2017', DatesHelper::getCurrentWeek(), DatesHelper::getCurrentRound(),'wr' );
-        $this->scrapeProjections('2017', DatesHelper::getCurrentWeek(), DatesHelper::getCurrentRound(),'te' );
-        $this->scrapeProjections('2017', DatesHelper::getCurrentWeek(), DatesHelper::getCurrentRound(),'k' );
-        $this->scrapeProjections('2017', DatesHelper::getCurrentWeek(), DatesHelper::getCurrentRound(),'dst' );
+        $this->scrapeProjections('2018', DatesHelper::getCurrentWeek(), DatesHelper::getCurrentRound(),'qb' );
+        $this->scrapeProjections('2018', DatesHelper::getCurrentWeek(), DatesHelper::getCurrentRound(),'rb' );
+        $this->scrapeProjections('2018', DatesHelper::getCurrentWeek(), DatesHelper::getCurrentRound(),'wr' );
+        $this->scrapeProjections('2018', DatesHelper::getCurrentWeek(), DatesHelper::getCurrentRound(),'te' );
+        $this->scrapeProjections('2018', DatesHelper::getCurrentWeek(), DatesHelper::getCurrentRound(),'k' );
+        $this->scrapeProjections('2018', DatesHelper::getCurrentWeek(), DatesHelper::getCurrentRound(),'dst' );
     }
 }
