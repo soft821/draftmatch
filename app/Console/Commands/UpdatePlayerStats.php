@@ -45,7 +45,8 @@ class UpdatePlayerStats extends Command
         }
 
         $client = new HttpClient(['headers' => ['Ocp-Apim-Subscription-Key' => "234e0f8d08b14965a663ec86e7fd43d9"]]);
-        $url = 'https://api.fantasydata.net/v3/nfl/stats/JSON/PlayerGameStatsByWeek/'.$timeFrame->api_season.'/'.$timeFrame->api_week;
+        // $url = 'https://api.fantasydata.net/v3/nfl/stats/JSON/PlayerGameStatsByWeek/'.$timeFrame->api_season.'/'.$timeFrame->api_week;
+        $url = 'https://api.fantasydata.net/v3/nfl/stats/JSON/PlayerGameStatsByWeek/2017REG/'.$timeFrame->api_week;
         \Log::info('Pulling player stats from url '.$url);
         $players = json_decode($client->request('GET', $url)->getBody()->getContents(), true);
 
@@ -133,7 +134,8 @@ class UpdatePlayerStats extends Command
         }
 
         $client = new HttpClient(['headers' => ['Ocp-Apim-Subscription-Key' => "dc113b0895374e4b9e50902b0296187f"]]);
-        $url = 'https://api.fantasydata.net/v3/nfl/stats/JSON/FantasyDefenseByGame/'.$timeFrame->api_season.'/'.$timeFrame->api_week;
+        // $url = 'https://api.fantasydata.net/v3/nfl/stats/JSON/FantasyDefenseByGame/'.$timeFrame->api_season.'/'.$timeFrame->api_week;
+        $url = 'https://api.fantasydata.net/v3/nfl/stats/JSON/FantasyDefenseByGame/2017REG/'.$timeFrame->api_week;
         \Log::info('Pulling defense stats from url '.$url);
         $defenses = json_decode($client->request('GET', $url)->getBody()->getContents(), true);
 
