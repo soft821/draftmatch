@@ -38,7 +38,8 @@ class UpdatePlayerInfo extends Command
         \Log::info('Pulling player info ...');
         $timeFrame = TimeFrame::getCurrentTimeFrame();
 
-        $newDate  =  date('Y-M-d', strtotime($timeFrame->start_date));
+        // $newDate  =  date('Y-M-d', strtotime($timeFrame->start_date));
+        $newDate = '2017-09-20';
 
         $key = $timeFrame->retrieveKey();
         $gamesInRange = Game::with('slates')->where('id', 'like', '%'.$key.'%')->get();

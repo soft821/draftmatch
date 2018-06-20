@@ -8,6 +8,7 @@ use App\Game;
 use Illuminate\Console\Command;
 use GuzzleHttp\Client as HttpClient;
 use Carbon\Carbon;
+use App\Common\Consts\Fakes\FakeConsts;
 
 class UpdateGames extends Command
 {
@@ -66,7 +67,8 @@ class UpdateGames extends Command
 
         $client = new HttpClient(['headers' => ['Ocp-Apim-Subscription-Key' => "234e0f8d08b14965a663ec86e7fd43d9"]]);
 
-        $url = 'https://api.fantasydata.net/v3/nfl/scores/JSON/ScoresByWeek/'.$timeFrame->api_season.'/'.$timeFrame->api_week;
+        $url = FakeConsts::$CONSOL_API_DOMAIN.'get_games';
+        // $url = 'https://api.fantasydata.net/v3/nfl/scores/JSON/ScoresByWeek/'.$timeFrame->api_season.'/'.$timeFrame->api_week;
         \Log::info('Pulling scores from url '.$url);
         $games = json_decode($client->request('GET', $url)->getBody()->getContents(), true);
 

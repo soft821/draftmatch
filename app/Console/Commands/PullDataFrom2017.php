@@ -18,14 +18,14 @@ class PullDataFrom2017 extends Command
      *
      * @var string
      */
-    protected $signature = 'fantasypull:2017';
+    protected $signature = 'fantasypull:2018';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Pull data from 2017 season';
+    protected $description = 'Pull data from 2018 season';
 
     /**
      * Create a new command instance.
@@ -48,7 +48,7 @@ class PullDataFrom2017 extends Command
     {
         for($i = 2; $i < 15; $i++){
             $client = new HttpClient(['headers' => ['Ocp-Apim-Subscription-Key' => "234e0f8d08b14965a663ec86e7fd43d9"]]);
-            $url = 'https://api.fantasydata.net/v3/nfl/stats/JSON/TeamGameStats/2017REG/' . $i;
+            $url = 'https://api.fantasydata.net/v3/nfl/stats/JSON/TeamGameStats/2018REG/' . $i;
             \Log::info('Pulling data for season from url '.$url);
             $team_game_stats = json_decode($client->request('GET', $url)->getBody()->getContents(), true);
 

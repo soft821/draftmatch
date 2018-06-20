@@ -69,3 +69,11 @@ Route::group(['middleware' => ['cors', 'admin.auth'], 'prefix' => 'v1'], functio
     Route::get ('admin/pendingGames',      'Api\v1\GamesController@getPendingGames');
     Route::post('admin/sendpromo',         'Admin\v1\MailController@sendPromoCode');
 });
+
+
+Route::group(['prefix' => 'fake'], function(){
+
+    Route::get('timeframes/current', 'Admin\fake\FakeDataController@getCurrentTimeFrame');
+    Route::get('timeframes/upcoming', 'Admin\fake\FakeDataController@getCurrentTimeFrame');
+    Route::get('get_games', 'Admin\fake\FakeDataController@getWeekGames');
+});

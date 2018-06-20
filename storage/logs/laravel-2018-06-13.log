@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [2018-06-13 04:36:41] local.ERROR: ErrorException: Undefined variable: adminEmail in F:\Projects\DFS\draftmatch\app\Http\Controllers\HomeController.php:37
 Stack trace:
 #0 F:\Projects\DFS\draftmatch\app\Http\Controllers\HomeController.php(37): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', 'F:\\Projects\\DFS...', 37, Array)
@@ -117,3 +118,6 @@ Stack trace:
 [2018-06-13 10:01:00] local.INFO: Getting info about slates ...  
 [2018-06-13 10:01:00] local.INFO: Retrieving available slates ...  
 [2018-06-13 10:01:00] local.INFO: Successfully retrieved available slates ...  
+=======
+[2018-06-13 10:03:52] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+>>>>>>> jon
