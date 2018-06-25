@@ -56,8 +56,16 @@ class MailController extends Controller
       $date = new \DateTime();
       $expireDate = $date->getTimestamp() + 86400 * 3;
       
-      Mail::to($request->get('email'))->send(new PromoCodeMail($promocode, $expireDate));
+      try {
+                
+           Mail::to($request->get('email'))->send(new PromoCodeMail($promocode, $expireDate));
 
+       } catch (\Exception $e) {
+           return HttpResponse::serverError(HttpStatus::$ERR_VALIDATION, HttpMessage::$USER_INVALID_EMAIL_FORMAT,
+                HttpMessage::$USER_INVALID_EMAIL_FORMAT);
+       }
+
+      
       PromoCode::UpdateOrCreate(
                             ['email' => $request->get('email')],
                             ['email' => $request->get('email'),

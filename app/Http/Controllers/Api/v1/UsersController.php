@@ -148,6 +148,32 @@ class UsersController extends Controller
         return HttpResponse::ok(HttpMessage::$USER_TOKEN_CREATED, (['token' => $token]));
     }
 
+    public function adminLogin(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        $token = null;
+        try {
+            if (!$token = JWTAuth::attempt($credentials, ['id'])) {
+                return HttpResponse::unauthorized(HttpStatus::$ERR_USER_INVALID_CREDENTIALS,
+                    HttpMessage::$USER_INVALID_CREDENTIALS,  HttpMessage::$USER_INVALID_CREDENTIALS);
+            }
+        }
+        catch (JWTAuthException $e) {
+            return HttpResponse::serverError(HttpStatus::$ERR_USER_CREATE_TOKEN, HttpMessage::$USER_ERR_CREATING_TOKEN,
+                $e->getMessage());
+        }
+
+        $user = JWTAuth::toUser($token);
+        if (!$user->isAdmin())
+        {
+            return HttpResponse::unauthorized(HttpStatus::$ERR_AUTH_ADMIN_ACCESS,
+                HttpMessage::$AUTH_ADMIN_ACCESS, HttpMessage::$AUTH_ADMIN_ACCESS);
+        }
+
+        return HttpResponse::ok(HttpMessage::$USER_TOKEN_CREATED, (['token' => $token]));
+    }
+
     public function getUser(Request $request)
     {
         try {
