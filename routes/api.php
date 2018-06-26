@@ -21,6 +21,7 @@ Route::get('test', 'HomeController@test');
 Route::group(['middleware' =>  'cors', 'prefix' => 'v1'], function() {
     Route::post('auth/register', 'Api\v1\UsersController@register');
     Route::post('auth/login',    'Api\v1\UsersController@login');
+    Route::post('auth/admin-login',    'Api\v1\UsersController@adminLogin');
     Route::post('auth/resetPassword',    'Api\v1\UsersController@resetPassword');
     Route::get ('info/games',    'Api\v1\GamesController@getGames');
     Route::get ('info/ranking',  'Api\v1\UsersController@getRanking');
@@ -68,6 +69,7 @@ Route::group(['middleware' => ['cors', 'admin.auth'], 'prefix' => 'v1'], functio
     Route::get ('admin/slates',            'Api\v1\SlatesController@getAdminSlates');
     Route::get ('admin/pendingGames',      'Api\v1\GamesController@getPendingGames');
     Route::post('admin/sendpromo',         'Admin\v1\MailController@sendPromoCode');
+
 });
 
 
