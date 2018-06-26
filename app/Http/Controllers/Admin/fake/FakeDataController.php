@@ -2306,7 +2306,7 @@ class FakeDataController extends Controller
                 "SeasonType" => 1,
                 "Season" => 2018,
                 "Week" => 6,
-                "Date" => "2018-06-281T13:00:00",
+                "Date" => "2018-06-28T13:00:00",
                 "AwayTeam" => "CAR",
                 "HomeTeam" => "WAS",
                 "AwayScore" => null,
