@@ -190,7 +190,7 @@ class FoxSportsScraper extends Command
      */
     public function handle()
     {
-        $this->getSchedule("2018", '5', '1', true);
+        $this->getSchedule("2018", '6', '1', true);
 
 
         /*$data = [
