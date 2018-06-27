@@ -137,3 +137,80 @@ Stack trace:
 [2018-06-27 09:15:22] local.INFO: Successfully retrieved data from url https://api.fantasydata.net/v3/nfl/stats/JSON/DailyFantasyPlayers/2017-09-20  
 [2018-06-27 09:15:22] local.INFO: Successfully updated player info  
 [2018-06-27 09:15:22] local.INFO: Executed command playerInfo:update successfully  
+[2018-06-27 10:01:17] local.INFO: SCHEDULING for day Wednesday DATE : 2018-06-27 06:01:17  
+[2018-06-27 10:10:12] local.INFO: User with specified email already exists  
+[2018-06-27 10:28:27] local.INFO: User with specified email already exists  
+[2018-06-27 10:28:59] local.INFO: User with specified email already exists  
+[2018-06-27 10:29:27] local.ERROR: GuzzleHttp\Exception\ClientException: Client error: `POST https://draftmatch.com/wp-json/wp/v2/users` resulted in a `404 Not Found` response:
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found (truncated...)
+ in F:\Projects\DFS\draftmatch\vendor\guzzlehttp\guzzle\src\Exception\RequestException.php:113
+Stack trace:
+#0 F:\Projects\DFS\draftmatch\vendor\guzzlehttp\guzzle\src\Middleware.php(66): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response))
+#1 F:\Projects\DFS\draftmatch\vendor\guzzlehttp\promises\src\Promise.php(203): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 F:\Projects\DFS\draftmatch\vendor\guzzlehttp\promises\src\Promise.php(156): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), Array)
+#3 F:\Projects\DFS\draftmatch\vendor\guzzlehttp\promises\src\TaskQueue.php(47): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+#4 F:\Projects\DFS\draftmatch\vendor\guzzlehttp\promises\src\Promise.php(246): GuzzleHttp\Promise\TaskQueue->run(true)
+#5 F:\Projects\DFS\draftmatch\vendor\guzzlehttp\promises\src\Promise.php(223): GuzzleHttp\Promise\Promise->invokeWaitFn()
+#6 F:\Projects\DFS\draftmatch\vendor\guzzlehttp\promises\src\Promise.php(267): GuzzleHttp\Promise\Promise->waitIfPending()
+#7 F:\Projects\DFS\draftmatch\vendor\guzzlehttp\promises\src\Promise.php(225): GuzzleHttp\Promise\Promise->invokeWaitList()
+#8 F:\Projects\DFS\draftmatch\vendor\guzzlehttp\promises\src\Promise.php(62): GuzzleHttp\Promise\Promise->waitIfPending()
+#9 F:\Projects\DFS\draftmatch\vendor\guzzlehttp\guzzle\src\Client.php(131): GuzzleHttp\Promise\Promise->wait()
+#10 F:\Projects\DFS\draftmatch\app\Http\Controllers\Api\v1\UsersController.php(122): GuzzleHttp\Client->request('POST', 'https://draftma...', Array)
+#11 [internal function]: App\Http\Controllers\Api\v1\UsersController->register(Object(Illuminate\Http\Request))
+#12 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(55): call_user_func_array(Array, Array)
+#13 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('register', Array)
+#14 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Api\v1\UsersController), 'register')
+#15 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(160): Illuminate\Routing\Route->runController()
+#16 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(572): Illuminate\Routing\Route->run()
+#17 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 F:\Projects\DFS\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#19 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#20 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#25 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#26 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#29 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#30 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#31 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#32 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#33 F:\Projects\DFS\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 F:\Projects\DFS\draftmatch\app\Http\Middleware\HttpsProtocol.php(29): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\HttpsProtocol->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#39 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#40 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#42 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#43 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#44 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#45 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#46 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#47 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#48 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#49 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#50 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#51 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#52 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#53 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#54 F:\Projects\DFS\draftmatch\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#55 F:\Projects\DFS\draftmatch\server.php(21): require_once('F:\\Projects\\DFS...')
+#56 {main}  
+[2018-06-27 10:30:15] local.INFO: User with specified email already exists  
+[2018-06-27 10:30:45] local.INFO: Sorry, but you have not invited yet in our service.  
+[2018-06-27 10:31:45] local.INFO: User with specified email already exists  
+[2018-06-27 10:31:51] local.INFO: User with specified email already exists  
+[2018-06-27 10:34:36] local.INFO: User with specified email already exists  
+[2018-06-27 10:34:42] local.INFO: Promo code is not correct.  
+[2018-06-27 10:35:42] local.INFO: User with specified email already exists  
+[2018-06-27 10:35:58] local.INFO: User with specified email already exists  
