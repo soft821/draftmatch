@@ -1,0 +1,358 @@
+[2018-06-27 09:58:06] local.INFO: array (
+  'pos' => 
+  Bitpay\Token::__set_state(array(
+     'token' => '3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h',
+     'resource' => NULL,
+     'facade' => 'pos',
+     'createdAt' => NULL,
+     'policies' => 
+    array (
+    ),
+     'pairingCode' => NULL,
+     'pairingExpiration' => NULL,
+  )),
+  'pos/invoice' => 
+  Bitpay\Token::__set_state(array(
+     'token' => '3YsFfkCx3gj73iieqeMMzSykWoQdkGrnVcWAMJycRWBe',
+     'resource' => NULL,
+     'facade' => 'pos/invoice',
+     'createdAt' => NULL,
+     'policies' => 
+    array (
+    ),
+     'pairingCode' => NULL,
+     'pairingExpiration' => NULL,
+  )),
+  'merchant' => 
+  Bitpay\Token::__set_state(array(
+     'token' => '6eq3tTP8S5he6QvMn4SKv1vzJVA4FBTimmWgYTriog4',
+     'resource' => NULL,
+     'facade' => 'merchant',
+     'createdAt' => NULL,
+     'policies' => 
+    array (
+    ),
+     'pairingCode' => NULL,
+     'pairingExpiration' => NULL,
+  )),
+)  
+[2018-06-27 10:02:51] local.INFO: SIN Tf7waVN8p22g6p8DsjYeu3j8QxZZRzxGsf4  
+[2018-06-27 10:02:56] local.ERROR: Exception: Error with request: no data returned in E:\draftMatch\draftmatch\vendor\bitpay\php-client\src\Bitpay\Client\Client.php:495
+Stack trace:
+#0 E:\draftMatch\draftmatch\app\Helpers\BitPayHelper.php(438): Bitpay\Client\Client->getTokens()
+#1 E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\UsersController.php(525): App\Helpers\BitPayHelper::payToUser()
+#2 [internal function]: App\Http\Controllers\Api\v1\UsersController->payToUser()
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(55): call_user_func_array(Array, Array)
+#4 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('payToUser', Array)
+#5 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Api\v1\UsersController), 'payToUser')
+#6 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(160): Illuminate\Routing\Route->runController()
+#7 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(572): Illuminate\Routing\Route->run()
+#8 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#11 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#14 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#17 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#18 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#19 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#20 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#21 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 E:\draftMatch\draftmatch\app\Http\Middleware\HttpsProtocol.php(29): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#25 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\HttpsProtocol->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#39 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#40 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#41 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#42 E:\draftMatch\draftmatch\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#43 E:\draftMatch\draftmatch\server.php(21): require_once('E:\\draftMatch\\d...')
+#44 {main}  
+[2018-06-27 10:03:36] local.INFO: SIN TfJSvXsTKBsGDfjmyd5fmWhfvud9LdDKAbg  
+[2018-06-27 10:22:08] local.ERROR: Exception: This endpoint does not support the `merchant` facade in E:\draftMatch\draftmatch\vendor\bitpay\php-client\src\Bitpay\Client\Client.php:299
+Stack trace:
+#0 E:\draftMatch\draftmatch\app\Helpers\BitPayHelper.php(498): Bitpay\Client\Client->createPayout(Object(Bitpay\Payout))
+#1 E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\UsersController.php(525): App\Helpers\BitPayHelper::payToUser()
+#2 [internal function]: App\Http\Controllers\Api\v1\UsersController->payToUser()
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(55): call_user_func_array(Array, Array)
+#4 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('payToUser', Array)
+#5 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Api\v1\UsersController), 'payToUser')
+#6 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(160): Illuminate\Routing\Route->runController()
+#7 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(572): Illuminate\Routing\Route->run()
+#8 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#11 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#14 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#17 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#18 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#19 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#20 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#21 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 E:\draftMatch\draftmatch\app\Http\Middleware\HttpsProtocol.php(29): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#25 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\HttpsProtocol->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#39 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#40 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#41 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#42 E:\draftMatch\draftmatch\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#43 E:\draftMatch\draftmatch\server.php(21): require_once('E:\\draftMatch\\d...')
+#44 {main}  
+[2018-06-27 10:22:40] local.ERROR: Exception: This endpoint does not support the `merchant` facade in E:\draftMatch\draftmatch\vendor\bitpay\php-client\src\Bitpay\Client\Client.php:299
+Stack trace:
+#0 E:\draftMatch\draftmatch\app\Helpers\BitPayHelper.php(498): Bitpay\Client\Client->createPayout(Object(Bitpay\Payout))
+#1 E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\UsersController.php(525): App\Helpers\BitPayHelper::payToUser()
+#2 [internal function]: App\Http\Controllers\Api\v1\UsersController->payToUser()
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(55): call_user_func_array(Array, Array)
+#4 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('payToUser', Array)
+#5 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Api\v1\UsersController), 'payToUser')
+#6 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(160): Illuminate\Routing\Route->runController()
+#7 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(572): Illuminate\Routing\Route->run()
+#8 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#11 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#14 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#17 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#18 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#19 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#20 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#21 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 E:\draftMatch\draftmatch\app\Http\Middleware\HttpsProtocol.php(29): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#25 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\HttpsProtocol->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#39 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#40 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#41 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#42 E:\draftMatch\draftmatch\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#43 E:\draftMatch\draftmatch\server.php(21): require_once('E:\\draftMatch\\d...')
+#44 {main}  
+[2018-06-27 12:25:18] local.ERROR: ErrorException: Undefined variable: updatedToken in E:\draftMatch\draftmatch\app\Helpers\BitPayHelper.php:475
+Stack trace:
+#0 E:\draftMatch\draftmatch\app\Helpers\BitPayHelper.php(475): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', 'E:\\draftMatch\\d...', 475, Array)
+#1 E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\UsersController.php(525): App\Helpers\BitPayHelper::payToUser()
+#2 [internal function]: App\Http\Controllers\Api\v1\UsersController->payToUser()
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(55): call_user_func_array(Array, Array)
+#4 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('payToUser', Array)
+#5 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Api\v1\UsersController), 'payToUser')
+#6 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(160): Illuminate\Routing\Route->runController()
+#7 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(572): Illuminate\Routing\Route->run()
+#8 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#11 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#14 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#17 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#18 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#19 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#20 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#21 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 E:\draftMatch\draftmatch\app\Http\Middleware\HttpsProtocol.php(29): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#25 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\HttpsProtocol->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#39 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#40 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#41 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#42 E:\draftMatch\draftmatch\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#43 E:\draftMatch\draftmatch\server.php(21): require_once('E:\\draftMatch\\d...')
+#44 {main}  
+[2018-06-27 12:25:53] local.ERROR: Exception: Invalid token in E:\draftMatch\draftmatch\vendor\bitpay\php-client\src\Bitpay\Client\Client.php:299
+Stack trace:
+#0 E:\draftMatch\draftmatch\app\Helpers\BitPayHelper.php(498): Bitpay\Client\Client->createPayout(Object(Bitpay\Payout))
+#1 E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\UsersController.php(525): App\Helpers\BitPayHelper::payToUser()
+#2 [internal function]: App\Http\Controllers\Api\v1\UsersController->payToUser()
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(55): call_user_func_array(Array, Array)
+#4 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('payToUser', Array)
+#5 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Api\v1\UsersController), 'payToUser')
+#6 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(160): Illuminate\Routing\Route->runController()
+#7 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(572): Illuminate\Routing\Route->run()
+#8 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#11 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#14 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#17 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#18 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#19 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#20 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#21 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 E:\draftMatch\draftmatch\app\Http\Middleware\HttpsProtocol.php(29): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#25 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\HttpsProtocol->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#39 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#40 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#41 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#42 E:\draftMatch\draftmatch\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#43 E:\draftMatch\draftmatch\server.php(21): require_once('E:\\draftMatch\\d...')
+#44 {main}  
+[2018-06-27 12:26:30] local.ERROR: Exception: Token is disabled in E:\draftMatch\draftmatch\vendor\bitpay\php-client\src\Bitpay\Client\Client.php:299
+Stack trace:
+#0 E:\draftMatch\draftmatch\app\Helpers\BitPayHelper.php(498): Bitpay\Client\Client->createPayout(Object(Bitpay\Payout))
+#1 E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\UsersController.php(525): App\Helpers\BitPayHelper::payToUser()
+#2 [internal function]: App\Http\Controllers\Api\v1\UsersController->payToUser()
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(55): call_user_func_array(Array, Array)
+#4 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('payToUser', Array)
+#5 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Api\v1\UsersController), 'payToUser')
+#6 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(160): Illuminate\Routing\Route->runController()
+#7 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(572): Illuminate\Routing\Route->run()
+#8 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#11 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#14 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#17 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#18 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#19 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#20 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#21 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 E:\draftMatch\draftmatch\app\Http\Middleware\HttpsProtocol.php(29): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#25 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\HttpsProtocol->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#39 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#40 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#41 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#42 E:\draftMatch\draftmatch\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#43 E:\draftMatch\draftmatch\server.php(21): require_once('E:\\draftMatch\\d...')
+#44 {main}  
+[2018-06-27 14:17:17] local.INFO: Exception while trying to create invoice Access denied  
+[2018-06-27 14:17:17] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 02747caedf7fe5e656475d3bdacb83c39960ec08196a3a271d43492f9c2b8355eb
+x-signature: 30440220587c210342d73eb674ec819b6b7e4f1a01a831c252e560b6c0ba04d12691c103022011820755abade206286b4de97d208992eaf1a84b821d019beca8fbeffad4f6f0
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1530109033_47","itemDesc":"Adding funds to draftmatch","itemCode":"1530109033_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"d381223c-f746-022f-9647-78797cc87188","nonce":1530109033.303988,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-27 14:17:17] local.INFO: Response =====> HTTP/1.1 500 Internal Server Error
+Date: Wed, 27 Jun 2018 14:17:15 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 25
+Connection: keep-alive
+Set-Cookie: __cfduid=d0a1c4125634cce71f8eab8b1b89cf61a1530109034; expires=Thu, 27-Jun-19 14:17:14 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"19-nRBdNN7VR55ywS/Y/sX+OwqwXgk"
+set-cookie: connect.sid=s%3AfKX3AR74bT9SR9Ta1MZrgdI_4p3Mqgps.mN3uAqV0Bl1lOy16PIGVlDMK2OWFfQ%2BlinjPinel11Q; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 4318893be88570a4-SIN
+
+{"error":"Access denied"}
+
+  
+[2018-06-27 14:17:17] local.INFO: Successfully created invoice for user jingadmin  

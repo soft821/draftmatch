@@ -1,0 +1,980 @@
+[2018-06-24 14:10:04] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-06-24 14:10:14] local.INFO: Adding invoice   
+[2018-06-24 14:10:14] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (2h2zDxQRMPRwKUCDHMdBWT, softman009@outlook.com, 1529849411_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529849411_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-24 14:10:14, 2018-06-24 14:10:14) returning "id")  
+[2018-06-24 14:10:14] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 3046022100c91c6608b6ad02a657688e6ab9905053ea749e47024465519127922e3c521f7a02210095d54b08fdca788718228d420d4aa66abc7ca869ca2b732788ee7f09c76fe596
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529849411_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529849411_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"b83ab719-c378-0a25-6aab-926a0eda3c11","nonce":1529849411.415125,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-24 14:10:14] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Sun, 24 Jun 2018 14:10:14 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1309
+Connection: keep-alive
+Set-Cookie: __cfduid=d04d3101e6b98d47815a175bb2f92ecfc1529849413; expires=Mon, 24-Jun-19 14:10:13 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"51d-e4DoRwW58fHjy+qE6As5Xf8c9j8"
+set-cookie: connect.sid=s%3AM5B3SvhIHq9WZNZZJpjDHcP3Ovu6Alhs.%2FckDC8eCRyfmSztfAGaeoSHe8Bpy8owN%2BCjxDVkrdJY; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42ffc6d4d922946f-NRT
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=2h2zDxQRMPRwKUCDHMdBWT","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529849411_47","invoiceTime":1529849414509,"expirationTime":1529850314509,"currentTime":1529849414527,"guid":"b83ab719-c378-0a25-6aab-926a0eda3c11","id":"2h2zDxQRMPRwKUCDHMdBWT","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":852500},"paymentTotals":{"BTC":1495200,"BCH":855500},"exchangeRates":{"BTC":{"USD":5939.09,"BCH":8.524601693698866},"BCH":{"BTC":0.11700296041725224,"USD":695.2000000000002}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.14,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/2h2zDxQRMPRwKUCDHMdBWT","BIP73":"https://test.bitpay.com/i/2h2zDxQRMPRwKUCDHMdBWT"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/2h2zDxQRMPRwKUCDHMdBWT","BIP73":"https://test.bitpay.com/i/2h2zDxQRMPRwKUCDHMdBWT"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPjgQHz93TzdVoMGDaCYtWWvDC4pn7eNfAarGBkpQ6CyHh"}}
+
+  
+[2018-06-24 14:10:14] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 14:10:26] local.INFO: Token Signature could not be verified.  
+[2018-06-24 14:10:39] local.INFO: Adding invoice   
+[2018-06-24 14:10:39] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (5pTJaj4NuXAa8qRGzGDbBR, softman009@outlook.com, 1529849435_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529849435_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-24 14:10:39, 2018-06-24 14:10:39) returning "id")  
+[2018-06-24 14:10:39] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 30440220529a511cce83d734827ea3e6b762c8cd198e4fff68d79d83ae603d8d00e38e64022059b92a8d9cb2413cf38bd6a6a62e215dd8e3f788ff70baba57f97ebf3d733e79
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529849435_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529849435_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"5c13f295-3065-1939-2821-886fa0d089a7","nonce":1529849435.861037,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-24 14:10:39] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Sun, 24 Jun 2018 14:10:38 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1309
+Connection: keep-alive
+Set-Cookie: __cfduid=d62afd2b5ab042938ea78af86a931c8211529849438; expires=Mon, 24-Jun-19 14:10:38 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"51d-JsBhRopAYkCzJijOAXsuUTYIiD0"
+set-cookie: connect.sid=s%3AUOQq49cIV3PeaSchGHQwLyTlKS1kSAk4.5uTl9LkcBufJfqqr9a%2Fyn8e4FZrcQjruY7fHzP4%2FF74; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42ffc76d2dce943f-NRT
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=5pTJaj4NuXAa8qRGzGDbBR","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529849435_47","invoiceTime":1529849438830,"expirationTime":1529850338830,"currentTime":1529849438847,"guid":"5c13f295-3065-1939-2821-886fa0d089a7","id":"5pTJaj4NuXAa8qRGzGDbBR","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":852500},"paymentTotals":{"BTC":1495200,"BCH":855500},"exchangeRates":{"BTC":{"USD":5939.09,"BCH":8.524601693698866},"BCH":{"BTC":0.11700296041725224,"USD":695.2000000000002}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.14,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/5pTJaj4NuXAa8qRGzGDbBR","BIP73":"https://test.bitpay.com/i/5pTJaj4NuXAa8qRGzGDbBR"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/5pTJaj4NuXAa8qRGzGDbBR","BIP73":"https://test.bitpay.com/i/5pTJaj4NuXAa8qRGzGDbBR"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPXn6VH1Yoa4hkHZC3DVNnusDzSR3xH6QQuP4hppjoY66M"}}
+
+  
+[2018-06-24 14:10:39] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 14:12:39] local.INFO: Exception while trying to create invoice Operation timed out after 10000 milliseconds with 0 out of 0 bytes received  
+[2018-06-24 14:12:39] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 695
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 3045022100b6719419d6c81dcf80707518267e8d9cf134ebd1081ea6abf6c8d0486c047bd5022048f2fd6eea76de9a5e92bd821a34f48882dd7679273f9db789a60e967a413834
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529849547_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529849547_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"e417d0d4-7e16-89b4-b2a0-20b2358fe964","nonce":1529849547.716532,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2htrey"}
+
+
+  
+[2018-06-24 14:12:39] local.INFO: Response =====> 
+
+  
+[2018-06-24 14:12:39] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 14:14:10] local.INFO: Adding invoice   
+[2018-06-24 14:14:10] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (5B2TxHnXDwAq5jvDeju4X9, softman009@outlook.com, 1529849646_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529849646_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-24 14:14:10, 2018-06-24 14:14:10) returning "id")  
+[2018-06-24 14:14:10] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 304502204a1127a3c0bb98fb877fb01446a35c8ddd91f51007feae852ea8be06492a1456022100e69f2e98620708ff9e4983b8d4bec7bcc66b3d9131313ca18741b371e9a82085
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529849646_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529849646_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"090f202e-5929-4a47-1384-c12a3bfe5d91","nonce":1529849646.821368,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-24 14:14:10] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Sun, 24 Jun 2018 14:14:09 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1309
+Connection: keep-alive
+Set-Cookie: __cfduid=d9e1236d2de2e70a5b0089e7113dcc8a71529849649; expires=Mon, 24-Jun-19 14:14:09 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"51d-2Q+Cm/23SJac8dNiwhjoc89cZE8"
+set-cookie: connect.sid=s%3AtuvijmjnwzLNVNnIYIiQlhhNkq-i5C8Z.TlCf2przXjMalZL8VviU0OgJg85i7TN94fdyjUtV7cE; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42ffcc936f6a944b-NRT
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=5B2TxHnXDwAq5jvDeju4X9","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529849646_47","invoiceTime":1529849649741,"expirationTime":1529850549741,"currentTime":1529849649762,"guid":"090f202e-5929-4a47-1384-c12a3bfe5d91","id":"5B2TxHnXDwAq5jvDeju4X9","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":853700},"paymentTotals":{"BTC":1495200,"BCH":856700},"exchangeRates":{"BTC":{"USD":5945.12,"BCH":8.536932797242963},"BCH":{"BTC":0.11684100646987534,"USD":695.1000000000001}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.14,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/5B2TxHnXDwAq5jvDeju4X9","BIP73":"https://test.bitpay.com/i/5B2TxHnXDwAq5jvDeju4X9"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/5B2TxHnXDwAq5jvDeju4X9","BIP73":"https://test.bitpay.com/i/5B2TxHnXDwAq5jvDeju4X9"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPg6ZfprXnVKK2ij4CkHRWVNtmiEhD969dHRAHUwzvRAL6"}}
+
+  
+[2018-06-24 14:14:10] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 14:14:54] local.INFO: Adding invoice   
+[2018-06-24 14:14:54] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (XWFnTRjmHhueS5t191L3Bp, softman009@outlook.com, 1529849691_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529849691_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-24 14:14:54, 2018-06-24 14:14:54) returning "id")  
+[2018-06-24 14:14:54] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 3045022100a3a7892894b99a05ab23109a4fad5ee691ceb6b83161009ff60770f876afd36f0220288db92f232785ba51a183439d4e6e40ac2eb1ca9e2cf92b01676425323f9124
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529849691_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529849691_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"5a9b9c0d-95e0-e4ca-7dfe-738e63cabe0e","nonce":1529849691.139412,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-24 14:14:54] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Sun, 24 Jun 2018 14:14:54 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1309
+Connection: keep-alive
+Set-Cookie: __cfduid=dd8faab6192657cd247e4d583a549f1ac1529849693; expires=Mon, 24-Jun-19 14:14:53 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"51d-RlI62jDesJmfpBJQuPXBLMHvSio"
+set-cookie: connect.sid=s%3Ai5TZwKkkBRWl53r2Sy9hiSjOj8Gg_Zp3.TX2GQSD%2B%2Ff28SLNqcv0X8NdUQcD6%2B70jHJ38wJ5Iztc; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42ffcda83d2a947b-NRT
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=XWFnTRjmHhueS5t191L3Bp","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529849691_47","invoiceTime":1529849694046,"expirationTime":1529850594046,"currentTime":1529849694061,"guid":"5a9b9c0d-95e0-e4ca-7dfe-738e63cabe0e","id":"XWFnTRjmHhueS5t191L3Bp","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":853700},"paymentTotals":{"BTC":1495200,"BCH":856700},"exchangeRates":{"BTC":{"USD":5945.12,"BCH":8.536932797242963},"BCH":{"BTC":0.11684100646987534,"USD":695.1000000000001}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.14,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/XWFnTRjmHhueS5t191L3Bp","BIP73":"https://test.bitpay.com/i/XWFnTRjmHhueS5t191L3Bp"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/XWFnTRjmHhueS5t191L3Bp","BIP73":"https://test.bitpay.com/i/XWFnTRjmHhueS5t191L3Bp"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPa8pAjcm3AUpktJo55vFCuRKjW2VizNrEut93Y8rioU6a"}}
+
+  
+[2018-06-24 14:14:54] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 16:53:08] local.INFO: Adding invoice   
+[2018-06-24 16:53:08] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (FpWfE5vgi3RZDqrFG4L1J2, softman009@outlook.com, 1529859183_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529859183_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-24 16:53:08, 2018-06-24 16:53:08) returning "id")  
+[2018-06-24 16:53:08] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 690
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 304502204f352b47ea02dfd6b1285d94f4063371b6e3d9034725dac940dde666765f673d022100e1761cf9b270435cf44b4850c84ac4c2c096b01d97738af7b91a19d54f9449ad
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529859183_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529859183_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"fcc0bc01-21d2-1568-6379-04601212e6dc","nonce":1529859183.79913,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-24 16:53:08] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Sun, 24 Jun 2018 16:53:07 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1297
+Connection: keep-alive
+Set-Cookie: __cfduid=d9d456048852a48e19060b75a6a114d541529859186; expires=Mon, 24-Jun-19 16:53:06 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"511-I1n7BDmlwRdqNuPQfECfy0njbyE"
+set-cookie: connect.sid=s%3AZxFBZAfBy5Vz1G6kFG626r8g5UeT_yUz.JeestY6zl7zEDn6w8LWQlq4IG6yJxe0V0wRsULpI8Q0; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 4300b56dba7ca93c-SIN
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=FpWfE5vgi3RZDqrFG4L1J2","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529859183_47","invoiceTime":1529859187596,"expirationTime":1529860087596,"currentTime":1529859187614,"guid":"fcc0bc01-21d2-1568-6379-04601212e6dc","id":"FpWfE5vgi3RZDqrFG4L1J2","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":822900},"paymentTotals":{"BTC":1495200,"BCH":825900},"exchangeRates":{"BTC":{"USD":6155.24,"BCH":8.228930481283422},"BCH":{"BTC":0.12124693515593181,"USD":747.2}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.14,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/FpWfE5vgi3RZDqrFG4L1J2","BIP73":"https://test.bitpay.com/i/FpWfE5vgi3RZDqrFG4L1J2"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/FpWfE5vgi3RZDqrFG4L1J2","BIP73":"https://test.bitpay.com/i/FpWfE5vgi3RZDqrFG4L1J2"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPhPfebRpMdrqRzwjgBnECbr1vES2tw1yM3pf88TUcwWJQ"}}
+
+  
+[2018-06-24 16:53:08] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 16:53:36] local.INFO: Adding invoice   
+[2018-06-24 16:53:36] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (GbT2TaD5zXKTV1BQ9a92Tt, softman009@outlook.com, 1529859212_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529859212_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-24 16:53:36, 2018-06-24 16:53:36) returning "id")  
+[2018-06-24 16:53:36] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 30450220249d226c364c4f1b504b5abe90c9c884919bb74d3f2f3676ffc5e5b4975320920221008fadae24519def7cb50f254ebda5b89f5ff11f69ed86f160c3955df5fecddf60
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529859212_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529859212_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"e50c3f4d-7649-aedc-fa49-0b6434d716c8","nonce":1529859212.502579,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-24 16:53:36] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Sun, 24 Jun 2018 16:53:36 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1297
+Connection: keep-alive
+Set-Cookie: __cfduid=d1cca6c76b67c921bcc553b42ce767e791529859215; expires=Mon, 24-Jun-19 16:53:35 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"511-m3MdtpEuvsWcPpXUmwKZhl0DI2A"
+set-cookie: connect.sid=s%3AWWtCX6ZyYN_HHFG8fZQThbWrm7yZdOpj.EB4LuwmZkesEm3kFpwbcE8BQPD5vl4HGQOVJuKd4UFQ; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 4300b61e6e9e3192-SIN
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=GbT2TaD5zXKTV1BQ9a92Tt","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529859212_47","invoiceTime":1529859215884,"expirationTime":1529860115884,"currentTime":1529859215903,"guid":"e50c3f4d-7649-aedc-fa49-0b6434d716c8","id":"GbT2TaD5zXKTV1BQ9a92Tt","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":822900},"paymentTotals":{"BTC":1495200,"BCH":825900},"exchangeRates":{"BTC":{"USD":6155.24,"BCH":8.228930481283422},"BCH":{"BTC":0.12124693515593181,"USD":747.2}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.14,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/GbT2TaD5zXKTV1BQ9a92Tt","BIP73":"https://test.bitpay.com/i/GbT2TaD5zXKTV1BQ9a92Tt"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/GbT2TaD5zXKTV1BQ9a92Tt","BIP73":"https://test.bitpay.com/i/GbT2TaD5zXKTV1BQ9a92Tt"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPeKsUbnDMscjnotETCTBaFDQmVD8Z181hi6J9y2guSsEN"}}
+
+  
+[2018-06-24 16:53:36] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 16:54:08] local.INFO: Adding invoice   
+[2018-06-24 16:54:08] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (92rrei5F6nGVPqKTM7TjsZ, softman009@outlook.com, 1529859243_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529859243_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-24 16:54:08, 2018-06-24 16:54:08) returning "id")  
+[2018-06-24 16:54:08] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 304402201eb2037ec54e6c50b51217e8b18937f09c09fce0ea76140a2132ec67c66582f402202a465b563ef93158a9540f2e2aa6375a59dbcac62c7a245df54da1e34d0ed7e4
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529859243_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529859243_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"9eca2669-efce-e301-ed0c-1651dc265d22","nonce":1529859243.941546,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-24 16:54:08] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Sun, 24 Jun 2018 16:54:07 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1318
+Connection: keep-alive
+Set-Cookie: __cfduid=df71a72f3d968dcfde78e28b1b5f491301529859246; expires=Mon, 24-Jun-19 16:54:06 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"526-78k1UeFe0nVg438pGsnWZdEb3x0"
+set-cookie: connect.sid=s%3Adu9gIYt6jj_sk-Y5wuTeHBV51RvQR7bX.cKH4lAt5uUQMR5Z%2BkUFNPwvIO6kXH80aw5l15xS7ilM; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 4300b6e2893a30a2-SIN
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=92rrei5F6nGVPqKTM7TjsZ","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529859243_47","invoiceTime":1529859247532,"expirationTime":1529860147532,"currentTime":1529859247553,"guid":"9eca2669-efce-e301-ed0c-1651dc265d22","id":"92rrei5F6nGVPqKTM7TjsZ","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":823500},"paymentTotals":{"BTC":1495200,"BCH":826500},"exchangeRates":{"BTC":{"USD":6146.679999999999,"BCH":8.235101822079313},"BCH":{"BTC":0.1209260427574455,"USD":743.7000000000002}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.14,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/92rrei5F6nGVPqKTM7TjsZ","BIP73":"https://test.bitpay.com/i/92rrei5F6nGVPqKTM7TjsZ"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/92rrei5F6nGVPqKTM7TjsZ","BIP73":"https://test.bitpay.com/i/92rrei5F6nGVPqKTM7TjsZ"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPogHsfGpWuDVqXqqm4a9Yu7pRzk96bKH4iqmS3XKX6b7b"}}
+
+  
+[2018-06-24 16:54:08] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 16:54:49] local.INFO: Adding invoice   
+[2018-06-24 16:54:49] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (vWMEapLJA1AaUsRc2sGwg, softman009@outlook.com, 1529859285_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529859285_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-24 16:54:49, 2018-06-24 16:54:49) returning "id")  
+[2018-06-24 16:54:49] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 3046022100a0b27800bd00a5de1b189516d1949f6aa8b567cb162fe0951615162176567297022100c03affa55fe5ceeef0845c2f9938f0d2500a18cde73fec1cfd976abd85b7d9e2
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529859285_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529859285_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"9b811c8c-f2f0-1e8f-1518-2cfa78d973a5","nonce":1529859285.120999,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-24 16:54:49] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Sun, 24 Jun 2018 16:54:48 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1312
+Connection: keep-alive
+Set-Cookie: __cfduid=ded70828777ebd6e5fe285322a922b2bb1529859287; expires=Mon, 24-Jun-19 16:54:47 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"520-/jHhf6TObWOWyPtCAwOsDq+DkgQ"
+set-cookie: connect.sid=s%3A6f1-Xd6al_U3rYut8l5JP_tez2SVAUOv.Ylc3ZefmDf%2FB9Rh0mcnSlyYtN%2FS7KCffEOZ9vdsiaYs; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 4300b7e3ec85a966-SIN
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=vWMEapLJA1AaUsRc2sGwg","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529859285_47","invoiceTime":1529859288458,"expirationTime":1529860188458,"currentTime":1529859288475,"guid":"9b811c8c-f2f0-1e8f-1518-2cfa78d973a5","id":"vWMEapLJA1AaUsRc2sGwg","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":823500},"paymentTotals":{"BTC":1495200,"BCH":826500},"exchangeRates":{"BTC":{"USD":6146.679999999999,"BCH":8.235101822079313},"BCH":{"BTC":0.1209260427574455,"USD":743.7000000000002}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.14,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/vWMEapLJA1AaUsRc2sGwg","BIP73":"https://test.bitpay.com/i/vWMEapLJA1AaUsRc2sGwg"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/vWMEapLJA1AaUsRc2sGwg","BIP73":"https://test.bitpay.com/i/vWMEapLJA1AaUsRc2sGwg"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPZ1jbRZgrjoM6xWVvQ3qXfTzaid1JJMv3RxLYXGtKGwon"}}
+
+  
+[2018-06-24 16:54:49] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 16:55:29] local.INFO: Adding invoice   
+[2018-06-24 16:55:29] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (x75vU5oFRspakt66p95fG, softman009@outlook.com, 1529859325_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529859325_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-24 16:55:29, 2018-06-24 16:55:29) returning "id")  
+[2018-06-24 16:55:29] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 3045022072d9ebd30df74d0806b000a959e1f5e1f9fac4d05de4d2c22bec73656390bb43022100c26ecc6a7415b39f987305f6e9e5058e302d3064caff9636477c692bb6bdb1b9
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529859325_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529859325_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"5e6a990d-f22c-dea2-91e8-ce7289a1a583","nonce":1529859325.966343,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-24 16:55:29] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Sun, 24 Jun 2018 16:55:29 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1291
+Connection: keep-alive
+Set-Cookie: __cfduid=dd0b222e27544c99cbbb3e6acbadb747c1529859328; expires=Mon, 24-Jun-19 16:55:28 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"50b-7AFysAiSScQbL/hqSYqyEReTmEs"
+set-cookie: connect.sid=s%3AAJlUjoeo0pjxzAz57XBEX0T87Tzmjpa_.8rpLzPSorFHvu9YQwdBUn0dFUQdBK0%2BzlEWeccVfeVI; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 4300b8e30a4430a2-SIN
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=x75vU5oFRspakt66p95fG","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529859325_47","invoiceTime":1529859329248,"expirationTime":1529860229248,"currentTime":1529859329263,"guid":"5e6a990d-f22c-dea2-91e8-ce7289a1a583","id":"x75vU5oFRspakt66p95fG","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":826000},"paymentTotals":{"BTC":1495200,"BCH":829000},"exchangeRates":{"BTC":{"USD":6170.04,"BCH":8.259759036144578},"BCH":{"BTC":0.12091704471808165,"USD":746.3}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.14,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/x75vU5oFRspakt66p95fG","BIP73":"https://test.bitpay.com/i/x75vU5oFRspakt66p95fG"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/x75vU5oFRspakt66p95fG","BIP73":"https://test.bitpay.com/i/x75vU5oFRspakt66p95fG"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPaqGeGKbhLTPqWVUc38FAfUtZiUNZMaJ2Un5JyCpPunU7"}}
+
+  
+[2018-06-24 16:55:29] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 16:55:59] local.INFO: Adding invoice   
+[2018-06-24 16:55:59] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (TiEotMH4JF7MmACnma4fQX, softman009@outlook.com, 1529859354_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529859354_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-24 16:55:59, 2018-06-24 16:55:59) returning "id")  
+[2018-06-24 16:55:59] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 30450220288778e473c019b130ce4a5fdd79881a90c04871b9566d23f9917ae74da75941022100a2f885976ee0521a7459302ca184fa906e58efaa84c494ae580403dca55a93e4
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529859354_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529859354_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"3c50dec0-0d00-c64e-031d-1fd2b7fba788","nonce":1529859354.931983,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-24 16:55:59] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Sun, 24 Jun 2018 16:55:58 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1297
+Connection: keep-alive
+Set-Cookie: __cfduid=dc2f7b86333eaa11dd0698bce42096dc61529859357; expires=Mon, 24-Jun-19 16:55:57 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"511-s01PWxHWoD8hoYytNGUkFBaQX30"
+set-cookie: connect.sid=s%3AM7hccVzTlz9ygffbN8Zd9QHVUeeflfzN.kZkYLQNSVTgXWkwnxxqB3RnCz9CCleqKJpgTX0Dekk8; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 4300b9987e72aaaa-SIN
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=TiEotMH4JF7MmACnma4fQX","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529859354_47","invoiceTime":1529859358355,"expirationTime":1529860258355,"currentTime":1529859358375,"guid":"3c50dec0-0d00-c64e-031d-1fd2b7fba788","id":"TiEotMH4JF7MmACnma4fQX","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":826000},"paymentTotals":{"BTC":1495200,"BCH":829000},"exchangeRates":{"BTC":{"USD":6170.04,"BCH":8.259759036144578},"BCH":{"BTC":0.12091704471808165,"USD":746.3}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.14,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/TiEotMH4JF7MmACnma4fQX","BIP73":"https://test.bitpay.com/i/TiEotMH4JF7MmACnma4fQX"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/TiEotMH4JF7MmACnma4fQX","BIP73":"https://test.bitpay.com/i/TiEotMH4JF7MmACnma4fQX"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPfdjVc218bHVdGcbzs1KHFKyU8iS9LXT1dy4XvwV7XEpw"}}
+
+  
+[2018-06-24 16:55:59] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 17:38:07] local.INFO: Adding invoice   
+[2018-06-24 17:38:07] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (QwA3CZ1EoiWP9c3WcN9TDs, softman009@outlook.com, 1529861883_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529861883_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-24 17:38:07, 2018-06-24 17:38:07) returning "id")  
+[2018-06-24 17:38:07] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 30460221008a57a85d4df799da72f5ece702fb3cef4d56b71c6fbec050a54928aa28156f8d022100b14bd4814e861510df89e562369d43dbb49d717c6cd73e953b2f2bbafc7738d1
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529861883_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529861883_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"eb5245d1-784f-0c5e-1469-e4a00b574594","nonce":1529861883.288946,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-24 17:38:07] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Sun, 24 Jun 2018 17:38:06 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1297
+Connection: keep-alive
+Set-Cookie: __cfduid=de985bf4a1b573333ebf4557f81a8788d1529861885; expires=Mon, 24-Jun-19 17:38:05 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"511-Ic3CJU6OMjFYjQrU3UM/cZO6PwU"
+set-cookie: connect.sid=s%3ApQUUMjSBMLAq6-oeRhd71UgoXPoOxT3-.xYnvtZTxd%2F8TFhi9VrMoLley68tDGPoF1v9%2FclmHrZ0; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 4300f752ddbdaa98-SIN
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=QwA3CZ1EoiWP9c3WcN9TDs","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529861883_47","invoiceTime":1529861886717,"expirationTime":1529862786717,"currentTime":1529861886732,"guid":"eb5245d1-784f-0c5e-1469-e4a00b574594","id":"QwA3CZ1EoiWP9c3WcN9TDs","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":813000},"paymentTotals":{"BTC":1495200,"BCH":816000},"exchangeRates":{"BTC":{"USD":6206.42,"BCH":8.129971181556195},"BCH":{"BTC":0.12261073387622938,"USD":761.1}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.14,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/QwA3CZ1EoiWP9c3WcN9TDs","BIP73":"https://test.bitpay.com/i/QwA3CZ1EoiWP9c3WcN9TDs"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/QwA3CZ1EoiWP9c3WcN9TDs","BIP73":"https://test.bitpay.com/i/QwA3CZ1EoiWP9c3WcN9TDs"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPkbPLncKkwmmS7DFGLEiBRH2L4knNr1UGRo6Y7JWQ5VtQ"}}
+
+  
+[2018-06-24 17:38:07] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 17:38:42] local.INFO: Adding invoice   
+[2018-06-24 17:38:42] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (Mokxr53DS7ew1GDD8FeKq2, softman009@outlook.com, 1529861918_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529861918_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-24 17:38:42, 2018-06-24 17:38:42) returning "id")  
+[2018-06-24 17:38:42] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 30450220187a6f75e5c604ebb91cb6aa82be0b563f8cb3cfd21825b5c9b2c61f47d73935022100cc44ab27690a5194fd9700036ef1c9a8611dcd09b882dae847bb2a01c4f9cce2
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529861918_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529861918_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"57aa0b21-9b61-c48d-2f5f-9444246166e8","nonce":1529861918.234637,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-24 17:38:42] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Sun, 24 Jun 2018 17:38:41 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1297
+Connection: keep-alive
+Set-Cookie: __cfduid=d10a92a2621f6fe6a047c2337ce311cbf1529861920; expires=Mon, 24-Jun-19 17:38:40 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"511-C6QJRxGaltFe5/fCHk9LJk2jcRM"
+set-cookie: connect.sid=s%3AJ7doaSQ1Z8-OnrBIoXyzo5oBsGkX7cSH.uR%2B8GudE3CyLPPOrHwKYtfEEjbI0mZx9YygEIwVw1HM; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 4300f82c1e58aa92-SIN
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=Mokxr53DS7ew1GDD8FeKq2","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529861918_47","invoiceTime":1529861921403,"expirationTime":1529862821403,"currentTime":1529861921419,"guid":"57aa0b21-9b61-c48d-2f5f-9444246166e8","id":"Mokxr53DS7ew1GDD8FeKq2","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":813000},"paymentTotals":{"BTC":1495200,"BCH":816000},"exchangeRates":{"BTC":{"USD":6206.42,"BCH":8.129971181556195},"BCH":{"BTC":0.12261073387622938,"USD":761.1}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.14,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/Mokxr53DS7ew1GDD8FeKq2","BIP73":"https://test.bitpay.com/i/Mokxr53DS7ew1GDD8FeKq2"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/Mokxr53DS7ew1GDD8FeKq2","BIP73":"https://test.bitpay.com/i/Mokxr53DS7ew1GDD8FeKq2"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPXYKa3YieAZnZ8yBZCpodbjmjAztEZ1vK37ZF6iAxRoJU"}}
+
+  
+[2018-06-24 17:38:42] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 17:57:47] local.INFO: Adding invoice   
+[2018-06-24 17:57:47] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (296x8zKd8kYwc2ot4Cmb7w, softman009@outlook.com, 1529863063_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529863063_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-24 17:57:47, 2018-06-24 17:57:47) returning "id")  
+[2018-06-24 17:57:47] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 304402200d4ac57993527d0d3fe927e57badd79b505749c74da3a7982948b17ff700d56c02207e69027858862d9e7bcc12c5009300794b5ee8a6b1f5b55f8d99e5b632640b52
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529863063_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529863063_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"b9589329-cf23-0e40-cf32-b85dcd788d61","nonce":1529863063.737316,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-24 17:57:47] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Sun, 24 Jun 2018 17:57:47 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1307
+Connection: keep-alive
+Set-Cookie: __cfduid=d859eaf15d67ae3b392d64f5de1a643051529863066; expires=Mon, 24-Jun-19 17:57:46 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"51b-n3tShSnqZYN0CRB5i65jh6vPP28"
+set-cookie: connect.sid=s%3AsIY90G-eBK4Gn8t9EI-IulIgw0xc-BBk.OygcUq2R87rgxX9B99aJiaNk0Qb8BUu4BGOvOE49umo; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 43011424ac11a966-SIN
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=296x8zKd8kYwc2ot4Cmb7w","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529863063_47","invoiceTime":1529863067140,"expirationTime":1529863967140,"currentTime":1529863067156,"guid":"b9589329-cf23-0e40-cf32-b85dcd788d61","id":"296x8zKd8kYwc2ot4Cmb7w","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":818000},"paymentTotals":{"BTC":1495200,"BCH":821000},"exchangeRates":{"BTC":{"USD":6192.409999999999,"BCH":8.180198150594451},"BCH":{"BTC":0.12187116430832955,"USD":755.6}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.14,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/296x8zKd8kYwc2ot4Cmb7w","BIP73":"https://test.bitpay.com/i/296x8zKd8kYwc2ot4Cmb7w"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/296x8zKd8kYwc2ot4Cmb7w","BIP73":"https://test.bitpay.com/i/296x8zKd8kYwc2ot4Cmb7w"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPaXbttt1NzoaPPqG7knBbiWAw1zzsmt8TqMZkJQb2zBCF"}}
+
+  
+[2018-06-24 17:57:47] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 18:04:54] local.INFO: Adding invoice   
+[2018-06-24 18:04:54] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (knyANAEXwP1TgBWBBi8AN, softman009@outlook.com, 1529863490_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529863490_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-24 18:04:54, 2018-06-24 18:04:54) returning "id")  
+[2018-06-24 18:04:54] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 304502200f220df85f5951e0282c84e9665edf13ec1c04eff7cfe5426414295e8c4dd3db022100b9b0b92428f27b3d64be83d57ee0b641b23b100567de755add0e0cc900c253cb
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529863490_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529863490_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"c3cd9fec-101d-cefa-443b-b53792d17b46","nonce":1529863490.618656,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-24 18:04:54] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Sun, 24 Jun 2018 18:04:54 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1301
+Connection: keep-alive
+Set-Cookie: __cfduid=decd6fbaffe1c01d3f33e6ecd8575fd061529863493; expires=Mon, 24-Jun-19 18:04:53 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"515-NWgNnJMqDnX5C1VZVDOmsEJQcz8"
+set-cookie: connect.sid=s%3ATFK6r4DEQAtxkh5hjYkX9EicMm4GTZji.2hzvAXRj82Voj51Mq%2Fw0A3Ja8ke00r6ld3QhdB5JPz0; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 43011e9139e830ea-SIN
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=knyANAEXwP1TgBWBBi8AN","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529863490_47","invoiceTime":1529863494120,"expirationTime":1529864394120,"currentTime":1529863494139,"guid":"c3cd9fec-101d-cefa-443b-b53792d17b46","id":"knyANAEXwP1TgBWBBi8AN","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":823300},"paymentTotals":{"BTC":1495200,"BCH":826300},"exchangeRates":{"BTC":{"USD":6177.449999999999,"BCH":8.233306677329068},"BCH":{"BTC":0.12122556145127507,"USD":748.9}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.14,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/knyANAEXwP1TgBWBBi8AN","BIP73":"https://test.bitpay.com/i/knyANAEXwP1TgBWBBi8AN"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/knyANAEXwP1TgBWBBi8AN","BIP73":"https://test.bitpay.com/i/knyANAEXwP1TgBWBBi8AN"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPnViuVMrLV4f54173Acf7AQnRnVwWbvGSuYHUFd415xdB"}}
+
+  
+[2018-06-24 18:04:54] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 18:06:36] local.INFO: Exception while trying to create invoice Invalid token  
+[2018-06-24 18:06:36] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 693
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 304502201ac4980f59e51fd87d5a0555ec2298b8f4b2d8d0d104a255256dd3f7d8e8372d022100da2338ad2949e81aa04581bfaf90c15222ba529aaaa32993cb4415fdf006c0f1
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529863592_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529863592_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"9f12b6db-7e3c-d9fb-1eb8-248d0727e00e","nonce":1529863592.166568,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2hee"}
+
+
+  
+[2018-06-24 18:06:36] local.INFO: Response =====> HTTP/1.1 500 Internal Server Error
+Date: Sun, 24 Jun 2018 18:06:35 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 25
+Connection: keep-alive
+Set-Cookie: __cfduid=d5e24d3510a8730ffdced9cfc51397a101529863594; expires=Mon, 24-Jun-19 18:06:34 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"19-1luTU257I9tvKUXOJotGBQDVDqk"
+set-cookie: connect.sid=s%3A7kVnH8vxvrUN0_WHS_DpxGLCsqmAYdud.xoLx4sT7PEL4gjOp%2Bt36UfxwPdFWKxLHVdfuu0SC5tw; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 43012109bef83210-SIN
+
+{"error":"Invalid token"}
+
+  
+[2018-06-24 18:06:36] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 18:09:40] local.INFO: Exception while trying to create invoice Invalid token  
+[2018-06-24 18:09:40] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 692
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 304502205700023244b1fba93e0808cd4e26d92639041d60bf41abcc237ea05ca944b659022100e549ca7c84b7e339003d4eb569364c67f74b2bb1d27cc673e9c10bf281c8aa51
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529863776_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529863776_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"18933b1e-9706-4e55-5b98-dbab9c448039","nonce":1529863776.938346,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2he"}
+
+
+  
+[2018-06-24 18:09:40] local.INFO: Response =====> HTTP/1.1 500 Internal Server Error
+Date: Sun, 24 Jun 2018 18:09:40 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 25
+Connection: keep-alive
+Set-Cookie: __cfduid=d2d1a87ad0ed9edc909f96feec34576e21529863779; expires=Mon, 24-Jun-19 18:09:39 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"19-1luTU257I9tvKUXOJotGBQDVDqk"
+set-cookie: connect.sid=s%3Ajiotvz8T3eA3yhKo907y0pl3GndKw0Ar.OTAk%2FONgSCdAF9D3QXh7C%2FlBjyg2ghNm95jGM%2Bqhl40; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 4301258c7a0eaa08-SIN
+
+{"error":"Invalid token"}
+
+  
+[2018-06-24 18:09:40] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 18:10:29] local.INFO: Exception while trying to create invoice Invalid token  
+[2018-06-24 18:10:29] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 693
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 3045022100db83ce77951e6430d882bce3fdc8aa51df5810b48f8a8690b1ea494b266d853802204fa2884aa128dd985847c5249791d8b6336a70f19f0a518bcb621d9868ce553f
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529863825_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529863825_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"f249a6e7-81c6-18d5-848e-08454af07385","nonce":1529863825.296638,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2hee"}
+
+
+  
+[2018-06-24 18:10:29] local.INFO: Response =====> HTTP/1.1 500 Internal Server Error
+Date: Sun, 24 Jun 2018 18:10:28 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 25
+Connection: keep-alive
+Set-Cookie: __cfduid=df41956f4c6d3602d0bbcac500e5908041529863827; expires=Mon, 24-Jun-19 18:10:27 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"19-1luTU257I9tvKUXOJotGBQDVDqk"
+set-cookie: connect.sid=s%3AcbGtwJaduflA5gg3gqJSGGY_W27bkYko.CVt3Guw5NKXxZAsFqIBG%2F6wvfxGcA9bpo71JKP0boUM; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 430126bc5ec8a918-SIN
+
+{"error":"Invalid token"}
+
+  
+[2018-06-24 18:10:29] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 18:11:00] local.INFO: Adding invoice   
+[2018-06-24 18:11:00] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (RFAfNjRtn5iXBwPoHJwRiF, softman009@outlook.com, 1529863856_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529863856_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-24 18:11:00, 2018-06-24 18:11:00) returning "id")  
+[2018-06-24 18:11:00] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 3045022100daa52f2ffc22cd81d82795ffcd606103acc2a9fcd8c1f3d495ecf2e4bd2db44b022067e410ab6950b91cd78173072bbf5fb8c14ad5ad7e272ce350848bc9d6db00db
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529863856_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529863856_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"5fc79ede-6c6e-3856-baa7-9a5e87a9b23e","nonce":1529863856.319998,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-24 18:11:00] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Sun, 24 Jun 2018 18:10:59 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1307
+Connection: keep-alive
+Set-Cookie: __cfduid=d22fe7b0e1c1eda6463915fd2af086ef91529863858; expires=Mon, 24-Jun-19 18:10:58 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"51b-36MOeQbGys7Jzxqy/adf7ksg+H4"
+set-cookie: connect.sid=s%3AO_nSyb07gledQzteAdC5VC5jNNpuZ7cQ.xB2hLk9rNkTGrYA9NUZQKE43ZIjSB4oZE3foix9cLnI; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 4301277c8d18a9b4-SIN
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=RFAfNjRtn5iXBwPoHJwRiF","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529863856_47","invoiceTime":1529863859444,"expirationTime":1529864759444,"currentTime":1529863859464,"guid":"5fc79ede-6c6e-3856-baa7-9a5e87a9b23e","id":"RFAfNjRtn5iXBwPoHJwRiF","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":823000},"paymentTotals":{"BTC":1495200,"BCH":826000},"exchangeRates":{"BTC":{"USD":6178.149999999999,"BCH":8.229852138004528},"BCH":{"BTC":0.12101793445050486,"USD":748.6}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.14,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/RFAfNjRtn5iXBwPoHJwRiF","BIP73":"https://test.bitpay.com/i/RFAfNjRtn5iXBwPoHJwRiF"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/RFAfNjRtn5iXBwPoHJwRiF","BIP73":"https://test.bitpay.com/i/RFAfNjRtn5iXBwPoHJwRiF"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPgFCrPzvUVfn7VLE7Q8CJPtY6vMM9YMu2c1ZbvMiBKaR2"}}
+
+  
+[2018-06-24 18:11:00] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 18:11:52] local.INFO: Exception while trying to create invoice Invalid token  
+[2018-06-24 18:11:52] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 690
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 3046022100eb043dbb942f5a75c0d5a13e462eb2593950897b3ef7243f4a6b0ae1a072b143022100cca5a13cbe13f45e236b92d06bfd460955223d1ddcd47a29c489fadc7461bd00
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529863908_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529863908_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"3a58b2f8-d08c-17c4-fdb5-2319d2e47c36","nonce":1529863908.600637,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2"}
+
+
+  
+[2018-06-24 18:11:52] local.INFO: Response =====> HTTP/1.1 500 Internal Server Error
+Date: Sun, 24 Jun 2018 18:11:51 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 25
+Connection: keep-alive
+Set-Cookie: __cfduid=d58dc22f2fd88f799d047b40664759e841529863910; expires=Mon, 24-Jun-19 18:11:50 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"19-1luTU257I9tvKUXOJotGBQDVDqk"
+set-cookie: connect.sid=s%3A0gmkRuW7IJ2FI0SxqWX8vULgQDYsP3H2.8WskUD6FRAwseoI%2Bw%2F%2FWKzS66ofjaGLqZ9eA96%2BXaNE; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 430128c32f8431d4-SIN
+
+{"error":"Invalid token"}
+
+  
+[2018-06-24 18:11:52] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 18:12:25] local.INFO: Exception while trying to create invoice Invalid token  
+[2018-06-24 18:12:25] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 304602210097c30d9b8cdf867b1bc21b565e08aada327ca9d12d875b90cd6a4dc00dbd78c5022100f879d1b46d506ef33756af7b64660405031e7434ddef173ece870c4c0e38613b
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529863941_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529863941_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"f643db69-fa6a-093a-7c68-aad755451f1e","nonce":1529863941.272418,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2H"}
+
+
+  
+[2018-06-24 18:12:25] local.INFO: Response =====> HTTP/1.1 500 Internal Server Error
+Date: Sun, 24 Jun 2018 18:12:24 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 25
+Connection: keep-alive
+Set-Cookie: __cfduid=d5b7b532af47a492c93692e7f0a54d5a41529863943; expires=Mon, 24-Jun-19 18:12:23 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"19-1luTU257I9tvKUXOJotGBQDVDqk"
+set-cookie: connect.sid=s%3A7QdjfNKLvIjcvpxByeiciXKBLa2Uoi-V.gKXZNTAv10O2X4k3sWZOjgxLJ0F%2B9%2B%2FcglE206BFPkQ; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 4301298fcde93138-SIN
+
+{"error":"Invalid token"}
+
+  
+[2018-06-24 18:12:25] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 18:12:47] local.INFO: Adding invoice   
+[2018-06-24 18:12:47] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (U4Z9Xz8Qt5ngDdzyP11Dvw, softman009@outlook.com, 1529863963_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529863963_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-24 18:12:47, 2018-06-24 18:12:47) returning "id")  
+[2018-06-24 18:12:47] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 304402205b200010fe193266fe8576e7abbae9e79d0731932e9de4063e06cbda4a8cd92602200b34e84276c6432d17b0904ccc0bb3981bb1af5a5ad8d8484678bb8d414e771e
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529863963_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529863963_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"60db53b4-0d74-83e3-80c8-1bcb73f6157a","nonce":1529863963.803766,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-24 18:12:47] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Sun, 24 Jun 2018 18:12:47 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1309
+Connection: keep-alive
+Set-Cookie: __cfduid=d647f507ebbead96d3fe66773853438b81529863966; expires=Mon, 24-Jun-19 18:12:46 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"51d-TZNa63cof9828y7/wYcgXniWqOM"
+set-cookie: connect.sid=s%3A20SQrxKoSq8Dy5gQ1Rz_Nt2p-6cJdsry.Qe1veeiYb%2FWa7dyMiglMfIfAGixm69hGxGdePwQsiYo; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 43012a1c9d7530f0-SIN
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=U4Z9Xz8Qt5ngDdzyP11Dvw","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529863963_47","invoiceTime":1529863966976,"expirationTime":1529864866976,"currentTime":1529863966994,"guid":"60db53b4-0d74-83e3-80c8-1bcb73f6157a","id":"U4Z9Xz8Qt5ngDdzyP11Dvw","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":823900},"paymentTotals":{"BTC":1495200,"BCH":826900},"exchangeRates":{"BTC":{"USD":6169.99,"BCH":8.238736813993857},"BCH":{"BTC":0.12123076923076923,"USD":748.5999999999999}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.14,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/U4Z9Xz8Qt5ngDdzyP11Dvw","BIP73":"https://test.bitpay.com/i/U4Z9Xz8Qt5ngDdzyP11Dvw"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/U4Z9Xz8Qt5ngDdzyP11Dvw","BIP73":"https://test.bitpay.com/i/U4Z9Xz8Qt5ngDdzyP11Dvw"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPnkHYiRc2yfKP9tNddVLrMFN9Ph5pCB5uTtRy3dP98cXu"}}
+
+  
+[2018-06-24 18:12:47] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 19:20:54] local.INFO: Adding invoice   
+[2018-06-24 19:20:54] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (GpwJzjaFuqKo4G3RqndqqX, softman009@outlook.com, 1529868050_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529868050_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-24 19:20:54, 2018-06-24 19:20:54) returning "id")  
+[2018-06-24 19:20:54] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 3046022100d084f187b0de00506602cad521735e08014dce95eebf66fa37aaff31730b331c022100bbb1f5fe8c09c84c8c662d770fb6ee2d6758e7bd0049c0007703badf4a0d844d
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529868050_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529868050_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"1a7e0ec4-2be2-4bc7-3755-67bd94befa84","nonce":1529868050.199545,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-24 19:20:54] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Sun, 24 Jun 2018 19:20:53 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1307
+Connection: keep-alive
+Set-Cookie: __cfduid=de7429fca04224606e5a2e69e2fc748fd1529868052; expires=Mon, 24-Jun-19 19:20:52 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"51b-7kIF+qN7uBYb4GE7aJjvTF1Tyms"
+set-cookie: connect.sid=s%3AWYhBD7HNWvL43DEJGML_gSYHdKgPROwk.VYzx9esyHwznh3tUswSxxPdfqNXCW4jcdpBrP2HOFRw; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 43018de1bd3230a2-SIN
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=GpwJzjaFuqKo4G3RqndqqX","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529868050_47","invoiceTime":1529868053527,"expirationTime":1529868953527,"currentTime":1529868053547,"guid":"1a7e0ec4-2be2-4bc7-3755-67bd94befa84","id":"GpwJzjaFuqKo4G3RqndqqX","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":818800},"paymentTotals":{"BTC":1495200,"BCH":821800},"exchangeRates":{"BTC":{"USD":6177.720000000001,"BCH":8.187833001988071},"BCH":{"BTC":0.12172511866743027,"USD":752.4}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.14,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/GpwJzjaFuqKo4G3RqndqqX","BIP73":"https://test.bitpay.com/i/GpwJzjaFuqKo4G3RqndqqX"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/GpwJzjaFuqKo4G3RqndqqX","BIP73":"https://test.bitpay.com/i/GpwJzjaFuqKo4G3RqndqqX"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPaf5qwUTvQkciEvcxGTbZi7tKaML1UjLTgcoMDukD1uob"}}
+
+  
+[2018-06-24 19:20:54] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 19:27:03] local.INFO: Adding invoice   
+[2018-06-24 19:27:03] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (GdhQHjYtHJCjReHX7RfCYY, softman009@outlook.com, 1529868419_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529868419_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-24 19:27:03, 2018-06-24 19:27:03) returning "id")  
+[2018-06-24 19:27:03] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 689
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 304602210089c5ed197c6b852f2af4e55e5e25025263b817f8d6a6e7e325468ba6ad97b6b2022100bb82c7cbb99793973f7766513c54ff70fc1313152c491e5e45e4b610288fb475
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529868419_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529868419_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"ba77c386-bb50-dd9e-6b5e-3cc621bfc725","nonce":1529868419.5524,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-24 19:27:03] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Sun, 24 Jun 2018 19:27:02 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1307
+Connection: keep-alive
+Set-Cookie: __cfduid=d7dd8e746886e95d57d197a7821cdc6e91529868422; expires=Mon, 24-Jun-19 19:27:02 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"51b-lEUwmwvNMwBY+wYZtSwJgG/Pdqc"
+set-cookie: connect.sid=s%3AN59B-1hdLYZyONVQJamimxem2vpfErPH.KJYwn6tp7nEG8ig4251IP6GXhpHuqMwlL4o66amdHxQ; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 430196e5bf5d7026-SIN
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=GdhQHjYtHJCjReHX7RfCYY","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529868419_47","invoiceTime":1529868422837,"expirationTime":1529869322837,"currentTime":1529868422855,"guid":"ba77c386-bb50-dd9e-6b5e-3cc621bfc725","id":"GdhQHjYtHJCjReHX7RfCYY","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":821400},"paymentTotals":{"BTC":1495200,"BCH":824400},"exchangeRates":{"BTC":{"USD":6182.409999999999,"BCH":8.213644214162349},"BCH":{"BTC":0.12130841755957526,"USD":750.5}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.14,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/GdhQHjYtHJCjReHX7RfCYY","BIP73":"https://test.bitpay.com/i/GdhQHjYtHJCjReHX7RfCYY"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/GdhQHjYtHJCjReHX7RfCYY","BIP73":"https://test.bitpay.com/i/GdhQHjYtHJCjReHX7RfCYY"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPjttsBbFH5RFm1i5J3z4YhQfmQ7euPWP9nHgq5XtLW5dq"}}
+
+  
+[2018-06-24 19:27:03] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 19:30:27] local.INFO: Adding invoice   
+[2018-06-24 19:30:27] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (PekAUH36Tabd2CJCYoanYC, softman009@outlook.com, 1529868623_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529868623_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-24 19:30:27, 2018-06-24 19:30:27) returning "id")  
+[2018-06-24 19:30:27] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 3045022100a489973e84201660b24306a5e2194bd287e91e193fa8ff94dd92dcdae546ab55022033fa6b8169330477b6642a5d0d14599cb782db0973819a94d31ea78e4a6fc39a
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529868623_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529868623_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"9761b363-053f-9ca3-f83e-1f33fe19d393","nonce":1529868623.419205,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-24 19:30:27] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Sun, 24 Jun 2018 19:30:26 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1307
+Connection: keep-alive
+Set-Cookie: __cfduid=d34749da45cadbd6521e793870b6237df1529868625; expires=Mon, 24-Jun-19 19:30:25 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"51b-2tg74iHHU2W/mM2Dw/MDmHgDHVc"
+set-cookie: connect.sid=s%3AjErEFAU_Inin11wp5R3FEE6e_pRwgggr.%2B68MW46pQ5zutcgIEUJZ4rXVOCjthMTD6bDtORvhkM0; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 43019bde9ff47026-SIN
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=PekAUH36Tabd2CJCYoanYC","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529868623_47","invoiceTime":1529868626445,"expirationTime":1529869526445,"currentTime":1529868626461,"guid":"9761b363-053f-9ca3-f83e-1f33fe19d393","id":"PekAUH36Tabd2CJCYoanYC","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":820700},"paymentTotals":{"BTC":1495200,"BCH":823700},"exchangeRates":{"BTC":{"USD":6173.020000000001,"BCH":8.206620579633077},"BCH":{"BTC":0.12168164880739352,"USD":751.4}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.14,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/PekAUH36Tabd2CJCYoanYC","BIP73":"https://test.bitpay.com/i/PekAUH36Tabd2CJCYoanYC"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/PekAUH36Tabd2CJCYoanYC","BIP73":"https://test.bitpay.com/i/PekAUH36Tabd2CJCYoanYC"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPa9fcJkmp4hFYdvQ7UmUfHFqvVVaU3UzpWCm2TTMmA5A3"}}
+
+  
+[2018-06-24 19:30:27] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-24 19:31:11] local.INFO: Adding invoice   
+[2018-06-24 19:31:11] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (NXeMfUnckskqPGwrrRhWxL, softman009@outlook.com, 1529868667_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529868667_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-24 19:31:11, 2018-06-24 19:31:11) returning "id")  
+[2018-06-24 19:31:11] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 304402200d005e15c53cea3617ff655e2a60cd49b18b4a3823a53117b62affa53d2eabc30220415192c74d863c05571a3785523a1a926ab47cae883909ff75b1286446e14b16
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529868667_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529868667_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"0629c258-2842-0e9a-755e-ac86cb877384","nonce":1529868667.839611,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-24 19:31:11] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Sun, 24 Jun 2018 19:31:11 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1297
+Connection: keep-alive
+Set-Cookie: __cfduid=dfc860b02f5d17acc8268595cd52835ee1529868670; expires=Mon, 24-Jun-19 19:31:10 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"511-E9cqj1nYOQKH+sSxeFGysXRHENY"
+set-cookie: connect.sid=s%3AHqGsvroRulZovPdbMzyn8EK69zM3HjxJ.5Py%2ByRk2oJsi12IKMwHwnzlvCGAO5YA21iRQahLWE00; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 43019cf3dfbe703e-SIN
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=NXeMfUnckskqPGwrrRhWxL","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529868667_47","invoiceTime":1529868670881,"expirationTime":1529869570881,"currentTime":1529868670897,"guid":"0629c258-2842-0e9a-755e-ac86cb877384","id":"NXeMfUnckskqPGwrrRhWxL","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":818200},"paymentTotals":{"BTC":1495200,"BCH":821200},"exchangeRates":{"BTC":{"USD":6169.19,"BCH":8.181949602122016},"BCH":{"BTC":0.12178803891774204,"USD":751.8}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.14,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/NXeMfUnckskqPGwrrRhWxL","BIP73":"https://test.bitpay.com/i/NXeMfUnckskqPGwrrRhWxL"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/NXeMfUnckskqPGwrrRhWxL","BIP73":"https://test.bitpay.com/i/NXeMfUnckskqPGwrrRhWxL"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPdCuypKYKAwqpq7dgH3RNCX3vqxYgzAaPwyLasVG8RtUg"}}
+
+  
+[2018-06-24 19:31:11] local.INFO: Successfully created invoice for user jingadmin  

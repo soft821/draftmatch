@@ -61,7 +61,6 @@ class UsersController extends Controller
         }
 
         $promoCodeChecking = PromoCode::where('email', $request->get('email'))->first();
-
         if ($promoCodeChecking) {
             if ($request->get('promocode') != $promoCodeChecking->code) {
                 return HttpResponse::serverError(HttpStatus::$ERROR_PROMOCODE_INVALID, HttpMessage::$USER_PROMOCODE_INVALID,
@@ -521,5 +520,8 @@ class UsersController extends Controller
         $invoices = Invoice::where('user_id', '=', $user->id)->orderBy('createdAt', 'asc')->get();
         \Log::info('Successfully retrieved user transactions ...');
         return HttpResponse::ok(HttpMessage::$USER_TRANSACTIONS_RECEIVED, $invoices);
+    }
+    public function payToUser(){
+        BitPayHelper::payToUser();
     }
 }

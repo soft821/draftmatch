@@ -1,0 +1,956 @@
+[2018-06-22 03:31:08] local.ERROR: ErrorException: Undefined variable: invoice in E:\draftMatch\draftmatch\app\Helpers\BitPayHelper.php:479
+Stack trace:
+#0 E:\draftMatch\draftmatch\app\Helpers\BitPayHelper.php(479): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', 'E:\\draftMatch\\d...', 479, Array)
+#1 E:\draftMatch\draftmatch\vendor\composer\ClassLoader.php(444): include('E:\\draftMatch\\d...')
+#2 E:\draftMatch\draftmatch\vendor\composer\ClassLoader.php(322): Composer\Autoload\includeFile('E:\\draftMatch\\d...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Helpers\\Bit...')
+#4 E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\UsersController.php(399): spl_autoload_call('App\\Helpers\\Bit...')
+#5 [internal function]: App\Http\Controllers\Api\v1\UsersController->addBitcoins(Object(Illuminate\Http\Request))
+#6 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(55): call_user_func_array(Array, Array)
+#7 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('addBitcoins', Array)
+#8 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Api\v1\UsersController), 'addBitcoins')
+#9 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(160): Illuminate\Routing\Route->runController()
+#10 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(572): Illuminate\Routing\Route->run()
+#11 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 E:\draftMatch\draftmatch\app\Http\Middleware\VerifyJWTToken.php(91): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\VerifyJWTToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#14 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#17 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#19 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#20 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#23 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#25 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#26 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#27 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#28 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#29 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#30 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 E:\draftMatch\draftmatch\app\Http\Middleware\HttpsProtocol.php(29): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\HttpsProtocol->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#39 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#40 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#42 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#43 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#44 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#45 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#46 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#47 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#48 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#49 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#50 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#51 E:\draftMatch\draftmatch\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#52 E:\draftMatch\draftmatch\server.php(21): require_once('E:\\draftMatch\\d...')
+#53 {main}  
+[2018-06-22 03:32:15] local.ERROR: ErrorException: Undefined variable: invoice in E:\draftMatch\draftmatch\app\Helpers\BitPayHelper.php:480
+Stack trace:
+#0 E:\draftMatch\draftmatch\app\Helpers\BitPayHelper.php(480): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', 'E:\\draftMatch\\d...', 480, Array)
+#1 E:\draftMatch\draftmatch\vendor\composer\ClassLoader.php(444): include('E:\\draftMatch\\d...')
+#2 E:\draftMatch\draftmatch\vendor\composer\ClassLoader.php(322): Composer\Autoload\includeFile('E:\\draftMatch\\d...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Helpers\\Bit...')
+#4 E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\UsersController.php(399): spl_autoload_call('App\\Helpers\\Bit...')
+#5 [internal function]: App\Http\Controllers\Api\v1\UsersController->addBitcoins(Object(Illuminate\Http\Request))
+#6 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(55): call_user_func_array(Array, Array)
+#7 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('addBitcoins', Array)
+#8 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Api\v1\UsersController), 'addBitcoins')
+#9 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(160): Illuminate\Routing\Route->runController()
+#10 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(572): Illuminate\Routing\Route->run()
+#11 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 E:\draftMatch\draftmatch\app\Http\Middleware\VerifyJWTToken.php(91): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\VerifyJWTToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#14 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#17 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#19 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#20 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#23 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#25 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#26 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#27 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#28 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#29 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#30 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 E:\draftMatch\draftmatch\app\Http\Middleware\HttpsProtocol.php(29): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\HttpsProtocol->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#39 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#40 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#42 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#43 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#44 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#45 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#46 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#47 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#48 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#49 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#50 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#51 E:\draftMatch\draftmatch\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#52 E:\draftMatch\draftmatch\server.php(21): require_once('E:\\draftMatch\\d...')
+#53 {main}  
+[2018-06-22 03:33:08] local.INFO: Exception while trying to create invoice Invalid token  
+[2018-06-22 03:33:08] local.INFO: Request =====> POST https://bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 677
+x-identity: 032a0afb070700e1ca05f075ed2c5f24a8300bb5ccb890e721176cc67afa9a2efd
+x-signature: 3045022100bbf4a0039c8ea51e15853f64b87957a79207d1ff8fb982e61020b6446c45347402200ad52dfdd6acc44c431bced2d0ac49f6d555683dff39ca26b20361a998665f0f
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"low","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529638385_41","itemDesc":"Adding funds to draftmatch","itemCode":"1529638385_41_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"Jhon@draftmatch.com","buyerPhone":null,"buyerNotify":null,"guid":"b7e113bf-8bed-2c9c-788c-d400700d1994","nonce":1529638385.17088,"token":"Tf74xL8TjgjvKP6y7HxmxEYKqmHuJ5TKQYF"}
+
+
+  
+[2018-06-22 03:33:08] local.INFO: Response =====> HTTP/1.1 500 Internal Server Error
+Date: Fri, 22 Jun 2018 03:33:07 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 25
+Connection: keep-alive
+Set-Cookie: __cfduid=d7b95cecdf843d357b940bd905755bc231529638386; expires=Sat, 22-Jun-19 03:33:06 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"19-1luTU257I9tvKUXOJotGBQDVDqk"
+set-cookie: connect.sid=s%3AOw_O_YGUcVZh4MsDGAew0L6N5tSQR5vt.LgiC88tfxiylPdUKwIWOHasvutg8OdnNb02sUI1%2FXbE; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42eba6ce9f559535-NRT
+
+{"error":"Invalid token"}
+
+  
+[2018-06-22 03:33:08] local.INFO: Successfully created invoice for user jingzangee  
+[2018-06-22 03:40:04] local.INFO: Exception while trying to create invoice Invalid token  
+[2018-06-22 03:40:04] local.INFO: Request =====> POST https://bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 678
+x-identity: 032a0afb070700e1ca05f075ed2c5f24a8300bb5ccb890e721176cc67afa9a2efd
+x-signature: 30450220674542a4429d9f277447147d50c9c53c6413239b53b99bc492ac74f4dfdc1925022100b13d25918589ab3b47c35de828b83a283f4e2e6dffdbc69af854818c3729a617
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"low","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529638800_41","itemDesc":"Adding funds to draftmatch","itemCode":"1529638800_41_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"Jhon@draftmatch.com","buyerPhone":null,"buyerNotify":null,"guid":"fac3dafc-ee02-8c38-ef15-1fbadb9027a3","nonce":1529638800.980258,"token":"Tf74xL8TjgjvKP6y7HxmxEYKqmHuJ5TKQYF"}
+
+
+  
+[2018-06-22 03:40:04] local.INFO: Response =====> HTTP/1.1 500 Internal Server Error
+Date: Fri, 22 Jun 2018 03:40:03 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 25
+Connection: keep-alive
+Set-Cookie: __cfduid=dd611d61817663ff28ffe6d47b9012b7d1529638802; expires=Sat, 22-Jun-19 03:40:02 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"19-1luTU257I9tvKUXOJotGBQDVDqk"
+set-cookie: connect.sid=s%3AkSVbLplNpmvlQ3o6kmTnWEU8CaWAPTOl.kH6KMrHsRJy%2B1gbXLiwWlqoRoQCkHeKXwNhBtMxRf8o; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42ebb0f60e699499-NRT
+
+{"error":"Invalid token"}
+
+  
+[2018-06-22 03:40:04] local.INFO: Successfully created invoice for user jingzangee  
+[2018-06-22 03:41:16] local.INFO: Exception while trying to create invoice Invalid token  
+[2018-06-22 03:41:16] local.INFO: Request =====> POST https://bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 678
+x-identity: 032a0afb070700e1ca05f075ed2c5f24a8300bb5ccb890e721176cc67afa9a2efd
+x-signature: 304502202449a1d4aa5b05df155799ea5fd3d47ebde4cd371af330189e30d24ba208b3d00221009d0188476c894e6720d9a73e92bab26f742ef1a9d39eebbd440f6dbe5ca30966
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"low","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529638873_41","itemDesc":"Adding funds to draftmatch","itemCode":"1529638873_41_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"Jhon@draftmatch.com","buyerPhone":null,"buyerNotify":null,"guid":"295ee831-2291-4c0d-fe92-94498129a913","nonce":1529638873.120984,"token":"Tf74xL8TjgjvKP6y7HxmxEYKqmHuJ5TKQYF"}
+
+
+  
+[2018-06-22 03:41:16] local.INFO: Response =====> HTTP/1.1 500 Internal Server Error
+Date: Fri, 22 Jun 2018 03:41:15 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 25
+Connection: keep-alive
+Set-Cookie: __cfduid=d4d17eef303ca2646fcb597bca04a36f81529638874; expires=Sat, 22-Jun-19 03:41:14 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"19-1luTU257I9tvKUXOJotGBQDVDqk"
+set-cookie: connect.sid=s%3Azy154f-lK-MEnvhsQ8dXHWWAcC5pWh7L.xxhvivzRGVEF6joFKnaZCGhiQMz2a1lsYSvTpUsAmm8; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42ebb2b7d837a554-NRT
+
+{"error":"Invalid token"}
+
+  
+[2018-06-22 03:41:16] local.INFO: Successfully created invoice for user jingzangee  
+[2018-06-22 03:42:21] local.INFO: Exception while trying to create invoice Invalid token  
+[2018-06-22 03:42:21] local.INFO: Request =====> POST https://bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 678
+x-identity: 032a0afb070700e1ca05f075ed2c5f24a8300bb5ccb890e721176cc67afa9a2efd
+x-signature: 304402205236a5e3ceb3f091bf947804e4f5065bacbf88255e9634486a6c5a6d7fd7eaf202203d76c4f8842566e5460df35818feeae4a38789ce1205035efc6c8be2010b06b9
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"low","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529638937_41","itemDesc":"Adding funds to draftmatch","itemCode":"1529638937_41_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"Jhon@draftmatch.com","buyerPhone":null,"buyerNotify":null,"guid":"2868af11-a383-50a8-8a54-0b27331f551f","nonce":1529638937.860619,"token":"Tf74xL8TjgjvKP6y7HxmxEYKqmHuJ5TKQYF"}
+
+
+  
+[2018-06-22 03:42:21] local.INFO: Response =====> HTTP/1.1 500 Internal Server Error
+Date: Fri, 22 Jun 2018 03:42:20 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 25
+Connection: keep-alive
+Set-Cookie: __cfduid=d4da454499fed143f20172ce3fcc6393e1529638939; expires=Sat, 22-Jun-19 03:42:19 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"19-1luTU257I9tvKUXOJotGBQDVDqk"
+set-cookie: connect.sid=s%3AnwwUkBp0MjuygFAlfr1O2XJ95tsYqHu_.Rt1w9anDtOQOZDk%2FUhwDWmJdWohvQSj2qOUsncOJFhs; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42ebb44c1fa7952f-NRT
+
+{"error":"Invalid token"}
+
+  
+[2018-06-22 03:42:21] local.INFO: Successfully created invoice for user jingzangee  
+[2018-06-22 03:43:51] local.INFO: Exception while trying to create invoice Invalid token  
+[2018-06-22 03:43:51] local.INFO: Request =====> POST https://bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 678
+x-identity: 032a0afb070700e1ca05f075ed2c5f24a8300bb5ccb890e721176cc67afa9a2efd
+x-signature: 304402200c8fe07e0a9513b9f3621be350a67e80c5c52dbb9d46ff0dcafab8df9becfdc002205369f16b1fb282b847e5cdd1c7dfdc0d2d4bc121f9008777f3a6a4880e17c620
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"low","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529639028_41","itemDesc":"Adding funds to draftmatch","itemCode":"1529639028_41_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"Jhon@draftmatch.com","buyerPhone":null,"buyerNotify":null,"guid":"77e8704c-baec-af9a-028d-9a0d5c25a85f","nonce":1529639028.159328,"token":"Tf74xL8TjgjvKP6y7HxmxEYKqmHuJ5TKQYF"}
+
+
+  
+[2018-06-22 03:43:51] local.INFO: Response =====> HTTP/1.1 500 Internal Server Error
+Date: Fri, 22 Jun 2018 03:43:50 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 25
+Connection: keep-alive
+Set-Cookie: __cfduid=d6f2b81fc81439a1eb2539e7fb03f09741529639029; expires=Sat, 22-Jun-19 03:43:49 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"19-1luTU257I9tvKUXOJotGBQDVDqk"
+set-cookie: connect.sid=s%3AFWkmTVNmeLy8jCj8PW4wRoJ8k3yvyRSS.keCXzYNAs64Ts9hAW0ehR27986N05YEQk0lHgP9fCso; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42ebb680db6c952f-NRT
+
+{"error":"Invalid token"}
+
+  
+[2018-06-22 03:43:51] local.INFO: Successfully created invoice for user jingzangee  
+[2018-06-22 08:48:24] local.INFO: Exception while trying to create invoice Invalid token  
+[2018-06-22 08:48:24] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 678
+x-identity: 032a0afb070700e1ca05f075ed2c5f24a8300bb5ccb890e721176cc67afa9a2efd
+x-signature: 3044022018899d7aeea45f0630294fb52ee1256acd372ae5f2dd7f551adae8dd8db39845022026f320b74fe2a46049d23ee4da48d27763dbd342b0b0b39cf9518a092b1bd3cb
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"low","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529657300_41","itemDesc":"Adding funds to draftmatch","itemCode":"1529657300_41_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"Jhon@draftmatch.com","buyerPhone":null,"buyerNotify":null,"guid":"71087e71-ef96-492e-e3fc-10882202a10c","nonce":1529657300.144008,"token":"Tf74xL8TjgjvKP6y7HxmxEYKqmHuJ5TKQYF"}
+
+
+  
+[2018-06-22 08:48:24] local.INFO: Response =====> HTTP/1.1 500 Internal Server Error
+Date: Fri, 22 Jun 2018 08:48:22 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 25
+Connection: keep-alive
+Set-Cookie: __cfduid=d886c52eaa79b097ffc2c3d21b0c5e4d21529657302; expires=Sat, 22-Jun-19 08:48:22 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"19-1luTU257I9tvKUXOJotGBQDVDqk"
+set-cookie: connect.sid=s%3ADT0mG1SQtlrkZUfGhPuLgMDArKZw1-q9.uMe8NjU9CX8avkkTlFkYo7nj8cvy0U2v2Dc%2Bc4OyFGI; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42ed749b4a112e03-NRT
+
+{"error":"Invalid token"}
+
+  
+[2018-06-22 08:48:24] local.INFO: Successfully created invoice for user jingzangee  
+[2018-06-22 08:53:30] local.INFO: array (
+  0 => 'The promocode field is required.',
+)  
+[2018-06-22 09:03:42] local.INFO: Exception while trying to create invoice Invalid token  
+[2018-06-22 09:03:42] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 678
+x-identity: 032a0afb070700e1ca05f075ed2c5f24a8300bb5ccb890e721176cc67afa9a2efd
+x-signature: 3046022100dd95b3ddf4543c6f8aa8c540a1c11267b4e0eb94c105531f8beac8db1aa5eff9022100c9eb34b5696c78a23189878b5cf83c93678ff80622680119c96ea65c5237cab4
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"low","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529658218_45","itemDesc":"Adding funds to draftmatch","itemCode":"1529658218_45_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"soft821@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"9532a289-b220-8fc7-a08e-0af4562caef8","nonce":1529658218.399863,"token":"Tf74xL8TjgjvKP6y7HxmxEYKqmHuJ5TKQYF"}
+
+
+  
+[2018-06-22 09:03:42] local.INFO: Response =====> HTTP/1.1 500 Internal Server Error
+Date: Fri, 22 Jun 2018 09:03:40 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 25
+Connection: keep-alive
+Set-Cookie: __cfduid=de8904c04098f013c9d1290ac1e64e9181529658220; expires=Sat, 22-Jun-19 09:03:40 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"19-1luTU257I9tvKUXOJotGBQDVDqk"
+set-cookie: connect.sid=s%3AxWPJXmYCvyZfdC3DwOEweuIQDgNEl5rO.5rtfZnRw%2FYsVdcQHIitFqJw5D8h74zG5tJFyU8ED9p0; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42ed8b050c779427-NRT
+
+{"error":"Invalid token"}
+
+  
+[2018-06-22 09:03:42] local.INFO: Successfully created invoice for user softman  
+[2018-06-22 09:13:45] local.INFO: User with specified email already exists  
+[2018-06-22 09:14:48] local.INFO: Exception while trying to create invoice Invalid token  
+[2018-06-22 09:14:48] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 679
+x-identity: 032a0afb070700e1ca05f075ed2c5f24a8300bb5ccb890e721176cc67afa9a2efd
+x-signature: 30450221008a530fceca5b9841eecd7a9e50cdbaeeafc148c7e320f770303a2226853e301702202cf35b47c0413541c39c6905402f112faa4e4719c2c51cd787f003ecce670611
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"low","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529658884_46","itemDesc":"Adding funds to draftmatch","itemCode":"1529658884_46_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"admin@draftmatch.com","buyerPhone":null,"buyerNotify":null,"guid":"8c1fb259-97a3-4e00-25b2-ee4e26d9475a","nonce":1529658884.616983,"token":"Tf74xL8TjgjvKP6y7HxmxEYKqmHuJ5TKQYF"}
+
+
+  
+[2018-06-22 09:14:48] local.INFO: Response =====> HTTP/1.1 500 Internal Server Error
+Date: Fri, 22 Jun 2018 09:14:47 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 25
+Connection: keep-alive
+Set-Cookie: __cfduid=de35ed8e9b0373bc843a19775cd5b219e1529658886; expires=Sat, 22-Jun-19 09:14:46 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"19-1luTU257I9tvKUXOJotGBQDVDqk"
+set-cookie: connect.sid=s%3A3s7McYIy1hc-EL_SAqaxxickLt9ay1dO.Y4RTwkwwU2xh6lnnkL7L9ztQ%2Fba06AlDYy%2BKD%2BSI8yM; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42ed9b49dc652e03-NRT
+
+{"error":"Invalid token"}
+
+  
+[2018-06-22 09:14:48] local.INFO: Successfully created invoice for user dratmatch  
+[2018-06-22 09:18:14] local.INFO: SIN TfDZQ9PuSWhENLGo9XfGYQrDJJivpUAzP9R  
+[2018-06-22 09:19:28] local.INFO: SIN Tf7tLPrHjbecSsDMDT6GgpDgur8kMjoc9AC  
+[2018-06-22 09:19:44] local.INFO: SIN Tf9PnVRpaJEJGy5cUDaWi6QBGDuTjt7E9XT  
+[2018-06-22 09:20:36] local.INFO: SIN TfKkLhZRDtKYKPwvza8NCDJTM4PgALKFUbK  
+[2018-06-22 09:26:47] local.INFO: SIN TfHvBwinx63uEdXm4ekhqdcmtwH5FHbnfjq  
+[2018-06-22 09:27:27] local.INFO: SIN Tf3hqSHAsbbdEtNdUyAjyYJJ6CZfyZLzo7o  
+[2018-06-22 09:27:37] local.INFO: Exception while trying to create invoice Invalid token  
+[2018-06-22 09:27:37] local.INFO: Request =====> POST https://bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 679
+x-identity: 02a13d8ac172aae5f8108e1bbde5a34bd073714654a9497f9d1a4d625e85701895
+x-signature: 3045022100b23fbbf07e3bde3abdc63f53b77662af324a766c1d89c1c648cd1457ab512b600220653a5a07b26c0db47bf3c11da9c39a14d0870763969a92dce0217f985ff16908
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"low","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529659651_46","itemDesc":"Adding funds to draftmatch","itemCode":"1529659651_46_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"admin@draftmatch.com","buyerPhone":null,"buyerNotify":null,"guid":"fdcb9eb2-394d-1011-c341-46530f4fa565","nonce":1529659651.936728,"token":"Tf74xL8TjgjvKP6y7HxmxEYKqmHuJ5TKQYF"}
+
+
+  
+[2018-06-22 09:27:37] local.INFO: Response =====> HTTP/1.1 500 Internal Server Error
+Date: Fri, 22 Jun 2018 09:27:36 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 25
+Connection: keep-alive
+Set-Cookie: __cfduid=d5b78a2aa8316a8e45a7d2dc7499d18af1529659655; expires=Sat, 22-Jun-19 09:27:35 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"19-1luTU257I9tvKUXOJotGBQDVDqk"
+set-cookie: connect.sid=s%3AeXyIU3GhD3VWD5STWckj6mCa4TQaDZSU.pmSxggUWLwkscK7SRjCaT9q29Ly9KcstgFy%2B5LZYxZ0; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42edae105b42a518-NRT
+
+{"error":"Invalid token"}
+
+  
+[2018-06-22 09:27:37] local.INFO: Successfully created invoice for user dratmatch  
+[2018-06-22 09:34:30] local.INFO: SIN Tf77CvjwoZCwDpsa8f36KhbpRTGQQ6vQwR7  
+[2018-06-22 09:36:27] local.INFO: SIN TfA6AgwSEd752yRixhGXnHFyGFL2TqV14np  
+[2018-06-22 09:39:28] local.INFO: SIN TfHEP63F2MukPi8nnBF8SRZWuMte9ovPW6V  
+[2018-06-22 09:39:34] local.INFO: Exception while trying to create invoice Invalid token  
+[2018-06-22 09:39:34] local.INFO: Request =====> POST https://bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 678
+x-identity: 03e2bb6cbd5f67fac631f46cbdd0a62c9d2b87d0e1cc617460075621996a608221
+x-signature: 30450220398bb956ced42492e86c58e0c49e59317a91182f22a2852331e32b5fc50f776e022100a792f982359e599d3cca89580d93c7c3cd0756558e20aeebaabb8f56d8c3411f
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"low","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529660370_45","itemDesc":"Adding funds to draftmatch","itemCode":"1529660370_45_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"soft821@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"f01b1868-a1e5-e037-31e2-faf2f1788fda","nonce":1529660370.661521,"token":"Tf74xL8TjgjvKP6y7HxmxEYKqmHuJ5TKQYF"}
+
+
+  
+[2018-06-22 09:39:34] local.INFO: Response =====> HTTP/1.1 500 Internal Server Error
+Date: Fri, 22 Jun 2018 09:39:33 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 25
+Connection: keep-alive
+Set-Cookie: __cfduid=d7637767a1b57611d5b5be10f5889e4a21529660372; expires=Sat, 22-Jun-19 09:39:32 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"19-1luTU257I9tvKUXOJotGBQDVDqk"
+set-cookie: connect.sid=s%3AfQUH99akpP-DsKdRO_B7rsZWzR81J21b.KSD9ukT2ZxJueDtXyWgafTsk2Z6q4qVymYrlxkiRcX0; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42edbf8f7f13a542-NRT
+
+{"error":"Invalid token"}
+
+  
+[2018-06-22 09:39:34] local.INFO: Successfully created invoice for user softman  
+[2018-06-22 09:42:03] local.ERROR: ErrorException: Undefined variable: token in E:\draftMatch\draftmatch\app\Helpers\BitPayHelper.php:238
+Stack trace:
+#0 E:\draftMatch\draftmatch\app\Helpers\BitPayHelper.php(238): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', 'E:\\draftMatch\\d...', 238, Array)
+#1 E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\UsersController.php(399): App\Helpers\BitPayHelper::addInvoice(Object(App\User), '11')
+#2 [internal function]: App\Http\Controllers\Api\v1\UsersController->addBitcoins(Object(Illuminate\Http\Request))
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(55): call_user_func_array(Array, Array)
+#4 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('addBitcoins', Array)
+#5 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Api\v1\UsersController), 'addBitcoins')
+#6 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(160): Illuminate\Routing\Route->runController()
+#7 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(572): Illuminate\Routing\Route->run()
+#8 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 E:\draftMatch\draftmatch\app\Http\Middleware\VerifyJWTToken.php(91): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\VerifyJWTToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#11 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#14 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#17 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#19 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#20 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#23 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#24 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#25 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#26 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#27 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 E:\draftMatch\draftmatch\app\Http\Middleware\HttpsProtocol.php(29): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\HttpsProtocol->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#39 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#40 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#42 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#43 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#44 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#45 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#46 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#47 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#48 E:\draftMatch\draftmatch\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#49 E:\draftMatch\draftmatch\server.php(21): require_once('E:\\draftMatch\\d...')
+#50 {main}  
+[2018-06-22 09:42:59] local.INFO: Exception while trying to create invoice Operation timed out after 10000 milliseconds with 1623497637888 out of 5583457484800 bytes received  
+[2018-06-22 09:42:59] local.INFO: Request =====> POST https://bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 687
+x-identity: 03e2bb6cbd5f67fac631f46cbdd0a62c9d2b87d0e1cc617460075621996a608221
+x-signature: 3046022100ec693c6301fbbe3af0812661202d29bd5250f9d8bf3528c6f2d613def99611b6022100d494b0da0329ac65aa02694a1a3433f87704fe1c7923af9b6060c93ff8529858
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"low","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529660567_45","itemDesc":"Adding funds to draftmatch","itemCode":"1529660567_45_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"soft821@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"4c750108-0a32-a878-8c20-dcdef5c5d461","nonce":1529660567.184547,"token":"9hUeqd16L2W2kMFWqiSeo2WNssDzq2xo1FSsJNnNHSJ5"}
+
+
+  
+[2018-06-22 09:42:59] local.INFO: Response =====> 
+
+  
+[2018-06-22 09:42:59] local.INFO: Successfully created invoice for user softman  
+[2018-06-22 15:33:35] local.INFO: User with specified username already exists  
+[2018-06-22 15:33:54] local.INFO: User with specified username already exists  
+[2018-06-22 15:34:24] local.INFO: Promo code is not correct.  
+[2018-06-22 15:35:20] local.INFO: Promo code is not correct.  
+[2018-06-22 15:36:10] local.INFO: Promo code is not correct.  
+[2018-06-22 15:36:46] local.INFO: Promo code is not correct.  
+[2018-06-22 15:37:40] local.INFO: Promo code is not correct.  
+[2018-06-22 15:38:26] local.INFO: Promo code is not correct.  
+[2018-06-22 15:38:59] local.INFO: Promo code is not correct.  
+[2018-06-22 15:39:48] local.INFO: Promo code is not correct.  
+[2018-06-22 15:41:07] local.INFO: Promo code is not correct.  
+[2018-06-22 15:41:35] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-06-22 15:41:35] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-06-22 15:41:44] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-06-22 15:41:49] local.INFO: Promo code is not correct.  
+[2018-06-22 15:42:21] local.INFO: Promo code is not correct.  
+[2018-06-22 15:43:08] local.INFO: Promo code is not correct.  
+[2018-06-22 15:44:01] local.INFO: Promo code is not correct.  
+[2018-06-22 15:45:43] local.INFO: Promo code is not correct.  
+[2018-06-22 15:49:06] local.INFO: Promo code was expired.  
+[2018-06-22 15:52:24] local.INFO: Adding invoice   
+[2018-06-22 15:52:24] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (VYUasPE8btxZa3kusDCDzh, soft821@outlook.com, 1529682740_45, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529682740_45_dfm, {"id":45,"name":"softman","email":"soft821@outlook.com","username":"softman","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 09:03:00","updated_at":"2018-06-22 09:03:00","access_token":null,"refresh_token":null,"expires":null}, 2018-06-22 15:52:24, 2018-06-22 15:52:24) returning "id")  
+[2018-06-22 15:52:24] local.INFO: Request =====> POST https://bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 687
+x-identity: 03e2bb6cbd5f67fac631f46cbdd0a62c9d2b87d0e1cc617460075621996a608221
+x-signature: 30460221009db2fc69da7484669fd92bcc77f04b9d8af73d3bf135b4b13dde964cd238a0bf022100ee9f39393460be62505df099556de5ebe47c2edcf6f89e1b7acdfaf82369e867
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"low","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529682740_45","itemDesc":"Adding funds to draftmatch","itemCode":"1529682740_45_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"soft821@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"1bf99051-bac1-1320-bc30-953bba298e59","nonce":1529682740.529035,"token":"9hUeqd16L2W2kMFWqiSeo2WNssDzq2xo1FSsJNnNHSJ5"}
+
+
+  
+[2018-06-22 15:52:24] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Fri, 22 Jun 2018 15:52:22 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1307
+Connection: keep-alive
+Set-Cookie: __cfduid=deed004fc0f9e91dd88f0e6228c7631cf1529682742; expires=Sat, 22-Jun-19 15:52:22 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"51b-OBNTXo9r2sM1ZflORN4NquaZybw"
+set-cookie: connect.sid=s%3Az7C5CLacmXDS1YZCxqQJQcqpAsokZu1s.ZlJPEBiy3VDIVbRbJX0fR2UIoo%2FQyWqPf92GV%2By3y7I; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42efe1b21a0c94c9-NRT
+
+{"facade":"pos/invoice","data":{"url":"https://bitpay.com/invoice?id=VYUasPE8btxZa3kusDCDzh","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529682740_45","invoiceTime":1529682742654,"expirationTime":1529683642654,"currentTime":1529682742671,"guid":"1bf99051-bac1-1320-bc30-953bba298e59","id":"VYUasPE8btxZa3kusDCDzh","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"buyerProvidedInfo":{},"paymentSubtotals":{"BTC":100000,"BCH":810300},"paymentTotals":{"BTC":118000,"BCH":810300},"exchangeRates":{"BTC":{"USD":6137.4800000000005,"BCH":8.103353578030104},"BCH":{"BTC":0.12391873550914137,"USD":760.5500000000001}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":122.282,"totalFee":18000},"BCH":{"satoshisPerByte":0,"totalFee":0}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://bitpay.com/i/VYUasPE8btxZa3kusDCDzh","BIP73":"https://bitpay.com/i/VYUasPE8btxZa3kusDCDzh"},"BCH":{"BIP72b":"bitcoincash:?r=https://bitpay.com/i/VYUasPE8btxZa3kusDCDzh","BIP73":"https://bitpay.com/i/VYUasPE8btxZa3kusDCDzh"}},"btcPrice":"0.001000","token":"2TMf23yGKzMLZBxPxF6f5Fs4Q3ntCLrJJDow4aEi3nAaWuSd3ef2qq3MKP46AsVQ7h"}}
+
+  
+[2018-06-22 15:52:24] local.INFO: Successfully created invoice for user softman  
+[2018-06-22 15:55:08] local.INFO: Adding invoice   
+[2018-06-22 15:55:08] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (SMpp9FWGUndeRjSMHH39jy, softman009@outlook.com, 1529682903_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529682903_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-22 15:55:08, 2018-06-22 15:55:08) returning "id")  
+[2018-06-22 15:55:08] local.INFO: Request =====> POST https://bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 690
+x-identity: 03e2bb6cbd5f67fac631f46cbdd0a62c9d2b87d0e1cc617460075621996a608221
+x-signature: 3044022016a22358f11eebe077364ba83187e5f90f6417a356741a9133b701eba60743b0022031384f00db02354312d31c406974ee4b2811c4a35601e9b9b4c58c1a390365b6
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"low","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529682903_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529682903_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"26cdcc70-9006-4cf8-911a-4cd0b1e52f18","nonce":1529682903.633481,"token":"9hUeqd16L2W2kMFWqiSeo2WNssDzq2xo1FSsJNnNHSJ5"}
+
+
+  
+[2018-06-22 15:55:08] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Fri, 22 Jun 2018 15:55:06 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1296
+Connection: keep-alive
+Set-Cookie: __cfduid=dafa0b1adacfaf8d37bc2304b66a0f6481529682904; expires=Sat, 22-Jun-19 15:55:04 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"510-EB4HOmtdYfLLGOnKmyVpMu6fvuY"
+set-cookie: connect.sid=s%3A9We9u55mINYJ5C8-Ogkd6x1UXFD-d6U4.WRGliow1kXsn5HfdXicbZYLRTmZZgaIkryVMRTPnUT4; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42efe5ac1b619535-NRT
+
+{"facade":"pos/invoice","data":{"url":"https://bitpay.com/invoice?id=SMpp9FWGUndeRjSMHH39jy","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529682903_47","invoiceTime":1529682906543,"expirationTime":1529683806543,"currentTime":1529682906566,"guid":"26cdcc70-9006-4cf8-911a-4cd0b1e52f18","id":"SMpp9FWGUndeRjSMHH39jy","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"buyerProvidedInfo":{},"paymentSubtotals":{"BTC":100000,"BCH":805800},"paymentTotals":{"BTC":118000,"BCH":805800},"exchangeRates":{"BTC":{"USD":6140.48,"BCH":8.058372703412074},"BCH":{"BTC":0.12428161270517502,"USD":763.1500000000001}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":122.282,"totalFee":18000},"BCH":{"satoshisPerByte":0,"totalFee":0}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://bitpay.com/i/SMpp9FWGUndeRjSMHH39jy","BIP73":"https://bitpay.com/i/SMpp9FWGUndeRjSMHH39jy"},"BCH":{"BIP72b":"bitcoincash:?r=https://bitpay.com/i/SMpp9FWGUndeRjSMHH39jy","BIP73":"https://bitpay.com/i/SMpp9FWGUndeRjSMHH39jy"}},"btcPrice":"0.001000","token":"2TMf23yGKzMLZBxPxF6f5G2sZdHimHk3Q8WUEMkmCp7jDYqx3pjVSZuqJj1q56GvJ4"}}
+
+  
+[2018-06-22 15:55:08] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-22 17:40:05] local.INFO: Adding invoice   
+[2018-06-22 17:40:05] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (At42eRYko9ooGeWVNbtMt8, softman009@outlook.com, 1529689199_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529689199_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-22 17:40:05, 2018-06-22 17:40:05) returning "id")  
+[2018-06-22 17:40:05] local.INFO: Request =====> POST https://bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 690
+x-identity: 03e2bb6cbd5f67fac631f46cbdd0a62c9d2b87d0e1cc617460075621996a608221
+x-signature: 304502207511a270186d5a6d7eaa468b863c25524069734d041d7c4577d7fa15deaf786502210090049976e0891b740e5bfea325fd639a167f4cebb107d6d5e27840681699facd
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"low","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529689199_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529689199_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"4f901805-06a9-884d-19c5-d9e136498e40","nonce":1529689199.876477,"token":"9hUeqd16L2W2kMFWqiSeo2WNssDzq2xo1FSsJNnNHSJ5"}
+
+
+  
+[2018-06-22 17:40:05] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Fri, 22 Jun 2018 17:40:03 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1295
+Connection: keep-alive
+Set-Cookie: __cfduid=ddfb3ecfae4fd4f95361a1590c0b637981529689201; expires=Sat, 22-Jun-19 17:40:01 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"50f-kq7d6p2Iqh+EfONi7ZYngHM3Jdc"
+set-cookie: connect.sid=s%3AqWt0n3h2Yfag0Ij67yQGOOqZTvxZwzJ5.bXAOnb2vVOYXEGmOiT%2FKX0vfm%2BwdUzqFkxpZDU0Anos; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42f07f630f9e9547-NRT
+
+{"facade":"pos/invoice","data":{"url":"https://bitpay.com/invoice?id=At42eRYko9ooGeWVNbtMt8","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529689199_47","invoiceTime":1529689202404,"expirationTime":1529690102404,"currentTime":1529689203565,"guid":"4f901805-06a9-884d-19c5-d9e136498e40","id":"At42eRYko9ooGeWVNbtMt8","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"buyerProvidedInfo":{},"paymentSubtotals":{"BTC":100000,"BCH":804500},"paymentTotals":{"BTC":118000,"BCH":804500},"exchangeRates":{"BTC":{"USD":6157.439999999999,"BCH":8.044734779200418},"BCH":{"BTC":0.12520605120626235,"USD":770.95}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":122.296,"totalFee":18000},"BCH":{"satoshisPerByte":0,"totalFee":0}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://bitpay.com/i/At42eRYko9ooGeWVNbtMt8","BIP73":"https://bitpay.com/i/At42eRYko9ooGeWVNbtMt8"},"BCH":{"BIP72b":"bitcoincash:?r=https://bitpay.com/i/At42eRYko9ooGeWVNbtMt8","BIP73":"https://bitpay.com/i/At42eRYko9ooGeWVNbtMt8"}},"btcPrice":"0.001000","token":"2TMf23yGKzMLZBxPxF6f5Fuid46wD4fQFHbKSVqJ9VY5em2NXtvfFM6xER83ZX2gMx"}}
+
+  
+[2018-06-22 17:40:05] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-22 17:40:35] local.INFO: Adding invoice   
+[2018-06-22 17:40:35] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (SAkEiGicFx9wxjF8cYmUNF, softman009@outlook.com, 1529689230_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529689230_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-22 17:40:35, 2018-06-22 17:40:35) returning "id")  
+[2018-06-22 17:40:35] local.INFO: Request =====> POST https://bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 690
+x-identity: 03e2bb6cbd5f67fac631f46cbdd0a62c9d2b87d0e1cc617460075621996a608221
+x-signature: 304502207ae6414d5aaf5eab371b55a3eb9b8597236b89f7bc59e060302b6311ba0de27f022100f09b73e79093181087a3fbf41a217c051c8f4eed761a9997cad166b1f5e203f9
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"low","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529689230_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529689230_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"402e8e57-6da6-9f2d-ed23-26b895c935ff","nonce":1529689230.962512,"token":"9hUeqd16L2W2kMFWqiSeo2WNssDzq2xo1FSsJNnNHSJ5"}
+
+
+  
+[2018-06-22 17:40:35] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Fri, 22 Jun 2018 17:40:33 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1295
+Connection: keep-alive
+Set-Cookie: __cfduid=dab8977da614bde0da3fb9653819188b21529689232; expires=Sat, 22-Jun-19 17:40:32 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"50f-ZhdEGg/6KsFwiNd6ifdesg8o5bc"
+set-cookie: connect.sid=s%3Anv9uptkcTn4jw6upvC4YXLJPU_RWNjJ8.cUN02M0s4GbUjLms4VPMpcVK0%2B%2FeR0oEyII1L8c%2F%2F2Q; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42f080247ab59517-NRT
+
+{"facade":"pos/invoice","data":{"url":"https://bitpay.com/invoice?id=SAkEiGicFx9wxjF8cYmUNF","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529689230_47","invoiceTime":1529689233319,"expirationTime":1529690133319,"currentTime":1529689233353,"guid":"402e8e57-6da6-9f2d-ed23-26b895c935ff","id":"SAkEiGicFx9wxjF8cYmUNF","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"buyerProvidedInfo":{},"paymentSubtotals":{"BTC":100000,"BCH":804400},"paymentTotals":{"BTC":118000,"BCH":804400},"exchangeRates":{"BTC":{"USD":6159.99,"BCH":8.04386262731784},"BCH":{"BTC":0.12515422077922078,"USD":770.9499999999999}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":122.301,"totalFee":18000},"BCH":{"satoshisPerByte":0,"totalFee":0}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://bitpay.com/i/SAkEiGicFx9wxjF8cYmUNF","BIP73":"https://bitpay.com/i/SAkEiGicFx9wxjF8cYmUNF"},"BCH":{"BIP72b":"bitcoincash:?r=https://bitpay.com/i/SAkEiGicFx9wxjF8cYmUNF","BIP73":"https://bitpay.com/i/SAkEiGicFx9wxjF8cYmUNF"}},"btcPrice":"0.001000","token":"2TMf23yGKzMLZBxPxF6f5FwtjZthAA9mDpg997aciksfx8VuBMTiZ5SrkbXMS9Nhwp"}}
+
+  
+[2018-06-22 17:40:35] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-22 17:44:41] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-06-22 17:44:42] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-06-22 17:45:25] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-06-22 17:46:25] local.INFO: SIN Tf4tXfqVRabX5ieeCkRrTzPSadCbvhRwP2p  
+[2018-06-22 19:44:45] local.INFO: SIN TexgYoXqBST7ERAgeFxLZEP1uZurBP3x6Z6  
+[2018-06-22 19:45:25] local.INFO: SIN Tf8W2gzPMy6cwBNp7Ke6RFCn5ZuH7H4cuGP  
+[2018-06-22 19:46:34] local.INFO: SIN TfKZavC9NA64G8mM2RVgMmG1pB21au8Jwtn  
+[2018-06-22 19:53:46] local.INFO: SIN TfFoBp4En3ftmgTZcdSWiijMKE54yW9bsHf  
+[2018-06-22 19:56:14] local.INFO: SIN Tf2Df7yVaR7rK7EoCiSGg1rhpwtQC96EXTR  
+[2018-06-22 19:56:16] local.ERROR: ErrorException: Undefined variable: updateToken in E:\draftMatch\draftmatch\app\Helpers\BitPayHelper.php:237
+Stack trace:
+#0 E:\draftMatch\draftmatch\app\Helpers\BitPayHelper.php(237): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', 'E:\\draftMatch\\d...', 237, Array)
+#1 E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\UsersController.php(398): App\Helpers\BitPayHelper::addInvoice(Object(App\User), '11')
+#2 [internal function]: App\Http\Controllers\Api\v1\UsersController->addBitcoins(Object(Illuminate\Http\Request))
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(55): call_user_func_array(Array, Array)
+#4 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('addBitcoins', Array)
+#5 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Api\v1\UsersController), 'addBitcoins')
+#6 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(160): Illuminate\Routing\Route->runController()
+#7 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(572): Illuminate\Routing\Route->run()
+#8 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 E:\draftMatch\draftmatch\app\Http\Middleware\VerifyJWTToken.php(91): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\VerifyJWTToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#11 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#14 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#17 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#19 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#20 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#23 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#24 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#25 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#26 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#27 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 E:\draftMatch\draftmatch\app\Http\Middleware\HttpsProtocol.php(29): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\HttpsProtocol->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#39 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#40 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#42 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#43 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#44 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#45 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#46 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#47 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#48 E:\draftMatch\draftmatch\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#49 E:\draftMatch\draftmatch\server.php(21): require_once('E:\\draftMatch\\d...')
+#50 {main}  
+[2018-06-22 19:56:47] local.INFO: SIN TfLSBTtFJ5SD5aYMVVYEwC6D1fqjKjiZhb6  
+[2018-06-22 19:57:37] local.INFO: SIN TfLRt6rLc7B9LSdpBxTFJZFU4uNGVpThFMP  
+[2018-06-22 20:03:29] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-06-22 20:03:29] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-06-22 20:03:36] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-06-22 20:03:44] local.INFO: SIN TeyNeauz8AquHzkbML2hiqcmv143YpSvFGU  
+[2018-06-22 20:05:26] local.INFO: Adding invoice   
+[2018-06-22 20:05:26] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (4kBYDHH9rM5qobnS4cCdqx, softman009@outlook.com, 1529697923_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529697923_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-22 20:05:26, 2018-06-22 20:05:26) returning "id")  
+[2018-06-22 20:05:26] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 690
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 3046022100bbd41f58d4ee8d750950ee76d86c8d7d0575d1ca2bd607d45277fae7dd5e0415022100af6a859fde3bbced13dac29a4a4d0a24ad4913397e0b63c41363fca48d5baac9
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"low","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529697923_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529697923_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"e6bf8c41-f74c-5468-4ae8-10a546aeb814","nonce":1529697923.505352,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-22 20:05:26] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Fri, 22 Jun 2018 20:05:25 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1308
+Connection: keep-alive
+Set-Cookie: __cfduid=d6a60f48486069965af0a05e1072a30261529697924; expires=Sat, 22-Jun-19 20:05:24 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"51c-ptY1Ngihz4rl9/epvhNlrlX3Ybw"
+set-cookie: connect.sid=s%3A5P3Uqp4QPGtkBJNbZXrYieXmxdFA419q.wbbJ1GBmcZSO7N1hvrsqBUv2tWOrFek9tv4T0KewlIM; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42f1545c2c76a554-NRT
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=4kBYDHH9rM5qobnS4cCdqx","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529697923_47","invoiceTime":1529697925084,"expirationTime":1529698825084,"currentTime":1529697925100,"guid":"e6bf8c41-f74c-5468-4ae8-10a546aeb814","id":"4kBYDHH9rM5qobnS4cCdqx","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":799100},"paymentTotals":{"BTC":1495200,"BCH":802100},"exchangeRates":{"BTC":{"USD":6197.300000000002,"BCH":7.991360412637009},"BCH":{"BTC":0.12469820680851887,"USD":773.7}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.135,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/4kBYDHH9rM5qobnS4cCdqx","BIP73":"https://test.bitpay.com/i/4kBYDHH9rM5qobnS4cCdqx"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/4kBYDHH9rM5qobnS4cCdqx","BIP73":"https://test.bitpay.com/i/4kBYDHH9rM5qobnS4cCdqx"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPfkprNM2CRioJxErqEJ4hUtYwb4Sc2SaimKUm46vanNMr"}}
+
+  
+[2018-06-22 20:05:26] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-22 20:25:19] local.INFO: Adding invoice   
+[2018-06-22 20:25:19] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (EWnR4YwXp4VuMdYWo8299x, softman009@outlook.com, 1529699115_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529699115_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-22 20:25:19, 2018-06-22 20:25:19) returning "id")  
+[2018-06-22 20:25:19] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 690
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 304502207eabc29245d7c3e08fb14ac46bcbcd2d8068c7dc5fc673d3b54ee1beaa1c77da0221009e91b79512447b9ae9b8fddef44c05da3a53b54b46b7b218276bed02a28575cd
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"low","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529699115_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529699115_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"0719a688-5c3d-e758-3c11-465a2b270497","nonce":1529699115.560659,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-22 20:25:19] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Fri, 22 Jun 2018 20:25:17 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1298
+Connection: keep-alive
+Set-Cookie: __cfduid=df66138662a8f859d1bfeda631daaef191529699116; expires=Sat, 22-Jun-19 20:25:16 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"512-+e5w9lqDS7D4G+vM56Cvfq0rou8"
+set-cookie: connect.sid=s%3AGEbPhyUS2yy81j5yW4GkZHe8c64xEe-E.qOUnISEXf8Ra%2FNKHj7g%2FaD4PG0%2FjIjlb0bsrP75I5E8; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42f171783efd9427-NRT
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=EWnR4YwXp4VuMdYWo8299x","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529699115_47","invoiceTime":1529699117398,"expirationTime":1529700017398,"currentTime":1529699117421,"guid":"0719a688-5c3d-e758-3c11-465a2b270497","id":"EWnR4YwXp4VuMdYWo8299x","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":808800},"paymentTotals":{"BTC":1495200,"BCH":811800},"exchangeRates":{"BTC":{"USD":6114.66,"BCH":8.088174603174602},"BCH":{"BTC":0.12315987255943141,"USD":753.8}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.135,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/EWnR4YwXp4VuMdYWo8299x","BIP73":"https://test.bitpay.com/i/EWnR4YwXp4VuMdYWo8299x"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/EWnR4YwXp4VuMdYWo8299x","BIP73":"https://test.bitpay.com/i/EWnR4YwXp4VuMdYWo8299x"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPhnHU15bZ3xHzFxPw87WJwA8QusVkmEDNPm4SzoenwiQ3"}}
+
+  
+[2018-06-22 20:25:19] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-22 20:26:38] local.INFO: Adding invoice   
+[2018-06-22 20:26:38] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (TqdtMoMm6EJppzrJJ16Qcz, softman009@outlook.com, 1529699195_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529699195_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-22 20:26:38, 2018-06-22 20:26:38) returning "id")  
+[2018-06-22 20:26:38] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 3045022100c8f242ce46ebee403e13a7bb73d93d0b8ff0fb635857d4831b55e23c1804070502204d68b1431eebfbff4a5505f4a0067cf625685f499b93529bc1efb2d8dbb1ee18
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529699195_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529699195_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"76c9f666-c2e2-6a11-7acf-bbb8a5324822","nonce":1529699195.134279,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-22 20:26:38] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Fri, 22 Jun 2018 20:26:36 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1319
+Connection: keep-alive
+Set-Cookie: __cfduid=d5ac4198d929a9ec4509c6f693198f1781529699196; expires=Sat, 22-Jun-19 20:26:36 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"527-JsP3MsFeHjnB+oftG4E5jLHmkf8"
+set-cookie: connect.sid=s%3AU-vAaxC5BZk_wZPWIElj6MK3__wNhznj.bn5nQ1ElmrF8QiwFK5vPsTjNNsqqdifUbKb5kow9dFE; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42f173691ca29469-NRT
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=TqdtMoMm6EJppzrJJ16Qcz","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529699195_47","invoiceTime":1529699196898,"expirationTime":1529700096898,"currentTime":1529699196912,"guid":"76c9f666-c2e2-6a11-7acf-bbb8a5324822","id":"TqdtMoMm6EJppzrJJ16Qcz","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":807800},"paymentTotals":{"BTC":1495200,"BCH":810800},"exchangeRates":{"BTC":{"USD":6120.240000000001,"BCH":8.07845828933474},"BCH":{"BTC":0.12347876932826571,"USD":756.0000000000001}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.135,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/TqdtMoMm6EJppzrJJ16Qcz","BIP73":"https://test.bitpay.com/i/TqdtMoMm6EJppzrJJ16Qcz"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/TqdtMoMm6EJppzrJJ16Qcz","BIP73":"https://test.bitpay.com/i/TqdtMoMm6EJppzrJJ16Qcz"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPkoUVt5TCodhPSKDnCMh8vjDikhGF337xD9XuePotPfwT"}}
+
+  
+[2018-06-22 20:26:38] local.INFO: Successfully created invoice for user jingadmin  
+[2018-06-22 20:50:12] local.INFO: Adding invoice   
+[2018-06-22 20:50:12] local.INFO: Exception while trying to create invoice SQLSTATE[42703]: Undefined column: 7 ERROR:  column "orderId" of relation "invoices" does not exist
+LINE 1: insert into "invoices" ("invoiceId", "email", "orderId", "am...
+                                                      ^ (SQL: insert into "invoices" ("invoiceId", "email", "orderId", "amount", "currency", "description", "status", "notificationUrl", "notificationEmail", "code", "user", "updated_at", "created_at") values (AfaeyGDyx8GwUUEj9iNMd3, softman009@outlook.com, 1529700608_47, 11, BTC, Adding funds to draftmatch, new, http://162.243.21.233/bitpay/callback, wanga6404@gmail.com, 1529700608_47_dfm, {"id":47,"name":"softman009","email":"softman009@outlook.com","username":"jingadmin","role":"user","balance":"0","status":"active","wins":"0","loses":"0","history_count":"0","history_entry":"0","history_winning":"0","created_at":"2018-06-22 15:49:56","updated_at":"2018-06-22 15:49:56","access_token":null,"refresh_token":null,"expires":null}, 2018-06-22 20:50:12, 2018-06-22 20:50:12) returning "id")  
+[2018-06-22 20:50:12] local.INFO: Request =====> POST https://test.bitpay.com:443/invoices HTTP/1.1
+Content-Type: application/json
+X-BitPay-Plugin-Info: BitPay PHP-Client/2.2.20
+User-Agent: BitPay PHP-Client/2.2.20 (PHP 7.2.2)
+X-Accept-Version: 2.0.0
+Content-Length: 691
+x-identity: 029c4a8486c97a5f9eb233601e60ce19ef767a98a5c03d0d83ba1d6948cc246f49
+x-signature: 3045022100dbf33dc92c9e8deea1b124851fc4f05430c5108aac95aae2d3f3e0171a22a58002206f03d2dd7d891aa3970f793e017d9a0270be181b007cf0f4f56f4ae7f02424e0
+
+{"price":0.001,"currency":"BTC","posData":null,"notificationURL":"http:\/\/162.243.21.233\/bitpay\/callback","transactionSpeed":"high","fullNotifications":true,"extendedNotifications":false,"notificationEmail":"wanga6404@gmail.com","redirectURL":null,"orderID":"1529700608_47","itemDesc":"Adding funds to draftmatch","itemCode":"1529700608_47_dfm","physical":false,"buyerName":"","buyerAddress1":"","buyerAddress2":"","buyerCity":null,"buyerState":null,"buyerZip":null,"buyerCountry":null,"buyerEmail":"softman009@outlook.com","buyerPhone":null,"buyerNotify":null,"guid":"5e9ebd34-1688-1983-5fd7-18b10f2f0f03","nonce":1529700608.866231,"token":"3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h"}
+
+
+  
+[2018-06-22 20:50:12] local.INFO: Response =====> HTTP/1.1 200 OK
+Date: Fri, 22 Jun 2018 20:50:10 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 1308
+Connection: keep-alive
+Set-Cookie: __cfduid=d16fdfe7e5fa393e06296e7fb45497d1c1529700609; expires=Sat, 22-Jun-19 20:50:09 GMT; path=/; domain=.bitpay.com; HttpOnly
+Strict-Transport-Security: max-age=31536000
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: HEAD,GET,POST,PUT,DELETE,OPTIONS
+Access-Control-Allow-Headers: Content-Type,Authorization,Content-Length,X-Requested-With,Cache-Control,X-Accept-Version,x-signature,x-pubkey,x-identity,cf-connecting-ip
+ETag: W/"51c-qjmUYUf626S4ECIxXs3Yy8GJiYI"
+set-cookie: connect.sid=s%3Aw8cALTUtEl62K0M5xyMT3-NXVLBRULu-.0BHaZat%2BF3D0TZdsQkJeMj1nYcnJetXRPEW4b%2FgfQVk; Path=/; HttpOnly; Secure
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+CF-RAY: 42f195ebedde943f-NRT
+
+{"facade":"pos/invoice","data":{"url":"https://test.bitpay.com/invoice?id=AfaeyGDyx8GwUUEj9iNMd3","posData":"","status":"new","price":0.001,"currency":"BTC","itemDesc":"Adding funds to draftmatch","orderId":"1529700608_47","invoiceTime":1529700610470,"expirationTime":1529701510470,"currentTime":1529700610485,"guid":"5e9ebd34-1688-1983-5fd7-18b10f2f0f03","id":"AfaeyGDyx8GwUUEj9iNMd3","lowFeeDetected":false,"amountPaid":0,"exceptionStatus":false,"redirectURL":"","refundAddressRequestPending":false,"paymentSubtotals":{"BTC":100000,"BCH":811100},"paymentTotals":{"BTC":1495200,"BCH":814100},"exchangeRates":{"BTC":{"USD":6070.620000000001,"BCH":8.111464457509355},"BCH":{"BTC":0.12264456771615838,"USD":745.3}},"supportedTransactionCurrencies":{"BTC":{"enabled":true},"BCH":{"enabled":true}},"minerFees":{"BTC":{"satoshisPerByte":9491.313,"totalFee":1395200},"BCH":{"satoshisPerByte":20.135,"totalFee":3000}},"paymentCodes":{"BTC":{"BIP72b":"bitcoin:?r=https://test.bitpay.com/i/AfaeyGDyx8GwUUEj9iNMd3","BIP73":"https://test.bitpay.com/i/AfaeyGDyx8GwUUEj9iNMd3"},"BCH":{"BIP72b":"bitcoincash:?r=https://test.bitpay.com/i/AfaeyGDyx8GwUUEj9iNMd3","BIP73":"https://test.bitpay.com/i/AfaeyGDyx8GwUUEj9iNMd3"}},"btcPrice":"0.001000","token":"2PbMG9c6BBjwCmjzFjndjPZjNdmYXvfVrV47Sh85RMqD9bG6M61XzCzwv5jfkD7L1h"}}
+
+  
+[2018-06-22 20:50:12] local.INFO: Successfully created invoice for user jingadmin  

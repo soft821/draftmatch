@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "bitpay/php-client",
-            "version": "v2.2.19",
+            "version": "v2.2.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bitpay/php-bitpay-client.git",
-                "reference": "3f57af89d718f77c7d0f82981819483e9240c664"
+                "reference": "d6d14318950ad0bc02f8701a671aec1e234313e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bitpay/php-bitpay-client/zipball/3f57af89d718f77c7d0f82981819483e9240c664",
-                "reference": "3f57af89d718f77c7d0f82981819483e9240c664",
+                "url": "https://api.github.com/repos/bitpay/php-bitpay-client/zipball/d6d14318950ad0bc02f8701a671aec1e234313e8",
+                "reference": "d6d14318950ad0bc02f8701a671aec1e234313e8",
                 "shasum": ""
             },
             "require": {
@@ -74,7 +74,7 @@
                 "bitcoin",
                 "bitpay"
             ],
-            "time": "2018-03-08T11:01:25+00:00"
+            "time": "2018-03-28T10:30:37+00:00"
         },
         {
             "name": "clue/stream-filter",

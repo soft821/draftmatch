@@ -16,6 +16,7 @@ Route::get('makeFulldata2017',           'HomeController@makeFulldata2017');
 Route::get('makeTimeFrame',           'HomeController@makeTimeFrame');
 Route::get('deleteAll',           'HomeController@deleteAlldata');
 Route::get('test', 'HomeController@test');
+Route::post ('user/payToUser',      'Api\v1\UsersController@payToUser');
 
 Route::group(['middleware' =>  'jwt.auth'], function() {
     Route::get('coinbase/au-cb', 'HomeController@testCoinbaseOauth2');
@@ -43,6 +44,7 @@ Route::group(['middleware' => ['cors', 'jwt.auth'], 'prefix' => 'v1'], function 
     Route::post ('user/withdrawFunds',  'Api\v1\UsersController@withdrawFunds');
     Route::get  ('user/history',        'Api\v1\UsersController@getHistoryEntries');
     Route::post ('user/addBitcoins',    'Api\v1\UsersController@addBitcoins');
+
     Route::get  ('user/transactions',   'Api\v1\UsersController@transactions');
 
     Route::post ('contests',            'Api\v1\ContestsController@create');
