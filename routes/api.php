@@ -11,11 +11,8 @@
 |
 */
  
-Route::get('pullDefenseStats',           'HomeController@pullDefenseStats');
-Route::get('makeFulldata2017',           'HomeController@makeFulldata2017');
-Route::get('makeTimeFrame',           'HomeController@makeTimeFrame');
-Route::get('deleteAll',           'HomeController@deleteAlldata');
-Route::get('test', 'HomeController@test');
+
+
 
 
 Route::group(['middleware' =>  'cors', 'prefix' => 'v1'], function() {
@@ -52,6 +49,8 @@ Route::group(['middleware' => ['cors', 'jwt.auth'], 'prefix' => 'v1'], function 
 
     Route::get  ('slates'   ,           'Api\v1\SlatesController@getSlates');
     Route::get  ('fantasyPlayers',      'Api\v1\FantasyPlayersController@getFantasyPlayers');
+
+    Route::get('test', 'HomeController@test');
 });
 
 Route::group(['middleware' => ['cors', 'jwt.auth', 'is-allowed-location'], 'prefix' => 'v1'], function () {
