@@ -85,11 +85,13 @@ class ContestsController extends Controller
         if ($request->get(ContestConsts::$CONTEST_NUM_OF_ENTRIES)) {
             $numOfEntries = $request->get(ContestConsts::$CONTEST_NUM_OF_ENTRIES);
 
-            if (!$user->isAdmin() && $user->balance * (1.0/CoinbaseHelper::getExchangeRate()) < $numOfEntries * $request->get(ContestConsts::$CONTEST_ENTRY_FEE)) {
+        }
+
+        if (!$user->isAdmin() && $user->balance * (1.0/CoinbaseHelper::getExchangeRate()) < $numOfEntries * $request->get(ContestConsts::$CONTEST_ENTRY_FEE)) {
                 return HttpResponse::serverError(HttpStatus::$ERR_NOT_ENOUGH_FUNDS, HttpMessage::$CONTEST_NOT_ENOUGH_FUNDS,
                     HttpMessage::$CONTEST_NOT_ENOUGH_FUNDS);
             }
-        }
+
 
         $private = false;
         if ($request->get(ContestConsts::$CONTEST_PRIVATE)){
