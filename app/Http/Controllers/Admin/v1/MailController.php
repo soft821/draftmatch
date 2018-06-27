@@ -39,7 +39,7 @@ class MailController extends Controller
                 $validator->errors()->all());
         }
 
-        $user_email = User::where('email', $request->get('email'))->first();
+        $user_email = User::where('email', $request->get('email'))->where('role', '=', 'member')->first();
         if ($user_email) {
             return HttpResponse::serverError(HttpStatus::$ERR_USER_EXISTS, HttpMessage::$USER_EMAIL_EXISTS,
                 HttpMessage::$USER_EMAIL_EXISTS);

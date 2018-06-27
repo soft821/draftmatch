@@ -41,55 +41,65 @@ class UsersController extends Controller
             'email' => 'required|email',
             'username' => 'required|min:6',
             'password' => 'required|min:6',
-            'promocode' => 'required'
+            'promocode' => 'nullable'
         ]);
 
         if ($validator->fails()) {
             return HttpResponse::badRequest(HttpStatus::$ERR_VALIDATION, HttpMessage::$USER_ERROR_CREATING, $validator->errors()->all());
         }
 
-        $user = User::where('email', $request->get('email'))->first();
+        if (!$request->get('promocode')) {
+             $user = User::where('email', $request->get('email'))->first();
+        } else {
+            $user = User::where('email', $request->get('email'))->where('role', '=', 'member')->first();
+        }
+
+        
         if ($user) {
             return HttpResponse::serverError(HttpStatus::$ERR_USER_EXISTS, HttpMessage::$USER_EMAIL_EXISTS,
                 HttpMessage::$USER_EMAIL_EXISTS);
         }
 
         $user = User::where('username', $request->get('username'))->first();
-        if ($user) {
+        if (!$request->get('promocode') && $user) {
             return HttpResponse::serverError(HttpStatus::$ERR_USER_EXISTS, HttpMessage::$USER_USERNAME_EXISTS,
                 HttpMessage::$USER_USERNAME_EXISTS);
         }
 
-        $promoCodeChecking = PromoCode::where('email', $request->get('email'))->first();
-
-        if ($promoCodeChecking) {
-            if ($request->get('promocode') != $promoCodeChecking->code) {
-                return HttpResponse::serverError(HttpStatus::$ERROR_PROMOCODE_INVALID, HttpMessage::$USER_PROMOCODE_INVALID,
-                HttpMessage::$USER_PROMOCODE_INVALID);
-            }
+        if (!$request->get('promocode')) {
         } else {
-            return HttpResponse::serverError(HttpStatus::$ERROR_PROMOCODE_INVALID, HttpMessage::$USER_PERMISSION_INVALID,
-                HttpMessage::$USER_PERMISSION_INVALID);
-        }
+            $promoCodeChecking = PromoCode::where('email', $request->get('email'))->first();
 
-        $date = new \DateTime();
-        if ($promoCodeChecking->expired < $date->getTimestamp()) {
-           return HttpResponse::serverError(HttpStatus::$ERROR_PROMOCODE_INVALID, HttpMessage::$USER_PROMOCODE_EXPIRED,
-                HttpMessage::$USER_PROMOCODE_EXPIRED);
+            if ($promoCodeChecking) {
+                if ($request->get('promocode') != $promoCodeChecking->code) {
+                    return HttpResponse::serverError(HttpStatus::$ERROR_PROMOCODE_INVALID, HttpMessage::$USER_PROMOCODE_INVALID,
+                    HttpMessage::$USER_PROMOCODE_INVALID);
+                }
+            } else {
+                return HttpResponse::serverError(HttpStatus::$ERROR_PROMOCODE_INVALID, HttpMessage::$USER_PERMISSION_INVALID,
+                    HttpMessage::$USER_PERMISSION_INVALID);
+            }
+
+            $date = new \DateTime();
+            if ($promoCodeChecking->expired < $date->getTimestamp()) {
+               return HttpResponse::serverError(HttpStatus::$ERROR_PROMOCODE_INVALID, HttpMessage::$USER_PROMOCODE_EXPIRED,
+                    HttpMessage::$USER_PROMOCODE_EXPIRED);
+            }
         }
+        
 
 
         try {
-            $user = $this->user->create([
-                'name' => $request->get('name'),
+
+            $user = User::updateOrCreate(array('email'=>$request->get('email')),
+                ['name' => $request->get('name'),
                 'email' => $request->get('email'),
                 'password' => bcrypt($request->get('password')),
                 'username' => $request->get('username'),
-                'balance' => 0
-            ]);
-
-            $user->balance = 0;
-            $user->save();
+                'balance' => 0,
+                'role' => !$request->get('promocode') ? 'user' : 'member'
+                ]
+            );
 
             $token = null;
             $credentials = $request->only('email', 'password');
@@ -105,18 +115,18 @@ class UsersController extends Controller
             }
 
 
-            try {
-                $client = new HttpClient(['headers' => ['Authorization' => "Basic ZHJhZnRtYXRjaDpxMTNZIE5uQ3EgSGtETSB4VVRDIDVjbHIgNFBHaw=="]]);
+            // try {
+            //     $client = new HttpClient(['headers' => ['Authorization' => "Basic ZHJhZnRtYXRjaDpxMTNZIE5uQ3EgSGtETSB4VVRDIDVjbHIgNFBHaw=="]]);
 
-                $client->request('POST', 'https://draftmatch.com/wp-json/wp/v2/users',
-                    ['json' => ['username' => $request->get('username'), 'password' => $request->get('password'), 'email' => $request->get('email')]]);
-            }
-            catch (\GuzzleHttp\Exception\ServerException $exception){
-                print_r('Exception');
-            }
-            catch (Exception $exception){
+            //     $client->request('POST', 'https://draftmatch.com/wp-json/wp/v2/users',
+            //         ['json' => ['username' => $request->get('username'), 'password' => $request->get('password'), 'email' => $request->get('email')]]);
+            // }
+            // catch (\GuzzleHttp\Exception\ServerException $exception){
+            //     print_r('Exception');
+            // }
+            // catch (Exception $exception){
 
-            }
+            // }
 
             $user->token = $token;
             return HttpResponse::ok(HttpMessage::$USER_CREATED_SUCCESSFULLY, $user);
