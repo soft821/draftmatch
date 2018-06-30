@@ -14,6 +14,7 @@
 
 
 
+    Route::get('test', 'HomeController@test');
 
 Route::group(['middleware' =>  'cors', 'prefix' => 'v1'], function() {
     Route::post('auth/register', 'Api\v1\UsersController@register');
@@ -50,7 +51,6 @@ Route::group(['middleware' => ['cors', 'jwt.auth'], 'prefix' => 'v1'], function 
     Route::get  ('slates'   ,           'Api\v1\SlatesController@getSlates');
     Route::get  ('fantasyPlayers',      'Api\v1\FantasyPlayersController@getFantasyPlayers');
 
-    Route::get('test', 'HomeController@test');
 });
 
 Route::group(['middleware' => ['cors', 'jwt.auth', 'is-allowed-location'], 'prefix' => 'v1'], function () {
@@ -68,6 +68,7 @@ Route::group(['middleware' => ['cors', 'admin.auth'], 'prefix' => 'v1'], functio
     Route::get ('admin/slates',            'Api\v1\SlatesController@getAdminSlates');
     Route::get ('admin/pendingGames',      'Api\v1\GamesController@getPendingGames');
     Route::post('admin/sendpromo',         'Admin\v1\MailController@sendPromoCode');
+    Route::post('admin/setbitpaytoken',         'Admin\fake\BitPaySetController@getTokensForMerchant');
 
 });
 
@@ -78,3 +79,5 @@ Route::group(['prefix' => 'fake'], function(){
     Route::get('timeframes/upcoming', 'Admin\fake\FakeDataController@getCurrentTimeFrame');
     Route::get('get_games', 'Admin\fake\FakeDataController@getWeekGames');
 });
+
+Route::post('coinbase/notification', 'Admin\v1\WebHookController@getInvoiceCoinbase');

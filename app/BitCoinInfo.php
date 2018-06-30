@@ -11,7 +11,9 @@ class BitCoinInfo extends Model
     public $incrementing = false;
 
     public static function getInfo(){
-        return BitCoinInfos::first();
+        return BitCoinInfo::first();
     }
+
+    
 
 }

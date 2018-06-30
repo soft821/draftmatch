@@ -30,6 +30,7 @@ class Kernel extends ConsoleKernel
         Commands\UpdatePlayerInfo::class,
         Commands\UpdatePlayerStats::class,
         Commands\UpdateLivePlayerStats::class,
+        Commands\BitPaySetKey::class,
         // Commands\PullDataFrom2017::class
     ];
 

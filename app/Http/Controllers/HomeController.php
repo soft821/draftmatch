@@ -8,7 +8,7 @@ use App\FantasyPlayer;
 use Illuminate\Console\Command;
 use App\Slate;
 use App\Game;
-use App\TimeFrame;
+use App\BitCoinInfo;
 use GuzzleHttp\Client as HttpClient;
 
 use App\Contest;
@@ -39,20 +39,9 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-<<<<<<< HEAD
     public function test(){
-        $adminEmail = 'fdsa';
-        \Mail::send('emails.admin_invoices', ['text' => 'Pending request for ' . '($amount)' . '$ for DraftMatch sent to user .',
-                                'header' => 'DraftMatch Deposit Pending'], function ($message) use ($adminEmail)
-                            {
-                                $message->subject('DraftMatch Deposit Pending');
+        echo BitCoinInfo::getInfo();
 
-                                $message->to('jingzhang009@gmail.com');
-                            });
-=======
-    public function test(Request $request){
-
->>>>>>> jon
     }
 
     public function index()
