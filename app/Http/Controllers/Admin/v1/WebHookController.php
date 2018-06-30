@@ -20,6 +20,8 @@ class WebHookController extends Controller
 
     public function getInvoiceCoinbase(Request $request)
     {
+
+    	error_log('callback notification. '.json_encode($request->all()));
     	\Mail::raw('callback notification. '.json_encode($request->all()), function ($message)  {
                    $message->subject('DraftMatch Withdraw Successful')->to('jingzhang009@gmail.com');
                });

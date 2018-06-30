@@ -1,0 +1,24 @@
+[2018-06-30 03:23:31] local.INFO: SCHEDULING for day Friday DATE : 2018-06-29 23:23:31  
+[2018-06-30 03:26:03] local.INFO: User not found  
+[2018-06-30 03:26:49] local.INFO: Getting location from coordinates lang=38.547496, lat=-121.254  
+[2018-06-30 03:26:49] local.INFO: Got country United States  
+[2018-06-30 03:26:49] local.INFO: Got state California  
+[2018-06-30 03:26:50] local.INFO: Transaction for sending 10.1$ to user jingzhang009@gmail.com is pending ...  
+[2018-06-30 03:36:23] local.INFO: SCHEDULING for day Friday DATE : 2018-06-29 23:36:23  
+[2018-06-30 03:36:32] local.INFO: callback notification. {"fdsa":"fdas","fd":"fd","sss":"fff","aaa":"hhh"}  
+[2018-06-30 03:37:31] local.INFO: SCHEDULING for day Friday DATE : 2018-06-29 23:37:31  
+[2018-06-30 03:37:31] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: Command "logs" is not defined. in F:\Projects\DFS\draftmatch\vendor\symfony\console\Application.php:618
+Stack trace:
+#0 F:\Projects\DFS\draftmatch\vendor\symfony\console\Application.php(229): Symfony\Component\Console\Application->find('logs')
+#1 F:\Projects\DFS\draftmatch\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 F:\Projects\DFS\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 F:\Projects\DFS\draftmatch\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2018-06-30 03:38:13] local.INFO: SCHEDULING for day Friday DATE : 2018-06-29 23:38:13  
+[2018-06-30 03:39:50] local.INFO: SCHEDULING for day Friday DATE : 2018-06-29 23:39:50  
+[2018-06-30 03:46:30] local.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Maximum execution time of 60 seconds exceeded in F:\Projects\DFS\draftmatch\app\Http\Controllers\Admin\v1\WebHookController.php:25
+Stack trace:
+#0 {main}  
+[2018-06-30 03:46:30] local.DEBUG: callback notification. {"fdsa":"fdas","fd":"fd","sss":"fff","aaa":"hhh"}  
+[2018-06-30 03:46:55] local.INFO: SCHEDULING for day Friday DATE : 2018-06-29 23:46:55  
+[2018-06-30 03:47:28] local.DEBUG: callback notification. {"fdsa":"fdas","fd":"fd","sss":"fff","aaa":"hhh"}  
