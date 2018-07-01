@@ -92,7 +92,7 @@ class UpdateInfo extends Command
             ->update(['updated' => true]);
 
 
-        \Log::info('Updated '.count($players).' live players');
+        \Log::info('Updated '.' live players');
     }
 
     public function updateFinishedPlayersInfo()

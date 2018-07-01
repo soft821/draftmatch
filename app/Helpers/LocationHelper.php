@@ -56,7 +56,9 @@ class LocationHelper {
         $request = 'http://maps.googleapis.com/maps/api/geocode/json?latlng='.$geolocation.'&sensor=false';
         $file_contents = file_get_contents($request);
         $json_decode = json_decode($file_contents);
+        $loc = array();
         if(isset($json_decode->results[0])) {
+            \Log::info('reach in address decode');
             $response = array();
             foreach($json_decode->results[0]->address_components as $addressComponet) {
                 if(in_array('political', $addressComponet->types)) {

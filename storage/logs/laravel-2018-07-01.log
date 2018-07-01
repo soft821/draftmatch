@@ -1,0 +1,875 @@
+[2018-07-01 09:09:18] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:09:18  
+[2018-07-01 09:10:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:10:01  
+[2018-07-01 09:10:01] local.INFO: Update exchange ...  
+[2018-07-01 09:10:03] local.INFO: Check invoices ...  
+[2018-07-01 09:10:03] local.INFO: No pending invoices  
+[2018-07-01 09:10:03] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:10:03] local.INFO: Finished with updating invoices  
+[2018-07-01 09:10:03] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-07-01 09:10:03] local.INFO: Condition is true for update:info everyFiveMinutes  
+[2018-07-01 09:10:03] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:10:03  
+[2018-07-01 09:10:03] local.INFO: Updating data ...  
+[2018-07-01 09:10:03] local.INFO: Updating live games results => 2018-07-01 05:10:03  
+[2018-07-01 09:10:03] local.INFO: DATE : 2018-07-01 05:10:03  
+[2018-07-01 09:10:03] local.INFO: Updated 2 games to LIVE status  
+[2018-07-01 09:10:03] local.INFO: Updating live players results => 2018-07-01 05:10:03  
+[2018-07-01 09:10:03] local.INFO: Updated  live players  
+[2018-07-01 09:10:03] local.INFO: Update finished players 2018-07-01 05:10:03  
+[2018-07-01 09:10:03] local.INFO: Updated 0 finished players  
+[2018-07-01 09:10:03] local.INFO: Updating slates status => 2018-07-01 05:10:03  
+[2018-07-01 09:10:03] local.INFO: Updated active slates to LIVE status of  0 slates successfully.  
+[2018-07-01 09:10:03] local.INFO: Updated slate to HISTORY status  0 slates successfully.  
+[2018-07-01 09:10:03] local.INFO: Successfully updated 0 slates  
+[2018-07-01 09:10:03] local.INFO: Updating contests  2018-07-01 05:10:03  
+[2018-07-01 09:10:03] local.INFO: Updated 0 to CANCELLED status  
+[2018-07-01 09:10:03] local.INFO: Updated 0 contests to HISTORY status  
+[2018-07-01 09:10:03] local.INFO: Updated 0 contests to LIVE status  
+[2018-07-01 09:10:03] local.INFO: Updating ENDED contests  2018-07-01 05:10:03  
+[2018-07-01 09:10:03] local.INFO: Updated 0 contests results  
+[2018-07-01 09:10:03] local.INFO: Updating LIVE contests  2018-07-01 05:10:03  
+[2018-07-01 09:10:03] local.INFO: Updating contest with status LIVE and id 1529739391.5602_46_0  
+[2018-07-01 09:10:03] local.INFO: FP1 9.4  
+[2018-07-01 09:10:03] local.INFO: FP2 8.4  
+[2018-07-01 09:10:03] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:10:03] local.INFO: Updating contest with status LIVE and id 1529738578.5235_46_0  
+[2018-07-01 09:10:03] local.INFO: FP1 15  
+[2018-07-01 09:10:03] local.INFO: FP2 13  
+[2018-07-01 09:10:03] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:10:03] local.INFO: Updating contest with status LIVE and id 1529738897.4485_46_0  
+[2018-07-01 09:10:03] local.INFO: FP1 6.9  
+[2018-07-01 09:10:03] local.INFO: FP2 0  
+[2018-07-01 09:10:03] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:10:03] local.INFO: Updating contest with status LIVE and id 1529739202.2085_46_0  
+[2018-07-01 09:10:03] local.INFO: FP1 24.04  
+[2018-07-01 09:10:03] local.INFO: FP2 0  
+[2018-07-01 09:10:03] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:10:03] local.INFO: Updating contest with status LIVE and id 1529519270.149_32_0  
+[2018-07-01 09:10:03] local.INFO: FP1 11.9  
+[2018-07-01 09:10:03] local.INFO: FP2 6.9  
+[2018-07-01 09:10:03] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:10:03] local.INFO: Updating contest with status LIVE and id 1529909700.6608_32_0  
+[2018-07-01 09:10:03] local.INFO: FP1 0  
+[2018-07-01 09:10:03] local.INFO: FP2 13.7  
+[2018-07-01 09:10:03] local.INFO: User  justin is winning currently  
+[2018-07-01 09:10:03] local.INFO: Updated 6 contests results  
+[2018-07-01 09:10:03] local.INFO: Updating ENDED contests  2018-07-01 05:10:03  
+[2018-07-01 09:10:03] local.INFO: Updated 0 contests results  
+[2018-07-01 09:10:03] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-07-01 09:10:03] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
+[2018-07-01 09:10:03] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[{"id":"TEN_BUF_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Mon","date":"2018-06-25 13:00:00","time":"2018-06-25T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"BUF","awayTeam":"TEN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"NYG_CAR_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Mon","date":"2018-06-25 13:00:00","time":"2018-06-25T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CAR","awayTeam":"NYG","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"MIA_CIN_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CIN","awayTeam":"MIA","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"BAL_CLE_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CLE","awayTeam":"BAL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"GB_DET_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"DET","awayTeam":"GB","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"DAL_HOU_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 20:20:00","time":"2018-06-24T20:20:00","homeScore":0,"awayScore":0,"homeTeam":"HOU","awayTeam":"DAL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"JAX_KC_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"KC","awayTeam":"JAX","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"OAK_LAC_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 16:05:00","time":"2018-06-24T16:05:00","homeScore":0,"awayScore":0,"homeTeam":"LAC","awayTeam":"OAK","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"IND_NE_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 20:20:00","time":"2018-06-24T20:20:00","homeScore":0,"awayScore":0,"homeTeam":"NE","awayTeam":"IND","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"WAS_NO_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 20:15:00","time":"2018-06-24T20:15:00","homeScore":0,"awayScore":0,"homeTeam":"NO","awayTeam":"WAS","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"DEN_NYJ_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"NYJ","awayTeam":"DEN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"MIN_PHI_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 16:25:00","time":"2018-06-24T16:25:00","homeScore":0,"awayScore":0,"homeTeam":"PHI","awayTeam":"MIN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"ATL_PIT_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"PIT","awayTeam":"ATL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"LAR_SEA_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 16:25:00","time":"2018-06-24T16:25:00","homeScore":0,"awayScore":0,"homeTeam":"SEA","awayTeam":"LAR","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"ARI_SF_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Thu","date":"2018-06-21 06:25:00","time":"2018-06-21T06:25:00","homeScore":0,"awayScore":0,"homeTeam":"SF","awayTeam":"ARI","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"PHI_NYG_2018_6_1","year":"2018","seasonType":"1","week":"6","day":"Thu","date":"2018-06-28 20:20:00","time":"2018-06-28T20:20:00","homeScore":0,"awayScore":0,"homeTeam":"NYG","awayTeam":"PHI","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"CAR_WAS_2018_6_1","year":"2018","seasonType":"1","week":"6","day":"Thu","date":"2018-06-28 13:00:00","time":"2018-06-28T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"WAS","awayTeam":"CAR","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""}]  
+[2018-07-01 09:10:03] local.INFO: Condition for games:update everyFiveMinutes for games in progress is true   
+[2018-07-01 09:10:04] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:10:04  
+[2018-07-01 09:10:04] local.INFO: Pulling scores   
+[2018-07-01 09:10:04] local.INFO: Pulling scores from url https://draftmatch-api.com/api/fake/get_games  
+[2018-07-01 09:10:05] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:10:05] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:10:05] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:10:05] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:10:05] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:10:05] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:10:05] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:10:05] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:10:05] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:10:05] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:10:05] local.INFO: Games 2 changed status  
+[2018-07-01 09:10:05] local.INFO: Pulling player stats  ...  
+[2018-07-01 09:10:05] local.INFO: Pulling player stats from url https://api.fantasydata.net/v3/nfl/stats/JSON/PlayerGameStatsByWeek/2017REG/6  
+[2018-07-01 09:10:34] local.INFO: Got 1752 from response  
+[2018-07-01 09:10:35] local.INFO: Successfully updated player stats  
+[2018-07-01 09:10:35] local.INFO: Pulling defense stats ...  
+[2018-07-01 09:10:35] local.INFO: Pulling data from urlhttps://api.fantasydata.net/v3/nfl/stats/JSON/FantasyDefenseByGame/2017REG/6  
+[2018-07-01 09:10:37] local.INFO: Got 28 from response  
+[2018-07-01 09:10:37] local.INFO: Successfully pulled defense stats  
+[2018-07-01 09:10:37] local.INFO: Successfully pulled all scores   
+[2018-07-01 09:11:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:11:01  
+[2018-07-01 09:11:01] local.INFO: Check invoices ...  
+[2018-07-01 09:11:01] local.INFO: No pending invoices  
+[2018-07-01 09:11:01] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:11:03] local.INFO: Finished with updating invoices  
+[2018-07-01 09:11:03] local.INFO: Checking conditions for update::info hourly  
+[2018-07-01 09:11:03] local.INFO: Condition is false for update:info hourly  
+[2018-07-01 09:11:44] local.INFO: Getting location from coordinates lang=38.547496, lat=-121.254  
+[2018-07-01 09:11:44] local.INFO: Could not get location  
+[2018-07-01 09:11:44] local.ERROR: ErrorException: Undefined variable: loc in /home/osboxes/Documents/projects/draftmatch/app/Helpers/LocationHelper.php:107
+Stack trace:
+#0 /home/osboxes/Documents/projects/draftmatch/app/Helpers/LocationHelper.php(107): App\Helpers\{closure}(8, 'Undefined varia...', '/home/osboxes/D...', 107, Array)
+#1 /home/osboxes/Documents/projects/draftmatch/app/Helpers/LocationHelper.php(26): App\Helpers\LocationHelper::get_location('38.547496', '-121.254')
+#2 /home/osboxes/Documents/projects/draftmatch/app/Http/Middleware/CheckLocation.php(33): App\Helpers\LocationHelper::isUserInAllowedLocation('38.547496', '-121.254')
+#3 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\CheckLocation->handle(Object(Illuminate\Http\Request), Object(Closure))
+#4 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#5 /home/osboxes/Documents/projects/draftmatch/app/Http/Middleware/VerifyJWTToken.php(91): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#6 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\VerifyJWTToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#7 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#8 /home/osboxes/Documents/projects/draftmatch/app/Http/Middleware/Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#10 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#11 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#16 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#19 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#20 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#21 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#23 /home/osboxes/Documents/projects/draftmatch/app/Http/Middleware/Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#24 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 /home/osboxes/Documents/projects/draftmatch/app/Http/Middleware/HttpsProtocol.php(29): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\HttpsProtocol->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#36 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#37 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#38 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#39 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#40 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#41 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#42 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#43 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#44 /home/osboxes/Documents/projects/draftmatch/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#45 /home/osboxes/Documents/projects/draftmatch/server.php(21): require_once('/home/osboxes/D...')
+#46 {main}  
+[2018-07-01 09:12:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:12:01  
+[2018-07-01 09:12:01] local.INFO: Check invoices ...  
+[2018-07-01 09:12:01] local.INFO: No pending invoices  
+[2018-07-01 09:12:01] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:12:02] local.INFO: Finished with updating invoices  
+[2018-07-01 09:13:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:13:01  
+[2018-07-01 09:13:01] local.INFO: Check invoices ...  
+[2018-07-01 09:13:01] local.INFO: No pending invoices  
+[2018-07-01 09:13:01] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:13:02] local.INFO: Finished with updating invoices  
+[2018-07-01 09:14:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:14:01  
+[2018-07-01 09:14:01] local.INFO: Check invoices ...  
+[2018-07-01 09:14:01] local.INFO: No pending invoices  
+[2018-07-01 09:14:01] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:14:03] local.INFO: Finished with updating invoices  
+[2018-07-01 09:15:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:15:01  
+[2018-07-01 09:15:01] local.INFO: Check invoices ...  
+[2018-07-01 09:15:01] local.INFO: No pending invoices  
+[2018-07-01 09:15:01] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:15:01] local.INFO: Finished with updating invoices  
+[2018-07-01 09:15:01] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-07-01 09:15:01] local.INFO: Condition is true for update:info everyFiveMinutes  
+[2018-07-01 09:15:02] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:15:02  
+[2018-07-01 09:15:02] local.INFO: Updating data ...  
+[2018-07-01 09:15:02] local.INFO: Updating live games results => 2018-07-01 05:15:02  
+[2018-07-01 09:15:02] local.INFO: DATE : 2018-07-01 05:15:02  
+[2018-07-01 09:15:02] local.INFO: Updated 2 games to LIVE status  
+[2018-07-01 09:15:02] local.INFO: Updating live players results => 2018-07-01 05:15:02  
+[2018-07-01 09:15:02] local.INFO: Updated  live players  
+[2018-07-01 09:15:02] local.INFO: Update finished players 2018-07-01 05:15:02  
+[2018-07-01 09:15:02] local.INFO: Updated 0 finished players  
+[2018-07-01 09:15:02] local.INFO: Updating slates status => 2018-07-01 05:15:02  
+[2018-07-01 09:15:02] local.INFO: Updated active slates to LIVE status of  0 slates successfully.  
+[2018-07-01 09:15:02] local.INFO: Updated slate to HISTORY status  0 slates successfully.  
+[2018-07-01 09:15:02] local.INFO: Successfully updated 0 slates  
+[2018-07-01 09:15:02] local.INFO: Updating contests  2018-07-01 05:15:02  
+[2018-07-01 09:15:02] local.INFO: Updated 0 to CANCELLED status  
+[2018-07-01 09:15:02] local.INFO: Updated 0 contests to HISTORY status  
+[2018-07-01 09:15:02] local.INFO: Updated 0 contests to LIVE status  
+[2018-07-01 09:15:02] local.INFO: Updating ENDED contests  2018-07-01 05:15:02  
+[2018-07-01 09:15:02] local.INFO: Updated 0 contests results  
+[2018-07-01 09:15:02] local.INFO: Updating LIVE contests  2018-07-01 05:15:02  
+[2018-07-01 09:15:02] local.INFO: Updating contest with status LIVE and id 1529739391.5602_46_0  
+[2018-07-01 09:15:02] local.INFO: FP1 9.4  
+[2018-07-01 09:15:02] local.INFO: FP2 8.4  
+[2018-07-01 09:15:02] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:15:02] local.INFO: Updating contest with status LIVE and id 1529738578.5235_46_0  
+[2018-07-01 09:15:02] local.INFO: FP1 15  
+[2018-07-01 09:15:02] local.INFO: FP2 13  
+[2018-07-01 09:15:02] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:15:02] local.INFO: Updating contest with status LIVE and id 1529738897.4485_46_0  
+[2018-07-01 09:15:02] local.INFO: FP1 6.9  
+[2018-07-01 09:15:02] local.INFO: FP2 0  
+[2018-07-01 09:15:02] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:15:02] local.INFO: Updating contest with status LIVE and id 1529739202.2085_46_0  
+[2018-07-01 09:15:02] local.INFO: FP1 24.04  
+[2018-07-01 09:15:02] local.INFO: FP2 0  
+[2018-07-01 09:15:02] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:15:02] local.INFO: Updating contest with status LIVE and id 1529519270.149_32_0  
+[2018-07-01 09:15:02] local.INFO: FP1 11.9  
+[2018-07-01 09:15:02] local.INFO: FP2 6.9  
+[2018-07-01 09:15:02] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:15:02] local.INFO: Updating contest with status LIVE and id 1529909700.6608_32_0  
+[2018-07-01 09:15:02] local.INFO: FP1 0  
+[2018-07-01 09:15:02] local.INFO: FP2 13.7  
+[2018-07-01 09:15:02] local.INFO: User  justin is winning currently  
+[2018-07-01 09:15:02] local.INFO: Updated 6 contests results  
+[2018-07-01 09:15:02] local.INFO: Updating ENDED contests  2018-07-01 05:15:02  
+[2018-07-01 09:15:02] local.INFO: Updated 0 contests results  
+[2018-07-01 09:15:02] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-07-01 09:15:02] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
+[2018-07-01 09:15:02] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[{"id":"TEN_BUF_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Mon","date":"2018-06-25 13:00:00","time":"2018-06-25T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"BUF","awayTeam":"TEN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"NYG_CAR_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Mon","date":"2018-06-25 13:00:00","time":"2018-06-25T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CAR","awayTeam":"NYG","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"MIA_CIN_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CIN","awayTeam":"MIA","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"BAL_CLE_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CLE","awayTeam":"BAL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"GB_DET_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"DET","awayTeam":"GB","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"DAL_HOU_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 20:20:00","time":"2018-06-24T20:20:00","homeScore":0,"awayScore":0,"homeTeam":"HOU","awayTeam":"DAL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"JAX_KC_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"KC","awayTeam":"JAX","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"OAK_LAC_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 16:05:00","time":"2018-06-24T16:05:00","homeScore":0,"awayScore":0,"homeTeam":"LAC","awayTeam":"OAK","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"IND_NE_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 20:20:00","time":"2018-06-24T20:20:00","homeScore":0,"awayScore":0,"homeTeam":"NE","awayTeam":"IND","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"WAS_NO_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 20:15:00","time":"2018-06-24T20:15:00","homeScore":0,"awayScore":0,"homeTeam":"NO","awayTeam":"WAS","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"DEN_NYJ_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"NYJ","awayTeam":"DEN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"MIN_PHI_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 16:25:00","time":"2018-06-24T16:25:00","homeScore":0,"awayScore":0,"homeTeam":"PHI","awayTeam":"MIN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"ATL_PIT_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"PIT","awayTeam":"ATL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"LAR_SEA_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 16:25:00","time":"2018-06-24T16:25:00","homeScore":0,"awayScore":0,"homeTeam":"SEA","awayTeam":"LAR","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"ARI_SF_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Thu","date":"2018-06-21 06:25:00","time":"2018-06-21T06:25:00","homeScore":0,"awayScore":0,"homeTeam":"SF","awayTeam":"ARI","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"PHI_NYG_2018_6_1","year":"2018","seasonType":"1","week":"6","day":"Thu","date":"2018-06-28 20:20:00","time":"2018-06-28T20:20:00","homeScore":0,"awayScore":0,"homeTeam":"NYG","awayTeam":"PHI","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"CAR_WAS_2018_6_1","year":"2018","seasonType":"1","week":"6","day":"Thu","date":"2018-06-28 13:00:00","time":"2018-06-28T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"WAS","awayTeam":"CAR","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""}]  
+[2018-07-01 09:15:02] local.INFO: Condition for games:update everyFiveMinutes for games in progress is true   
+[2018-07-01 09:15:02] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:15:02  
+[2018-07-01 09:15:02] local.INFO: Pulling scores   
+[2018-07-01 09:15:02] local.INFO: Pulling scores from url https://draftmatch-api.com/api/fake/get_games  
+[2018-07-01 09:15:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:15:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:15:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:15:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:15:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:15:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:15:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:15:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:15:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:15:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:15:04] local.INFO: Games 2 changed status  
+[2018-07-01 09:15:04] local.INFO: Pulling player stats  ...  
+[2018-07-01 09:15:04] local.INFO: Pulling player stats from url https://api.fantasydata.net/v3/nfl/stats/JSON/PlayerGameStatsByWeek/2017REG/6  
+[2018-07-01 09:15:25] local.INFO: Got 1752 from response  
+[2018-07-01 09:15:27] local.INFO: Successfully updated player stats  
+[2018-07-01 09:15:27] local.INFO: Pulling defense stats ...  
+[2018-07-01 09:15:27] local.INFO: Pulling data from urlhttps://api.fantasydata.net/v3/nfl/stats/JSON/FantasyDefenseByGame/2017REG/6  
+[2018-07-01 09:15:29] local.INFO: Got 28 from response  
+[2018-07-01 09:15:29] local.INFO: Successfully pulled defense stats  
+[2018-07-01 09:15:29] local.INFO: Successfully pulled all scores   
+[2018-07-01 09:16:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:16:01  
+[2018-07-01 09:16:01] local.INFO: Check invoices ...  
+[2018-07-01 09:16:01] local.INFO: No pending invoices  
+[2018-07-01 09:16:01] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:16:02] local.INFO: Finished with updating invoices  
+[2018-07-01 09:17:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:17:01  
+[2018-07-01 09:17:01] local.INFO: Check invoices ...  
+[2018-07-01 09:17:01] local.INFO: No pending invoices  
+[2018-07-01 09:17:01] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:17:02] local.INFO: Finished with updating invoices  
+[2018-07-01 09:18:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:18:01  
+[2018-07-01 09:18:01] local.INFO: Check invoices ...  
+[2018-07-01 09:18:01] local.INFO: No pending invoices  
+[2018-07-01 09:18:01] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:18:02] local.INFO: Finished with updating invoices  
+[2018-07-01 09:19:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:19:01  
+[2018-07-01 09:19:01] local.INFO: Check invoices ...  
+[2018-07-01 09:19:01] local.INFO: No pending invoices  
+[2018-07-01 09:19:01] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:19:02] local.INFO: Finished with updating invoices  
+[2018-07-01 09:20:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:20:01  
+[2018-07-01 09:20:02] local.INFO: Update exchange ...  
+[2018-07-01 09:20:02] local.INFO: Check invoices ...  
+[2018-07-01 09:20:02] local.INFO: No pending invoices  
+[2018-07-01 09:20:02] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:20:03] local.INFO: Finished with updating invoices  
+[2018-07-01 09:20:03] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-07-01 09:20:03] local.INFO: Condition is true for update:info everyFiveMinutes  
+[2018-07-01 09:20:03] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:20:03  
+[2018-07-01 09:20:03] local.INFO: Updating data ...  
+[2018-07-01 09:20:03] local.INFO: Updating live games results => 2018-07-01 05:20:03  
+[2018-07-01 09:20:03] local.INFO: DATE : 2018-07-01 05:20:03  
+[2018-07-01 09:20:03] local.INFO: Updated 2 games to LIVE status  
+[2018-07-01 09:20:03] local.INFO: Updating live players results => 2018-07-01 05:20:03  
+[2018-07-01 09:20:03] local.INFO: Updated  live players  
+[2018-07-01 09:20:03] local.INFO: Update finished players 2018-07-01 05:20:03  
+[2018-07-01 09:20:03] local.INFO: Updated 0 finished players  
+[2018-07-01 09:20:03] local.INFO: Updating slates status => 2018-07-01 05:20:03  
+[2018-07-01 09:20:03] local.INFO: Updated active slates to LIVE status of  0 slates successfully.  
+[2018-07-01 09:20:03] local.INFO: Updated slate to HISTORY status  0 slates successfully.  
+[2018-07-01 09:20:03] local.INFO: Successfully updated 0 slates  
+[2018-07-01 09:20:03] local.INFO: Updating contests  2018-07-01 05:20:03  
+[2018-07-01 09:20:03] local.INFO: Updated 0 to CANCELLED status  
+[2018-07-01 09:20:03] local.INFO: Updated 0 contests to HISTORY status  
+[2018-07-01 09:20:03] local.INFO: Updated 0 contests to LIVE status  
+[2018-07-01 09:20:03] local.INFO: Updating ENDED contests  2018-07-01 05:20:03  
+[2018-07-01 09:20:03] local.INFO: Updated 0 contests results  
+[2018-07-01 09:20:03] local.INFO: Updating LIVE contests  2018-07-01 05:20:03  
+[2018-07-01 09:20:03] local.INFO: Updating contest with status LIVE and id 1529739391.5602_46_0  
+[2018-07-01 09:20:03] local.INFO: FP1 9.4  
+[2018-07-01 09:20:03] local.INFO: FP2 8.4  
+[2018-07-01 09:20:03] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:20:03] local.INFO: Updating contest with status LIVE and id 1529738578.5235_46_0  
+[2018-07-01 09:20:03] local.INFO: FP1 15  
+[2018-07-01 09:20:03] local.INFO: FP2 13  
+[2018-07-01 09:20:03] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:20:03] local.INFO: Updating contest with status LIVE and id 1529738897.4485_46_0  
+[2018-07-01 09:20:03] local.INFO: FP1 6.9  
+[2018-07-01 09:20:03] local.INFO: FP2 0  
+[2018-07-01 09:20:03] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:20:03] local.INFO: Updating contest with status LIVE and id 1529739202.2085_46_0  
+[2018-07-01 09:20:03] local.INFO: FP1 24.04  
+[2018-07-01 09:20:03] local.INFO: FP2 0  
+[2018-07-01 09:20:03] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:20:03] local.INFO: Updating contest with status LIVE and id 1529519270.149_32_0  
+[2018-07-01 09:20:03] local.INFO: FP1 11.9  
+[2018-07-01 09:20:03] local.INFO: FP2 6.9  
+[2018-07-01 09:20:03] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:20:03] local.INFO: Updating contest with status LIVE and id 1529909700.6608_32_0  
+[2018-07-01 09:20:03] local.INFO: FP1 0  
+[2018-07-01 09:20:03] local.INFO: FP2 13.7  
+[2018-07-01 09:20:03] local.INFO: User  justin is winning currently  
+[2018-07-01 09:20:03] local.INFO: Updated 6 contests results  
+[2018-07-01 09:20:03] local.INFO: Updating ENDED contests  2018-07-01 05:20:03  
+[2018-07-01 09:20:03] local.INFO: Updated 0 contests results  
+[2018-07-01 09:20:03] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-07-01 09:20:03] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
+[2018-07-01 09:20:03] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[{"id":"TEN_BUF_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Mon","date":"2018-06-25 13:00:00","time":"2018-06-25T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"BUF","awayTeam":"TEN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"NYG_CAR_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Mon","date":"2018-06-25 13:00:00","time":"2018-06-25T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CAR","awayTeam":"NYG","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"MIA_CIN_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CIN","awayTeam":"MIA","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"BAL_CLE_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CLE","awayTeam":"BAL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"GB_DET_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"DET","awayTeam":"GB","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"DAL_HOU_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 20:20:00","time":"2018-06-24T20:20:00","homeScore":0,"awayScore":0,"homeTeam":"HOU","awayTeam":"DAL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"JAX_KC_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"KC","awayTeam":"JAX","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"OAK_LAC_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 16:05:00","time":"2018-06-24T16:05:00","homeScore":0,"awayScore":0,"homeTeam":"LAC","awayTeam":"OAK","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"IND_NE_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 20:20:00","time":"2018-06-24T20:20:00","homeScore":0,"awayScore":0,"homeTeam":"NE","awayTeam":"IND","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"WAS_NO_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 20:15:00","time":"2018-06-24T20:15:00","homeScore":0,"awayScore":0,"homeTeam":"NO","awayTeam":"WAS","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"DEN_NYJ_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"NYJ","awayTeam":"DEN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"MIN_PHI_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 16:25:00","time":"2018-06-24T16:25:00","homeScore":0,"awayScore":0,"homeTeam":"PHI","awayTeam":"MIN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"ATL_PIT_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"PIT","awayTeam":"ATL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"LAR_SEA_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 16:25:00","time":"2018-06-24T16:25:00","homeScore":0,"awayScore":0,"homeTeam":"SEA","awayTeam":"LAR","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"ARI_SF_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Thu","date":"2018-06-21 06:25:00","time":"2018-06-21T06:25:00","homeScore":0,"awayScore":0,"homeTeam":"SF","awayTeam":"ARI","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"PHI_NYG_2018_6_1","year":"2018","seasonType":"1","week":"6","day":"Thu","date":"2018-06-28 20:20:00","time":"2018-06-28T20:20:00","homeScore":0,"awayScore":0,"homeTeam":"NYG","awayTeam":"PHI","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"CAR_WAS_2018_6_1","year":"2018","seasonType":"1","week":"6","day":"Thu","date":"2018-06-28 13:00:00","time":"2018-06-28T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"WAS","awayTeam":"CAR","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""}]  
+[2018-07-01 09:20:03] local.INFO: Condition for games:update everyFiveMinutes for games in progress is true   
+[2018-07-01 09:20:03] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:20:03  
+[2018-07-01 09:20:03] local.INFO: Pulling scores   
+[2018-07-01 09:20:03] local.INFO: Pulling scores from url https://draftmatch-api.com/api/fake/get_games  
+[2018-07-01 09:20:06] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:20:06] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:20:08] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:20:08] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:20:09] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:20:09] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:20:09] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:20:09] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:20:09] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:20:09] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:20:09] local.INFO: Games 2 changed status  
+[2018-07-01 09:20:09] local.INFO: Pulling player stats  ...  
+[2018-07-01 09:20:09] local.INFO: Pulling player stats from url https://api.fantasydata.net/v3/nfl/stats/JSON/PlayerGameStatsByWeek/2017REG/6  
+[2018-07-01 09:20:33] local.INFO: Got 1752 from response  
+[2018-07-01 09:20:34] local.INFO: Successfully updated player stats  
+[2018-07-01 09:20:34] local.INFO: Pulling defense stats ...  
+[2018-07-01 09:20:34] local.INFO: Pulling data from urlhttps://api.fantasydata.net/v3/nfl/stats/JSON/FantasyDefenseByGame/2017REG/6  
+[2018-07-01 09:20:36] local.INFO: Got 28 from response  
+[2018-07-01 09:20:36] local.INFO: Successfully pulled defense stats  
+[2018-07-01 09:20:36] local.INFO: Successfully pulled all scores   
+[2018-07-01 09:21:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:21:01  
+[2018-07-01 09:21:01] local.INFO: Check invoices ...  
+[2018-07-01 09:21:01] local.INFO: No pending invoices  
+[2018-07-01 09:21:01] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:21:02] local.INFO: Finished with updating invoices  
+[2018-07-01 09:22:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:22:01  
+[2018-07-01 09:22:01] local.INFO: Check invoices ...  
+[2018-07-01 09:22:01] local.INFO: No pending invoices  
+[2018-07-01 09:22:01] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:22:02] local.INFO: Finished with updating invoices  
+[2018-07-01 09:23:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:23:01  
+[2018-07-01 09:23:01] local.INFO: Check invoices ...  
+[2018-07-01 09:23:01] local.INFO: No pending invoices  
+[2018-07-01 09:23:01] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:23:02] local.INFO: Finished with updating invoices  
+[2018-07-01 09:24:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:24:01  
+[2018-07-01 09:24:01] local.INFO: Check invoices ...  
+[2018-07-01 09:24:01] local.INFO: No pending invoices  
+[2018-07-01 09:24:01] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:24:02] local.INFO: Finished with updating invoices  
+[2018-07-01 09:24:14] local.INFO: Getting location from coordinates lang=38.547496, lat=-121.254  
+[2018-07-01 09:24:14] local.INFO: Could not get location  
+[2018-07-01 09:24:14] local.ERROR: ErrorException: Undefined variable: loc in /home/osboxes/Documents/projects/draftmatch/app/Helpers/LocationHelper.php:108
+Stack trace:
+#0 /home/osboxes/Documents/projects/draftmatch/app/Helpers/LocationHelper.php(108): App\Helpers\{closure}(8, 'Undefined varia...', '/home/osboxes/D...', 108, Array)
+#1 /home/osboxes/Documents/projects/draftmatch/app/Helpers/LocationHelper.php(26): App\Helpers\LocationHelper::get_location('38.547496', '-121.254')
+#2 /home/osboxes/Documents/projects/draftmatch/app/Http/Middleware/CheckLocation.php(33): App\Helpers\LocationHelper::isUserInAllowedLocation('38.547496', '-121.254')
+#3 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\CheckLocation->handle(Object(Illuminate\Http\Request), Object(Closure))
+#4 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#5 /home/osboxes/Documents/projects/draftmatch/app/Http/Middleware/VerifyJWTToken.php(91): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#6 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\VerifyJWTToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#7 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#8 /home/osboxes/Documents/projects/draftmatch/app/Http/Middleware/Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#10 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#11 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#16 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#19 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#20 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#21 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#23 /home/osboxes/Documents/projects/draftmatch/app/Http/Middleware/Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#24 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 /home/osboxes/Documents/projects/draftmatch/app/Http/Middleware/HttpsProtocol.php(29): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\HttpsProtocol->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#36 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#37 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#38 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#39 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#40 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#41 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#42 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#43 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#44 /home/osboxes/Documents/projects/draftmatch/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#45 /home/osboxes/Documents/projects/draftmatch/server.php(21): require_once('/home/osboxes/D...')
+#46 {main}  
+[2018-07-01 09:25:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:25:01  
+[2018-07-01 09:25:01] local.INFO: Check invoices ...  
+[2018-07-01 09:25:01] local.INFO: No pending invoices  
+[2018-07-01 09:25:01] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:25:02] local.INFO: Finished with updating invoices  
+[2018-07-01 09:25:02] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-07-01 09:25:02] local.INFO: Condition is true for update:info everyFiveMinutes  
+[2018-07-01 09:25:02] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:25:02  
+[2018-07-01 09:25:02] local.INFO: Updating data ...  
+[2018-07-01 09:25:02] local.INFO: Updating live games results => 2018-07-01 05:25:02  
+[2018-07-01 09:25:02] local.INFO: DATE : 2018-07-01 05:25:02  
+[2018-07-01 09:25:02] local.INFO: Updated 2 games to LIVE status  
+[2018-07-01 09:25:02] local.INFO: Updating live players results => 2018-07-01 05:25:02  
+[2018-07-01 09:25:02] local.INFO: Updated  live players  
+[2018-07-01 09:25:02] local.INFO: Update finished players 2018-07-01 05:25:02  
+[2018-07-01 09:25:02] local.INFO: Updated 0 finished players  
+[2018-07-01 09:25:02] local.INFO: Updating slates status => 2018-07-01 05:25:02  
+[2018-07-01 09:25:02] local.INFO: Updated active slates to LIVE status of  0 slates successfully.  
+[2018-07-01 09:25:02] local.INFO: Updated slate to HISTORY status  0 slates successfully.  
+[2018-07-01 09:25:02] local.INFO: Successfully updated 0 slates  
+[2018-07-01 09:25:02] local.INFO: Updating contests  2018-07-01 05:25:02  
+[2018-07-01 09:25:02] local.INFO: Updated 0 to CANCELLED status  
+[2018-07-01 09:25:02] local.INFO: Updated 0 contests to HISTORY status  
+[2018-07-01 09:25:02] local.INFO: Updated 0 contests to LIVE status  
+[2018-07-01 09:25:02] local.INFO: Updating ENDED contests  2018-07-01 05:25:02  
+[2018-07-01 09:25:02] local.INFO: Updated 0 contests results  
+[2018-07-01 09:25:02] local.INFO: Updating LIVE contests  2018-07-01 05:25:02  
+[2018-07-01 09:25:02] local.INFO: Updating contest with status LIVE and id 1529739391.5602_46_0  
+[2018-07-01 09:25:02] local.INFO: FP1 9.4  
+[2018-07-01 09:25:02] local.INFO: FP2 8.4  
+[2018-07-01 09:25:02] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:25:02] local.INFO: Updating contest with status LIVE and id 1529738578.5235_46_0  
+[2018-07-01 09:25:02] local.INFO: FP1 15  
+[2018-07-01 09:25:02] local.INFO: FP2 13  
+[2018-07-01 09:25:02] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:25:02] local.INFO: Updating contest with status LIVE and id 1529738897.4485_46_0  
+[2018-07-01 09:25:02] local.INFO: FP1 6.9  
+[2018-07-01 09:25:02] local.INFO: FP2 0  
+[2018-07-01 09:25:02] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:25:02] local.INFO: Updating contest with status LIVE and id 1529739202.2085_46_0  
+[2018-07-01 09:25:02] local.INFO: FP1 24.04  
+[2018-07-01 09:25:02] local.INFO: FP2 0  
+[2018-07-01 09:25:02] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:25:02] local.INFO: Updating contest with status LIVE and id 1529519270.149_32_0  
+[2018-07-01 09:25:02] local.INFO: FP1 11.9  
+[2018-07-01 09:25:02] local.INFO: FP2 6.9  
+[2018-07-01 09:25:02] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:25:02] local.INFO: Updating contest with status LIVE and id 1529909700.6608_32_0  
+[2018-07-01 09:25:02] local.INFO: FP1 0  
+[2018-07-01 09:25:02] local.INFO: FP2 13.7  
+[2018-07-01 09:25:02] local.INFO: User  justin is winning currently  
+[2018-07-01 09:25:02] local.INFO: Updated 6 contests results  
+[2018-07-01 09:25:02] local.INFO: Updating ENDED contests  2018-07-01 05:25:02  
+[2018-07-01 09:25:02] local.INFO: Updated 0 contests results  
+[2018-07-01 09:25:02] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-07-01 09:25:02] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
+[2018-07-01 09:25:02] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[{"id":"TEN_BUF_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Mon","date":"2018-06-25 13:00:00","time":"2018-06-25T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"BUF","awayTeam":"TEN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"NYG_CAR_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Mon","date":"2018-06-25 13:00:00","time":"2018-06-25T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CAR","awayTeam":"NYG","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"MIA_CIN_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CIN","awayTeam":"MIA","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"BAL_CLE_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CLE","awayTeam":"BAL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"GB_DET_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"DET","awayTeam":"GB","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"DAL_HOU_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 20:20:00","time":"2018-06-24T20:20:00","homeScore":0,"awayScore":0,"homeTeam":"HOU","awayTeam":"DAL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"JAX_KC_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"KC","awayTeam":"JAX","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"OAK_LAC_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 16:05:00","time":"2018-06-24T16:05:00","homeScore":0,"awayScore":0,"homeTeam":"LAC","awayTeam":"OAK","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"IND_NE_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 20:20:00","time":"2018-06-24T20:20:00","homeScore":0,"awayScore":0,"homeTeam":"NE","awayTeam":"IND","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"WAS_NO_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 20:15:00","time":"2018-06-24T20:15:00","homeScore":0,"awayScore":0,"homeTeam":"NO","awayTeam":"WAS","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"DEN_NYJ_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"NYJ","awayTeam":"DEN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"MIN_PHI_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 16:25:00","time":"2018-06-24T16:25:00","homeScore":0,"awayScore":0,"homeTeam":"PHI","awayTeam":"MIN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"ATL_PIT_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"PIT","awayTeam":"ATL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"LAR_SEA_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 16:25:00","time":"2018-06-24T16:25:00","homeScore":0,"awayScore":0,"homeTeam":"SEA","awayTeam":"LAR","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"ARI_SF_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Thu","date":"2018-06-21 06:25:00","time":"2018-06-21T06:25:00","homeScore":0,"awayScore":0,"homeTeam":"SF","awayTeam":"ARI","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"PHI_NYG_2018_6_1","year":"2018","seasonType":"1","week":"6","day":"Thu","date":"2018-06-28 20:20:00","time":"2018-06-28T20:20:00","homeScore":0,"awayScore":0,"homeTeam":"NYG","awayTeam":"PHI","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"CAR_WAS_2018_6_1","year":"2018","seasonType":"1","week":"6","day":"Thu","date":"2018-06-28 13:00:00","time":"2018-06-28T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"WAS","awayTeam":"CAR","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""}]  
+[2018-07-01 09:25:02] local.INFO: Condition for games:update everyFiveMinutes for games in progress is true   
+[2018-07-01 09:25:02] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:25:02  
+[2018-07-01 09:25:02] local.INFO: Pulling scores   
+[2018-07-01 09:25:02] local.INFO: Pulling scores from url https://draftmatch-api.com/api/fake/get_games  
+[2018-07-01 09:25:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:25:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:25:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:25:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:25:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:25:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:25:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:25:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:25:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:25:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:25:04] local.INFO: Games 2 changed status  
+[2018-07-01 09:25:04] local.INFO: Pulling player stats  ...  
+[2018-07-01 09:25:04] local.INFO: Pulling player stats from url https://api.fantasydata.net/v3/nfl/stats/JSON/PlayerGameStatsByWeek/2017REG/6  
+[2018-07-01 09:25:26] local.INFO: Got 1752 from response  
+[2018-07-01 09:25:27] local.INFO: Successfully updated player stats  
+[2018-07-01 09:25:27] local.INFO: Pulling defense stats ...  
+[2018-07-01 09:25:27] local.INFO: Pulling data from urlhttps://api.fantasydata.net/v3/nfl/stats/JSON/FantasyDefenseByGame/2017REG/6  
+[2018-07-01 09:25:29] local.INFO: Got 28 from response  
+[2018-07-01 09:25:29] local.INFO: Successfully pulled defense stats  
+[2018-07-01 09:25:29] local.INFO: Successfully pulled all scores   
+[2018-07-01 09:26:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:26:01  
+[2018-07-01 09:26:01] local.INFO: Check invoices ...  
+[2018-07-01 09:26:01] local.INFO: No pending invoices  
+[2018-07-01 09:26:01] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:26:03] local.INFO: Finished with updating invoices  
+[2018-07-01 09:26:37] local.INFO: Getting location from coordinates lang=38.547496, lat=-121.254  
+[2018-07-01 09:26:37] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Undefined constant 'Log' in /home/osboxes/Documents/projects/draftmatch/app/Helpers/LocationHelper.php:61
+Stack trace:
+#0 /home/osboxes/Documents/projects/draftmatch/app/Helpers/LocationHelper.php(26): App\Helpers\LocationHelper::get_location('38.547496', '-121.254')
+#1 /home/osboxes/Documents/projects/draftmatch/app/Http/Middleware/CheckLocation.php(33): App\Helpers\LocationHelper::isUserInAllowedLocation('38.547496', '-121.254')
+#2 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\CheckLocation->handle(Object(Illuminate\Http\Request), Object(Closure))
+#3 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#4 /home/osboxes/Documents/projects/draftmatch/app/Http/Middleware/VerifyJWTToken.php(91): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#5 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\VerifyJWTToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#6 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#7 /home/osboxes/Documents/projects/draftmatch/app/Http/Middleware/Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#8 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#9 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#10 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#12 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#13 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#14 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#15 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#16 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#18 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#19 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#20 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#21 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#22 /home/osboxes/Documents/projects/draftmatch/app/Http/Middleware/Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 /home/osboxes/Documents/projects/draftmatch/app/Http/Middleware/HttpsProtocol.php(29): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): App\Http\Middleware\HttpsProtocol->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#29 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#30 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#32 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#33 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#34 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#35 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#36 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#37 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#38 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#39 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#40 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#41 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#42 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#43 /home/osboxes/Documents/projects/draftmatch/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#44 /home/osboxes/Documents/projects/draftmatch/server.php(21): require_once('/home/osboxes/D...')
+#45 {main}  
+[2018-07-01 09:26:58] local.INFO: Getting location from coordinates lang=38.547496, lat=-121.254  
+[2018-07-01 09:26:58] local.INFO: reach in address decode  
+[2018-07-01 09:26:58] local.INFO: Got country United States  
+[2018-07-01 09:26:58] local.INFO: Got state California  
+[2018-07-01 09:27:00] local.INFO: Transaction for sending 5$ to user jtc81wr@aol.com is pending ...  
+[2018-07-01 09:27:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:27:01  
+[2018-07-01 09:27:01] local.INFO: Check invoices ...  
+[2018-07-01 09:27:01] local.INFO: Checking invoices. Found 1  
+[2018-07-01 09:27:02] local.INFO: Got some successfull invo  
+[2018-07-01 09:27:02] local.INFO: INVOICE_ID ff6a1edc-ff28-5502-973a-44c911fb1cff  
+[2018-07-01 09:27:02] local.INFO: Invoice with id ff6a1edc-ff28-5502-973a-44c911fb1cff not found. Retries  0  
+[2018-07-01 09:27:02] local.INFO: Finished with updating invoices  
+[2018-07-01 09:28:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:28:01  
+[2018-07-01 09:28:01] local.INFO: Check invoices ...  
+[2018-07-01 09:28:01] local.INFO: Checking invoices. Found 1  
+[2018-07-01 09:28:03] local.INFO: Got some successfull invo  
+[2018-07-01 09:28:03] local.INFO: INVOICE_ID ff6a1edc-ff28-5502-973a-44c911fb1cff  
+[2018-07-01 09:28:03] local.INFO: Invoice with id ff6a1edc-ff28-5502-973a-44c911fb1cff not found. Retries  1  
+[2018-07-01 09:28:03] local.INFO: Finished with updating invoices  
+[2018-07-01 09:29:02] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:29:02  
+[2018-07-01 09:29:02] local.INFO: Check invoices ...  
+[2018-07-01 09:29:02] local.INFO: Checking invoices. Found 1  
+[2018-07-01 09:29:03] local.INFO: Got some successfull invo  
+[2018-07-01 09:29:03] local.INFO: INVOICE_ID ff6a1edc-ff28-5502-973a-44c911fb1cff  
+[2018-07-01 09:29:03] local.INFO: Invoice with id ff6a1edc-ff28-5502-973a-44c911fb1cff not found. Retries  2  
+[2018-07-01 09:29:03] local.INFO: Finished with updating invoices  
+[2018-07-01 09:30:02] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:30:02  
+[2018-07-01 09:30:02] local.INFO: Update exchange ...  
+[2018-07-01 09:30:04] local.INFO: Check invoices ...  
+[2018-07-01 09:30:04] local.INFO: Checking invoices. Found 1  
+[2018-07-01 09:30:05] local.INFO: Got some successfull invo  
+[2018-07-01 09:30:05] local.INFO: INVOICE_ID ff6a1edc-ff28-5502-973a-44c911fb1cff  
+[2018-07-01 09:30:05] local.INFO: Invoice with id ff6a1edc-ff28-5502-973a-44c911fb1cff not found. Retries  3  
+[2018-07-01 09:30:05] local.INFO: Finished with updating invoices  
+[2018-07-01 09:30:05] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-07-01 09:30:05] local.INFO: Condition is true for update:info everyFiveMinutes  
+[2018-07-01 09:30:05] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:30:05  
+[2018-07-01 09:30:05] local.INFO: Updating data ...  
+[2018-07-01 09:30:05] local.INFO: Updating live games results => 2018-07-01 05:30:05  
+[2018-07-01 09:30:05] local.INFO: DATE : 2018-07-01 05:30:05  
+[2018-07-01 09:30:05] local.INFO: Updated 2 games to LIVE status  
+[2018-07-01 09:30:05] local.INFO: Updating live players results => 2018-07-01 05:30:05  
+[2018-07-01 09:30:05] local.INFO: Updated  live players  
+[2018-07-01 09:30:05] local.INFO: Update finished players 2018-07-01 05:30:05  
+[2018-07-01 09:30:05] local.INFO: Updated 0 finished players  
+[2018-07-01 09:30:05] local.INFO: Updating slates status => 2018-07-01 05:30:05  
+[2018-07-01 09:30:05] local.INFO: Updated active slates to LIVE status of  0 slates successfully.  
+[2018-07-01 09:30:05] local.INFO: Updated slate to HISTORY status  0 slates successfully.  
+[2018-07-01 09:30:05] local.INFO: Successfully updated 0 slates  
+[2018-07-01 09:30:05] local.INFO: Updating contests  2018-07-01 05:30:05  
+[2018-07-01 09:30:05] local.INFO: Updated 0 to CANCELLED status  
+[2018-07-01 09:30:05] local.INFO: Updated 0 contests to HISTORY status  
+[2018-07-01 09:30:05] local.INFO: Updated 0 contests to LIVE status  
+[2018-07-01 09:30:05] local.INFO: Updating ENDED contests  2018-07-01 05:30:05  
+[2018-07-01 09:30:05] local.INFO: Updated 0 contests results  
+[2018-07-01 09:30:05] local.INFO: Updating LIVE contests  2018-07-01 05:30:05  
+[2018-07-01 09:30:05] local.INFO: Updating contest with status LIVE and id 1529739391.5602_46_0  
+[2018-07-01 09:30:05] local.INFO: FP1 9.4  
+[2018-07-01 09:30:05] local.INFO: FP2 8.4  
+[2018-07-01 09:30:05] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:30:05] local.INFO: Updating contest with status LIVE and id 1529738578.5235_46_0  
+[2018-07-01 09:30:05] local.INFO: FP1 15  
+[2018-07-01 09:30:05] local.INFO: FP2 13  
+[2018-07-01 09:30:05] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:30:05] local.INFO: Updating contest with status LIVE and id 1529738897.4485_46_0  
+[2018-07-01 09:30:05] local.INFO: FP1 6.9  
+[2018-07-01 09:30:05] local.INFO: FP2 0  
+[2018-07-01 09:30:05] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:30:05] local.INFO: Updating contest with status LIVE and id 1529739202.2085_46_0  
+[2018-07-01 09:30:05] local.INFO: FP1 24.04  
+[2018-07-01 09:30:05] local.INFO: FP2 0  
+[2018-07-01 09:30:05] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:30:05] local.INFO: Updating contest with status LIVE and id 1529519270.149_32_0  
+[2018-07-01 09:30:05] local.INFO: FP1 11.9  
+[2018-07-01 09:30:05] local.INFO: FP2 6.9  
+[2018-07-01 09:30:05] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:30:05] local.INFO: Updating contest with status LIVE and id 1529909700.6608_32_0  
+[2018-07-01 09:30:05] local.INFO: FP1 0  
+[2018-07-01 09:30:05] local.INFO: FP2 13.7  
+[2018-07-01 09:30:05] local.INFO: User  justin is winning currently  
+[2018-07-01 09:30:05] local.INFO: Updated 6 contests results  
+[2018-07-01 09:30:05] local.INFO: Updating ENDED contests  2018-07-01 05:30:05  
+[2018-07-01 09:30:05] local.INFO: Updated 0 contests results  
+[2018-07-01 09:30:05] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-07-01 09:30:05] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
+[2018-07-01 09:30:05] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[{"id":"TEN_BUF_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Mon","date":"2018-06-25 13:00:00","time":"2018-06-25T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"BUF","awayTeam":"TEN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"NYG_CAR_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Mon","date":"2018-06-25 13:00:00","time":"2018-06-25T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CAR","awayTeam":"NYG","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"MIA_CIN_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CIN","awayTeam":"MIA","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"BAL_CLE_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CLE","awayTeam":"BAL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"GB_DET_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"DET","awayTeam":"GB","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"DAL_HOU_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 20:20:00","time":"2018-06-24T20:20:00","homeScore":0,"awayScore":0,"homeTeam":"HOU","awayTeam":"DAL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"JAX_KC_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"KC","awayTeam":"JAX","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"OAK_LAC_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 16:05:00","time":"2018-06-24T16:05:00","homeScore":0,"awayScore":0,"homeTeam":"LAC","awayTeam":"OAK","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"IND_NE_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 20:20:00","time":"2018-06-24T20:20:00","homeScore":0,"awayScore":0,"homeTeam":"NE","awayTeam":"IND","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"WAS_NO_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 20:15:00","time":"2018-06-24T20:15:00","homeScore":0,"awayScore":0,"homeTeam":"NO","awayTeam":"WAS","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"DEN_NYJ_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"NYJ","awayTeam":"DEN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"MIN_PHI_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 16:25:00","time":"2018-06-24T16:25:00","homeScore":0,"awayScore":0,"homeTeam":"PHI","awayTeam":"MIN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"ATL_PIT_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"PIT","awayTeam":"ATL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"LAR_SEA_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 16:25:00","time":"2018-06-24T16:25:00","homeScore":0,"awayScore":0,"homeTeam":"SEA","awayTeam":"LAR","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"ARI_SF_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Thu","date":"2018-06-21 06:25:00","time":"2018-06-21T06:25:00","homeScore":0,"awayScore":0,"homeTeam":"SF","awayTeam":"ARI","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"CAR_WAS_2018_6_1","year":"2018","seasonType":"1","week":"6","day":"Thu","date":"2018-06-28 13:00:00","time":"2018-06-28T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"WAS","awayTeam":"CAR","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"PHI_NYG_2018_6_1","year":"2018","seasonType":"1","week":"6","day":"Thu","date":"2018-06-28 20:20:00","time":"2018-06-28T20:20:00","homeScore":0,"awayScore":0,"homeTeam":"NYG","awayTeam":"PHI","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""}]  
+[2018-07-01 09:30:05] local.INFO: Condition for games:update everyFiveMinutes for games in progress is true   
+[2018-07-01 09:30:05] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:30:05  
+[2018-07-01 09:30:05] local.INFO: Pulling scores   
+[2018-07-01 09:30:05] local.INFO: Pulling scores from url https://draftmatch-api.com/api/fake/get_games  
+[2018-07-01 09:30:07] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:30:07] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:30:07] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:30:07] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:30:07] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:30:07] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:30:07] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:30:07] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:30:07] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:30:07] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:30:07] local.INFO: Games 2 changed status  
+[2018-07-01 09:30:07] local.INFO: Pulling player stats  ...  
+[2018-07-01 09:30:07] local.INFO: Pulling player stats from url https://api.fantasydata.net/v3/nfl/stats/JSON/PlayerGameStatsByWeek/2017REG/6  
+[2018-07-01 09:30:31] local.INFO: Got 1752 from response  
+[2018-07-01 09:30:32] local.INFO: Successfully updated player stats  
+[2018-07-01 09:30:32] local.INFO: Pulling defense stats ...  
+[2018-07-01 09:30:32] local.INFO: Pulling data from urlhttps://api.fantasydata.net/v3/nfl/stats/JSON/FantasyDefenseByGame/2017REG/6  
+[2018-07-01 09:30:34] local.INFO: Got 28 from response  
+[2018-07-01 09:30:34] local.INFO: Successfully pulled defense stats  
+[2018-07-01 09:30:34] local.INFO: Successfully pulled all scores   
+[2018-07-01 09:30:34] local.INFO: Checking condition for liveStats:update everyThirtyMinutes  
+[2018-07-01 09:30:34] local.INFO: Condition for liveStats:update everyThirtyMinutes day condition is Tuesday  
+[2018-07-01 09:30:34] local.INFO: Condition liveStats:update everyFiveMinutes retrieving games in progress  
+[2018-07-01 09:30:34] local.INFO: Condition liveStats:update everyFiveMinutes received games in progress  
+[2018-07-01 09:30:34] local.INFO: Condition liveStats:update everyFiveMinutes there are games in progress  
+[2018-07-01 09:30:34] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:30:34  
+[2018-07-01 09:30:34] local.INFO: Updating live player stats ...  
+[2018-07-01 09:30:34] local.INFO: Not 0  
+[2018-07-01 09:30:34] local.INFO: Pulling player stats from url https://api.fantasydata.net/v3/nfl/stats/JSON/PlayerGameStatsByWeekDelta/2017REG/6/2  
+[2018-07-01 09:30:36] local.INFO: Updated .0 players   
+[2018-07-01 09:30:36] local.INFO: Calling end point https://api.fantasydata.net/v3/nfl/stats/JSON/FantasyDefenseByGame/2017REG/6  
+[2018-07-01 09:31:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:31:01  
+[2018-07-01 09:31:01] local.INFO: Check invoices ...  
+[2018-07-01 09:31:01] local.INFO: Checking invoices. Found 1  
+[2018-07-01 09:31:02] local.INFO: Got some successfull invo  
+[2018-07-01 09:31:03] local.INFO: INVOICE_ID ff6a1edc-ff28-5502-973a-44c911fb1cff  
+[2018-07-01 09:31:03] local.INFO: Invoice with id ff6a1edc-ff28-5502-973a-44c911fb1cff not found. Retries  4  
+[2018-07-01 09:31:03] local.INFO: Finished with updating invoices  
+[2018-07-01 09:32:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:32:01  
+[2018-07-01 09:32:01] local.INFO: Check invoices ...  
+[2018-07-01 09:32:01] local.INFO: Checking invoices. Found 1  
+[2018-07-01 09:32:02] local.INFO: Got some successfull invo  
+[2018-07-01 09:32:03] local.INFO: INVOICE_ID ff6a1edc-ff28-5502-973a-44c911fb1cff  
+[2018-07-01 09:32:03] local.INFO: Invoice with id ff6a1edc-ff28-5502-973a-44c911fb1cff not found. Retries  5  
+[2018-07-01 09:32:03] local.INFO: Finished with updating invoices  
+[2018-07-01 09:32:19] local.INFO: Rate {"id":"1","rate":"0.000157"}  
+[2018-07-01 09:32:19] local.INFO: Not enough funds  
+[2018-07-01 09:33:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:33:01  
+[2018-07-01 09:33:01] local.INFO: Check invoices ...  
+[2018-07-01 09:33:01] local.INFO: Checking invoices. Found 1  
+[2018-07-01 09:33:02] local.INFO: Got some successfull invo  
+[2018-07-01 09:33:03] local.INFO: INVOICE_ID ff6a1edc-ff28-5502-973a-44c911fb1cff  
+[2018-07-01 09:33:03] local.INFO: Invoice with id ff6a1edc-ff28-5502-973a-44c911fb1cff not found. Retries  6  
+[2018-07-01 09:33:03] local.INFO: Finished with updating invoices  
+[2018-07-01 09:34:00] local.INFO: Rate {"id":"1","rate":"0.000157"}  
+[2018-07-01 09:34:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:34:01  
+[2018-07-01 09:34:01] local.INFO: Check invoices ...  
+[2018-07-01 09:34:01] local.INFO: No pending invoices  
+[2018-07-01 09:34:01] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:34:03] local.INFO: Finished with updating invoices  
+[2018-07-01 09:34:03] local.INFO: Rate {"id":"1","rate":"0.000157"}  
+[2018-07-01 09:34:03] local.INFO: Rate {"id":"1","rate":"0.000157"}  
+[2018-07-01 09:34:03] local.INFO: Taking 0.000314BTC from user(6) account  
+[2018-07-01 09:34:04] local.INFO: Transaction for sending 2$ to user jtc81wr@aol.com is completed ...  
+[2018-07-01 09:35:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:35:01  
+[2018-07-01 09:35:01] local.INFO: Check invoices ...  
+[2018-07-01 09:35:01] local.INFO: No pending invoices  
+[2018-07-01 09:35:01] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:35:02] local.INFO: Finished with updating invoices  
+[2018-07-01 09:35:02] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-07-01 09:35:02] local.INFO: Condition is true for update:info everyFiveMinutes  
+[2018-07-01 09:35:02] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:35:02  
+[2018-07-01 09:35:02] local.INFO: Updating data ...  
+[2018-07-01 09:35:02] local.INFO: Updating live games results => 2018-07-01 05:35:02  
+[2018-07-01 09:35:02] local.INFO: DATE : 2018-07-01 05:35:02  
+[2018-07-01 09:35:02] local.INFO: Updated 2 games to LIVE status  
+[2018-07-01 09:35:02] local.INFO: Updating live players results => 2018-07-01 05:35:02  
+[2018-07-01 09:35:02] local.INFO: Updated  live players  
+[2018-07-01 09:35:02] local.INFO: Update finished players 2018-07-01 05:35:02  
+[2018-07-01 09:35:02] local.INFO: Updated 0 finished players  
+[2018-07-01 09:35:02] local.INFO: Updating slates status => 2018-07-01 05:35:02  
+[2018-07-01 09:35:02] local.INFO: Updated active slates to LIVE status of  0 slates successfully.  
+[2018-07-01 09:35:02] local.INFO: Updated slate to HISTORY status  0 slates successfully.  
+[2018-07-01 09:35:02] local.INFO: Successfully updated 0 slates  
+[2018-07-01 09:35:02] local.INFO: Updating contests  2018-07-01 05:35:02  
+[2018-07-01 09:35:02] local.INFO: Updated 0 to CANCELLED status  
+[2018-07-01 09:35:02] local.INFO: Updated 0 contests to HISTORY status  
+[2018-07-01 09:35:02] local.INFO: Updated 0 contests to LIVE status  
+[2018-07-01 09:35:02] local.INFO: Updating ENDED contests  2018-07-01 05:35:02  
+[2018-07-01 09:35:02] local.INFO: Updated 0 contests results  
+[2018-07-01 09:35:02] local.INFO: Updating LIVE contests  2018-07-01 05:35:02  
+[2018-07-01 09:35:02] local.INFO: Updating contest with status LIVE and id 1529739391.5602_46_0  
+[2018-07-01 09:35:02] local.INFO: FP1 9.4  
+[2018-07-01 09:35:02] local.INFO: FP2 8.4  
+[2018-07-01 09:35:02] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:35:02] local.INFO: Updating contest with status LIVE and id 1529738578.5235_46_0  
+[2018-07-01 09:35:02] local.INFO: FP1 15  
+[2018-07-01 09:35:02] local.INFO: FP2 13  
+[2018-07-01 09:35:02] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:35:02] local.INFO: Updating contest with status LIVE and id 1529738897.4485_46_0  
+[2018-07-01 09:35:02] local.INFO: FP1 6.9  
+[2018-07-01 09:35:02] local.INFO: FP2 0  
+[2018-07-01 09:35:02] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:35:02] local.INFO: Updating contest with status LIVE and id 1529739202.2085_46_0  
+[2018-07-01 09:35:02] local.INFO: FP1 24.04  
+[2018-07-01 09:35:02] local.INFO: FP2 0  
+[2018-07-01 09:35:02] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:35:02] local.INFO: Updating contest with status LIVE and id 1529519270.149_32_0  
+[2018-07-01 09:35:02] local.INFO: FP1 11.9  
+[2018-07-01 09:35:02] local.INFO: FP2 6.9  
+[2018-07-01 09:35:02] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:35:02] local.INFO: Updating contest with status LIVE and id 1529909700.6608_32_0  
+[2018-07-01 09:35:02] local.INFO: FP1 0  
+[2018-07-01 09:35:02] local.INFO: FP2 13.7  
+[2018-07-01 09:35:02] local.INFO: User  justin is winning currently  
+[2018-07-01 09:35:02] local.INFO: Updated 6 contests results  
+[2018-07-01 09:35:02] local.INFO: Updating ENDED contests  2018-07-01 05:35:02  
+[2018-07-01 09:35:02] local.INFO: Updated 0 contests results  
+[2018-07-01 09:35:02] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-07-01 09:35:02] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
+[2018-07-01 09:35:02] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[{"id":"TEN_BUF_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Mon","date":"2018-06-25 13:00:00","time":"2018-06-25T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"BUF","awayTeam":"TEN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"NYG_CAR_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Mon","date":"2018-06-25 13:00:00","time":"2018-06-25T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CAR","awayTeam":"NYG","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"MIA_CIN_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CIN","awayTeam":"MIA","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"BAL_CLE_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CLE","awayTeam":"BAL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"GB_DET_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"DET","awayTeam":"GB","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"DAL_HOU_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 20:20:00","time":"2018-06-24T20:20:00","homeScore":0,"awayScore":0,"homeTeam":"HOU","awayTeam":"DAL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"JAX_KC_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"KC","awayTeam":"JAX","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"OAK_LAC_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 16:05:00","time":"2018-06-24T16:05:00","homeScore":0,"awayScore":0,"homeTeam":"LAC","awayTeam":"OAK","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"IND_NE_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 20:20:00","time":"2018-06-24T20:20:00","homeScore":0,"awayScore":0,"homeTeam":"NE","awayTeam":"IND","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"WAS_NO_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 20:15:00","time":"2018-06-24T20:15:00","homeScore":0,"awayScore":0,"homeTeam":"NO","awayTeam":"WAS","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"DEN_NYJ_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"NYJ","awayTeam":"DEN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"MIN_PHI_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 16:25:00","time":"2018-06-24T16:25:00","homeScore":0,"awayScore":0,"homeTeam":"PHI","awayTeam":"MIN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"ATL_PIT_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"PIT","awayTeam":"ATL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"LAR_SEA_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 16:25:00","time":"2018-06-24T16:25:00","homeScore":0,"awayScore":0,"homeTeam":"SEA","awayTeam":"LAR","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"ARI_SF_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Thu","date":"2018-06-21 06:25:00","time":"2018-06-21T06:25:00","homeScore":0,"awayScore":0,"homeTeam":"SF","awayTeam":"ARI","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"PHI_NYG_2018_6_1","year":"2018","seasonType":"1","week":"6","day":"Thu","date":"2018-06-28 20:20:00","time":"2018-06-28T20:20:00","homeScore":0,"awayScore":0,"homeTeam":"NYG","awayTeam":"PHI","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"CAR_WAS_2018_6_1","year":"2018","seasonType":"1","week":"6","day":"Thu","date":"2018-06-28 13:00:00","time":"2018-06-28T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"WAS","awayTeam":"CAR","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""}]  
+[2018-07-01 09:35:02] local.INFO: Condition for games:update everyFiveMinutes for games in progress is true   
+[2018-07-01 09:35:02] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:35:02  
+[2018-07-01 09:35:02] local.INFO: Pulling scores   
+[2018-07-01 09:35:02] local.INFO: Pulling scores from url https://draftmatch-api.com/api/fake/get_games  
+[2018-07-01 09:35:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:35:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:35:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:35:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:35:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:35:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:35:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:35:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:35:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:35:04] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:35:04] local.INFO: Games 2 changed status  
+[2018-07-01 09:35:04] local.INFO: Pulling player stats  ...  
+[2018-07-01 09:35:04] local.INFO: Pulling player stats from url https://api.fantasydata.net/v3/nfl/stats/JSON/PlayerGameStatsByWeek/2017REG/6  
+[2018-07-01 09:35:26] local.INFO: Got 1752 from response  
+[2018-07-01 09:35:27] local.INFO: Successfully updated player stats  
+[2018-07-01 09:35:27] local.INFO: Pulling defense stats ...  
+[2018-07-01 09:35:27] local.INFO: Pulling data from urlhttps://api.fantasydata.net/v3/nfl/stats/JSON/FantasyDefenseByGame/2017REG/6  
+[2018-07-01 09:35:29] local.INFO: Got 28 from response  
+[2018-07-01 09:35:29] local.INFO: Successfully pulled defense stats  
+[2018-07-01 09:35:29] local.INFO: Successfully pulled all scores   
+[2018-07-01 09:36:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:36:01  
+[2018-07-01 09:36:01] local.INFO: Check invoices ...  
+[2018-07-01 09:36:01] local.INFO: No pending invoices  
+[2018-07-01 09:36:01] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:36:02] local.INFO: Finished with updating invoices  
+[2018-07-01 09:37:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:37:01  
+[2018-07-01 09:37:01] local.INFO: Check invoices ...  
+[2018-07-01 09:37:01] local.INFO: No pending invoices  
+[2018-07-01 09:37:01] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:37:02] local.INFO: Finished with updating invoices  
+[2018-07-01 09:38:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:38:01  
+[2018-07-01 09:38:01] local.INFO: Check invoices ...  
+[2018-07-01 09:38:01] local.INFO: No pending invoices  
+[2018-07-01 09:38:01] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:38:02] local.INFO: Finished with updating invoices  
+[2018-07-01 09:39:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:39:01  
+[2018-07-01 09:39:01] local.INFO: Check invoices ...  
+[2018-07-01 09:39:01] local.INFO: No pending invoices  
+[2018-07-01 09:39:01] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:39:01] local.INFO: Finished with updating invoices  
+[2018-07-01 09:40:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:40:01  
+[2018-07-01 09:40:02] local.INFO: Update exchange ...  
+[2018-07-01 09:40:02] local.INFO: Check invoices ...  
+[2018-07-01 09:40:02] local.INFO: No pending invoices  
+[2018-07-01 09:40:02] local.INFO: Checking invoices. Found 0  
+[2018-07-01 09:40:03] local.INFO: Finished with updating invoices  
+[2018-07-01 09:40:03] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-07-01 09:40:03] local.INFO: Condition is true for update:info everyFiveMinutes  
+[2018-07-01 09:40:03] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:40:03  
+[2018-07-01 09:40:03] local.INFO: Updating data ...  
+[2018-07-01 09:40:03] local.INFO: Updating live games results => 2018-07-01 05:40:03  
+[2018-07-01 09:40:03] local.INFO: DATE : 2018-07-01 05:40:03  
+[2018-07-01 09:40:03] local.INFO: Updated 2 games to LIVE status  
+[2018-07-01 09:40:03] local.INFO: Updating live players results => 2018-07-01 05:40:03  
+[2018-07-01 09:40:03] local.INFO: Updated  live players  
+[2018-07-01 09:40:03] local.INFO: Update finished players 2018-07-01 05:40:03  
+[2018-07-01 09:40:03] local.INFO: Updated 0 finished players  
+[2018-07-01 09:40:03] local.INFO: Updating slates status => 2018-07-01 05:40:03  
+[2018-07-01 09:40:03] local.INFO: Updated active slates to LIVE status of  0 slates successfully.  
+[2018-07-01 09:40:03] local.INFO: Updated slate to HISTORY status  0 slates successfully.  
+[2018-07-01 09:40:03] local.INFO: Successfully updated 0 slates  
+[2018-07-01 09:40:03] local.INFO: Updating contests  2018-07-01 05:40:03  
+[2018-07-01 09:40:03] local.INFO: Updated 0 to CANCELLED status  
+[2018-07-01 09:40:03] local.INFO: Updated 0 contests to HISTORY status  
+[2018-07-01 09:40:03] local.INFO: Updated 0 contests to LIVE status  
+[2018-07-01 09:40:03] local.INFO: Updating ENDED contests  2018-07-01 05:40:03  
+[2018-07-01 09:40:03] local.INFO: Updated 0 contests results  
+[2018-07-01 09:40:03] local.INFO: Updating LIVE contests  2018-07-01 05:40:03  
+[2018-07-01 09:40:03] local.INFO: Updating contest with status LIVE and id 1529739391.5602_46_0  
+[2018-07-01 09:40:03] local.INFO: FP1 9.4  
+[2018-07-01 09:40:03] local.INFO: FP2 8.4  
+[2018-07-01 09:40:03] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:40:03] local.INFO: Updating contest with status LIVE and id 1529738578.5235_46_0  
+[2018-07-01 09:40:03] local.INFO: FP1 15  
+[2018-07-01 09:40:03] local.INFO: FP2 13  
+[2018-07-01 09:40:03] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:40:03] local.INFO: Updating contest with status LIVE and id 1529738897.4485_46_0  
+[2018-07-01 09:40:03] local.INFO: FP1 6.9  
+[2018-07-01 09:40:03] local.INFO: FP2 0  
+[2018-07-01 09:40:03] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:40:03] local.INFO: Updating contest with status LIVE and id 1529739202.2085_46_0  
+[2018-07-01 09:40:03] local.INFO: FP1 24.04  
+[2018-07-01 09:40:03] local.INFO: FP2 0  
+[2018-07-01 09:40:03] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:40:03] local.INFO: Updating contest with status LIVE and id 1529519270.149_32_0  
+[2018-07-01 09:40:03] local.INFO: FP1 11.9  
+[2018-07-01 09:40:03] local.INFO: FP2 6.9  
+[2018-07-01 09:40:03] local.INFO: User  testcase1 is winning currently.  
+[2018-07-01 09:40:03] local.INFO: Updating contest with status LIVE and id 1529909700.6608_32_0  
+[2018-07-01 09:40:03] local.INFO: FP1 0  
+[2018-07-01 09:40:03] local.INFO: FP2 13.7  
+[2018-07-01 09:40:03] local.INFO: User  justin is winning currently  
+[2018-07-01 09:40:03] local.INFO: Updated 6 contests results  
+[2018-07-01 09:40:03] local.INFO: Updating ENDED contests  2018-07-01 05:40:03  
+[2018-07-01 09:40:03] local.INFO: Updated 0 contests results  
+[2018-07-01 09:40:03] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-07-01 09:40:03] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
+[2018-07-01 09:40:03] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[{"id":"TEN_BUF_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Mon","date":"2018-06-25 13:00:00","time":"2018-06-25T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"BUF","awayTeam":"TEN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"NYG_CAR_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Mon","date":"2018-06-25 13:00:00","time":"2018-06-25T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CAR","awayTeam":"NYG","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"MIA_CIN_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CIN","awayTeam":"MIA","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"BAL_CLE_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CLE","awayTeam":"BAL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"GB_DET_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"DET","awayTeam":"GB","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"DAL_HOU_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 20:20:00","time":"2018-06-24T20:20:00","homeScore":0,"awayScore":0,"homeTeam":"HOU","awayTeam":"DAL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"JAX_KC_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"KC","awayTeam":"JAX","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"OAK_LAC_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 16:05:00","time":"2018-06-24T16:05:00","homeScore":0,"awayScore":0,"homeTeam":"LAC","awayTeam":"OAK","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"IND_NE_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 20:20:00","time":"2018-06-24T20:20:00","homeScore":0,"awayScore":0,"homeTeam":"NE","awayTeam":"IND","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"WAS_NO_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 20:15:00","time":"2018-06-24T20:15:00","homeScore":0,"awayScore":0,"homeTeam":"NO","awayTeam":"WAS","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"DEN_NYJ_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"NYJ","awayTeam":"DEN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"MIN_PHI_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 16:25:00","time":"2018-06-24T16:25:00","homeScore":0,"awayScore":0,"homeTeam":"PHI","awayTeam":"MIN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"ATL_PIT_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 13:00:00","time":"2018-06-24T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"PIT","awayTeam":"ATL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"LAR_SEA_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Sun","date":"2018-06-24 16:25:00","time":"2018-06-24T16:25:00","homeScore":0,"awayScore":0,"homeTeam":"SEA","awayTeam":"LAR","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"ARI_SF_2018_5_1","year":"2018","seasonType":"1","week":"5","day":"Thu","date":"2018-06-21 06:25:00","time":"2018-06-21T06:25:00","homeScore":0,"awayScore":0,"homeTeam":"SF","awayTeam":"ARI","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"PHI_NYG_2018_6_1","year":"2018","seasonType":"1","week":"6","day":"Thu","date":"2018-06-28 20:20:00","time":"2018-06-28T20:20:00","homeScore":0,"awayScore":0,"homeTeam":"NYG","awayTeam":"PHI","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"CAR_WAS_2018_6_1","year":"2018","seasonType":"1","week":"6","day":"Thu","date":"2018-06-28 13:00:00","time":"2018-06-28T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"WAS","awayTeam":"CAR","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""}]  
+[2018-07-01 09:40:03] local.INFO: Condition for games:update everyFiveMinutes for games in progress is true   
+[2018-07-01 09:40:03] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-01 05:40:03  
+[2018-07-01 09:40:03] local.INFO: Pulling scores   
+[2018-07-01 09:40:03] local.INFO: Pulling scores from url https://draftmatch-api.com/api/fake/get_games  
+[2018-07-01 09:40:05] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:40:05] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:40:05] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:40:05] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:40:05] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:40:05] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:40:05] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:40:05] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:40:05] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:40:05] local.INFO: Adding games to slates Sun  
+[2018-07-01 09:40:05] local.INFO: Games 2 changed status  
+[2018-07-01 09:40:05] local.INFO: Pulling player stats  ...  
+[2018-07-01 09:40:05] local.INFO: Pulling player stats from url https://api.fantasydata.net/v3/nfl/stats/JSON/PlayerGameStatsByWeek/2017REG/6  
