@@ -8,6 +8,7 @@ use App\TimeFrame;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Helpers\DatesHelper;
 
 use App\Http\HttpResponse;
 use App\Http\HttpStatus;
@@ -1220,7 +1221,11 @@ class FakeDataController extends Controller
             )
         );
         */
-        
+
+
+        $currentTime = DatesHelper::getCurrentDate()->format('Y-m-d H:i:s');
+
+        $currentTime = str_replace(' ', 'T', $currentTime);                 
         $currentGames = array (
             array (
                 "GameKey" => "201810602",
@@ -2380,6 +2385,20 @@ class FakeDataController extends Controller
             )
             
         );
+
+        for ($i = 0; $i < count($currentGames); $i++) {
+            
+            $deltaTimeStamp = strtotime(date($currentGames[$i]['DateTime'])) - strtotime(date($currentTime)) + 3*3600;
+
+            if ($deltaTimeStamp < 0) {
+                
+                $currentGames[$i]['IsOver'] = true;
+
+            } elseif ($deltaTimeStamp < 3*3600) {
+                
+                $currentGames[$i]['HasStarted'] = true;
+            } 
+        }
 
         return response()->json($currentGames);
     }

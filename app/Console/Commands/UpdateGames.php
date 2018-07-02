@@ -197,7 +197,7 @@ class UpdateGames extends Command
             \Artisan::call('fantasyData:pull');
         }
 
-        \Log::info('Successfully pulled all scores ');
+        \Log::info('Successfully pulled all updated games scores ');
     }
 
     /**
