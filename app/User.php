@@ -116,6 +116,8 @@ class User extends Authenticatable
             $builder->where('status', '=', $status);
         }
 
+        $builder->orderBy('id', 'asc');
+
         return $builder->get();
     }
 }

@@ -69,6 +69,8 @@ Route::group(['middleware' => ['cors', 'admin.auth'], 'prefix' => 'v1'], functio
     Route::get ('admin/pendingGames',      'Api\v1\GamesController@getPendingGames');
     Route::post('admin/sendpromo',         'Admin\v1\MailController@sendPromoCode');
     Route::post('admin/setbitpaytoken',         'Admin\fake\BitPaySetController@getTokensForMerchant');
+    Route::post ('admin/user/delete',    'Api\v1\UsersController@deleteUser');
+    Route::post ('admin/user/access-blog',    'Api\v1\UsersController@changeAccessPermission');
 
 });
 

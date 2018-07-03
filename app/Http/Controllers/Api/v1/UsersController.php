@@ -221,7 +221,7 @@ class UsersController extends Controller
             return HttpResponse::serverError(HttpStatus::$ERR_UNKNOWN, HttpMessage::$USER_ERROR_RETRIEVING, $e->getMessage());
         }
 
-        return HttpResponse::ok(HttpMessage::$USER_FOUND, $users);
+        return HttpResponse::ok(HttpMessage::$USER_FOUND,$users, array('rate' => CoinbaseHelper::getExchangeRate()));
     }
 
     public function blockUser(Request $request)
@@ -305,6 +305,74 @@ class UsersController extends Controller
         }
         catch (Exception $e) {
             return HttpResponse::serverError(HttpStatus::$ERR_UNKNOWN, HttpMessage::$USER_ACTIVATE_ERROR, $e->getMessage());
+        }
+
+        return HttpResponse::ok(HttpMessage::$USER_ACTIVATED, null);
+    }
+
+    public function deleteUser(Request $request){
+
+        $id = null;
+        if ($request->get('user_id')) {
+            $id = $request->get('user_id');
+        }
+        else {
+            return HttpResponse::badRequest(HttpStatus::$ERR_VALIDATION, HttpMessage::$USER_DELETE_ERROR_VALIDATE,
+                HttpMessage::$USER_DELETE_ERROR_VALIDATE);
+        }
+
+        try {
+            $user = User::find($id);
+            if ($user == null) {
+                return HttpResponse::serverError(HttpStatus::$ERR_USER_NOT_FOUND, HttpMessage::$USER_NOT_FOUND,
+                    HttpMessage::$USER_NOT_FOUND);
+            }
+        }
+        catch (QueryException $e) {
+            return HttpResponse::serverError(HttpStatus::$SQL_ERROR, HttpMessage::$USER_NOT_FOUND,$e->getMessage());
+        }
+        catch (Exception $e) {
+            return HttpResponse::serverError(HttpStatus::$ERR_UNKNOWN, HttpMessage::$USER_NOT_FOUND, $e->getMessage());
+        }
+
+        $user->delete();
+
+        return HttpResponse::ok(HttpMessage::$USER_DELETED, null);
+
+
+    }
+
+    public function changeAccessPermission(Request $request){
+        $id = null;
+        if ($request->get('user_id')) {
+            $id = $request->get('user_id');
+        }
+        
+        try {
+            $user = User::find($id);
+            if ($user == null) {
+                return HttpResponse::serverError(HttpStatus::$ERR_USER_NOT_FOUND, HttpMessage::$USER_NOT_FOUND,
+                    HttpMessage::$USER_NOT_FOUND);
+            }
+        }
+        catch (QueryException $e) {
+            return HttpResponse::serverError(HttpStatus::$SQL_ERROR, HttpMessage::$USER_NOT_FOUND,$e->getMessage());
+        }
+        catch (Exception $e) {
+            return HttpResponse::serverError(HttpStatus::$ERR_UNKNOWN, HttpMessage::$USER_NOT_FOUND, $e->getMessage());
+        }
+
+        try {
+                
+                $user->blog_access = $request->get('blog_access');
+                $user->save();
+            
+        }
+        catch (QueryException $e) {
+            return HttpResponse::serverError(HttpStatus::$SQL_ERROR, HttpMessage::$USER_BLOG_ACCESS_CHANGE_ERROR, $e->getMessage());
+        }
+        catch (Exception $e) {
+            return HttpResponse::serverError(HttpStatus::$ERR_UNKNOWN, HttpMessage::$USER_BLOG_ACCESS_CHANGE_ERROR, $e->getMessage());
         }
 
         return HttpResponse::ok(HttpMessage::$USER_ACTIVATED, null);
@@ -557,5 +625,10 @@ class UsersController extends Controller
         $invoices = Invoice::where('user_id', '=', $user->id)->orderBy('createdAt', 'asc')->get();
         \Log::info('Successfully retrieved user transactions ...');
         return HttpResponse::ok(HttpMessage::$USER_TRANSACTIONS_RECEIVED, $invoices);
+    }
+
+    public function getHistoryEntries()
+    {
+        echo "string";
     }
 }

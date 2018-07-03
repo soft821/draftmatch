@@ -22,6 +22,7 @@ class HttpMessage
     public static $USER_TOKEN_CREATED        = 'Successfully created user token';
     public static $USER_FOUND                = 'User found in database';
     public static $USER_BLOCKED              = 'User successfully blocked';
+    public static $USER_DELETED              = 'User successfully deleted';
     public static $USER_ACTIVATED            = 'User successfully activated';
     public static $USER_FUNDS_ADDED          = 'User successfully added funds to the account';
     public static $USER_FUNDS_WITHDRAWED     = 'User successfully withdrawed funds from account';
@@ -52,11 +53,13 @@ class HttpMessage
     public static $USER_BLOCK_ERROR          = 'Error occurred while trying to block the user';
     public static $USER_BLOCK_ADMIN_ERROR    = 'Admin user can\'t be blocked';
     public static $USER_ACTIVATE_ERROR_VALIDATE = 'User id required to activate user';
+    public static $USER_DELETE_ERROR_VALIDATE = 'User id required to delete user';
     public static $USER_ACTIVATE_ERROR       = 'Error occurred while trying to activate the user';
     public static $USER_PROMOCODE_ERROR_VALIDATE = 'User email required to send promo code';
     public static $USER_PROMOCODE_SUCCESS = 'Promo code sent successfully.';
     public static $USER_PROMOCODE_INVALID = 'Promo code is not correct.';
     public static $USER_PERMISSION_INVALID = 'Sorry, but you have not invited yet in our service.';
+    public static $USER_BLOG_ACCESS_CHANGE_ERROR       = 'Error occurred while trying to change the user blog permission.';
 
     // SlatesController messages
     public static $SLATES_SUCCESSFULLY_RETRIEVED                 = 'List of game times successfully retrieved';

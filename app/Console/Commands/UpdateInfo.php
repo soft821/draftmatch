@@ -487,6 +487,7 @@ class UpdateInfo extends Command
                             $invoice->save();
 
                             $invoice->user->balance = $invoice->user->balance + $inv->getAmount()->getAmount();
+                            $invoice->user->deposit = $invoice->user->deposit + $inv->getAmount()->getAmount();
                             $invoice->user->save();
 
                             try {
