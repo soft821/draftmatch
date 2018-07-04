@@ -413,7 +413,7 @@ class UpdateInfo extends Command
                     $inv = $allTransactions[$invoice->description];
                 } else {
                     \Log::info('Invoice with id ' . $invoice->invoiceId . ' not found. Retries  '.$invoice->retries);
-                    if ($invoice->retries > 5) {
+                    if ($invoice->retries > 15) {
                         $invoice->status = 'failed';
                         $invoice->save();
                     } else {
