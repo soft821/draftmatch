@@ -6,13 +6,13 @@ use App\Common\Consts\Contest\ContestStatusConsts;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use NotificationChannels\WebPush\HasPushSubscriptions;
+
 
 class User extends Authenticatable
 {
     use Notifiable;
     use CanResetPassword;
-    use HasPushSubscriptions;
+    
 
     /**
      * The attributes that are mass assignable.
