@@ -10,7 +10,10 @@
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
- 
+Route::get('pusher', function()
+{
+    return View::make('pusher');
+});
 Route::get('pullDefenseStats',           'HomeController@pullDefenseStats');
 Route::get('makeFulldata2017',           'HomeController@makeFulldata2017');
 Route::get('makeTimeFrame',           'HomeController@makeTimeFrame');

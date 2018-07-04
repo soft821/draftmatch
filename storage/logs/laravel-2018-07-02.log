@@ -1,0 +1,235 @@
+[2018-07-02 02:47:11] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 02:54:58] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 02:55:21] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 02:55:52] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 02:56:13] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 02:56:13] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: There are no commands defined in the "webpush" namespace. in E:\draftMatch\draftmatch\vendor\symfony\console\Application.php:564
+Stack trace:
+#0 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(604): Symfony\Component\Console\Application->findNamespace('webpush')
+#1 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(229): Symfony\Component\Console\Application->find('webpush:vapid')
+#2 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 E:\draftMatch\draftmatch\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main}  
+[2018-07-02 03:18:08] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 03:18:23] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 03:18:37] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 03:19:14] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 03:19:14] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: There are no commands defined in the "webpush" namespace. in E:\draftMatch\draftmatch\vendor\symfony\console\Application.php:564
+Stack trace:
+#0 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(604): Symfony\Component\Console\Application->findNamespace('webpush')
+#1 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(229): Symfony\Component\Console\Application->find('webpush:vapid')
+#2 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 E:\draftMatch\draftmatch\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main}  
+[2018-07-02 03:35:30] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 03:43:16] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 03:43:16] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: There are no commands defined in the "webpush" namespace. in E:\draftMatch\draftmatch\vendor\symfony\console\Application.php:564
+Stack trace:
+#0 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(604): Symfony\Component\Console\Application->findNamespace('webpush')
+#1 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(229): Symfony\Component\Console\Application->find('webpush:vapid')
+#2 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 E:\draftMatch\draftmatch\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main}  
+[2018-07-02 03:43:39] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 03:43:46] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 03:43:46] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: There are no commands defined in the "webpush" namespace. in E:\draftMatch\draftmatch\vendor\symfony\console\Application.php:564
+Stack trace:
+#0 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(604): Symfony\Component\Console\Application->findNamespace('webpush')
+#1 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(229): Symfony\Component\Console\Application->find('webpush:vapid')
+#2 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 E:\draftMatch\draftmatch\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main}  
+[2018-07-02 03:45:36] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 03:45:54] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 03:45:54] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: There are no commands defined in the "webpush" namespace. in E:\draftMatch\draftmatch\vendor\symfony\console\Application.php:564
+Stack trace:
+#0 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(604): Symfony\Component\Console\Application->findNamespace('webpush')
+#1 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(229): Symfony\Component\Console\Application->find('webpush:vapid')
+#2 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 E:\draftMatch\draftmatch\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main}  
+[2018-07-02 04:12:15] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 04:12:27] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 04:13:14] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 04:13:32] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 04:13:32] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: There are no commands defined in the "webpush" namespace. in E:\draftMatch\draftmatch\vendor\symfony\console\Application.php:564
+Stack trace:
+#0 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(604): Symfony\Component\Console\Application->findNamespace('webpush')
+#1 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(229): Symfony\Component\Console\Application->find('webpush:vapid')
+#2 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 E:\draftMatch\draftmatch\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main}  
+[2018-07-02 04:23:29] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 04:23:29] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: There are no commands defined in the "webpush" namespace. in E:\draftMatch\draftmatch\vendor\symfony\console\Application.php:564
+Stack trace:
+#0 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(604): Symfony\Component\Console\Application->findNamespace('webpush')
+#1 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(229): Symfony\Component\Console\Application->find('webpush:vapid')
+#2 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 E:\draftMatch\draftmatch\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main}  
+[2018-07-02 04:31:06] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 04:31:07] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: There are no commands defined in the "webpush" namespace. in E:\draftMatch\draftmatch\vendor\symfony\console\Application.php:564
+Stack trace:
+#0 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(604): Symfony\Component\Console\Application->findNamespace('webpush')
+#1 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(229): Symfony\Component\Console\Application->find('webpush:vapid')
+#2 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 E:\draftMatch\draftmatch\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main}  
+[2018-07-02 05:02:30] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 05:02:30] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: There are no commands defined in the "webpush" namespace. in E:\draftMatch\draftmatch\vendor\symfony\console\Application.php:564
+Stack trace:
+#0 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(604): Symfony\Component\Console\Application->findNamespace('webpush')
+#1 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(229): Symfony\Component\Console\Application->find('webpush:vapid')
+#2 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 E:\draftMatch\draftmatch\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main}  
+[2018-07-02 05:25:20] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 05:25:33] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 05:25:33] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: Command "webpush" is not defined. in E:\draftMatch\draftmatch\vendor\symfony\console\Application.php:618
+Stack trace:
+#0 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(229): Symfony\Component\Console\Application->find('webpush')
+#1 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 E:\draftMatch\draftmatch\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2018-07-02 05:25:55] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 05:25:55] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: There are no commands defined in the "webpush" namespace. in E:\draftMatch\draftmatch\vendor\symfony\console\Application.php:564
+Stack trace:
+#0 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(604): Symfony\Component\Console\Application->findNamespace('webpush')
+#1 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(229): Symfony\Component\Console\Application->find('webpush:vapid')
+#2 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 E:\draftMatch\draftmatch\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main}  
+[2018-07-02 05:27:02] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 05:27:08] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 05:41:04] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 05:41:04] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: There are no commands defined in the "webpush" namespace. in E:\draftMatch\draftmatch\vendor\symfony\console\Application.php:564
+Stack trace:
+#0 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(604): Symfony\Component\Console\Application->findNamespace('webpush')
+#1 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(229): Symfony\Component\Console\Application->find('webpush:vapid')
+#2 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 E:\draftMatch\draftmatch\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main}  
+[2018-07-02 11:05:53] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 12:42:47] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 12:50:34] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 12:55:12] local.ERROR: InvalidArgumentException: Attribute [view] does not exist. in E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\RouteRegistrar.php:75
+Stack trace:
+#0 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1098): Illuminate\Routing\RouteRegistrar->attribute('view', '/home')
+#1 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(221): Illuminate\Routing\Router->__call('view', Array)
+#2 E:\draftMatch\draftmatch\routes\api.php(13): Illuminate\Support\Facades\Facade::__callStatic('view', Array)
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(327): require('E:\\draftMatch\\d...')
+#4 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(283): Illuminate\Routing\Router->loadRoutes('E:\\draftMatch\\d...')
+#5 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, 'E:\\draftMatch\\d...')
+#6 E:\draftMatch\draftmatch\app\Providers\RouteServiceProvider.php(71): Illuminate\Routing\RouteRegistrar->group('E:\\draftMatch\\d...')
+#7 E:\draftMatch\draftmatch\app\Providers\RouteServiceProvider.php(38): App\Providers\RouteServiceProvider->mapApiRoutes()
+#8 [internal function]: App\Providers\RouteServiceProvider->map()
+#9 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#10 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#11 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#12 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Container\Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#13 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Support\Providers\RouteServiceProvider.php(74): Illuminate\Container\Container->call(Array)
+#14 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Support\Providers\RouteServiceProvider.php(33): Illuminate\Foundation\Support\Providers\RouteServiceProvider->loadRoutes()
+#15 E:\draftMatch\draftmatch\app\Providers\RouteServiceProvider.php(28): Illuminate\Foundation\Support\Providers\RouteServiceProvider->boot()
+#16 [internal function]: App\Providers\RouteServiceProvider->boot()
+#17 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#18 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#19 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#20 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Container\Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#21 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(788): Illuminate\Container\Container->call(Array)
+#22 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(771): Illuminate\Foundation\Application->bootProvider(Object(App\Providers\RouteServiceProvider))
+#23 [internal function]: Illuminate\Foundation\Application->Illuminate\Foundation\{closure}(Object(App\Providers\RouteServiceProvider), 17)
+#24 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(772): array_walk(Array, Object(Closure))
+#25 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Bootstrap\BootProviders.php(17): Illuminate\Foundation\Application->boot()
+#26 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(208): Illuminate\Foundation\Bootstrap\BootProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#27 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(162): Illuminate\Foundation\Application->bootstrapWith(Array)
+#28 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(146): Illuminate\Foundation\Http\Kernel->bootstrap()
+#29 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#30 E:\draftMatch\draftmatch\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#31 E:\draftMatch\draftmatch\server.php(21): require_once('E:\\draftMatch\\d...')
+#32 {main}  
+[2018-07-02 13:19:57] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 13:21:36] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 13:22:00] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 13:22:17] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 13:22:28] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 13:22:28] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: There are no commands defined in the "webpush" namespace. in E:\draftMatch\draftmatch\vendor\symfony\console\Application.php:564
+Stack trace:
+#0 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(604): Symfony\Component\Console\Application->findNamespace('webpush')
+#1 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(229): Symfony\Component\Console\Application->find('webpush:vapid')
+#2 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 E:\draftMatch\draftmatch\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main}  
+[2018-07-02 13:31:21] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 13:31:21] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: Command "sercve" is not defined.
+
+Did you mean this?
+    serve in E:\draftMatch\draftmatch\vendor\symfony\console\Application.php:618
+Stack trace:
+#0 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(229): Symfony\Component\Console\Application->find('sercve')
+#1 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 E:\draftMatch\draftmatch\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2018-07-02 13:31:27] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-02 13:31:30] local.ERROR: ErrorException: Use of undefined constant PUSHER_APP_KEY - assumed 'PUSHER_APP_KEY' (this will throw an Error in a future version of PHP) in E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\UsersController.php:473
+Stack trace:
+#0 E:\draftMatch\draftmatch\app\Http\Controllers\Api\v1\UsersController.php(473): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'Use of undefine...', 'E:\\draftMatch\\d...', 473, Array)
+#1 [internal function]: App\Http\Controllers\Api\v1\UsersController->getRanking(Object(Illuminate\Http\Request))
+#2 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(55): call_user_func_array(Array, Array)
+#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('getRanking', Array)
+#4 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Api\v1\UsersController), 'getRanking')
+#5 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Route.php(160): Illuminate\Routing\Route->runController()
+#6 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(572): Illuminate\Routing\Route->run()
+#7 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#8 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#10 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#11 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Routing\Middleware\ThrottleRequests->handle(Object(Illuminate\Http\Request), Object(Closure), '60', '1')
+#16 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#19 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#20 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#21 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#23 E:\draftMatch\draftmatch\app\Http\Middleware\Cors.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#24 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\Cors->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 E:\draftMatch\draftmatch\app\Http\Middleware\HttpsProtocol.php(29): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): App\Http\Middleware\HttpsProtocol->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#36 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#37 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#38 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#39 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#40 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#41 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#42 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#43 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#44 E:\draftMatch\draftmatch\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#45 E:\draftMatch\draftmatch\server.php(21): require_once('E:\\draftMatch\\d...')
+#46 {main}  
