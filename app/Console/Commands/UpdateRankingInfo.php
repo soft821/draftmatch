@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use GuzzleHttp\Client as HttpClient;
+use App\Helpers\DatesHelper;
 use DB;
 use App\User;
 use App\Entry;
@@ -50,6 +51,9 @@ class UpdateRankingInfo extends Command
     }
 
     public function updateByAllTime(){
+
+        \Log::info('Updating user ranking by alltime => '.DatesHelper::getCurrentDate());
+
         $users = User::all();
         foreach($users as $user){
               if ($user['history_count'] > 0){
@@ -63,6 +67,10 @@ class UpdateRankingInfo extends Command
     }
 
     public function updateByMonth(){
+
+
+        \Log::info('Updating user ranking by month => '.DatesHelper::getCurrentDate());
+
         $users = User::all();
         foreach ($users as $user) {
             $userScore = array();
@@ -102,6 +110,9 @@ class UpdateRankingInfo extends Command
     }
 
     public function updateByWeek(){
+
+        \Log::info('Updating user ranking by week => '.DatesHelper::getCurrentDate());
+
         $users = User::all();
         foreach ($users as $user) {
             $userScore = array();

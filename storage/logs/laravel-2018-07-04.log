@@ -1,91 +1,91 @@
-[2018-07-04 04:13:31] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
-[2018-07-04 04:13:31] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: There are no commands defined in the "command" namespace. in E:\draftMatch\draftmatch\vendor\symfony\console\Application.php:564
+[2018-07-04 09:23:01] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-04 09:23:01] local.INFO: Check invoices ...  
+[2018-07-04 09:23:01] local.INFO: No pending invoices  
+[2018-07-04 09:23:01] local.INFO: Checking invoices. Found 0  
+[2018-07-04 09:23:02] local.INFO: Finished with updating invoices  
+[2018-07-04 09:23:02] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-04 09:23:02] local.INFO: Updating user ranking by alltime => 2017-06-12 07:31:19  
+[2018-07-04 09:23:02] local.INFO: Updating user ranking by month => 2017-06-12 07:31:19  
+[2018-07-04 09:23:03] local.INFO: Updating user ranking by week => 2017-06-12 07:31:19  
+[2018-07-04 09:23:07] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-04 09:24:01] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-04 09:24:01] local.INFO: Check invoices ...  
+[2018-07-04 09:24:01] local.INFO: No pending invoices  
+[2018-07-04 09:24:01] local.INFO: Checking invoices. Found 0  
+[2018-07-04 09:24:03] local.INFO: Finished with updating invoices  
+[2018-07-04 09:24:03] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-04 09:24:03] local.INFO: Updating user ranking by alltime => 2017-06-12 07:31:19  
+[2018-07-04 09:24:03] local.INFO: Updating user ranking by month => 2017-06-12 07:31:19  
+[2018-07-04 09:24:04] local.INFO: Updating user ranking by week => 2017-06-12 07:31:19  
+[2018-07-04 09:25:01] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-04 09:25:01] local.INFO: Check invoices ...  
+[2018-07-04 09:25:01] local.INFO: No pending invoices  
+[2018-07-04 09:25:01] local.INFO: Checking invoices. Found 0  
+[2018-07-04 09:25:03] local.INFO: Finished with updating invoices  
+[2018-07-04 09:25:03] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-04 09:25:03] local.INFO: Updating user ranking by alltime => 2017-06-12 07:31:19  
+[2018-07-04 09:25:03] local.INFO: Updating user ranking by month => 2017-06-12 07:31:19  
+[2018-07-04 09:25:04] local.INFO: Updating user ranking by week => 2017-06-12 07:31:19  
+[2018-07-04 09:25:09] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-07-04 09:25:09] local.INFO: Condition is true for update:info everyFiveMinutes  
+[2018-07-04 09:25:09] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-04 09:25:09] local.INFO: Updating data ...  
+[2018-07-04 09:25:09] local.INFO: Updating live games results => 2017-06-12 07:31:19  
+[2018-07-04 09:25:09] local.INFO: DATE : 2017-06-12 07:31:19  
+[2018-07-04 09:25:09] local.INFO: Updated 0 games to LIVE status  
+[2018-07-04 09:25:09] local.INFO: Updating live players results => 2017-06-12 07:31:19  
+[2018-07-04 09:25:09] local.ERROR: ErrorException: count(): Parameter must be an array or an object that implements Countable in /home/osboxes/Documents/projects/draftmatch/app/Console/Commands/UpdateInfo.php:95
 Stack trace:
-#0 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(604): Symfony\Component\Console\Application->findNamespace('command')
-#1 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(229): Symfony\Component\Console\Application->find('command:list')
-#2 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#4 E:\draftMatch\draftmatch\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#5 {main}  
-[2018-07-04 05:04:35] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
-[2018-07-04 05:23:19] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
-[2018-07-04 05:27:42] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
-[2018-07-04 06:04:16] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
-[2018-07-04 08:34:21] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
-[2018-07-04 08:35:03] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
-[2018-07-04 08:35:03] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined method App\Console\Commands\UpdateRankingInfo::divideFloat() in E:\draftMatch\draftmatch\app\Console\Commands\UpdateRankingInfo.php:49
-Stack trace:
-#0 E:\draftMatch\draftmatch\app\Console\Commands\UpdateRankingInfo.php(156): App\Console\Commands\UpdateRankingInfo->updateByAllTime()
-#1 [internal function]: App\Console\Commands\UpdateRankingInfo->handle()
-#2 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(29): call_user_func_array(Array, Array)
-#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
-#4 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
-#5 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Container\Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
-#6 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Console\Command.php(182): Illuminate\Container\Container->call(Array)
-#7 E:\draftMatch\draftmatch\vendor\symfony\console\Command\Command.php(252): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
-#8 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Console\Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
-#9 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(946): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#10 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(248): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\UpdateRankingInfo), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#11 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#12 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#13 E:\draftMatch\draftmatch\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#14 {main}  
-[2018-07-04 08:36:21] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
-[2018-07-04 08:36:23] local.ERROR: ErrorException: Undefined variable: options in E:\draftMatch\draftmatch\app\Console\Commands\UpdateRankingInfo.php:144
-Stack trace:
-#0 E:\draftMatch\draftmatch\app\Console\Commands\UpdateRankingInfo.php(144): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', 'E:\\draftMatch\\d...', 144, Array)
-#1 E:\draftMatch\draftmatch\app\Console\Commands\UpdateRankingInfo.php(166): App\Console\Commands\UpdateRankingInfo->sendPushNotification()
-#2 [internal function]: App\Console\Commands\UpdateRankingInfo->handle()
-#3 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(29): call_user_func_array(Array, Array)
-#4 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
-#5 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
-#6 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Container\Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
-#7 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Console\Command.php(182): Illuminate\Container\Container->call(Array)
-#8 E:\draftMatch\draftmatch\vendor\symfony\console\Command\Command.php(252): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
-#9 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Console\Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
-#10 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(946): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#11 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(248): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\UpdateRankingInfo), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#12 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#13 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#14 E:\draftMatch\draftmatch\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#15 {main}  
-[2018-07-04 08:37:18] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
-[2018-07-04 08:37:57] local.ERROR: Swift_IoException: Unable to open file for reading [./assets/images/img_mail_bg.jpg] in E:\draftMatch\draftmatch\vendor\swiftmailer\swiftmailer\lib\classes\Swift\ByteStream\FileByteStream.php:144
-Stack trace:
-#0 E:\draftMatch\draftmatch\vendor\swiftmailer\swiftmailer\lib\classes\Swift\ByteStream\FileByteStream.php(84): Swift_ByteStream_FileByteStream->_getReadHandle()
-#1 E:\draftMatch\draftmatch\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Mime\ContentEncoder\Base64ContentEncoder.php(43): Swift_ByteStream_FileByteStream->read(8192)
-#2 E:\draftMatch\draftmatch\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Mime\SimpleMimeEntity.php(547): Swift_Mime_ContentEncoder_Base64ContentEncoder->encodeByteStream(Object(Swift_ByteStream_FileByteStream), Object(Swift_Transport_StreamBuffer), 0, 76)
-#3 E:\draftMatch\draftmatch\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Mime\SimpleMimeEntity.php(522): Swift_Mime_SimpleMimeEntity->_bodyToByteStream(Object(Swift_Transport_StreamBuffer))
-#4 E:\draftMatch\draftmatch\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Mime\SimpleMimeEntity.php(562): Swift_Mime_SimpleMimeEntity->toByteStream(Object(Swift_Transport_StreamBuffer))
-#5 E:\draftMatch\draftmatch\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Mime\SimpleMimeEntity.php(522): Swift_Mime_SimpleMimeEntity->_bodyToByteStream(Object(Swift_Transport_StreamBuffer))
-#6 E:\draftMatch\draftmatch\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Mime\SimpleMessage.php(614): Swift_Mime_SimpleMimeEntity->toByteStream(Object(Swift_Transport_StreamBuffer))
-#7 E:\draftMatch\draftmatch\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Message.php(170): Swift_Mime_SimpleMessage->toByteStream(Object(Swift_Transport_StreamBuffer))
-#8 E:\draftMatch\draftmatch\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(327): Swift_Message->toByteStream(Object(Swift_Transport_StreamBuffer))
-#9 E:\draftMatch\draftmatch\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(428): Swift_Transport_AbstractSmtpTransport->_streamMessage(Object(Swift_Message))
-#10 E:\draftMatch\draftmatch\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(444): Swift_Transport_AbstractSmtpTransport->_doMailTransaction(Object(Swift_Message), 'postmaster@draf...', Array, Array)
-#11 E:\draftMatch\draftmatch\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(176): Swift_Transport_AbstractSmtpTransport->_sendTo(Object(Swift_Message), 'postmaster@draf...', Array, Array)
-#12 E:\draftMatch\draftmatch\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
-#13 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Mail\Mailer.php(443): Swift_Mailer->send(Object(Swift_Message), Array)
-#14 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Mail\Mailer.php(217): Illuminate\Mail\Mailer->sendSwiftMessage(Object(Swift_Message))
-#15 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Mail\Mailable.php(124): Illuminate\Mail\Mailer->send('emails.rankingU...', Array, Object(Closure))
-#16 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Mail\Mailer.php(232): Illuminate\Mail\Mailable->send(Object(Illuminate\Mail\Mailer))
-#17 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Mail\Mailer.php(187): Illuminate\Mail\Mailer->sendMailable(Object(App\Mail\RankingUpdateMail))
-#18 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Mail\PendingMail.php(99): Illuminate\Mail\Mailer->send(Object(App\Mail\RankingUpdateMail))
-#19 E:\draftMatch\draftmatch\app\Console\Commands\UpdateRankingInfo.php(158): Illuminate\Mail\PendingMail->send(Object(App\Mail\RankingUpdateMail))
-#20 E:\draftMatch\draftmatch\app\Console\Commands\UpdateRankingInfo.php(171): App\Console\Commands\UpdateRankingInfo->sendEmail()
-#21 [internal function]: App\Console\Commands\UpdateRankingInfo->handle()
-#22 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(29): call_user_func_array(Array, Array)
-#23 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
-#24 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
-#25 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Container\Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
-#26 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Console\Command.php(182): Illuminate\Container\Container->call(Array)
-#27 E:\draftMatch\draftmatch\vendor\symfony\console\Command\Command.php(252): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
-#28 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Console\Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
-#29 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(946): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#30 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(248): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\UpdateRankingInfo), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#31 E:\draftMatch\draftmatch\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#32 E:\draftMatch\draftmatch\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#33 E:\draftMatch\draftmatch\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#34 {main}  
-[2018-07-04 08:44:21] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
-[2018-07-04 08:51:15] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'count(): Parame...', '/home/osboxes/D...', 95, Array)
+#1 /home/osboxes/Documents/projects/draftmatch/app/Console/Commands/UpdateInfo.php(95): count(0)
+#2 /home/osboxes/Documents/projects/draftmatch/app/Console/Commands/UpdateInfo.php(610): App\Console\Commands\UpdateInfo->updateLivePleyersInfo()
+#3 [internal function]: App\Console\Commands\UpdateInfo->handle()
+#4 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#5 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#6 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#7 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Container/Container.php(539): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#8 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#9 /home/osboxes/Documents/projects/draftmatch/vendor/symfony/console/Command/Command.php(252): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#10 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#11 /home/osboxes/Documents/projects/draftmatch/vendor/symfony/console/Application.php(946): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /home/osboxes/Documents/projects/draftmatch/vendor/symfony/console/Application.php(248): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\UpdateInfo), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /home/osboxes/Documents/projects/draftmatch/vendor/symfony/console/Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /home/osboxes/Documents/projects/draftmatch/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /home/osboxes/Documents/projects/draftmatch/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 {main}  
+[2018-07-04 09:25:09] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-07-04 09:25:09] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
+[2018-07-04 09:25:09] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[]  
+[2018-07-04 09:25:09] local.INFO: Condition for games:update everyFiveMinutes is false  
+[2018-07-04 09:26:01] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-04 09:26:01] local.INFO: Check invoices ...  
+[2018-07-04 09:26:01] local.INFO: No pending invoices  
+[2018-07-04 09:26:01] local.INFO: Checking invoices. Found 0  
+[2018-07-04 09:26:04] local.INFO: Finished with updating invoices  
+[2018-07-04 09:26:04] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-04 09:26:04] local.INFO: Updating user ranking by alltime => 2017-06-12 07:31:19  
+[2018-07-04 09:26:04] local.INFO: Updating user ranking by month => 2017-06-12 07:31:19  
+[2018-07-04 09:26:05] local.INFO: Updating user ranking by week => 2017-06-12 07:31:19  
+[2018-07-04 09:27:01] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-04 09:27:01] local.INFO: Check invoices ...  
+[2018-07-04 09:27:01] local.INFO: No pending invoices  
+[2018-07-04 09:27:01] local.INFO: Checking invoices. Found 0  
+[2018-07-04 09:27:04] local.INFO: Finished with updating invoices  
+[2018-07-04 09:27:04] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-04 09:27:04] local.INFO: Updating user ranking by alltime => 2017-06-12 07:31:19  
+[2018-07-04 09:27:04] local.INFO: Updating user ranking by month => 2017-06-12 07:31:19  
+[2018-07-04 09:27:04] local.INFO: Updating user ranking by week => 2017-06-12 07:31:19  
+[2018-07-04 09:28:01] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-04 09:28:01] local.INFO: Check invoices ...  
+[2018-07-04 09:28:01] local.INFO: No pending invoices  
+[2018-07-04 09:28:01] local.INFO: Checking invoices. Found 0  
+[2018-07-04 09:28:03] local.INFO: Finished with updating invoices  
+[2018-07-04 09:28:03] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-04 09:28:03] local.INFO: Updating user ranking by alltime => 2017-06-12 07:31:19  
+[2018-07-04 09:28:03] local.INFO: Updating user ranking by month => 2017-06-12 07:31:19  
+[2018-07-04 09:28:04] local.INFO: Updating user ranking by week => 2017-06-12 07:31:19  
+[2018-07-04 09:29:01] local.INFO: SCHEDULING for day Monday DATE : 2017-06-12 07:31:19  
+[2018-07-04 09:29:01] local.INFO: Check invoices ...  
+[2018-07-04 09:29:01] local.INFO: No pending invoices  
+[2018-07-04 09:29:01] local.INFO: Checking invoices. Found 0  
+[2018-07-04 09:29:02] local.INFO: Finished with updating invoices  

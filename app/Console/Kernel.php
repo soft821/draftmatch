@@ -63,12 +63,6 @@ class Kernel extends ConsoleKernel
             return false;
         });
 
-        $schedule->command('update:ranking')->everyMinute()->timezone('America/New_York')->when(function(){
-            return true;
-        });
-
-
-
         $schedule->command('update:info')->hourlyAt(11)->timezone('America/New_York')->when(function(){
             \Log::info('Checking conditions for update::info hourly');
             if (DatesHelper::getCurrentDay() === 'Tuesday' || DatesHelper::getCurrentDay() === 'Wednesday' ||
