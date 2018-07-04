@@ -15,6 +15,7 @@ use App\Http\Requests;
 use JWTAuth;
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Game;
 use App\Invoice;
 use JWTAuthException;
 use Mockery\Exception;
@@ -24,7 +25,16 @@ use Illuminate\Validation\Rule;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use GuzzleHttp\Client as HttpClient;
 use App\PromoCode;
+use DB;
+use App\Entry;
+use App\Ranking_week;
+use App\Ranking_month;
+use Carbon\Carbon;
+use Illuminate\Support\Collection;
 
+use Illuminate\Support\Facades\Mail;
+use App\Mail\RankingUpdateMail;
+use Pusher\Pusher;
 class UsersController extends Controller
 {
     private $user;
@@ -383,7 +393,6 @@ class UsersController extends Controller
         $validator = \Validator::make($request->all(), [
             UserBalanceConsts::$AMOUNT => 'numeric|min:1|max:10000'
         ]);
-
         // if any of validation rules failed, we will fail to create contest
         if ($validator->fails()) {
             return HttpResponse::badRequest(HttpStatus::$ERR_VALIDATION, HttpMessage::$USER_ERROR_ADDING_FUNDS, $validator->errors()->all());
@@ -404,7 +413,8 @@ class UsersController extends Controller
                 HttpMessage::$USER_BLOCKED_OPERATION);
         }
         try {
-            $response = CoinbaseHelper::sendRequestToUser($user, $request->get('amount'));
+
+             $response = CoinbaseHelper::sendRequestToUser($user, $request->get('amount'));
         }
         catch (QueryException $e) {
             return HttpResponse::serverError(HttpStatus::$SQL_ERROR, HttpMessage::$USER_ERROR_ADDING_FUNDS, $e->getMessage());
@@ -532,6 +542,24 @@ class UsersController extends Controller
         return (mt_rand ($min * 10, $max * 10)/10.0);
     }
 
+    private function divideFloat($a, $b, $precision=3) {
+        $a*=pow(10, $precision);
+        $result=(int)($a / $b);
+        if (strlen($result)==$precision) return '0.' . $result;
+        else return preg_replace('/(\d{' . $precision . '})$/', '.\1', $result);
+    }
+
+    private  function convertToObject($array) {
+        $object = new \stdClass();
+        foreach ($array as $key => $value) {
+            if (is_array($value)) {
+                $value = convertToObject($value);
+            }
+            $object->$key = $value;
+        }
+        return $object;
+    }
+
     public function getRanking(Request $request){
         $validator = \Validator::make($request->all(), [
             "type"       => ['required', Rule::in(["all_time", "weekly", "monthly"])]]);
@@ -540,12 +568,289 @@ class UsersController extends Controller
         if ($validator->fails()) {
             return HttpResponse::badRequest(HttpStatus::$ERR_VALIDATION, HttpMessage::$USER_ERROR_ADDING_FUNDS, $validator->errors()->all());
         }
+       //  // dd($request->input('type'));
+       //  $options = array(
+       //      'cluster' => 'mt1', 
+       //      'encrypted' => true
+       //  );
+ 
+       // //Remember to set your credentials below.
+       //  $pusher = new Pusher(
+       //      '22436cb886a06e68758b',
+       //      '43d7fd80ce194a54f933',
+       //      '553320',
+       //      $options
+       //  );
+        
+       //  $message= "Hello User";
+        
+       //  //Send a message to notify channel with an event name of notify-event
+       //  $pusher->trigger('notify', 'notify-event', $message); 
+       //  dd('pusher test');
 
-        $users = User::getAllUsers();
-        foreach($users as $user){
-            $user["pts"] = $this->getRandD(1.0, 1000.0);
+       // Mail::to('wanga6404@gmail.com')->send(new RankingUpdateMail());
+       if ($request->input('type') == 'all_time'){
+        //*******if type = All time then***********************
+            $rankingData = DB::table('users')
+                        ->where('history_count', '>', 0)
+                        ->select('name', 'email', 'wins', 'loses', 'score', 'history_winning', 'history_count')
+                        ->orderBy('score', 'desc')
+                        ->get();
+              // dd($rankingData);
+            //*******parsing method****************
+            foreach ($rankingData as $key => $value) {
+                $ranking = $key + 1;;
+                $name = $rankingData[$key]->name;
+                $score = $rankingData[$key]->score;
+                echo $ranking;
+                echo $name;
+                echo $score;
+            }
+            dd('Parsing and');
+            //*************************************        
+        //*****************************************************
+       }
+       else if ($request->input('type') == 'weekly'){
+        //******if type is weekly then*******************
+            $rankingData = array();
+            for ($i = 1; $i < 21; $i++){
+                $week = $i;
+                $scoreData = DB::table('ranking_weeks')
+                        ->join('users', 'users.id', '=', 'ranking_weeks.user_id')
+                        ->join('entries', 'users.id', '=', 'entries.user_id')
+                        ->join('games', 'games.id', '=', 'entries.game_id')
+                        ->where('games.week', '=', $week)
+                        ->select('users.name', 'users.email', 'ranking_weeks.score_week_'.$week.' as score_week')
+                        ->orderBy('ranking_weeks.score_week_'.$week, 'desc')
+                        ->get();
+                $collection = collect($scoreData);
+                $unique = $collection->unique('email');
+                $unique->values()->all();
+                array_push($rankingData, $unique);
+            }
+            foreach ($rankingData as $key => $value) {
+                // echo $key, $value;
+                $week = $key + 1;
+                if (is_object($value) && ($value->count() != 0)){
+                    $ranking = 0;
+                    foreach ($value as $key1 => $value1) {
+                        $ranking++;
+                        if (is_object($value1)){
+                            foreach ($value1 as $key2 => $value2) {
+                                $ranking_weeks[$week][$ranking]['week'] = $week;
+                                $ranking_weeks[$week][$ranking]['ranking'] = $ranking;
+                                $ranking_weeks[$week][$ranking][$key2] = $value2; 
+                            }
+                        }
+                        
+                    }
+                }
+                else{
+                    $ranking_weeks[$week] = null;
+                }
+            }
+            // dd($ranking_weeks);
+            //*******parsing method****************
+            $rankingData = $ranking_weeks[5];
+            if ($rankingData){
+                foreach ($rankingData as $key => $value) {
+                    $ranking = $rankingData[$key]['ranking'];
+                    $name = $rankingData[$key]['name'];
+                    $score = $rankingData[$key]['score_week'];
+                    echo $ranking;
+                    echo $name;
+                    echo $score;
+                }
+            }
+            else {
+                echo 'There is no game!';
+            }
+            dd('Parsing and');
+            //*************************************
+        //*************************************************
+       }
+       else if ($request->input('type') == 'monthly'){
+        //******if type is monthly then*******************
+            $rankingData = array();
+            for ($i = 1; $i < 13; $i++){
+                $startMonth = $i;
+                $dateS = new Carbon('2018-'.$startMonth.'-1');
+                $dateE = new Carbon('2018-'.$startMonth.'-31');
+                $scoreData = DB::table('ranking_months')
+                        ->join('users', 'users.id', '=', 'ranking_months.user_id')
+                        ->join('entries', 'users.id', '=', 'entries.user_id')
+                        ->join('games', 'games.id', '=', 'entries.game_id')
+                        ->whereBetween('games.date', [$dateS->format('Y-m-d')." 00:00:00", $dateE->format('Y-m-d')." 23:59:59"])
+                        ->select('users.name', 'users.email', 'ranking_months.score_month_'.$startMonth.' as score_month')
+                        ->orderBy('ranking_months.score_month_'.$startMonth, 'desc')
+                        ->get();
+               $collection = collect($scoreData);
+               $unique = $collection->unique('email');
+               $unique->values()->all();
+               array_push($rankingData, $unique);
+                
+            }
+            foreach ($rankingData as $key => $value) {
+                // echo $key, $value;
+                $month = $key + 1;
+                if (is_object($value) && ($value->count() != 0)){
+                    $ranking = 0;
+                    foreach ($value as $key1 => $value1) {
+                        $ranking++;
+                        if (is_object($value1)){
+                            foreach ($value1 as $key2 => $value2) {
+                                $ranking_months[$month][$ranking]['month'] = $month;
+                                $ranking_months[$month][$ranking]['ranking'] = $ranking;
+                                $ranking_months[$month][$ranking][$key2] = $value2; 
+                            }
+                        }
+                        
+                    }
+                }
+                else{
+                    $ranking_months[$month] = null;
+                }
+            }
+            //*******parsing method****************
+            $rankingData = $ranking_months[6];
+            if ($rankingData){
+                foreach ($rankingData as $key => $value) {
+                    $ranking = $rankingData[$key]['ranking'];
+                    $name = $rankingData[$key]['name'];
+                    $score = $rankingData[$key]['score_month'];
+                    echo $ranking;
+                    echo $name;
+                    echo $score;
+                }
+            }
+            else {
+                echo 'There is no game!';
+            }
+            dd('Parsing and');
+            //*************************************
+        //*************************************************
+       }
+       else {
+
+       }
+
+      return HttpResponse::ok(HttpMessage::$USER_FOUND, $rankingData);
+    }
+    public function setRanking(Request $request){
+        $validator = \Validator::make($request->all(), [
+            "type"       => ['required', Rule::in(["all_time", "weekly", "monthly"])]]);
+
+        // if any of validation rules failed, we will fail to create contest
+        if ($validator->fails()) {
+            return HttpResponse::badRequest(HttpStatus::$ERR_VALIDATION, HttpMessage::$USER_ERROR_ADDING_FUNDS, $validator->errors()->all());
         }
 
+        // $user = User::all()->count();
+        // for ($i = 1; $i<37; $i++){
+        //     $user = User::find($i);
+
+        //     $user->history_count = round($this->getRandD(1.0, 10.0));
+        //     $user->history_winning = $this->getRandD(1.0, 3.6);
+
+        //     $user->save();
+        // }
+        // for ($i = 36; $i<48; $i++){
+        //     $user = User::find($i);
+
+        //     $user->history_count = round($this->getRandD(1.0, 10.0));
+        //     $user->history_winning = $this->getRandD(1.0, 3.6);
+
+        //     $user->save();
+        // }
+        // for ($i = 1542; $i < 1579; $i++){
+        //     $entry = Entry::find($i);
+        //     $entry->winning = $this -> getRandD(0.5, 1.2);
+        //     $entry -> save();
+        // }
+        //********if type = "all_time"***********
+        // $users = User::all();
+        // foreach($users as $user){
+        //       echo $user;
+        //       if ($user['history_count'] > 0){
+        //         $user['score'] = $this -> divideFloat($user['history_winning'], $user['history_count']);
+        //       }
+        //       else{
+        //         $user['score'] = 0.0;
+        //       }
+        //       $user->update(['score'=>$user['score']]);
+        // }
+        // dd('df');
+        //***************************************
+        //********if type = "weekly"*************
+        // $users = User::all();
+        // foreach ($users as $user) {
+        //     $userScore = array();
+        //     for ($i = 1; $i < 21 ; $i++){
+        //         $scoreData = DB::table('users')->where('users.id', '=', $user->id)
+        //             ->join('entries', 'users.id', '=', 'entries.user_id')
+        //             ->join('games', 'games.id', '=', 'entries.game_id')
+        //             ->where('games.week', 'like', $i)
+        //             ->select('users.name','games.week', 'entries.winning')
+        //             ->get();
+        //         $week_playCount = count($scoreData);
+        //         $score = 0;
+        //         foreach ($scoreData as $scoreValue) {
+        //             $score += $scoreValue->winning;
+        //         }
+        //         if ($week_playCount > 0){
+        //             $score = $this -> divideFloat($score, $week_playCount);
+        //         }
+        //         else{
+        //             $score = 0.0;
+        //         }
+        //         $userscore = array_push($userScore, $score);
+        //     }
+
+        //     foreach ($userScore as $key => $value) {
+        //         $week = $key + 1;
+        //         $userScoreObject['score_week_'.$week] = $value;
+        //     }
+        //     $userScoreObject['user_id'] = $user->id;
+        //     $ranking_weeks = Ranking_week::UpdateOrCreate($userScoreObject);
+        // }
+        //****************************************
+        $users = User::all();
+        foreach ($users as $user) {
+            $userScore = array();
+            for ($i = 1; $i < 13 ; $i++){
+                $startMonth = $i;
+                $dateS = new Carbon('2018-'.$startMonth.'-1');
+                $dateE = new Carbon('2018-'.$startMonth.'-31');
+                $scoreData = DB::table('users')->where('users.id', '=', $user->id)
+                    ->join('entries', 'users.id', '=', 'entries.user_id')
+                    ->join('games', 'games.id', '=', 'entries.game_id')
+                    ->whereBetween('games.date', [$dateS->format('Y-m-d')." 00:00:00", $dateE->format('Y-m-d')." 23:59:59"])
+                    ->select('users.name','games.week', 'entries.winning')
+                    ->get();
+                // dd($scoreData, $userScore);
+                $month_playCount = count($scoreData);
+                $score = 0;
+                foreach ($scoreData as $scoreValue) {
+                    $score += $scoreValue->winning;
+                }
+                if ($month_playCount > 0){
+                    $score = $this -> divideFloat($score, $month_playCount);
+                }
+                else{
+                    $score = 0.0;
+                }
+                $userscore = array_push($userScore, $score);
+            }
+
+            foreach ($userScore as $key => $value) {
+                $month = $key + 1;
+                $userScoreObject['score_month_'.$month] = $value;
+            }
+            $userScoreObject['user_id'] = $user->id;
+            // dd($userScoreObject);
+            $ranking_months = Ranking_month::UpdateOrCreate($userScoreObject);
+        }
+        dd('dd');
         return HttpResponse::ok(HttpMessage::$USER_FOUND, $users);
     }
 
@@ -627,8 +932,4 @@ class UsersController extends Controller
         return HttpResponse::ok(HttpMessage::$USER_TRANSACTIONS_RECEIVED, $invoices);
     }
 
-    public function getHistoryEntries()
-    {
-        echo "string";
-    }
 }

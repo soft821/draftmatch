@@ -6,11 +6,13 @@ use App\Common\Consts\Contest\ContestStatusConsts;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use NotificationChannels\WebPush\HasPushSubscriptions;
 
 class User extends Authenticatable
 {
     use Notifiable;
     use CanResetPassword;
+    use HasPushSubscriptions;
 
     /**
      * The attributes that are mass assignable.
@@ -77,7 +79,7 @@ class User extends Authenticatable
     }
 
     public static function getAllUsers(){
-        return User::where('username', '!=', 'admin')->select('username', 'wins', 'loses')->get();
+        return User::where('username', '!=', 'admin')->select('username', 'wins', 'loses', 'history_winning', 'history_count')->get();
     }
 
     /*public function getUserLiveContests()

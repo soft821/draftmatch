@@ -32,6 +32,8 @@ class Kernel extends ConsoleKernel
         Commands\UpdateLivePlayerStats::class,
         Commands\BitPaySetKey::class,
         // Commands\PullDataFrom2017::class
+        Commands\UpdateRankingInfo::class
+
     ];
 
     /**
@@ -51,6 +53,17 @@ class Kernel extends ConsoleKernel
 
         $schedule->call(function() {\Log::info('Update exchange ...');CoinbaseHelper::updateExchangeRate();})->everyTenMinutes();
         $schedule->call(function() {\Log::info('Check invoices ...');UpdateInfo::checkInvoices();})->everyMinute();
+
+
+        $schedule->command('update:ranking')->dailyAt('10:00')->timezone('America/New_York')->when(function(){
+            \Log::info('Checking conditions for update::ranking weekly');
+            if (DatesHelper::getCurrentDay() === 'Tuesday') {
+                \Log::info('Condition is true for update:ranking weekly');
+                return true;
+            }
+            \Log::info('Condition is false for update:ranking weekly');
+            return false;
+        });
 
         $schedule->command('update:info')->hourlyAt(11)->timezone('America/New_York')->when(function(){
             \Log::info('Checking conditions for update::info hourly');

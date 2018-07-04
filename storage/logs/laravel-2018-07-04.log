@@ -1,0 +1,83 @@
+[2018-07-04 09:59:02] local.INFO: SCHEDULING for day Wednesday DATE : 2018-07-04 05:59:02  
+[2018-07-04 09:59:02] local.INFO: Check invoices ...  
+[2018-07-04 09:59:02] local.INFO: No pending invoices  
+[2018-07-04 09:59:02] local.INFO: Checking invoices. Found 0  
+[2018-07-04 09:59:04] local.INFO: Finished with updating invoices  
+[2018-07-04 10:00:01] local.INFO: SCHEDULING for day Wednesday DATE : 2018-07-04 06:00:01  
+[2018-07-04 10:00:01] local.INFO: Update exchange ...  
+[2018-07-04 10:00:02] local.INFO: Check invoices ...  
+[2018-07-04 10:00:02] local.INFO: No pending invoices  
+[2018-07-04 10:00:02] local.INFO: Checking invoices. Found 0  
+[2018-07-04 10:00:04] local.INFO: Finished with updating invoices  
+[2018-07-04 10:00:04] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-07-04 10:00:04] local.INFO: Checking condition for timeframe:update hourly ...  
+[2018-07-04 10:00:04] local.INFO: Retrieving games which are not in HISTORY state for timeframe:update hourly  
+[2018-07-04 10:00:04] local.INFO: Retrieved games which are not in HISTORY state for timeframe:update hourly  
+[2018-07-04 10:00:04] local.INFO: Condition for timeframe:update hourly false  
+[2018-07-04 10:00:04] local.INFO: Condition for games:update twiceDaily is met  
+[2018-07-04 10:00:04] local.INFO: SCHEDULING for day Wednesday DATE : 2018-07-04 06:00:04  
+[2018-07-04 10:00:04] local.INFO: Pulling scores   
+[2018-07-04 10:00:04] local.INFO: Pulling scores from url https://draftmatch-api.com/api/fake/get_games  
+[2018-07-04 10:00:08] local.INFO: Adding games to slates Sun  
+[2018-07-04 10:00:08] local.INFO: Adding games to slates Sun  
+[2018-07-04 10:00:08] local.INFO: Adding games to slates Sun  
+[2018-07-04 10:00:08] local.INFO: Adding games to slates Sun  
+[2018-07-04 10:00:08] local.INFO: Adding games to slates Sun  
+[2018-07-04 10:00:08] local.INFO: Adding games to slates Sun  
+[2018-07-04 10:00:08] local.INFO: Adding games to slates Sun  
+[2018-07-04 10:00:08] local.INFO: Adding games to slates Sun  
+[2018-07-04 10:00:08] local.INFO: Adding games to slates Sun  
+[2018-07-04 10:00:08] local.INFO: Successfully pulled all updated games scores   
+[2018-07-04 10:00:08] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-07-04 10:00:08] local.INFO: Condition for games:update everyFiveMinuets for day condition is false Wednesday  
+[2018-07-04 10:00:08] local.INFO: Checking conditions for playerInfo:update twiceDaily  
+[2018-07-04 10:00:08] local.INFO: Condition for playerInfo:update twiceDaily for day is true Wednesday  
+[2018-07-04 10:00:08] local.INFO: SCHEDULING for day Wednesday DATE : 2018-07-04 06:00:08  
+[2018-07-04 10:00:08] local.INFO: Executing command playerInfo:update  
+[2018-07-04 10:00:08] local.INFO: Pulling player info ...  
+[2018-07-04 10:00:08] local.INFO: Retrieving data from url https://api.fantasydata.net/v3/nfl/stats/JSON/DailyFantasyPlayers/2017-09-20  
+[2018-07-04 10:00:15] local.INFO: Successfully retrieved data from url https://api.fantasydata.net/v3/nfl/stats/JSON/DailyFantasyPlayers/2017-09-20  
+[2018-07-04 10:00:16] local.INFO: Successfully updated player info  
+[2018-07-04 10:00:16] local.INFO: Executed command playerInfo:update successfully  
+[2018-07-04 10:00:16] local.INFO: Checking condition for playerInfo:update hourly   
+[2018-07-04 10:00:16] local.INFO: Condition for playerInfo:update hourly is false  
+[2018-07-04 10:00:16] local.INFO: Checking condition for playerStats:update hourly  
+[2018-07-04 10:00:16] local.INFO: Checking condition for liveStats:update everyThirtyMinutes  
+[2018-07-04 10:01:01] local.INFO: SCHEDULING for day Wednesday DATE : 2018-07-04 06:01:01  
+[2018-07-04 10:01:01] local.INFO: Check invoices ...  
+[2018-07-04 10:01:01] local.INFO: No pending invoices  
+[2018-07-04 10:01:01] local.INFO: Checking invoices. Found 0  
+[2018-07-04 10:01:04] local.INFO: Finished with updating invoices  
+[2018-07-04 10:02:01] local.INFO: SCHEDULING for day Wednesday DATE : 2018-07-04 06:02:01  
+[2018-07-04 10:02:01] local.INFO: Check invoices ...  
+[2018-07-04 10:02:01] local.INFO: No pending invoices  
+[2018-07-04 10:02:01] local.INFO: Checking invoices. Found 0  
+[2018-07-04 10:02:02] local.INFO: Finished with updating invoices  
+[2018-07-04 10:03:01] local.INFO: SCHEDULING for day Wednesday DATE : 2018-07-04 06:03:01  
+[2018-07-04 10:03:01] local.INFO: Check invoices ...  
+[2018-07-04 10:03:01] local.INFO: No pending invoices  
+[2018-07-04 10:03:01] local.INFO: Checking invoices. Found 0  
+[2018-07-04 10:03:03] local.INFO: Finished with updating invoices  
+[2018-07-04 10:04:01] local.INFO: SCHEDULING for day Wednesday DATE : 2018-07-04 06:04:01  
+[2018-07-04 10:04:01] local.INFO: Check invoices ...  
+[2018-07-04 10:04:01] local.INFO: No pending invoices  
+[2018-07-04 10:04:01] local.INFO: Checking invoices. Found 0  
+[2018-07-04 10:04:03] local.INFO: Finished with updating invoices  
+[2018-07-04 10:05:01] local.INFO: SCHEDULING for day Wednesday DATE : 2018-07-04 06:05:01  
+[2018-07-04 10:05:01] local.INFO: Check invoices ...  
+[2018-07-04 10:05:01] local.INFO: No pending invoices  
+[2018-07-04 10:05:01] local.INFO: Checking invoices. Found 0  
+[2018-07-04 10:05:04] local.INFO: Finished with updating invoices  
+[2018-07-04 10:05:04] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-07-04 10:05:04] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-07-04 10:05:04] local.INFO: Condition for games:update everyFiveMinuets for day condition is false Wednesday  
+[2018-07-04 10:06:01] local.INFO: SCHEDULING for day Wednesday DATE : 2018-07-04 06:06:01  
+[2018-07-04 10:06:01] local.INFO: Check invoices ...  
+[2018-07-04 10:06:01] local.INFO: No pending invoices  
+[2018-07-04 10:06:01] local.INFO: Checking invoices. Found 0  
+[2018-07-04 10:06:05] local.INFO: Finished with updating invoices  
+[2018-07-04 10:07:01] local.INFO: SCHEDULING for day Wednesday DATE : 2018-07-04 06:07:01  
+[2018-07-04 10:07:01] local.INFO: Check invoices ...  
+[2018-07-04 10:07:01] local.INFO: No pending invoices  
+[2018-07-04 10:07:01] local.INFO: Checking invoices. Found 0  
+[2018-07-04 10:07:05] local.INFO: Finished with updating invoices  

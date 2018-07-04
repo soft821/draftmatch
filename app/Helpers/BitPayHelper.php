@@ -53,20 +53,22 @@ class BitPayHelper{
          * keys. You can, of course, create your own as long as it implements the StorageInterface
          */
 
+        // dd($publicKey);
 
-
-        $storageEngine = new \Bitpay\Storage\EncryptedFilesystemStorage(config('app.bitpay_password'));
-        $storageEngine->persist($privateKey);
-        $storageEngine->persist($publicKey);
+        // $storageEngine = new \Bitpay\Storage\EncryptedFilesystemStorage(config('app.bitpay_password'));
+        // $storageEngine = new \Bitpay\Storage\FilesystemStorage();
+        $storageEngine = new \Bitpay\Storage\EncryptedFilesystemStorage('YourTopSecretPassword');
 
         $sin = \Bitpay\SinKey::create()->setPublicKey($publicKey)->generate();
         \Log::info("SIN " . $sin);
+        $storageEngine->persist($privateKey);
+        $storageEngine->persist($publicKey);
         /**
          * This is all for the first tutorial, you can run this script from the command
          * line `php examples/tutorial/001.php` This will generate and create two files
          * located at `/tmp/bitpay.pri` and `/tmp/bitpay.pub`
          */
-
+        // dd($storageEngine);
     }
 
     public static function pairIt(){
@@ -163,8 +165,9 @@ class BitPayHelper{
 
     public static function addInvoice($user, $amount){
 
-        // See 002.php for explanation
-        $storageEngine = new \Bitpay\Storage\EncryptedFilesystemStorage(config('app.bitpay_password')); // Password may need to be updated if you changed it
+        // BitPayHelper::createKeys();
+        // // See 002.php for explanation
+        $storageEngine = new \Bitpay\KeyManager(new \Bitpay\Storage\EncryptedFilesystemStorage('YourTopSecretPassword')); // Password may need to be updated if you changed it
         $privateKey    = $storageEngine->load('/tmp/bitpay.pri');
         $publicKey     = $storageEngine->load('/tmp/bitpay.pub');
         $client        = new \Bitpay\Client\Client();
@@ -174,17 +177,72 @@ class BitPayHelper{
         $client->setPublicKey($publicKey);
         $client->setNetwork($network);
         $client->setAdapter($adapter);
-        // ---------------------------
-        /**
-         * The last object that must be injected is the token object.
-         */
+        // // ---------------------------
+        // /**
+        //  * The last object that must be injected is the token object.
+        //  */
+        // // $token = new \Bitpay\Token();
+        // // $bitpayInfo = null;//BitCoinInfos::getInfo();
+        // // $token->setToken($bitpayInfo->token); // UPDATE THIS VALUE
+        // // /**
+        // //  * Token object is injected into the client
+        // //  */
+        // // $client->setToken($token);
+        // // dd($client);
+
+        // $sin = \Bitpay\SinKey::create()->setPublicKey($publicKey)->generate();
+        // $pairingCode = 'p1sb7op';
+        
+        // try {
+        //     $token = $client->createToken(
+        //         array(
+        //             'pairingCode' => $pairingCode,
+        //             'label'       => 'ddd',
+        //             'id'          => (string) $sin,
+        //         )
+        //     );
+        // } catch (\Exception $e) {
+        //     // *
+        //     //  * The code will throw an exception if anything goes wrong, if you did not
+        //     //  * change the $pairingCode value or if you are trying to use a pairing
+        //     //  * code that has already been used, you will get an exception. It was
+        //     //  * decided that it makes more sense to allow your application to handle
+        //     //  * this exception since each app is different and has different requirements.
+             
+        //     echo "Exception occured: " . $e->getMessage().PHP_EOL;
+        //     echo "Pairing failed. Please check whether you're trying to pair a production pairing code on test.".PHP_EOL;
+        //     $request  = $client->getRequest();
+        //     $response = $client->getResponse();
+        //     /**
+        //      * You can use the entire request/response to help figure out what went
+        //      * wrong, but for right now, we will just var_dump them.
+        //      */
+        //     echo (string) $request.PHP_EOL.PHP_EOL.PHP_EOL;
+        //     echo (string) $response.PHP_EOL.PHP_EOL;
+        //     /**
+        //      * NOTE: The `(string)` is include so that the objects are converted to a
+        //      *       user friendly string.
+        //      */
+        //     exit(1); // We do not want to continue if something went wrong
+        // }
+        // /**
+        //  * Now persist (save) the token obtained OR,
+        //  * after it's created initially, you can call the
+        //  * getTokens() method to retrieve all tokens
+        //  * associated with your key.
+        //  */
+        // $persistThisValue = $token->getToken();
+        // echo 'Token obtained: ' . $persistThisValue . PHP_EOL;
+        // $updatedToken = $persistThisValue . PHP_EOL;
+        // dd($updatedToken);
+
         $token = new \Bitpay\Token();
-        $bitpayInfo = null;//BitCoinInfos::getInfo();
-        $token->setToken($bitpayInfo->token); // UPDATE THIS VALUE
+        $token->setToken('3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h'); // UPDATE THIS VALUE
         /**
          * Token object is injected into the client
          */
         $client->setToken($token);
+
         /**
          * This is where we will start to create an Invoice object, make sure to check
          * the InvoiceInterface for methods that you can use.
@@ -219,10 +277,15 @@ class BitPayHelper{
          */
         $invoice->setCurrency(new \Bitpay\Currency('BTC'));
         // Configure the rest of the invoice
-        $invoice->setFullNotifications(true)->setTransactionSpeed('low')->setNotificationEmail("glupkotocak@gmail.com")
+        // $invoice->setFullNotifications(true)->setTransactionSpeed('low')->setNotificationEmail("glupkotocak@gmail.com")
+        //     ->setOrderId($timestamp.'_'.$user->id)
+        //     // You will receive IPN's at this URL, should be HTTPS for security purposes!
+        //     ->setNotificationUrl('http://162.243.21.233/bitpay/callback');
+        $invoice->setFullNotifications(true)->setTransactionSpeed('high')->setNotificationEmail("wanga6404@gmail.com")
             ->setOrderId($timestamp.'_'.$user->id)
             // You will receive IPN's at this URL, should be HTTPS for security purposes!
             ->setNotificationUrl('http://162.243.21.233/bitpay/callback');
+
 
         /**
          * Updates invoice with new information such as the invoice id and the URL where
@@ -255,6 +318,8 @@ class BitPayHelper{
         }
 
         \Log::info('Successfully created invoice for user '.$user->username);
+        $id = $invoice->getOrderId();
+        dd($client, $invoice);
         return $invoice;
     }
 
@@ -262,7 +327,7 @@ class BitPayHelper{
 
         //\Log::info("GOT ID ".$invoiceId);
         // See 002.php for explanation
-        $storageEngine = new \Bitpay\Storage\EncryptedFilesystemStorage(config('app.bitpay_password')); // Password may need to be updated if you changed it
+        $storageEngine = new \Bitpay\Storage\EncryptedFilesystemStorage('YourTopSecretPassword'); // Password may need to be updated if you changed it
         $privateKey    = $storageEngine->load('/tmp/bitpay.pri');
         $publicKey     = $storageEngine->load('/tmp/bitpay.pub');
         $client        = new \Bitpay\Client\Client();
@@ -277,9 +342,54 @@ class BitPayHelper{
          * The last object that must be injected is the token object.
          */
         //\Log::info("CHECKPOINT1 ");
+        // $sin = \Bitpay\SinKey::create()->setPublicKey($publicKey)->generate();
+        // $pairingCode = 'p1sb7op';
+        
+        // try {
+        //     $token = $client->createToken(
+        //         array(
+        //             'pairingCode' => $pairingCode,
+        //             'label'       => 'ddd',
+        //             'id'          => (string) $sin,
+        //         )
+        //     );
+        // } catch (\Exception $e) {
+        //     // *
+        //     //  * The code will throw an exception if anything goes wrong, if you did not
+        //     //  * change the $pairingCode value or if you are trying to use a pairing
+        //     //  * code that has already been used, you will get an exception. It was
+        //     //  * decided that it makes more sense to allow your application to handle
+        //     //  * this exception since each app is different and has different requirements.
+             
+        //     echo "Exception occured: " . $e->getMessage().PHP_EOL;
+        //     echo "Pairing failed. Please check whether you're trying to pair a production pairing code on test.".PHP_EOL;
+        //     $request  = $client->getRequest();
+        //     $response = $client->getResponse();
+        //     /**
+        //      * You can use the entire request/response to help figure out what went
+        //      * wrong, but for right now, we will just var_dump them.
+        //      */
+        //     echo (string) $request.PHP_EOL.PHP_EOL.PHP_EOL;
+        //     echo (string) $response.PHP_EOL.PHP_EOL;
+        //     /**
+        //      * NOTE: The `(string)` is include so that the objects are converted to a
+        //      *       user friendly string.
+        //      */
+        //     exit(1); // We do not want to continue if something went wrong
+        // }
+        // /**
+        //  * Now persist (save) the token obtained OR,
+        //  * after it's created initially, you can call the
+        //  * getTokens() method to retrieve all tokens
+        //  * associated with your key.
+        //  */
+        // $persistThisValue = $token->getToken();
+        // echo 'Token obtained: ' . $persistThisValue . PHP_EOL;
+        // $updatedToken = $persistThisValue . PHP_EOL;
         $token = new \Bitpay\Token();
         $bitpayInfo = null;;//;BitCoinInfos::getInfo();
-        $token->setToken($bitpayInfo->token); // UPDATE THIS VALUE
+        // $token->setToken($bitpayInfo->token); // UPDATE THIS VALUE
+        $token->setToken('3ASfwXrVvt21bZXSASyzLsUxeX1FvGjwN98RvWjQYB2h');
         /**
          * Token object is injected into the client
          */
@@ -310,8 +420,11 @@ class BitPayHelper{
 //JYhRYFUtK3La6nxZSEXBUy
 
     public static function payToUser(){
+
+        // BitPayHelper::createKeys();
         // See 002.php for explanation
-        $storageEngine = new \Bitpay\Storage\EncryptedFilesystemStorage(config('app.bitpay_password')); // Password may need to be updated if you changed it
+        // $storageEngine = new \Bitpay\Storage\EncryptedFilesystemStorage(config('app.bitpay_password')); // Password may need to be updated if you changed it
+        $storageEngine = new \Bitpay\Storage\EncryptedFilesystemStorage('YourTopSecretPassword');
         $privateKey    = $storageEngine->load('/tmp/bitpay.pri');
         $publicKey     = $storageEngine->load('/tmp/bitpay.pub');
         $client        = new \Bitpay\Client\Client();
@@ -322,7 +435,7 @@ class BitPayHelper{
         $client->setNetwork($network);
         $client->setAdapter($adapter);
 
-        \Log::info($client->getTokens());
+        // \Log::info($client->getTokens());
 
 
         // ---------------------------
@@ -330,22 +443,44 @@ class BitPayHelper{
          * The last object that must be injected is the token object.
          */
 
+        $sin = \Bitpay\SinKey::create()->setPublicKey($publicKey)->generate();
+        $pairingCode = 'p1sb7op';
+        
+        $token = $client->createToken(
+            array(
+                'facade' => 'payroll',
+                'label' => 'You can insert a label herecmh',
+                'id' => (string) $sin,
+            )
+        ); 
+        /**
+         * Now persist (save) the token obtained OR,
+         * after it's created initially, you can call the
+         * getTokens() method to retrieve all tokens
+         * associated with your key.
+         */
+        $persistThisValue = $token->getToken();
+        $pairingCode = $token->getPairingCode();
+        echo 'Token obtained: ' . $persistThisValue . PHP_EOL;
+        dd($pairingCode);
+        $updatedToken = $persistThisValue . PHP_EOL;
+        // dd($pairingCode);
         $time = gmdate('Y-m-d\TH:i:s\.', 1414691179)."000Z";
         $token = new \Bitpay\Token();
 
         //$bitpayInfo = BitCoinInfos::getInfo();
 
-        $token->setFacade('payroll')->setToken(config('app.bitpay_token')); // UPDATE THIS VALUE
-
+        // $token->setFacade('payroll')->setToken(config('app.bitpay_token')); // UPDATE THIS VALUE
+        $token->setFacade('payroll')
+              ->setToken('GDygSCXRdamC5ZuT3ESayqwappBGuYpMg5wmLA23BgRY');
        // $inv = $client->getPayouts();
 
        // print_r($inv);
         $instruction1 = new \Bitpay\PayoutInstruction();
         $instruction1
             ->setAmount(0.00001)
-            ->setAddress('mxLxx5wKseBd5of2AMC3Eh7ipVzap8KHyj')
+            ->setAddress('mhuASFUN8VY9dpTBsbcq4gkLCShskLxzun')
             ->setLabel('Paying Chris');
-
         $payout = new \Bitpay\Payout();
         $payout
             ->setEffectiveDate($time)
@@ -353,14 +488,15 @@ class BitPayHelper{
             ->setCurrency(new \Bitpay\Currency('BTC'))
             ->setPricingMethod('bitcoinbestbuy')
             ->setReference('{ref}')
-            ->setNotificationEmail('haris.omerovic87@gmail.com')
+            ->setNotificationEmail('wanga6404@gmail.com')
             ->setNotificationUrl('https://example.com/ipn.php')
             ->setToken($token)
             ->addInstruction($instruction1);
 
 
-        //$client->setToken($token);
-        //$client->createPayout($payout);
+        $client->setToken($token);
+        $client->createPayout($payout);
+        dd($client);
         print_r($client->createPayout($payout));
         //print_r($client->getPayouts());
     }
@@ -397,3 +533,4 @@ class BitPayHelper{
         }
     }
 }
+
