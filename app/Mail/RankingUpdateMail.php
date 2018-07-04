@@ -20,7 +20,7 @@ class RankingUpdateMail extends Mailable
      */
     public function __construct()
     {
-        $this->logoPath = './assets/images/img_mail_bg.jpg';
+        $this->logoPath = base_path('public/assets/images/img_mail_bg.jpg');
     }
 
     /**

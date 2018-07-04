@@ -42,6 +42,13 @@ class UpdateRankingInfo extends Command
         parent::__construct();
     }
 
+    private function divideFloat($a, $b, $precision=3) {
+        $a*=pow(10, $precision);
+        $result=(int)($a / $b);
+        if (strlen($result)==$precision) return '0.' . $result;
+        else return preg_replace('/(\d{' . $precision . '})$/', '.\1', $result);
+    }
+
     public function updateByAllTime(){
         $users = User::all();
         foreach($users as $user){
@@ -129,6 +136,10 @@ class UpdateRankingInfo extends Command
     }
 
     public function sendPushNotification(){
+        $options = array(
+            'cluster' => 'mt1', 
+            'encrypted' => true
+        );
         //Remember to set your credentials below.
         $pusher = new Pusher(
             '22436cb886a06e68758b',
