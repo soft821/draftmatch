@@ -932,4 +932,164 @@ class UsersController extends Controller
         return HttpResponse::ok(HttpMessage::$USER_TRANSACTIONS_RECEIVED, $invoices);
     }
 
+    public function addFundsByCheckbook(Request $request){
+        $validator = \Validator::make($request->all(), [
+            UserBalanceConsts::$AMOUNT => 'numeric|min:1|max:10000'
+        ]);
+        // if any of validation rules failed, we will fail to create contest
+        if ($validator->fails()) {
+            return HttpResponse::badRequest(HttpStatus::$ERR_VALIDATION, HttpMessage::$USER_ERROR_ADDING_FUNDS, $validator->errors()->all());
+        }
+
+        try {
+            $user = JWTAuth::toUser($request->token);
+        }
+        catch (Exception $exception)
+        {
+            return HttpResponse::unauthorized(HttpStatus::$ERR_AUTH_INVALID_TOKEN_PROVIDED,HttpMessage::$USER_ERROR_ADDING_FUNDS,
+                $exception->getMessage());
+        }
+
+        if ($user->status === UserStatusConsts::$BLOCKED)
+        {
+            return HttpResponse::serverError(HttpStatus::$ERR_USER_BLOCKED_OPERATION, HttpMessage::$USER_BLOCKED_OPERATION,
+                HttpMessage::$USER_BLOCKED_OPERATION);
+        }
+
+        // $client = new HttpClient(['headers' => ['Authorization' => "64b4d2f7475f4c7aa5bb1bc08d1b58ee:jNYQNhHCm5Pm7tfBausN7FLAzxiQfF",
+        //     'Content-Type' => 'application/json'
+        //     ]
+        // ]);
+        // $url = 'https://checkbook.io/v3/invoice';
+
+        $client = new HttpClient(['headers' => ['Authorization' => "0a7990396d731af2d7802805b1c573ed:bdb71b58f24f853c6f60f7a03951e9b5",
+            'Content-Type' => 'application/json'
+            ]
+        ]);
+        $url = 'https://sandbox.checkbook.io/v3/invoice';
+
+
+        $test = $client->request('POST', $url, ['json' => array('name' => 'DraftMatch LLC',
+            'recipient' => 'phanthanhhung1118@gmail.com',
+            'amount' => 1.00,
+            'description' => 'Invoice 125'
+        )])->getBody();
+
+        echo $test;
+
+        // return redirect()->action('Api\v1\UsersController@checkbookCallback');
+
+    }
+
+    public function withdrawFundsByCheckbook(Request $request){
+
+        $validator = \Validator::make($request->all(), [
+            UserBalanceConsts::$AMOUNT => 'numeric|min:1|max:10000'
+        ]);
+        // if any of validation rules failed, we will fail to create contest
+        if ($validator->fails()) {
+            return HttpResponse::badRequest(HttpStatus::$ERR_VALIDATION, HttpMessage::$USER_ERROR_ADDING_FUNDS, $validator->errors()->all());
+        }
+
+        try {
+            $user = JWTAuth::toUser($request->token);
+        }
+        catch (Exception $exception)
+        {
+            return HttpResponse::unauthorized(HttpStatus::$ERR_AUTH_INVALID_TOKEN_PROVIDED,HttpMessage::$USER_ERROR_ADDING_FUNDS,
+                $exception->getMessage());
+        }
+
+        if ($user->status === UserStatusConsts::$BLOCKED)
+        {
+            return HttpResponse::serverError(HttpStatus::$ERR_USER_BLOCKED_OPERATION, HttpMessage::$USER_BLOCKED_OPERATION,
+                HttpMessage::$USER_BLOCKED_OPERATION);
+        }
+
+        $client = new HttpClient(['headers' => ['Authorization' => "0a7990396d731af2d7802805b1c573ed:bdb71b58f24f853c6f60f7a03951e9b5",
+            'Content-Type' => 'application/json'
+            ]
+        ]);
+        $url = 'https://sandbox.checkbook.io/v3/check/digital';
+
+
+        $test = $client->request('POST', $url, ['json' => array('name' => 'Softman',
+            'recipient' => 'softman009@outlook.com',
+            'amount' => 2.00,
+            'description' => 'Invoice 126'
+        )])->getBody();
+
+        echo $test;
+
+
+    }
+
+    public function checkbookCallback(Request $request){
+        
+       
+
+        $provider = new \League\OAuth2\Client\Provider\GenericProvider([
+            'clientId'                => '7b141d43ffe04621ab67de46d4360a05',    
+            'clientSecret'            => 'bdb71b58f24f853c6f60f7a03951e9b5',  
+            'redirectUri'             => 'http://127.0.0.1:8000/api/v1/checkbook/callback',
+            'urlAuthorize'            => 'https://sandbox.checkbook.io/oauth/authorize',
+            'urlAccessToken'          => 'https://sandbox.checkbook.io/oauth/token',
+            'urlResourceOwnerDetails' => 'https://sandbox.checkbook.io/oauth/resource'
+        ]);
+
+        // If we don't have an authorization code then get one
+        if (!isset($_GET['code'])) {
+        
+            // Fetch the authorization URL from the provider; this returns the
+            // urlAuthorize option and generates and applies any necessary parameters
+            // (e.g. state).
+            $authorizationUrl = $provider->getAuthorizationUrl();
+        
+            // Get the state generated for you and store it to the session.
+            $_SESSION['oauth2state'] = $provider->getState();
+        
+            // Redirect the user to the authorization URL.
+            header('Location: ' . $authorizationUrl);
+            echo "step one";
+            exit;
+        
+        // Check given state against previously stored one to mitigate CSRF attack
+        } elseif (empty($_GET['state']) || (isset($_SESSION['oauth2state']) && $_GET['state'] !== $_SESSION['       oauth2state'])) {
+        
+            if (isset($_SESSION['oauth2state'])) {
+                unset($_SESSION['oauth2state']);
+            }
+
+            echo "step two";
+            exit('Invalid state');
+        
+        } else {
+        
+            try {
+        
+                // Try to get an access token using the authorization code grant.
+                $accessToken = $provider->getAccessToken('authorization_code', [
+                    'code' => $_GET['code']
+                ]);
+        
+                // We have an access token, which we may use in authenticated
+                // requests against the service provider's API.
+                echo 'Access Token: ' . $accessToken->getToken() . "<br>";
+                echo 'Refresh Token: ' . $accessToken->getRefreshToken() . "<br>";
+                echo 'Expired in: ' . $accessToken->getExpires() . "<br>";
+                echo 'Already expired? ' . ($accessToken->hasExpired() ? 'expired' : 'not expired') . "<br>";
+        
+               
+        
+            } catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
+        
+                // Failed to get the access token or user details.
+                exit($e->getMessage());
+        
+            }
+        
+        }       
+            
+    }
+
 }

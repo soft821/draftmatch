@@ -33,12 +33,15 @@ Route::group(['middleware' =>  'cors', 'prefix' => 'v1'], function() {
     Route::get('routes',         'Api\v1\ApiDescriptionController@getRoutes');
     Route::get('responseFormat', 'Api\v1\ApiDescriptionController@responseMessageFormat');
     Route::get('help',           'Api\v1\ApiDescriptionController@help');
+    Route::get('checkbook/callback',           'Api\v1\UsersController@checkbookCallback');
 });
 
 Route::group(['middleware' => ['cors', 'jwt.auth'], 'prefix' => 'v1'], function () {
     Route::get  ('user',                'Api\v1\UsersController@getUser');
     Route::post ('user/addFunds',       'Api\v1\UsersController@addFunds');
+    Route::post ('user/addFunds/checkbook',       'Api\v1\UsersController@addFundsByCheckbook');
     Route::post ('user/withdrawFunds',  'Api\v1\UsersController@withdrawFunds');
+    Route::post ('user/withdrawFunds/checkbook',  'Api\v1\UsersController@withdrawFundsByCheckbook');
     Route::get  ('user/history',        'Api\v1\UsersController@getHistoryEntries');
     Route::post ('user/addBitcoins',    'Api\v1\UsersController@addBitcoins');
 

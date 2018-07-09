@@ -161,6 +161,8 @@ class SlatesController extends Controller
 
     public function createSlate(Request $request)
     {
+
+ 
         $validator = \Validator::make($request->all(), [
             SlateConsts::$SLATE_NAME => 'required',
             SlateConsts::$GAMES      => 'required|array'
@@ -225,7 +227,7 @@ class SlatesController extends Controller
 
             $slate->firstDay = $slate->firstGame()->day;
             $slate->lastDay = $slate->lastGame()->day;
-            //$slate->active = true;
+            $slate->active = true;
             $slate->save();
         }
         catch (QueryException $e){
