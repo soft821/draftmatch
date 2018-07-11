@@ -33,7 +33,7 @@ Route::group(['middleware' =>  'cors', 'prefix' => 'v1'], function() {
     Route::get('routes',         'Api\v1\ApiDescriptionController@getRoutes');
     Route::get('responseFormat', 'Api\v1\ApiDescriptionController@responseMessageFormat');
     Route::get('help',           'Api\v1\ApiDescriptionController@help');
-    Route::get('checkbook/callback',           'Api\v1\UsersController@checkbookCallback');
+    
 });
 
 Route::group(['middleware' => ['cors', 'jwt.auth'], 'prefix' => 'v1'], function () {
@@ -77,6 +77,8 @@ Route::group(['middleware' => ['cors', 'admin.auth'], 'prefix' => 'v1'], functio
     Route::post('admin/setbitpaytoken',         'Admin\fake\BitPaySetController@getTokensForMerchant');
     Route::post ('admin/user/delete',    'Api\v1\UsersController@deleteUser');
     Route::post ('admin/user/access-blog',    'Api\v1\UsersController@changeAccessPermission');
+    Route::get  ('admin/fantasyPlayers',      'Api\v1\FantasyPlayersController@getFPlayers');
+    Route::post  ('admin/update/fp_tier',      'Api\v1\FantasyPlayersController@updateFPTier');
 
 });
 
@@ -89,3 +91,6 @@ Route::group(['prefix' => 'fake'], function(){
 });
 
 Route::post('coinbase/notification', 'Admin\v1\WebHookController@getInvoiceCoinbase');
+Route::group(['prefix' => 'v1'], function(){
+    Route::get('checkbook/callback', ['as' => 'checkbookcallback', 'uses' => 'Api\v1\UsersController@checkbookCallback']);
+});

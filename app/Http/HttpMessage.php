@@ -39,6 +39,7 @@ class HttpMessage
     public static $USER_NOT_FOUND            = 'User not found';
     public static $USER_BLOCKED_OPERATION    = 'Operation not allowed because user is blocked';
     public static $USER_ERROR_ADDING_FUNDS   = 'Error occurred while trying to add funds to user account';
+    public static $USER_ERROR_CHECK_FUNDS   = 'Error occurred while trying to add funds from checkbook.io';
     public static $USER_ERROR_WITHDRAW_FUNDS = 'Error occurred while trying to withdraw funds from user account';
     public static $USER_NOT_ENOUGH_FUNDS     = 'Not enough funds';
     public static $USER_INVALID_EMAIL_FORMAT = 'Invalid email format specified';
@@ -76,6 +77,7 @@ class HttpMessage
 
     // FantasyPlayersController messages
     public static $FANTASY_PLAYERS_SUCCESSFULLY_RETRIEVED        = 'List of fantasy players successfully retrieved';
+    public static $FANTASY_PLAYERS_SUCCESSFULLY_UPDATED        = 'Fantasy player was successfully updated';
 
     public static $FANTASY_PLAYERS_ERROR_RETRIEVING              = 'Error retrieving fantasy players';
 

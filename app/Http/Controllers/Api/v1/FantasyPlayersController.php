@@ -125,4 +125,32 @@ class FantasyPlayersController extends Controller
 
         return HttpResponse::ok(HttpMessage::$FANTASY_PLAYERS_SUCCESSFULLY_RETRIEVED, $result);
     }
+
+    public function getFPlayers(Request $request){
+        try{
+            $result = FantasyPlayer::getPlayers();
+        }
+        catch (QueryException $e){
+            return HttpResponse::serverError(HttpStatus::$SQL_ERROR, HttpMessage::$FANTASY_PLAYERS_ERROR_RETRIEVING, $e->getMessage());
+        }
+        catch (Exception $exception){
+            return HttpResponse::serverError(HttpStatus::$ERR_FANTASY_PLAYERS_RETRIEVE, HttpMessage::$FANTASY_PLAYERS_ERROR_RETRIEVING,
+                $exception->getMessage());
+        }
+
+        return HttpResponse::ok(HttpMessage::$FANTASY_PLAYERS_SUCCESSFULLY_RETRIEVED, $result);
+    }
+
+    public function updateFPTier(Request $request){
+
+        $fPlayer = FantasyPlayer::find($request->id);
+        if (!$fPlayer) {
+            return HttpResponse::serverError(HttpStatus::$ERR_FANTASY_PLAYERS_RETRIEVE, HttpMessage::$FANTASY_PLAYERS_ERROR_RETRIEVING,
+                $exception->getMessage());
+        }
+
+        $fPlayer->tier = $request->tier;
+        $fPlayer->save();
+        return HttpResponse::ok(HttpMessage::$FANTASY_PLAYERS_SUCCESSFULLY_UPDATED, $fPlayer);
+    }
 }

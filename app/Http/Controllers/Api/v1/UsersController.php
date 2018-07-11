@@ -35,6 +35,8 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\RankingUpdateMail;
 use Pusher\Pusher;
+use Closure;
+
 class UsersController extends Controller
 {
     private $user;
@@ -164,8 +166,9 @@ class UsersController extends Controller
             return HttpResponse::serverError(HttpStatus::$ERR_USER_CREATE_TOKEN, HttpMessage::$USER_ERR_CREATING_TOKEN,
                 $e->getMessage());
         }
-
-        return HttpResponse::ok(HttpMessage::$USER_TOKEN_CREATED, (['token' => $token]));
+        $user = JWTAuth::toUser($token);
+        $hasCheckbookToken = $user->token ? true : false;
+        return HttpResponse::ok(HttpMessage::$USER_TOKEN_CREATED, (['token' => $token, 'hasToken' => $hasCheckbookToken, 'id' => $user->id]));
     }
 
     public function adminLogin(Request $request)
@@ -956,11 +959,12 @@ class UsersController extends Controller
                 HttpMessage::$USER_BLOCKED_OPERATION);
         }
 
-        // $client = new HttpClient(['headers' => ['Authorization' => "64b4d2f7475f4c7aa5bb1bc08d1b58ee:jNYQNhHCm5Pm7tfBausN7FLAzxiQfF",
-        //     'Content-Type' => 'application/json'
-        //     ]
-        // ]);
-        // $url = 'https://checkbook.io/v3/invoice';
+        /* email funding
+        $client = new HttpClient(['headers' => ['Authorization' => "64b4d2f7475f4c7aa5bb1bc08d1b58ee:jNYQNhHCm5Pm7tfBausN7FLAzxiQfF",
+            'Content-Type' => 'application/json'
+            ]
+        ]);
+        $url = 'https://checkbook.io/v3/invoice';
 
         $client = new HttpClient(['headers' => ['Authorization' => "0a7990396d731af2d7802805b1c573ed:bdb71b58f24f853c6f60f7a03951e9b5",
             'Content-Type' => 'application/json'
@@ -977,7 +981,9 @@ class UsersController extends Controller
 
         echo $test;
 
-        // return redirect()->action('Api\v1\UsersController@checkbookCallback');
+        return \Redirect::route('checkbookcallback');
+        */
+        
 
     }
 
@@ -1006,6 +1012,7 @@ class UsersController extends Controller
                 HttpMessage::$USER_BLOCKED_OPERATION);
         }
 
+        /*
         $client = new HttpClient(['headers' => ['Authorization' => "0a7990396d731af2d7802805b1c573ed:bdb71b58f24f853c6f60f7a03951e9b5",
             'Content-Type' => 'application/json'
             ]
@@ -1020,13 +1027,14 @@ class UsersController extends Controller
         )])->getBody();
 
         echo $test;
+        */
 
 
     }
 
     public function checkbookCallback(Request $request){
         
-       
+
 
         $provider = new \League\OAuth2\Client\Provider\GenericProvider([
             'clientId'                => '7b141d43ffe04621ab67de46d4360a05',    
@@ -1043,14 +1051,20 @@ class UsersController extends Controller
             // Fetch the authorization URL from the provider; this returns the
             // urlAuthorize option and generates and applies any necessary parameters
             // (e.g. state).
-            $authorizationUrl = $provider->getAuthorizationUrl();
+
+            $options = [
+                'scope' => ['check']
+            ];
+
+            $authorizationUrl = $provider->getAuthorizationUrl($options);
         
             // Get the state generated for you and store it to the session.
             $_SESSION['oauth2state'] = $provider->getState();
         
             // Redirect the user to the authorization URL.
-            header('Location: ' . $authorizationUrl);
-            echo "step one";
+            // header('Location: ' . $authorizationUrl);
+            return \Redirect::to($authorizationUrl);
+            
             exit;
         
         // Check given state against previously stored one to mitigate CSRF attack
@@ -1059,9 +1073,6 @@ class UsersController extends Controller
             if (isset($_SESSION['oauth2state'])) {
                 unset($_SESSION['oauth2state']);
             }
-
-            echo "step two";
-            exit('Invalid state');
         
         } else {
         
@@ -1075,20 +1086,20 @@ class UsersController extends Controller
                 // We have an access token, which we may use in authenticated
                 // requests against the service provider's API.
                 echo 'Access Token: ' . $accessToken->getToken() . "<br>";
-                echo 'Refresh Token: ' . $accessToken->getRefreshToken() . "<br>";
-                echo 'Expired in: ' . $accessToken->getExpires() . "<br>";
-                echo 'Already expired? ' . ($accessToken->hasExpired() ? 'expired' : 'not expired') . "<br>";
-        
-               
+                // echo 'Refresh Token: ' . $accessToken->getRefreshToken() . "<br>";
+                // echo 'Expired in: ' . $accessToken->getExpires() . "<br>";
+                // echo 'Already expired? ' . ($accessToken->hasExpired() ? 'expired' : 'not expired') . "<br>";
+                \Log::info('#######################################################################');
+                // \Log::info($request->token);
         
             } catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
         
-                // Failed to get the access token or user details.
-                exit($e->getMessage());
-        
+                        
             }
         
-        }       
+        }   
+
+        return HttpResponse::unauthorized(HttpStatus::$ERR_AUTH_USER_NOT_ALLOWED,HttpMessage::$USER_ERROR_CHECK_FUNDS, 'checkbook authorization err');    
             
     }
 

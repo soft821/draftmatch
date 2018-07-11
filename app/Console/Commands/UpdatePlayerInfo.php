@@ -75,6 +75,7 @@ class UpdatePlayerInfo extends Command
             $gamesMap[$game->awayTeam] = $game;
             $slatesMap[$game->id]      = $game->slates;
         }
+        \Log::info('fPlayer counts: '.count($players));
 
         foreach ($players as $player){
             $fps = $player['ProjectedFantasyPoints'];

@@ -1,6 +1,7 @@
 <?php
 
 namespace App;
+use App\TimeFrame;
 
 class FantasyPlayer extends Model
 {
@@ -31,6 +32,29 @@ class FantasyPlayer extends Model
             with(["game" => function ($query){
                 $query->select('id', 'homeTeam', 'awayTeam');
         }])->where('position', 'like', '%'.$position.'%')->where('tier', 'like', '%'.$tier.'%')->orderBy('tier', 'ASC')->get();
+
+        \Log::info('Successfully retrieved fantasy players ...');
+
+        return $ret_val;
+        /*
+        return FantasyPlayer::with(['game' => function($query){
+            $query->select('id', 'homeTeam', 'awayTeam', 'day');}
+        ])->whereHas('games', function($query){
+                $query->select('id', 'homeTeam', 'awayTeam');
+                $query->whereHas('slates', function($query){
+                    $query->where('id',  'Sun_2017_2_3');});})->select('id', 'name', 'team', 'tier', 'fps')->
+        orderBy('tier', 'ASC')->get();*/
+
+       // return FantasyPlayer::with('slates')->where('id', 'Sun_2017_2_3')->get();
+
+    }
+
+    public static function getPlayers()
+    {
+        \Log::info('Trying to get fantasy players by Admin');
+        $filter = TimeFrame::getCurrentTimeFrame();
+
+        $ret_val = FantasyPlayer::where('id', 'like', '%'.$filter->retrieveKey().'%')->select('id', 'name', 'team', 'tier', 'fps', 'position', 'salary')->orderBy('tier', 'ASC')->get();
 
         \Log::info('Successfully retrieved fantasy players ...');
 
