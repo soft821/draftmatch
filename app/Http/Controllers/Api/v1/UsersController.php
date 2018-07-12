@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\v1;
 use App\Common\Consts\User\UserBalanceConsts;
 use App\Common\Consts\User\UserStatusConsts;
 use App\Helpers\CoinbaseHelper;
+use App\Helpers\CheckbookHelper;
 use App\Http\HttpMessage;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
@@ -960,32 +961,24 @@ class UsersController extends Controller
                 HttpMessage::$USER_BLOCKED_OPERATION);
         }
 
-        /* email funding
-        $client = new HttpClient(['headers' => ['Authorization' => "64b4d2f7475f4c7aa5bb1bc08d1b58ee:jNYQNhHCm5Pm7tfBausN7FLAzxiQfF",
-            'Content-Type' => 'application/json'
-            ]
-        ]);
-        $url = 'https://checkbook.io/v3/invoice';
+        try {
 
-        $client = new HttpClient(['headers' => ['Authorization' => "0a7990396d731af2d7802805b1c573ed:bdb71b58f24f853c6f60f7a03951e9b5",
-            'Content-Type' => 'application/json'
-            ]
-        ]);
-        $url = 'https://sandbox.checkbook.io/v3/invoice';
+             $response = CheckbookHelper::sendRequestToUser($user, $request->get('amount'));
+        }
+        catch (QueryException $e) {
+            return HttpResponse::serverError(HttpStatus::$SQL_ERROR, HttpMessage::$USER_ERROR_ADDING_FUNDS, $e->getMessage());
+        }
+        catch (Exception $e) {
+            return HttpResponse::serverError(HttpStatus::$ERR_USER_ADD_FUNDS,HttpMessage::$USER_ERROR_ADDING_FUNDS, $e->getMessage());
+        }
 
+        if (strpos($response, 'Error') !== false) {
+            return HttpResponse::serverError(HttpStatus::$ERR_USER_ADD_FUNDS, HttpMessage::$USER_ERROR_ADDING_FUNDS, $response);
+        }
 
-        $test = $client->request('POST', $url, ['json' => array('name' => 'DraftMatch LLC',
-            'recipient' => 'phanthanhhung1118@gmail.com',
-            'amount' => 1.00,
-            'description' => 'Invoice 125'
-        )])->getBody();
+        return HttpResponse::ok($response, $response);
 
-        echo $test;
-
-        return \Redirect::route('checkbookcallback');
-        */
         
-
     }
 
     public function withdrawFundsByCheckbook(Request $request){
@@ -1013,23 +1006,26 @@ class UsersController extends Controller
                 HttpMessage::$USER_BLOCKED_OPERATION);
         }
 
-        /*
-        $client = new HttpClient(['headers' => ['Authorization' => "0a7990396d731af2d7802805b1c573ed:bdb71b58f24f853c6f60f7a03951e9b5",
-            'Content-Type' => 'application/json'
-            ]
-        ]);
-        $url = 'https://sandbox.checkbook.io/v3/check/digital';
+        if ($user->balance * (1.0/CoinbaseHelper::getExchangeRate()) < $request->get(UserBalanceConsts::$AMOUNT))
+        {
+            return HttpResponse::serverError(HttpStatus::$ERR_NOT_ENOUGH_FUNDS, HttpMessage::$USER_NOT_ENOUGH_FUNDS,
+                HttpMessage::$USER_NOT_ENOUGH_FUNDS);
+        }
+        try {
+            $response = CheckbookHelper::sendMoneyToUser($user, $request->get('amount'));
+        }
+        catch (QueryException $e) {
+            return HttpResponse::serverError(HttpStatus::$SQL_ERROR, HttpMessage::$USER_ERROR_WITHDRAW_FUNDS, $e->getMessage());
+        }
+        catch (Exception $e) {
+            return HttpResponse::serverError(HttpStatus::$ERR_USER_WITHDRAW_FUNDS, HttpMessage::$USER_ERROR_WITHDRAW_FUNDS, $e->getMessage());
+        }
 
+        if (strpos($response, 'Error') !== false) {
+            return HttpResponse::serverError(HttpMessage::$ERR_USER_WITHDRAW_FUNDS, $response);
+        }
 
-        $test = $client->request('POST', $url, ['json' => array('name' => 'Softman',
-            'recipient' => 'softman009@outlook.com',
-            'amount' => 2.00,
-            'description' => 'Invoice 126'
-        )])->getBody();
-
-        echo $test;
-        */
-
+        return HttpResponse::ok($response, $response);
 
     }
 
