@@ -1121,7 +1121,7 @@ class UsersController extends Controller
                     ]
                 );
                
-                return \Redirect::to(env('FRONTEND_URL', 'https://draftmatch.com').'/#/main/add-funds/'.$timestamp);
+                return \Redirect::to(env('FRONTEND_URL', 'https://draftmatch.com').'/#/main/add-funds?check='.$timestamp);
                 
         
             } catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
