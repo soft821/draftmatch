@@ -27,6 +27,7 @@ class HttpMessage
     public static $USER_FUNDS_ADDED          = 'User successfully added funds to the account';
     public static $USER_FUNDS_WITHDRAWED     = 'User successfully withdrawed funds from account';
     public static $USER_MAIL_PASSWORD_SENT   = 'Reset password link successfully sent to specified email';
+    public static $USER_GRANTED_CHECKBOOK   = 'successfully granted permission for checkbook.';
     public static $USER_MAIL_SUPPORT_SENT    = 'Email successfully sent to support';
     public static $USER_TRANSACTIONS_RECEIVED= 'Successfully received user transactions';
 

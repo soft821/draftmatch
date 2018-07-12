@@ -27,6 +27,7 @@ use GuzzleHttp\Client as HttpClient;
 use App\PromoCode;
 use DB;
 use App\Entry;
+use App\CheckbookToken;
 use App\Ranking_week;
 use App\Ranking_month;
 use Carbon\Carbon;
@@ -1032,14 +1033,41 @@ class UsersController extends Controller
 
     }
 
-    public function checkbookCallback(Request $request){
+    public function hasCheckbook(Request $request){
         
+        try {
+            $user = JWTAuth::toUser($request->token);
+        }catch (Exception $exception)
+        {
+            return HttpResponse::unauthorized(HttpStatus::$ERR_AUTH_INVALID_TOKEN_PROVIDED,HttpMessage::$USER_ERROR_ADDING_FUNDS,
+                $exception->getMessage());
+        }
 
+        if (!$request->time) {
+            return HttpResponse::ok(HttpMessage::$USER_GRANTED_CHECKBOOK, (['checkbook_token' => false]));
+        }
+
+        $compare = CheckbookToken::where('time', $request->get('time'))->first();
+        if (!$compare) {
+            return HttpResponse::ok(HttpMessage::$USER_GRANTED_CHECKBOOK, (['checkbook_token' => false]));
+        }
+
+        $user->token = $compare->token;
+        $user->refresh_token = $compare->refreshtoken;
+        $user->gateway = 'checkbook';
+        $user->save();
+        \Log::info('*****************************');
+        return HttpResponse::ok(HttpMessage::$USER_GRANTED_CHECKBOOK, (['checkbook_token' => true]));
+    }
+
+    public function checkbookCallback(Request $request){
+
+        
 
         $provider = new \League\OAuth2\Client\Provider\GenericProvider([
             'clientId'                => '7b141d43ffe04621ab67de46d4360a05',    
             'clientSecret'            => 'bdb71b58f24f853c6f60f7a03951e9b5',  
-            'redirectUri'             => 'http://127.0.0.1:8000/api/v1/checkbook/callback',
+            'redirectUri'             => env('BASE_URL', 'https://draftmatch-api.com').'/api/v1/checkbook/callback',
             'urlAuthorize'            => 'https://sandbox.checkbook.io/oauth/authorize',
             'urlAccessToken'          => 'https://sandbox.checkbook.io/oauth/token',
             'urlResourceOwnerDetails' => 'https://sandbox.checkbook.io/oauth/resource'
@@ -1051,7 +1079,7 @@ class UsersController extends Controller
             // Fetch the authorization URL from the provider; this returns the
             // urlAuthorize option and generates and applies any necessary parameters
             // (e.g. state).
-
+            
             $options = [
                 'scope' => ['check']
             ];
@@ -1060,10 +1088,9 @@ class UsersController extends Controller
         
             // Get the state generated for you and store it to the session.
             $_SESSION['oauth2state'] = $provider->getState();
-        
+            
             // Redirect the user to the authorization URL.
-            // header('Location: ' . $authorizationUrl);
-            return \Redirect::to($authorizationUrl);
+            header('Location: ' . $authorizationUrl);
             
             exit;
         
@@ -1078,19 +1105,24 @@ class UsersController extends Controller
         
             try {
         
+                
                 // Try to get an access token using the authorization code grant.
                 $accessToken = $provider->getAccessToken('authorization_code', [
                     'code' => $_GET['code']
                 ]);
-        
-                // We have an access token, which we may use in authenticated
-                // requests against the service provider's API.
-                echo 'Access Token: ' . $accessToken->getToken() . "<br>";
-                // echo 'Refresh Token: ' . $accessToken->getRefreshToken() . "<br>";
-                // echo 'Expired in: ' . $accessToken->getExpires() . "<br>";
-                // echo 'Already expired? ' . ($accessToken->hasExpired() ? 'expired' : 'not expired') . "<br>";
-                \Log::info('#######################################################################');
-                // \Log::info($request->token);
+                
+                $date = new \DateTime();
+                $timestamp = $date->getTimestamp();
+
+                $token = CheckbookToken::updateOrCreate(array('time'=> $timestamp),
+                    ['time' => $timestamp,
+                    'token' => $accessToken->getToken(),
+                    'refreshtoken' => $accessToken->getRefreshToken(),
+                    ]
+                );
+               
+                return \Redirect::to(env('FRONTEND_URL', 'https://draftmatch.com').'/#/main/add-funds/'.$timestamp);
+                
         
             } catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
         
@@ -1099,7 +1131,7 @@ class UsersController extends Controller
         
         }   
 
-        return HttpResponse::unauthorized(HttpStatus::$ERR_AUTH_USER_NOT_ALLOWED,HttpMessage::$USER_ERROR_CHECK_FUNDS, 'checkbook authorization err');    
+        return \Redirect::to(env('FRONTEND_URL', 'https://draftmatch.com').'/#/main/add-funds');
             
     }
 

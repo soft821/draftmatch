@@ -53,7 +53,7 @@ Route::group(['middleware' => ['cors', 'jwt.auth'], 'prefix' => 'v1'], function 
     Route::post ('contests/enter',      'Api\v1\ContestsController@enter');
     Route::post ('contests/cancel',     'Api\v1\ContestsController@cancelContest');
     Route::patch('contests/entry',      'Api\v1\ContestsController@editEntry');
-
+    Route::post('auth/checkbook',    'Api\v1\UsersController@hasCheckbook');
     Route::get  ('slates'   ,           'Api\v1\SlatesController@getSlates');
     Route::get  ('fantasyPlayers',      'Api\v1\FantasyPlayersController@getFantasyPlayers');
 
