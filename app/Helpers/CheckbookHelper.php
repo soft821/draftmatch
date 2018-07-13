@@ -68,7 +68,7 @@ class CheckbookHelper {
             }
 
             if ($response['status'] === 'PAID') {
-                $user->balance = $user->balance - $amount * CoinbaseHelper::getExchangeRate();
+                $user->balance = $user->balance - $amount / 1.0 * CoinbaseHelper::getExchangeRate();
                 $user->save();
 
                 $check->checked = true;
@@ -148,7 +148,7 @@ class CheckbookHelper {
                  }
 
                  if ($response['status'] === 'PAID') {
-                     $user->balance = $user->balance + $amount * CoinbaseHelper::getExchangeRate();
+                     $user->balance = $user->balance + $amount / 1.0 * CoinbaseHelper::getExchangeRate();
                      $user->save();
 
                      $check->checked = true;

@@ -6,6 +6,7 @@ use App\Helpers\CoinbaseHelper;
 use App\Helpers\DatesHelper;
 use App\Contest;
 use App\Invoice;
+use App\Check;
 use App\Game;
 use App\Slate;
 use App\FantasyPlayer;
@@ -592,6 +593,13 @@ class UpdateInfo extends Command
 
     public static function checkCheckbook(){
 
+        $dbChecks = Check::getPendingChecks();
+        if (count($dbChecks) === 0){
+            \Log::info('No pending checks');
+        }
+
+        \Log::info('Checking checks. Found '.count($dbChecks));
+
         try {
 
             $client = new HttpClient(['headers' => ['Authorization' => "0a7990396d731af2d7802805b1c573ed:bdb71b58f24f853c6f60f7a03951e9b5",
@@ -603,6 +611,72 @@ class UpdateInfo extends Command
 
             $checksFromSite = json_decode($client->request('GET', $url)->getBody()->getContents(), true);
             
+            $siteChecks = $checksFromSite['checks'];
+            $allTransactions = [];
+            foreach ($siteChecks as $check) {
+                $id = $check['id'];
+                $allTransactions[$id] = $check;
+            }
+
+            foreach ($dbChecks as $check) {
+                if (array_key_exists($check->checkid, $allTransactions)) {
+                    
+                    $sCheck = $allTransactions[$check->checkid];
+
+                } else {
+                    continue;
+                }
+
+                if ($sCheck['status'] === 'IN_PROCESS') {
+                    continue;
+                } else if ($sCheck['status'] === 'PAID') {
+                    if ($check->type === 'INCOMING') {
+                        
+                        try {
+                            $check->status = 'PAID';
+                            $check->checked = true;
+                            $check-save();
+
+                            $check->user->balance = $check->user->balance + $check->amount /1.0 * CoinbaseHelper::getExchangeRate();
+                            $check->user->deposit = $check->user->deposit + $check->amount /1.0 * CoinbaseHelper::getExchangeRate();
+                            $check->user->save(); 
+                        } catch (Exception $e) {
+                            $check->status = 'IN_PROCESS';
+                            $check->checked = false;
+                            $check-save();
+                            \Log::info('Error occurred while trying to save check in database ');
+                            continue;
+                        }
+                    } else if ($check->type === 'OUTCOMING') {
+                        try {
+                            $check->status = 'PAID';
+                            $check->checked = true;
+                            $check-save();
+
+                            $check->user->balance = $check->user->balance - $check->amount /1.0 * CoinbaseHelper::getExchangeRate();
+                            $check->user->save(); 
+                        } catch (Exception $e) {
+                            $check->status = 'IN_PROCESS';
+                            $check->checked = false;
+                            $check-save();
+                            \Log::info('Error occurred while trying to save check in database ');
+                            continue;
+                        }
+                    }
+                } else if ($sCheck['status'] === 'VOID') {
+                    $check->status = 'VOID';
+                    $check->checked = true;
+                    $check->save();
+                } else if ($sCheck['status'] === 'EXPIRED') {
+                    $check->status = 'EXPIRED';
+                    $check->checked = true;
+                    $check->save();
+                } else if ($sCheck['status'] === 'FAILED') {
+                    $check->status = 'FAILED';
+                    $check->checked = true;
+                    $check->save();
+                }
+            }
 
         }catch (Exception $e) {
             \Log::info('Error was encountered when getting digital checks.');

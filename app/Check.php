@@ -20,5 +20,9 @@ class Check extends Model
         return $this->belongsTo(User::class);
     }
 
+    public static function getPendingChecks(){
+        return Check::where('status', '=', 'IN_PROCESS')->get();
+    }
+
     
 }

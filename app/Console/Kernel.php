@@ -53,7 +53,7 @@ class Kernel extends ConsoleKernel
 
         $schedule->call(function() {\Log::info('Update exchange ...');CoinbaseHelper::updateExchangeRate();})->everyTenMinutes();
         $schedule->call(function() {\Log::info('Check invoices ...');UpdateInfo::checkInvoices();})->everyMinute();
-        $schedule->call(function() {\Log::info('Check digital check ...');UpdateInfo::checkCheckbook();})->everyFiveMinutes();
+        $schedule->call(function() {\Log::info('Check digital check ...');UpdateInfo::checkCheckbook();})->everyMinute();
 
 
         $schedule->command('update:ranking')->dailyAt('10:00')->timezone('America/New_York')->when(function(){
