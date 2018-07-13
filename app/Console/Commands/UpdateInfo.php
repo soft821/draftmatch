@@ -358,7 +358,6 @@ class UpdateInfo extends Command
 
     public static function checkInvoices(){
         $invoices = Invoice::getPendingInvoices();
-
         if (count($invoices) === 0){
             \Log::info('No pending invoices');
         }

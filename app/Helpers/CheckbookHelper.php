@@ -30,6 +30,27 @@ class CheckbookHelper {
         echo $test;
         */
 
+        try {
+
+            $client = new HttpClient(['headers' => ['Authorization' => "0a7990396d731af2d7802805b1c573ed:bdb71b58f24f853c6f60f7a03951e9b5",
+                'Content-Type' => 'application/json'
+                ]
+            ]);
+            $url = 'https://sandbox.checkbook.io/v3/check/digital';
+
+
+            $response = $client->request('POST', $url, ['json' => array('name' => 'DraftMatch LLC',
+                'recipient' => $user->email,
+                'amount' => $amount*1.0,
+                'description' => 'withdraw funds from DraftMatch.com'
+            )])->getBody();
+
+
+            return $response;
+        }catch (Exception $e) {
+            return HttpResponse::serverError(HttpStatus::$ERR_USER_ADD_FUNDS,HttpMessage::$USER_ERROR_ADDING_FUNDS, $e->getMessage());
+        }
+
 	}
 
 	public static function sendRequestToUser($user, $amount){
@@ -61,22 +82,22 @@ class CheckbookHelper {
 
         try {
 
-       		$client = new HttpClient(['headers' => ['Authorization' => "bearer ".$user->token,
-       		    'Content-Type' => 'application/json'
-       		    ]
-       		]);
-       		$url = 'https://sandbox.checkbook.io/v3/check/digital';
+        		$client = new HttpClient(['headers' => ['Authorization' => "bearer ".$user->token,
+        		    'Content-Type' => 'application/json'
+        		    ]
+        		]);
+        		$url = 'https://sandbox.checkbook.io/v3/check/digital';
 
 
-       		$response = $client->request('POST', $url, ['json' => array('name' => 'DraftMatch LLC',
-       		    'recipient' => 'admin@draftmatch.com',
-       		    'amount' => $amount*1.0,
-       		    'description' => 'Add funds to DraftMatch.com'
-       		)])->getBody();
+        		$response = $client->request('POST', $url, ['json' => array('name' => 'DraftMatch LLC',
+        		    'recipient' => 'admin@draftmatch.com',
+        		    'amount' => $amount*1.0,
+        		    'description' => 'Add funds to DraftMatch.com'
+        		)])->getBody();
 
 
-       		return $response;
-		}catch (Exception $e) {
+        		return $response;
+		    }catch (Exception $e) {
             return HttpResponse::serverError(HttpStatus::$ERR_USER_ADD_FUNDS,HttpMessage::$USER_ERROR_ADDING_FUNDS, $e->getMessage());
         }
 	}	

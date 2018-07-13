@@ -988,7 +988,7 @@ class UsersController extends Controller
         ]);
         // if any of validation rules failed, we will fail to create contest
         if ($validator->fails()) {
-            return HttpResponse::badRequest(HttpStatus::$ERR_VALIDATION, HttpMessage::$USER_ERROR_ADDING_FUNDS, $validator->errors()->all());
+            return HttpResponse::badRequest(HttpStatus::$ERR_VALIDATION, HttpMessage::$USER_ERROR_WITHDRAW_FUNDS, $validator->errors()->all());
         }
 
         try {
