@@ -1064,9 +1064,9 @@ class UsersController extends Controller
             'clientId'                => '7b141d43ffe04621ab67de46d4360a05',    
             'clientSecret'            => 'bdb71b58f24f853c6f60f7a03951e9b5',  
             'redirectUri'             => env('BASE_URL', 'https://draftmatch-api.com').'/api/v1/checkbook/callback',
-            'urlAuthorize'            => 'https://sandbox.checkbook.io/oauth/authorize',
-            'urlAccessToken'          => 'https://sandbox.checkbook.io/oauth/token',
-            'urlResourceOwnerDetails' => 'https://sandbox.checkbook.io/oauth/resource'
+            'urlAuthorize'            => env('CHECKBOOK_URL', 'https://checkbook.io').'/oauth/authorize',
+            'urlAccessToken'          => env('CHECKBOOK_URL', 'https://checkbook.io').'/oauth/token',
+            'urlResourceOwnerDetails' => env('CHECKBOOK_URL', 'https://checkbook.io').'/oauth/resource'
         ]);
 
         // If we don't have an authorization code then get one

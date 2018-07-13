@@ -11,6 +11,7 @@ use App\Slate;
 use App\FantasyPlayer;
 use Coinbase\Wallet\Client;
 use Coinbase\Wallet\Configuration;
+use GuzzleHttp\Client as HttpClient;
 
 use Illuminate\Console\Command;
 use Mockery\Exception;
@@ -587,6 +588,25 @@ class UpdateInfo extends Command
         }
 
         \Log::info('Finished with updating invoices');
+    }
+
+    public static function checkCheckbook(){
+
+        try {
+
+            $client = new HttpClient(['headers' => ['Authorization' => "0a7990396d731af2d7802805b1c573ed:bdb71b58f24f853c6f60f7a03951e9b5",
+                'Accept' => 'application/json'
+                ]
+            ]);
+            $url = env('CHECKBOOK_URL', 'https://checkbook.io').'/v3/check';
+
+
+            $checksFromSite = json_decode($client->request('GET', $url)->getBody()->getContents(), true);
+            
+
+        }catch (Exception $e) {
+            \Log::info('Error was encountered when getting digital checks.');
+        }
     }
 
     public function handle()

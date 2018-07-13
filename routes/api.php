@@ -33,6 +33,7 @@ Route::group(['middleware' =>  'cors', 'prefix' => 'v1'], function() {
     Route::get('routes',         'Api\v1\ApiDescriptionController@getRoutes');
     Route::get('responseFormat', 'Api\v1\ApiDescriptionController@responseMessageFormat');
     Route::get('help',           'Api\v1\ApiDescriptionController@help');
+    Route::get('test',           'Api\v1\ApiDescriptionController@test');
     
 });
 

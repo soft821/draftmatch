@@ -2,13 +2,14 @@
 
 namespace App\Helpers;
 
-use App\Invoice;
+use App\Check;
 use Mockery\Exception;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Client as HttpClient;
 use App\Http\HttpResponse;
 use App\Http\HttpStatus;
 use App\Http\HttpMessage;
+use App\CoinbaseHelper;
 
 class CheckbookHelper {
 
@@ -29,6 +30,7 @@ class CheckbookHelper {
 
         echo $test;
         */
+        $retMessage = "";
 
         try {
 
@@ -36,17 +38,44 @@ class CheckbookHelper {
                 'Content-Type' => 'application/json'
                 ]
             ]);
-            $url = 'https://sandbox.checkbook.io/v3/check/digital';
+            $url = env('CHECKBOOK_URL', 'https://checkbook.io').'/v3/check/digital';
 
 
-            $response = $client->request('POST', $url, ['json' => array('name' => 'DraftMatch LLC',
+            $response = json_decode($client->request('POST', $url, ['json' => array('name' => 'DraftMatch LLC',
                 'recipient' => $user->email,
                 'amount' => $amount*1.0,
-                'description' => 'withdraw funds from DraftMatch.com'
-            )])->getBody();
+                'description' => 'Check ID: '.time().'_'.($user->id).'_'.($amount).' Sending '.$amount.'$ to user '.$user->email
+            )])->getBody()->getContents(), true);
 
+            try {
+                $check = new Check();
+                $check->email = $user->email;
+                $check->user_id = $user->id;
+                $check->amount = $amount*1.0;
+                $check->description = $response['description'];
+                $check->status = $response['status'];
+                $check->image_uri = $response['image_uri'];
+                $check->gen_time = $response['date'];
+                $check->checkid = $response['id'];
+                $check->type = 'OUTGOING';
+                $check->checked = false;
 
-            return $response;
+                $check->save();
+                $retMessage = "You successfully requested withdraw fund from DraftMatch.";
+            }catch(Exception $e){
+                \Log::info('Error saving check id in database ...');
+                $retMessage = "Error saving check id in database ...";
+            }
+
+            if ($response['status'] === 'PAID') {
+                $user->balance = $user->balance - $amount * CoinbaseHelper::getExchangeRate();
+                $user->save();
+
+                $check->checked = true;
+                $check->save();
+            }
+
+            return $retMessage;
         }catch (Exception $e) {
             return HttpResponse::serverError(HttpStatus::$ERR_USER_ADD_FUNDS,HttpMessage::$USER_ERROR_ADDING_FUNDS, $e->getMessage());
         }
@@ -80,25 +109,57 @@ class CheckbookHelper {
         return \Redirect::route('checkbookcallback');
         */
 
+        $retMessage = "";
+
         try {
 
         		$client = new HttpClient(['headers' => ['Authorization' => "bearer ".$user->token,
         		    'Content-Type' => 'application/json'
         		    ]
         		]);
-        		$url = 'https://sandbox.checkbook.io/v3/check/digital';
+        		$url = env('CHECKBOOK_URL', 'https://checkbook.io').'/v3/check/digital';
 
 
-        		$response = $client->request('POST', $url, ['json' => array('name' => 'DraftMatch LLC',
+        		$response = json_decode($client->request('POST', $url, ['json' => array('name' => 'DraftMatch LLC',
         		    'recipient' => 'admin@draftmatch.com',
         		    'amount' => $amount*1.0,
-        		    'description' => 'Add funds to DraftMatch.com'
-        		)])->getBody();
+        		    'description' => 'Check ID: '.time().'_'.($user->id).'_'.($amount).' Receiving '.$amount.'$ from user '.$user->email
+        		)])->getBody()->getContents(), true);
 
 
-        		return $response;
+        		try {
+                     $check = new Check();
+                     $check->email = $user->email;
+                     $check->user_id = $user->id;
+                     $check->amount = $amount*1.0;
+                     $check->description = $response['description'];
+                     $check->status = $response['status'];
+                     $check->image_uri = $response['image_uri'];
+                     $check->gen_time = $response['date'];
+                     $check->checkid = $response['id'];
+                     $check->type = 'INCOMING';
+                     $check->checked = false;
+
+                     $check->save();
+                     $retMessage = "You successfully requested adding fund to DraftMatch from your account.";
+                 }catch(Exception $e){
+                     \Log::info('Error saving check id in database ...');
+                     $retMessage = "Error saving check id in database ...";
+                 }
+
+                 if ($response['status'] === 'PAID') {
+                     $user->balance = $user->balance + $amount * CoinbaseHelper::getExchangeRate();
+                     $user->save();
+
+                     $check->checked = true;
+                     $check->save();
+                 }
+
+                 return $retMessage;
 		    }catch (Exception $e) {
-            return HttpResponse::serverError(HttpStatus::$ERR_USER_ADD_FUNDS,HttpMessage::$USER_ERROR_ADDING_FUNDS, $e->getMessage());
+                 return HttpResponse::serverError(HttpStatus::$ERR_USER_ADD_FUNDS,HttpMessage::$USER_ERROR_ADDING_FUNDS, $e->getMessage());
         }
-	}	
+	}
+
+
 }

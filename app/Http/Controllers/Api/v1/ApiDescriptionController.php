@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\v1;
 use App\Http\HttpMessage;
 use App\Http\HttpStatus;
 use App\Http\Controllers\Controller;
+use GuzzleHttp\Client as HttpClient;
 
 class ApiDescriptionController extends Controller
 {
@@ -46,5 +47,16 @@ class ApiDescriptionController extends Controller
         $help = ['help' => "First step is to register user over /api/v1/auth/register route. After successful register you need to retrieve a token using /api/v1/auth/login route.Token will be in a entities of the response. Token will be used for authentication for all future requests which requires authentication.Token should be past in Authorization header as Bearer TOKEN. Token expires in 30 mins, and then you have to call login route again."];
 
         return $help;
+    }
+
+    public function test(){
+        $client = new HttpClient(['headers' => ['Authorization' => "0a7990396d731af2d7802805b1c573ed:bdb71b58f24f853c6f60f7a03951e9b5",
+                'Accept' => 'application/json'
+                ]
+            ]);
+            $url = env('CHECKBOOK_URL', 'https://checkbook.io').'/v3/check';
+
+            $response = json_decode($client->request('GET', $url)->getBody()->getContents(), true);
+            return response()->json($response['checks']);
     }
 }
