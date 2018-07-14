@@ -204,6 +204,7 @@ class UsersController extends Controller
         try {
             $user = JWTAuth::toUser($request->token);
             $user->balance = round($user->balance * 1.0/CoinbaseHelper::getExchangeRate(), 2);
+            $user->token = $user->token ? true : false;
         }
         catch (Exception $e){
             return HttpResponse::badRequest(HttpStatus::$ENTITY_NOT_FOUND, HttpMessage::$USER_NOT_FOUND, $e->getMessage());
@@ -961,6 +962,11 @@ class UsersController extends Controller
                 HttpMessage::$USER_BLOCKED_OPERATION);
         }
 
+        if (!$user->token) {
+            return HttpResponse::serverError(HttpStatus::$ERR_USER_BLOCKED_OPERATION, HttpMessage::$USER_BLOCKED_OPERATION,
+                HttpMessage::$USER_BLOCKED_OPERATION);
+        }
+
         try {
 
              $response = CheckbookHelper::sendRequestToUser($user, $request->get('amount'));
@@ -1011,6 +1017,13 @@ class UsersController extends Controller
             return HttpResponse::serverError(HttpStatus::$ERR_NOT_ENOUGH_FUNDS, HttpMessage::$USER_NOT_ENOUGH_FUNDS,
                 HttpMessage::$USER_NOT_ENOUGH_FUNDS);
         }
+
+
+        if (!$user->token) {
+            return HttpResponse::serverError(HttpStatus::$ERR_USER_BLOCKED_OPERATION, HttpMessage::$USER_BLOCKED_OPERATION,
+                HttpMessage::$USER_BLOCKED_OPERATION);
+        }
+        
         try {
             $response = CheckbookHelper::sendMoneyToUser($user, $request->get('amount'));
         }
