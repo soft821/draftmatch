@@ -9,7 +9,7 @@ use GuzzleHttp\Client as HttpClient;
 use App\Http\HttpResponse;
 use App\Http\HttpStatus;
 use App\Http\HttpMessage;
-use App\CoinbaseHelper;
+use App\Helpers\CoinbaseHelper;
 
 class CheckbookHelper {
 
@@ -67,7 +67,7 @@ class CheckbookHelper {
                 $retMessage = "Error saving check id in database ...";
             }
 
-            if ($response['status'] === 'PAID') {
+            if ($response['status'] === 'IN_PROCESS') {
                 $user->balance = $user->balance - $amount / 1.0 * CoinbaseHelper::getExchangeRate();
                 $user->save();
 
@@ -147,7 +147,7 @@ class CheckbookHelper {
                      $retMessage = "Error saving check id in database ...";
                  }
 
-                 if ($response['status'] === 'PAID') {
+                 if ($response['status'] === 'IN_PROCESS') {
                      $user->balance = $user->balance + $amount / 1.0 * CoinbaseHelper::getExchangeRate();
                      $user->save();
 

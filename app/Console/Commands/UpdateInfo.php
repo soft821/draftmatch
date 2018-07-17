@@ -441,6 +441,14 @@ class UpdateInfo extends Command
                         try {
                             \Log::info('Invoice with id ' . $invoice->id . ' expired ...');
                             $client->cancelTransaction($inv);
+                            if ($invoice->type === 'request') {
+                                $invoice->user->balance = $invoice->user->balance - $inv->getAmount()->getAmount();
+                                $invoice->user->deposit = $invoice->user->deposit - $inv->getAmount()->getAmount();
+                                $invoice->user->save();
+                            } else if ($invoice->type === 'send') {
+                                $invoice->user->balance = $invoice->user->balance - $inv->getAmount()->getAmount();
+                                $invoice->user->save();
+                            }
 
                             try {
                                 $invoice->status = 'failed';
@@ -487,9 +495,9 @@ class UpdateInfo extends Command
                             $invoice->invoiceId = $inv->getId();
                             $invoice->save();
 
-                            $invoice->user->balance = $invoice->user->balance + $inv->getAmount()->getAmount();
-                            $invoice->user->deposit = $invoice->user->deposit + $inv->getAmount()->getAmount();
-                            $invoice->user->save();
+                            // $invoice->user->balance = $invoice->user->balance + $inv->getAmount()->getAmount();
+                            // $invoice->user->deposit = $invoice->user->deposit + $inv->getAmount()->getAmount();
+                            // $invoice->user->save();
 
                             try {
                                 \Mail::send('emails.admin_invoices', ['text' => 'Transaction with id ' . $invoice->id . ' completed for user ' . $invoice->email . '.',
@@ -522,8 +530,8 @@ class UpdateInfo extends Command
                             $invoice->status = 'completed';
                             $invoice->save();
 
-                            $invoice->user->balance = $invoice->user->balance + $inv->getAmount()->getAmount();
-                            $invoice->user->save();
+                            // $invoice->user->balance = $invoice->user->balance + $inv->getAmount()->getAmount();
+                            // $invoice->user->save();
 
                             try {
 
@@ -552,6 +560,14 @@ class UpdateInfo extends Command
                     }
                 } else if ($inv->getStatus() === 'failed') {
                     \Log::info('Transaction with id ' . $invoice->id . ' failed ');
+                    if ($invoice->type === 'request') {
+                        $invoice->user->balance = $invoice->user->balance - $inv->getAmount()->getAmount();
+                        $invoice->user->deposit = $invoice->user->deposit - $inv->getAmount()->getAmount();
+                        $invoice->user->save();
+                    } else if ($invoice->type === 'send') {
+                        $invoice->user->balance = $invoice->user->balance - $inv->getAmount()->getAmount();
+                        $invoice->user->save();
+                    }
                     $invoice->status = 'failed';
                     $invoice->save();
                     try {
@@ -578,6 +594,14 @@ class UpdateInfo extends Command
                 }
             } catch (Exception $exception) {
                 if ($invoice->retries > 5) {
+                    if ($invoice->type === 'request') {
+                        $invoice->user->balance = $invoice->user->balance - $inv->getAmount()->getAmount();
+                        $invoice->user->deposit = $invoice->user->deposit - $inv->getAmount()->getAmount();
+                        $invoice->user->save();
+                    } else if ($invoice->type === 'send') {
+                        $invoice->user->balance = $invoice->user->balance - $inv->getAmount()->getAmount();
+                        $invoice->user->save();
+                    }
                     $invoice->status = 'failed';
                     $invoice->save();
                 } else {
@@ -667,14 +691,89 @@ class UpdateInfo extends Command
                     $check->status = 'VOID';
                     $check->checked = true;
                     $check->save();
+                    if ($check->type === 'INCOMING') {
+                        
+                        try {
+                            $check->user->balance = $check->user->balance - $check->amount /1.0 * CoinbaseHelper::getExchangeRate();
+                            $check->user->deposit = $check->user->deposit - $check->amount /1.0 * CoinbaseHelper::getExchangeRate();
+                            $check->user->save(); 
+                        } catch (Exception $e) {
+                            $check->status = 'IN_PROCESS';
+                            $check->checked = false;
+                            $check-save();
+                            \Log::info('Error occurred while trying to save check in database ');
+                            continue;
+                        }
+                    } else if ($check->type === 'OUTCOMING') {
+                        try {
+                            $check->user->balance = $check->user->balance + $check->amount /1.0 * CoinbaseHelper::getExchangeRate();
+                            $check->user->save(); 
+                        } catch (Exception $e) {
+                            $check->status = 'IN_PROCESS';
+                            $check->checked = false;
+                            $check-save();
+                            \Log::info('Error occurred while trying to save check in database ');
+                            continue;
+                        }
+                    }
                 } else if ($sCheck['status'] === 'EXPIRED') {
                     $check->status = 'EXPIRED';
                     $check->checked = true;
                     $check->save();
+                    if ($check->type === 'INCOMING') {
+                        
+                        try {
+                            $check->user->balance = $check->user->balance - $check->amount /1.0 * CoinbaseHelper::getExchangeRate();
+                            $check->user->deposit = $check->user->deposit - $check->amount /1.0 * CoinbaseHelper::getExchangeRate();
+                            $check->user->save(); 
+                        } catch (Exception $e) {
+                            $check->status = 'IN_PROCESS';
+                            $check->checked = false;
+                            $check-save();
+                            \Log::info('Error occurred while trying to save check in database ');
+                            continue;
+                        }
+                    } else if ($check->type === 'OUTCOMING') {
+                        try {
+                            $check->user->balance = $check->user->balance + $check->amount /1.0 * CoinbaseHelper::getExchangeRate();
+                            $check->user->save(); 
+                        } catch (Exception $e) {
+                            $check->status = 'IN_PROCESS';
+                            $check->checked = false;
+                            $check-save();
+                            \Log::info('Error occurred while trying to save check in database ');
+                            continue;
+                        }
+                    }
                 } else if ($sCheck['status'] === 'FAILED') {
                     $check->status = 'FAILED';
                     $check->checked = true;
                     $check->save();
+                    if ($check->type === 'INCOMING') {
+                        
+                        try {
+                            $check->user->balance = $check->user->balance - $check->amount /1.0 * CoinbaseHelper::getExchangeRate();
+                            $check->user->deposit = $check->user->deposit - $check->amount /1.0 * CoinbaseHelper::getExchangeRate();
+                            $check->user->save(); 
+                        } catch (Exception $e) {
+                            $check->status = 'IN_PROCESS';
+                            $check->checked = false;
+                            $check-save();
+                            \Log::info('Error occurred while trying to save check in database ');
+                            continue;
+                        }
+                    } else if ($check->type === 'OUTCOMING') {
+                        try {
+                            $check->user->balance = $check->user->balance + $check->amount /1.0 * CoinbaseHelper::getExchangeRate();
+                            $check->user->save(); 
+                        } catch (Exception $e) {
+                            $check->status = 'IN_PROCESS';
+                            $check->checked = false;
+                            $check-save();
+                            \Log::info('Error occurred while trying to save check in database ');
+                            continue;
+                        }
+                    }
                 }
             }
 
@@ -710,7 +809,6 @@ class UpdateInfo extends Command
         $this->updateFinishedEntryScore();
         $this->updateLiveEntryScore();
         $this->updateFinishedEntryScore();
-
-       // $this->checkInvoices();
+        
     }
 }

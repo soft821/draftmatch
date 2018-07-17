@@ -432,8 +432,8 @@ class UsersController extends Controller
         if (strpos($response, 'Error') !== false) {
             return HttpResponse::serverError(HttpStatus::$ERR_USER_ADD_FUNDS, HttpMessage::$USER_ERROR_ADDING_FUNDS, $response);
         }
-
-        return HttpResponse::ok($response, $response);
+        $currentBalance = round($user->balance / (CoinbaseHelper::getExchangeRate()));
+        return HttpResponse::ok($response, $response, $currentBalance);
     }
 
     public function withdrawFunds(Request $request )
@@ -486,7 +486,8 @@ class UsersController extends Controller
             return HttpResponse::serverError(HttpMessage::$ERR_USER_WITHDRAW_FUNDS, $response);
         }
 
-        return HttpResponse::ok($response, $response);
+        $currentBalance = round($user->balance / CoinbaseHelper::getExchangeRate());
+        return HttpResponse::ok($response, $response, $currentBalance);
     }
 
     public function addBitcoins(Request $request)
@@ -981,8 +982,8 @@ class UsersController extends Controller
         if (strpos($response, 'Error') !== false) {
             return HttpResponse::serverError(HttpStatus::$ERR_USER_ADD_FUNDS, HttpMessage::$USER_ERROR_ADDING_FUNDS, $response);
         }
-
-        return HttpResponse::ok($response, $response);
+        $currentBalance = round($user->balance / CoinbaseHelper::getExchangeRate());
+        return HttpResponse::ok($response, $response, $currentBalance);
 
         
     }
@@ -1038,7 +1039,8 @@ class UsersController extends Controller
             return HttpResponse::serverError(HttpMessage::$ERR_USER_WITHDRAW_FUNDS, $response);
         }
 
-        return HttpResponse::ok($response, $response);
+        $currentBalance = round($user->balance / CoinbaseHelper::getExchangeRate());
+        return HttpResponse::ok($response, $response, $currentBalance);
 
     }
 

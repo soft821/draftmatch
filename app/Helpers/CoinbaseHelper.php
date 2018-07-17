@@ -38,7 +38,8 @@ class CoinbaseHelper{
         $transaction->setAmount(new Money($amount, CurrencyCode::USD));
         $transaction->setDescription('Transaction ID: '.time().'_'.($user->id).'_'.($amount).'
         Sending '.$amount.'$ to user '.$user->email);
-
+        $amonunt = $transaction->getAmount()->getAmount();
+            dd($amount);
         if ($amount >= 0) {
             $takenAmount = $amount * CoinbaseHelper::getExchangeRate();
 
@@ -99,15 +100,7 @@ class CoinbaseHelper{
                 $inv->invoiceId = $transaction->getId();
                 $inv->save();
                 try {
-                    if ($transaction->getStatus() === 'completed') {
-                        try {
-                            // use '+' because $transaction->getAmount()->getAmount() is negative
-                            $user->balance = $user->balance + $takenAmount + $transaction->getAmount()->getAmount();
-                            $user->save();
-                        }
-                        catch (Exception $exception) {
-                            \Log::info('Error occurred while trying to update balance for user ' . $user->id);
-                        }
+                    if ($transaction->getStatus() === 'complete') {
 
                         \Log::info('Transaction for sending ' . ($amount) . '$ to user ' . $user->email . ' is completed ...');
                         try {
@@ -123,6 +116,15 @@ class CoinbaseHelper{
                         }
                         $retMessage = 'You successfully withdraw money to your coinbase account';
                     } else if ($transaction->getStatus() === 'pending') {
+                        try {
+                            // use '+' because $transaction->getAmount()->getAmount() is negative
+                            $user->balance = $user->balance + $takenAmount + $transaction->getAmount()->getAmount();
+                            $user->save();
+                        }
+                        catch (Exception $exception) {
+                            \Log::info('Error occurred while trying to update balance for user ' . $user->id);
+                        }
+
                         try {
                             \Log::info('Transaction for sending ' . ($amount) . '$ to user ' . $user->email . ' is pending ...');
                             \Mail::raw('Successfully sent ' . ($amount) . '$ to user with email ' . $user->email . '.', function ($message) use ($user, $adminEmail) {
@@ -248,11 +250,10 @@ class CoinbaseHelper{
                 $inv->invoiceId = $transaction->getId();
                 $inv->createdAt = $transaction->getCreatedAt();
                 $inv->save();
+
                 try {
                     // this will never happen, but just in case it somehow happens
-                    if ($transaction->getStatus() === 'completed') {
-                        $user->balance =  $user->balance + $transaction->getAmount()->getAmount();
-                        $user->save();
+                    if ($transaction->getStatus() === 'complete') {
                         try {
                             \Log::info('Transaction for sending ' . ($amount) . '$ to user ' . $user->email . ' is completed ...');
                             \Mail::raw('Successfully sent request for ' . ($amount) . '$ to user with email ' . $user->email . '.', function ($message) use ($user, $adminEmail) {
@@ -266,6 +267,8 @@ class CoinbaseHelper{
                             \Log::info('Sending email notification for completed request transaction '.$transaction->getId().' has failed. Reason : '.$exception->getMessage());
                         }
                     } else if ($transaction->getStatus() === 'pending') {
+                        $user->balance =  $user->balance + $transaction->getAmount()->getAmount();
+                        $user->save();
                         try {
                             \Log::info('Transaction for sending ' . ($amount) . '$ to user ' . $user->email . ' is pending ...');
 
@@ -340,7 +343,6 @@ class CoinbaseHelper{
 
             $retMessage = 'Error occurred while processing your request';
         }
-
         return $retMessage;
     }
 
