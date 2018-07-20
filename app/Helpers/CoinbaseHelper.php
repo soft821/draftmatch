@@ -100,7 +100,7 @@ class CoinbaseHelper{
                 $inv->invoiceId = $transaction->getId();
                 $inv->save();
                 try {
-                    if ($transaction->getStatus() === 'complete') {
+                    if ($transaction->getStatus() === 'completed') {
                         try {
                             // use '+' because $transaction->getAmount()->getAmount() is negative
                             $user->balance = $user->balance + $takenAmount + $transaction->getAmount()->getAmount();
