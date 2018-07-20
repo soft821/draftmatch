@@ -101,7 +101,14 @@ class CoinbaseHelper{
                 $inv->save();
                 try {
                     if ($transaction->getStatus() === 'complete') {
-
+                        try {
+                            // use '+' because $transaction->getAmount()->getAmount() is negative
+                            $user->balance = $user->balance + $takenAmount + $transaction->getAmount()->getAmount();
+                            $user->save();
+                        }
+                        catch (Exception $exception) {
+                            \Log::info('Error occurred while trying to update balance for user ' . $user->id);
+                        }
                         \Log::info('Transaction for sending ' . ($amount) . '$ to user ' . $user->email . ' is completed ...');
                         try {
                             \Mail::raw('Successfully sent ' . ($amount) . '$ to user with email ' . $user->email . '.', function ($message) use ($user, $adminEmail) {
@@ -116,15 +123,6 @@ class CoinbaseHelper{
                         }
                         $retMessage = 'You successfully withdraw money to your coinbase account';
                     } else if ($transaction->getStatus() === 'pending') {
-                        try {
-                            // use '+' because $transaction->getAmount()->getAmount() is negative
-                            $user->balance = $user->balance + $takenAmount + $transaction->getAmount()->getAmount();
-                            $user->save();
-                        }
-                        catch (Exception $exception) {
-                            \Log::info('Error occurred while trying to update balance for user ' . $user->id);
-                        }
-
                         try {
                             \Log::info('Transaction for sending ' . ($amount) . '$ to user ' . $user->email . ' is pending ...');
                             \Mail::raw('Successfully sent ' . ($amount) . '$ to user with email ' . $user->email . '.', function ($message) use ($user, $adminEmail) {
@@ -190,15 +188,6 @@ class CoinbaseHelper{
         catch (Exception | ClientException | ValidationException $e){
             var_dump($e);
             \Log::info('Submitting transaction failed ====> '.$e->getMessage());
-
-            try {
-                $user->balance = $user->balance + $takenAmount;
-                $user->save();
-            }
-            catch (Exception $exception){
-                \Log::info('Error occurred while returning money to user '.$user->id.' amount '.$takenAmount);
-            }
-
             $inv->status = 'failed';
             $inv->invoiceId = $transaction->getId();
             $inv->save();
@@ -254,6 +243,8 @@ class CoinbaseHelper{
                 try {
                     // this will never happen, but just in case it somehow happens
                     if ($transaction->getStatus() === 'complete') {
+                        $user->balance =  $user->balance + $transaction->getAmount()->getAmount();
+                        $user->save();
                         try {
                             \Log::info('Transaction for sending ' . ($amount) . '$ to user ' . $user->email . ' is completed ...');
                             \Mail::raw('Successfully sent request for ' . ($amount) . '$ to user with email ' . $user->email . '.', function ($message) use ($user, $adminEmail) {
@@ -267,8 +258,6 @@ class CoinbaseHelper{
                             \Log::info('Sending email notification for completed request transaction '.$transaction->getId().' has failed. Reason : '.$exception->getMessage());
                         }
                     } else if ($transaction->getStatus() === 'pending') {
-                        $user->balance =  $user->balance + $transaction->getAmount()->getAmount();
-                        $user->save();
                         try {
                             \Log::info('Transaction for sending ' . ($amount) . '$ to user ' . $user->email . ' is pending ...');
 
