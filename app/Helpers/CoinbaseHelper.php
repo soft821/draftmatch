@@ -242,7 +242,7 @@ class CoinbaseHelper{
 
                 try {
                     // this will never happen, but just in case it somehow happens
-                    if ($transaction->getStatus() === 'complete') {
+                    if ($transaction->getStatus() === 'completed') {
                         $user->balance =  $user->balance + $transaction->getAmount()->getAmount();
                         $user->save();
                         try {
