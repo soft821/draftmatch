@@ -850,3 +850,429 @@
 [2018-07-20 18:46:02] local.INFO: Finished with updating invoices  
 [2018-07-20 18:46:02] local.INFO: Check digital check ...  
 [2018-07-20 18:46:02] local.INFO: Checking checks. Found 21  
+[2018-07-20 18:47:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 14:47:01  
+[2018-07-20 18:47:01] local.INFO: Check invoices ...  
+[2018-07-20 18:47:01] local.INFO: No pending invoices  
+[2018-07-20 18:47:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 18:47:02] local.INFO: Finished with updating invoices  
+[2018-07-20 18:47:02] local.INFO: Check digital check ...  
+[2018-07-20 18:47:02] local.INFO: Checking checks. Found 21  
+[2018-07-20 18:48:02] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 14:48:02  
+[2018-07-20 18:48:02] local.INFO: Check invoices ...  
+[2018-07-20 18:48:02] local.INFO: No pending invoices  
+[2018-07-20 18:48:02] local.INFO: Checking invoices. Found 0  
+[2018-07-20 18:48:03] local.INFO: Finished with updating invoices  
+[2018-07-20 18:48:03] local.INFO: Check digital check ...  
+[2018-07-20 18:48:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 18:48:52] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 14:48:52  
+[2018-07-20 18:49:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 14:49:01  
+[2018-07-20 18:49:01] local.INFO: Check invoices ...  
+[2018-07-20 18:49:01] local.INFO: No pending invoices  
+[2018-07-20 18:49:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 18:49:03] local.INFO: Finished with updating invoices  
+[2018-07-20 18:49:03] local.INFO: Check digital check ...  
+[2018-07-20 18:49:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 18:50:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 14:50:01  
+[2018-07-20 18:50:01] local.INFO: Update exchange ...  
+[2018-07-20 18:50:02] local.INFO: Check invoices ...  
+[2018-07-20 18:50:02] local.INFO: No pending invoices  
+[2018-07-20 18:50:02] local.INFO: Checking invoices. Found 0  
+[2018-07-20 18:50:05] local.INFO: Finished with updating invoices  
+[2018-07-20 18:50:05] local.INFO: Check digital check ...  
+[2018-07-20 18:50:05] local.INFO: Checking checks. Found 21  
+[2018-07-20 18:50:06] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-07-20 18:50:06] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-07-20 18:50:06] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
+[2018-07-20 18:50:06] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[]  
+[2018-07-20 18:50:06] local.INFO: Condition for games:update everyFiveMinutes is false  
+[2018-07-20 18:51:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 14:51:01  
+[2018-07-20 18:51:01] local.INFO: Check invoices ...  
+[2018-07-20 18:51:01] local.INFO: No pending invoices  
+[2018-07-20 18:51:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 18:51:03] local.INFO: Finished with updating invoices  
+[2018-07-20 18:51:03] local.INFO: Check digital check ...  
+[2018-07-20 18:51:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 18:52:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 14:52:01  
+[2018-07-20 18:52:01] local.INFO: Check invoices ...  
+[2018-07-20 18:52:01] local.INFO: No pending invoices  
+[2018-07-20 18:52:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 18:52:03] local.INFO: Finished with updating invoices  
+[2018-07-20 18:52:03] local.INFO: Check digital check ...  
+[2018-07-20 18:52:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 18:53:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 14:53:01  
+[2018-07-20 18:53:01] local.INFO: Check invoices ...  
+[2018-07-20 18:53:01] local.INFO: No pending invoices  
+[2018-07-20 18:53:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 18:53:02] local.INFO: Finished with updating invoices  
+[2018-07-20 18:53:02] local.INFO: Check digital check ...  
+[2018-07-20 18:53:02] local.INFO: Checking checks. Found 21  
+[2018-07-20 18:54:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 14:54:01  
+[2018-07-20 18:54:01] local.INFO: Check invoices ...  
+[2018-07-20 18:54:01] local.INFO: No pending invoices  
+[2018-07-20 18:54:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 18:54:02] local.INFO: Finished with updating invoices  
+[2018-07-20 18:54:02] local.INFO: Check digital check ...  
+[2018-07-20 18:54:02] local.INFO: Checking checks. Found 21  
+[2018-07-20 18:55:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 14:55:01  
+[2018-07-20 18:55:01] local.INFO: Check invoices ...  
+[2018-07-20 18:55:01] local.INFO: No pending invoices  
+[2018-07-20 18:55:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 18:55:05] local.INFO: Finished with updating invoices  
+[2018-07-20 18:55:05] local.INFO: Check digital check ...  
+[2018-07-20 18:55:05] local.INFO: Checking checks. Found 21  
+[2018-07-20 18:55:06] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-07-20 18:55:06] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-07-20 18:55:06] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
+[2018-07-20 18:55:06] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[]  
+[2018-07-20 18:55:06] local.INFO: Condition for games:update everyFiveMinutes is false  
+[2018-07-20 18:56:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 14:56:01  
+[2018-07-20 18:56:01] local.INFO: Check invoices ...  
+[2018-07-20 18:56:01] local.INFO: No pending invoices  
+[2018-07-20 18:56:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 18:56:03] local.INFO: Finished with updating invoices  
+[2018-07-20 18:56:03] local.INFO: Check digital check ...  
+[2018-07-20 18:56:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 18:57:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 14:57:01  
+[2018-07-20 18:57:01] local.INFO: Check invoices ...  
+[2018-07-20 18:57:01] local.INFO: No pending invoices  
+[2018-07-20 18:57:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 18:57:03] local.INFO: Finished with updating invoices  
+[2018-07-20 18:57:03] local.INFO: Check digital check ...  
+[2018-07-20 18:57:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 18:58:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 14:58:01  
+[2018-07-20 18:58:01] local.INFO: Check invoices ...  
+[2018-07-20 18:58:01] local.INFO: No pending invoices  
+[2018-07-20 18:58:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 18:58:02] local.INFO: Finished with updating invoices  
+[2018-07-20 18:58:02] local.INFO: Check digital check ...  
+[2018-07-20 18:58:02] local.INFO: Checking checks. Found 21  
+[2018-07-20 18:59:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 14:59:01  
+[2018-07-20 18:59:02] local.INFO: Check invoices ...  
+[2018-07-20 18:59:02] local.INFO: No pending invoices  
+[2018-07-20 18:59:02] local.INFO: Checking invoices. Found 0  
+[2018-07-20 18:59:04] local.INFO: Finished with updating invoices  
+[2018-07-20 18:59:04] local.INFO: Check digital check ...  
+[2018-07-20 18:59:04] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:00:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:00:01  
+[2018-07-20 19:00:01] local.INFO: Update exchange ...  
+[2018-07-20 19:00:02] local.INFO: Check invoices ...  
+[2018-07-20 19:00:02] local.INFO: No pending invoices  
+[2018-07-20 19:00:02] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:00:04] local.INFO: Finished with updating invoices  
+[2018-07-20 19:00:04] local.INFO: Check digital check ...  
+[2018-07-20 19:00:04] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:00:06] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-07-20 19:00:06] local.INFO: Checking condition for timeframe:update hourly ...  
+[2018-07-20 19:00:06] local.INFO: Condition for timeframe:update hourly for day condition is false  
+[2018-07-20 19:00:06] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-07-20 19:00:06] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
+[2018-07-20 19:00:06] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[]  
+[2018-07-20 19:00:06] local.INFO: Condition for games:update everyFiveMinutes is false  
+[2018-07-20 19:00:06] local.INFO: Checking condition for playerInfo:update hourly   
+[2018-07-20 19:00:06] local.INFO: Condition for playerInfo:update hourly is false  
+[2018-07-20 19:00:06] local.INFO: Checking condition for playerStats:update hourly  
+[2018-07-20 19:00:06] local.INFO: Checking condition for liveStats:update everyThirtyMinutes  
+[2018-07-20 19:01:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:01:01  
+[2018-07-20 19:01:01] local.INFO: Check invoices ...  
+[2018-07-20 19:01:01] local.INFO: No pending invoices  
+[2018-07-20 19:01:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:01:03] local.INFO: Finished with updating invoices  
+[2018-07-20 19:01:03] local.INFO: Check digital check ...  
+[2018-07-20 19:01:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:02:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:02:01  
+[2018-07-20 19:02:01] local.INFO: Check invoices ...  
+[2018-07-20 19:02:01] local.INFO: No pending invoices  
+[2018-07-20 19:02:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:02:02] local.INFO: Finished with updating invoices  
+[2018-07-20 19:02:02] local.INFO: Check digital check ...  
+[2018-07-20 19:02:02] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:03:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:03:01  
+[2018-07-20 19:03:01] local.INFO: Check invoices ...  
+[2018-07-20 19:03:01] local.INFO: No pending invoices  
+[2018-07-20 19:03:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:03:02] local.INFO: Finished with updating invoices  
+[2018-07-20 19:03:02] local.INFO: Check digital check ...  
+[2018-07-20 19:03:02] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:04:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:04:01  
+[2018-07-20 19:04:01] local.INFO: Check invoices ...  
+[2018-07-20 19:04:01] local.INFO: No pending invoices  
+[2018-07-20 19:04:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:04:02] local.INFO: Finished with updating invoices  
+[2018-07-20 19:04:02] local.INFO: Check digital check ...  
+[2018-07-20 19:04:02] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:05:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:05:01  
+[2018-07-20 19:05:01] local.INFO: Check invoices ...  
+[2018-07-20 19:05:01] local.INFO: No pending invoices  
+[2018-07-20 19:05:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:05:03] local.INFO: Finished with updating invoices  
+[2018-07-20 19:05:03] local.INFO: Check digital check ...  
+[2018-07-20 19:05:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:05:04] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-07-20 19:05:04] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-07-20 19:05:04] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
+[2018-07-20 19:05:04] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[]  
+[2018-07-20 19:05:04] local.INFO: Condition for games:update everyFiveMinutes is false  
+[2018-07-20 19:06:02] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:06:02  
+[2018-07-20 19:06:02] local.INFO: Check invoices ...  
+[2018-07-20 19:06:02] local.INFO: No pending invoices  
+[2018-07-20 19:06:02] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:06:03] local.INFO: Finished with updating invoices  
+[2018-07-20 19:06:03] local.INFO: Check digital check ...  
+[2018-07-20 19:06:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:07:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:07:01  
+[2018-07-20 19:07:01] local.INFO: Check invoices ...  
+[2018-07-20 19:07:01] local.INFO: No pending invoices  
+[2018-07-20 19:07:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:07:02] local.INFO: Finished with updating invoices  
+[2018-07-20 19:07:02] local.INFO: Check digital check ...  
+[2018-07-20 19:07:02] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:08:02] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:08:02  
+[2018-07-20 19:08:02] local.INFO: Check invoices ...  
+[2018-07-20 19:08:02] local.INFO: No pending invoices  
+[2018-07-20 19:08:02] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:08:03] local.INFO: Finished with updating invoices  
+[2018-07-20 19:08:03] local.INFO: Check digital check ...  
+[2018-07-20 19:08:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:09:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:09:01  
+[2018-07-20 19:09:01] local.INFO: Check invoices ...  
+[2018-07-20 19:09:01] local.INFO: No pending invoices  
+[2018-07-20 19:09:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:09:03] local.INFO: Finished with updating invoices  
+[2018-07-20 19:09:03] local.INFO: Check digital check ...  
+[2018-07-20 19:09:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:10:02] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:10:02  
+[2018-07-20 19:10:02] local.INFO: Update exchange ...  
+[2018-07-20 19:10:03] local.INFO: Check invoices ...  
+[2018-07-20 19:10:03] local.INFO: No pending invoices  
+[2018-07-20 19:10:03] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:10:04] local.INFO: Finished with updating invoices  
+[2018-07-20 19:10:04] local.INFO: Check digital check ...  
+[2018-07-20 19:10:04] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:10:05] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-07-20 19:10:05] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-07-20 19:10:05] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
+[2018-07-20 19:10:05] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[]  
+[2018-07-20 19:10:05] local.INFO: Condition for games:update everyFiveMinutes is false  
+[2018-07-20 19:10:08] local.INFO: Trying to get fantasy players for slateId: Sun_2018_9_1, position: RBtier:  
+[2018-07-20 19:10:08] local.INFO: Successfully retrieved fantasy players ...  
+[2018-07-20 19:10:17] local.INFO: Rate {"id":"1","rate":"0.000136","key":null}  
+[2018-07-20 19:10:17] local.INFO: Inserted contests 1  
+[2018-07-20 19:10:24] local.INFO: Trying to get fantasy players for slateId: Sun_2018_9_1, position: Ktier:  
+[2018-07-20 19:10:24] local.INFO: Successfully retrieved fantasy players ...  
+[2018-07-20 19:10:28] local.INFO: Rate {"id":"1","rate":"0.000136","key":null}  
+[2018-07-20 19:10:28] local.INFO: Inserted contests 1  
+[2018-07-20 19:11:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:11:01  
+[2018-07-20 19:11:01] local.INFO: Check invoices ...  
+[2018-07-20 19:11:01] local.INFO: No pending invoices  
+[2018-07-20 19:11:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:11:02] local.INFO: Finished with updating invoices  
+[2018-07-20 19:11:02] local.INFO: Check digital check ...  
+[2018-07-20 19:11:02] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:11:04] local.INFO: Checking conditions for update::info hourly  
+[2018-07-20 19:11:04] local.INFO: Condition is true for update:info hourly  
+[2018-07-20 19:11:04] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:11:04  
+[2018-07-20 19:11:04] local.INFO: Updating data ...  
+[2018-07-20 19:11:04] local.INFO: Updating live games results => 2018-07-20 15:11:04  
+[2018-07-20 19:11:04] local.INFO: DATE : 2018-07-20 15:11:04  
+[2018-07-20 19:11:04] local.INFO: Updated 0 games to LIVE status  
+[2018-07-20 19:11:04] local.INFO: Updating live players results => 2018-07-20 15:11:04  
+[2018-07-20 19:11:04] local.INFO: Updated  live players  
+[2018-07-20 19:11:04] local.INFO: Update finished players 2018-07-20 15:11:04  
+[2018-07-20 19:11:04] local.INFO: Updated 0 finished players  
+[2018-07-20 19:11:04] local.INFO: Updating slates status => 2018-07-20 15:11:04  
+[2018-07-20 19:11:04] local.INFO: Updated active slates to LIVE status of  0 slates successfully.  
+[2018-07-20 19:11:04] local.INFO: Updated slate to HISTORY status  0 slates successfully.  
+[2018-07-20 19:11:04] local.INFO: Successfully updated 0 slates  
+[2018-07-20 19:11:04] local.INFO: Updating contests  2018-07-20 15:11:04  
+[2018-07-20 19:11:04] local.INFO: Updated 0 to CANCELLED status  
+[2018-07-20 19:11:04] local.INFO: Updated 0 contests to HISTORY status  
+[2018-07-20 19:11:04] local.INFO: Updated 0 contests to LIVE status  
+[2018-07-20 19:11:04] local.INFO: Updating ENDED contests  2018-07-20 15:11:04  
+[2018-07-20 19:11:04] local.INFO: Updated 0 contests results  
+[2018-07-20 19:11:04] local.INFO: Updating LIVE contests  2018-07-20 15:11:04  
+[2018-07-20 19:11:04] local.INFO: Updated 0 contests results  
+[2018-07-20 19:11:04] local.INFO: Updating ENDED contests  2018-07-20 15:11:04  
+[2018-07-20 19:11:04] local.INFO: Updated 0 contests results  
+[2018-07-20 19:12:02] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:12:02  
+[2018-07-20 19:12:02] local.INFO: Check invoices ...  
+[2018-07-20 19:12:02] local.INFO: No pending invoices  
+[2018-07-20 19:12:02] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:12:03] local.INFO: Finished with updating invoices  
+[2018-07-20 19:12:03] local.INFO: Check digital check ...  
+[2018-07-20 19:12:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:13:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:13:01  
+[2018-07-20 19:13:01] local.INFO: Check invoices ...  
+[2018-07-20 19:13:01] local.INFO: No pending invoices  
+[2018-07-20 19:13:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:13:02] local.INFO: Finished with updating invoices  
+[2018-07-20 19:13:02] local.INFO: Check digital check ...  
+[2018-07-20 19:13:02] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:13:24] local.INFO: Getting info about slates ...  
+[2018-07-20 19:13:24] local.INFO: Retrieving available slates ...  
+[2018-07-20 19:13:24] local.INFO: Successfully retrieved available slates ...  
+[2018-07-20 19:13:45] local.INFO: Getting info about slates ...  
+[2018-07-20 19:13:45] local.INFO: Retrieving available slates ...  
+[2018-07-20 19:13:45] local.INFO: Successfully retrieved available slates ...  
+[2018-07-20 19:14:02] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:14:02  
+[2018-07-20 19:14:02] local.INFO: Check invoices ...  
+[2018-07-20 19:14:02] local.INFO: No pending invoices  
+[2018-07-20 19:14:02] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:14:04] local.INFO: Finished with updating invoices  
+[2018-07-20 19:14:04] local.INFO: Check digital check ...  
+[2018-07-20 19:14:04] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:15:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:15:01  
+[2018-07-20 19:15:01] local.INFO: Check invoices ...  
+[2018-07-20 19:15:01] local.INFO: No pending invoices  
+[2018-07-20 19:15:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:15:03] local.INFO: Finished with updating invoices  
+[2018-07-20 19:15:03] local.INFO: Check digital check ...  
+[2018-07-20 19:15:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:15:04] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-07-20 19:15:04] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-07-20 19:15:04] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
+[2018-07-20 19:15:04] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[]  
+[2018-07-20 19:15:04] local.INFO: Condition for games:update everyFiveMinutes is false  
+[2018-07-20 19:16:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:16:01  
+[2018-07-20 19:16:01] local.INFO: Check invoices ...  
+[2018-07-20 19:16:01] local.INFO: No pending invoices  
+[2018-07-20 19:16:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:16:03] local.INFO: Finished with updating invoices  
+[2018-07-20 19:16:03] local.INFO: Check digital check ...  
+[2018-07-20 19:16:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:17:02] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:17:02  
+[2018-07-20 19:17:03] local.INFO: Check invoices ...  
+[2018-07-20 19:17:03] local.INFO: No pending invoices  
+[2018-07-20 19:17:03] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:17:04] local.INFO: Finished with updating invoices  
+[2018-07-20 19:17:04] local.INFO: Check digital check ...  
+[2018-07-20 19:17:04] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:18:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:18:01  
+[2018-07-20 19:18:01] local.INFO: Check invoices ...  
+[2018-07-20 19:18:01] local.INFO: No pending invoices  
+[2018-07-20 19:18:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:18:03] local.INFO: Finished with updating invoices  
+[2018-07-20 19:18:03] local.INFO: Check digital check ...  
+[2018-07-20 19:18:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:19:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:19:01  
+[2018-07-20 19:19:01] local.INFO: Check invoices ...  
+[2018-07-20 19:19:01] local.INFO: No pending invoices  
+[2018-07-20 19:19:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:19:03] local.INFO: Finished with updating invoices  
+[2018-07-20 19:19:03] local.INFO: Check digital check ...  
+[2018-07-20 19:19:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:20:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:20:01  
+[2018-07-20 19:20:01] local.INFO: Update exchange ...  
+[2018-07-20 19:20:03] local.INFO: Check invoices ...  
+[2018-07-20 19:20:03] local.INFO: No pending invoices  
+[2018-07-20 19:20:03] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:20:04] local.INFO: Finished with updating invoices  
+[2018-07-20 19:20:04] local.INFO: Check digital check ...  
+[2018-07-20 19:20:04] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:20:05] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-07-20 19:20:05] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-07-20 19:20:05] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
+[2018-07-20 19:20:05] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[]  
+[2018-07-20 19:20:05] local.INFO: Condition for games:update everyFiveMinutes is false  
+[2018-07-20 19:21:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:21:01  
+[2018-07-20 19:21:02] local.INFO: Check invoices ...  
+[2018-07-20 19:21:02] local.INFO: No pending invoices  
+[2018-07-20 19:21:02] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:21:03] local.INFO: Finished with updating invoices  
+[2018-07-20 19:21:03] local.INFO: Check digital check ...  
+[2018-07-20 19:21:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:22:02] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:22:02  
+[2018-07-20 19:22:02] local.INFO: Check invoices ...  
+[2018-07-20 19:22:02] local.INFO: No pending invoices  
+[2018-07-20 19:22:02] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:22:03] local.INFO: Finished with updating invoices  
+[2018-07-20 19:22:03] local.INFO: Check digital check ...  
+[2018-07-20 19:22:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:23:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:23:01  
+[2018-07-20 19:23:01] local.INFO: Check invoices ...  
+[2018-07-20 19:23:01] local.INFO: No pending invoices  
+[2018-07-20 19:23:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:23:03] local.INFO: Finished with updating invoices  
+[2018-07-20 19:23:03] local.INFO: Check digital check ...  
+[2018-07-20 19:23:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:24:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:24:01  
+[2018-07-20 19:24:01] local.INFO: Check invoices ...  
+[2018-07-20 19:24:01] local.INFO: No pending invoices  
+[2018-07-20 19:24:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:24:02] local.INFO: Finished with updating invoices  
+[2018-07-20 19:24:02] local.INFO: Check digital check ...  
+[2018-07-20 19:24:02] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:25:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:25:01  
+[2018-07-20 19:25:01] local.INFO: Check invoices ...  
+[2018-07-20 19:25:01] local.INFO: No pending invoices  
+[2018-07-20 19:25:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:25:02] local.INFO: Finished with updating invoices  
+[2018-07-20 19:25:02] local.INFO: Check digital check ...  
+[2018-07-20 19:25:02] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:25:04] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-07-20 19:25:04] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-07-20 19:25:04] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
+[2018-07-20 19:25:04] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[]  
+[2018-07-20 19:25:04] local.INFO: Condition for games:update everyFiveMinutes is false  
+[2018-07-20 19:26:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:26:01  
+[2018-07-20 19:26:01] local.INFO: Check invoices ...  
+[2018-07-20 19:26:01] local.INFO: No pending invoices  
+[2018-07-20 19:26:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:26:02] local.INFO: Finished with updating invoices  
+[2018-07-20 19:26:02] local.INFO: Check digital check ...  
+[2018-07-20 19:26:02] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:27:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:27:01  
+[2018-07-20 19:27:01] local.INFO: Check invoices ...  
+[2018-07-20 19:27:01] local.INFO: No pending invoices  
+[2018-07-20 19:27:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:27:03] local.INFO: Finished with updating invoices  
+[2018-07-20 19:27:03] local.INFO: Check digital check ...  
+[2018-07-20 19:27:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:28:02] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:28:02  
+[2018-07-20 19:28:02] local.INFO: Check invoices ...  
+[2018-07-20 19:28:02] local.INFO: No pending invoices  
+[2018-07-20 19:28:02] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:28:04] local.INFO: Finished with updating invoices  
+[2018-07-20 19:28:04] local.INFO: Check digital check ...  
+[2018-07-20 19:28:04] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:29:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:29:01  
+[2018-07-20 19:29:01] local.INFO: Check invoices ...  
+[2018-07-20 19:29:01] local.INFO: No pending invoices  
+[2018-07-20 19:29:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:29:03] local.INFO: Finished with updating invoices  
+[2018-07-20 19:29:03] local.INFO: Check digital check ...  
+[2018-07-20 19:29:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:30:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:30:01  
+[2018-07-20 19:30:02] local.INFO: Update exchange ...  
+[2018-07-20 19:30:02] local.INFO: Check invoices ...  
+[2018-07-20 19:30:02] local.INFO: No pending invoices  
+[2018-07-20 19:30:02] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:30:04] local.INFO: Finished with updating invoices  
+[2018-07-20 19:30:04] local.INFO: Check digital check ...  
+[2018-07-20 19:30:04] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:30:05] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-07-20 19:30:05] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-07-20 19:30:05] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
+[2018-07-20 19:30:05] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[]  
+[2018-07-20 19:30:05] local.INFO: Condition for games:update everyFiveMinutes is false  
+[2018-07-20 19:30:05] local.INFO: Checking condition for liveStats:update everyThirtyMinutes  
+[2018-07-20 19:31:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:31:01  
+[2018-07-20 19:31:01] local.INFO: Check invoices ...  
+[2018-07-20 19:31:02] local.INFO: No pending invoices  
+[2018-07-20 19:31:02] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:31:03] local.INFO: Finished with updating invoices  
+[2018-07-20 19:31:03] local.INFO: Check digital check ...  
+[2018-07-20 19:31:03] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:32:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:32:01  
+[2018-07-20 19:32:01] local.INFO: Check invoices ...  
+[2018-07-20 19:32:01] local.INFO: No pending invoices  
+[2018-07-20 19:32:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:32:02] local.INFO: Finished with updating invoices  
+[2018-07-20 19:32:02] local.INFO: Check digital check ...  
+[2018-07-20 19:32:02] local.INFO: Checking checks. Found 21  
+[2018-07-20 19:33:01] local.INFO: SCHEDULING for day Friday DATE : 2018-07-20 15:33:01  
+[2018-07-20 19:33:01] local.INFO: Check invoices ...  
+[2018-07-20 19:33:01] local.INFO: No pending invoices  
+[2018-07-20 19:33:01] local.INFO: Checking invoices. Found 0  
+[2018-07-20 19:33:02] local.INFO: Finished with updating invoices  
+[2018-07-20 19:33:02] local.INFO: Check digital check ...  
+[2018-07-20 19:33:02] local.INFO: Checking checks. Found 21  
