@@ -49,6 +49,7 @@ class ContestsController extends Controller
     // @todo_haris Admin can create contest with 2 fantasy players without owner setted up, but no one else
     public function create(Request $request)
     {
+        $credit_applied = false;
         $validator = \Validator::make($request->all(), [
             ContestConsts::$CONTEST_SLATE_ID        => 'required',
             ContestConsts::$CONTEST_ENTRY_FEE       => ['required', Rule::in(ContestConsts::getEntryFees())],
@@ -204,6 +205,23 @@ class ContestsController extends Controller
 
         try {
             $user->balance = $user->balance - $numOfEntries * $request->get(ContestConsts::$CONTEST_ENTRY_FEE) * CoinbaseHelper::getExchangeRate();
+            $total_fee = (int)($numOfEntries * $request->get(ContestConsts::$CONTEST_ENTRY_FEE)/10);
+
+            if (($user->role == "member") && ($user->credit > $total_fee)){
+                \Log::info('credit applied ---> '.$user->credit);
+                $credit_applied = true;
+                $contest_worth_before = $user->contest_worth;
+                $contest_worth_after = $contest_worth_before + $numOfEntries * $request->get(ContestConsts::$CONTEST_ENTRY_FEE);
+                $user->contest_worth = $contest_worth_after;
+                if ($contest_worth_after > 10){
+                    $creditFloat = (float)($contest_worth_after / 10);
+                    $credit = (int) $creditFloat;
+                    $user->contest_worth = ($creditFloat - $credit) * 10;
+                    $user->contest_worth_before = $contest_worth_before;
+                    $user->credit = $user->credit - $credit;
+                    $user->balance = $user->balance + $credit * CoinbaseHelper::getExchangeRate();
+                }
+            }
             $user->save();
         }
         catch (Exception $e)
@@ -233,7 +251,8 @@ class ContestsController extends Controller
                     'user_id'     => $user->id,
                     'group_id'    => $groupId,
                     'private'     => $private,
-                    'admin_contest' => $user->isAdmin() ? true:false
+                    'admin_contest' => $user->isAdmin() ? true:false,
+                    'credit_applied' => $credit_applied
                 ]);
 
                 //if (!$user->isAdmin()) {
@@ -267,6 +286,13 @@ class ContestsController extends Controller
             {
                 if (!$user->isAdmin()) {
                     $user->balance = $user->balance + $numOfEntries * $request->get(ContestConsts::$CONTEST_ENTRY_FEE) * CoinbaseHelper::getExchangeRate();
+                    if ($user->role == "member"){
+                        
+                        $user->contest_worth = $user->contest_worth_before;
+                        $credit = (int)(($user->contest_worth_before + $numOfEntries * $request->get(ContestConsts::$CONTEST_ENTRY_FEE))/ 10);
+                        $user->credit = $user->credit + $credit;
+                        $user->balance = $user->balance - $credit * CoinbaseHelper::getExchangeRate();
+                    }
                     $user->save();
                 }
                 return HttpResponse::serverError(HttpStatus::$ERR_CREATE_CONTEST, HttpMessage::$CONTEST_ERROR_CREATING,
@@ -278,6 +304,13 @@ class ContestsController extends Controller
                 if (!$entriesUpdates) {
                     Contest::where('id', 'like', '%' . $timestamp . '_' . $user->id . '%')->update(['status' => ContestStatusConsts::$CONTEST_STATUS_ERROR]);
                     $user->balance = $user->balance + $numOfEntries * $request->get(ContestConsts::$CONTEST_ENTRY_FEE) * CoinbaseHelper::getExchangeRate();
+                    if ($user->role == "member"){
+                        
+                        $user->contest_worth = $user->contest_worth_before;
+                        $credit = (int)(($user->contest_worth_before + $numOfEntries * $request->get(ContestConsts::$CONTEST_ENTRY_FEE))/ 10);
+                        $user->credit = $user->credit + $credit;
+                        $user->balance = $user->balance - $credit * CoinbaseHelper::getExchangeRate();
+                    }
                     $user->save();
                     //Contest::updateOrCreate(array('id' => $contest->id), ["status" => ContestStatusConsts::$CONTEST_STATUS_ERROR]);
                     return HttpResponse::serverError(HttpStatus::$ERR_CREATE_USER_ENTRY, HttpMessage::$CONTEST_USER_ENTRY_ERROR_CREATING,
@@ -413,6 +446,22 @@ class ContestsController extends Controller
                     'owner'             => false
                 ]);
                 $user->balance = $user->balance - $contest->entryFee * CoinbaseHelper::getExchangeRate();
+                $entry_fee = (int)($contest->entryFee/10);
+                if (($user->role == "member") && ($user->credit > $entry_fee)){
+
+                    $contest_worth_before = $user->contest_worth;
+                    $contest_worth_after = $contest_worth_before + $contest->entryFee;
+                    $user->contest_worth = $contest_worth_after;
+                    if ($contest_worth_after > 10){
+                        $creditFloat = (float)($contest_worth_after / 10);
+                        $credit = (int) $creditFloat;
+                        $user->contest_worth = ($creditFloat - $credit) * 10;
+                        $user->contest_worth_before = $contest_worth_before;
+                        $user->credit = $user->credit - $credit;
+                        $user->balance = $user->balance + $credit * CoinbaseHelper::getExchangeRate();
+                    }
+                    $contest->credit_applied = true;
+                }
                 $user->save();
                 $contest->filled = true;
                 $contest->save();
@@ -451,6 +500,23 @@ class ContestsController extends Controller
                 }
                 $contest->save();
                 $user->balance = $user->balance - $contest->entryFee * CoinbaseHelper::getExchangeRate();
+
+                $entry_fee = (int)($contest->entryFee/10);
+                if (($user->role == "member") && ($user->credit > $entry_fee)){
+
+                    $contest_worth_before = $user->contest_worth;
+                    $contest_worth_after = $contest_worth_before + $contest->entryFee;
+                    $user->contest_worth = $contest_worth_after;
+                    if ($contest_worth_after > 10){
+                        $creditFloat = (float)($contest_worth_after / 10);
+                        $credit = (int) $creditFloat;
+                        $user->contest_worth = ($creditFloat - $credit) * 10;
+                        $user->contest_worth_before = $contest_worth_before;
+                        $user->credit = $user->credit - $credit;
+                        $user->balance = $user->balance + $credit * CoinbaseHelper::getExchangeRate();
+                    }
+                    $contest->credit_applied = true;
+                }
                 $user->save();
             }
             catch (Exception $exception)
@@ -732,6 +798,19 @@ class ContestsController extends Controller
 
             $contest->status = ContestStatusConsts::$CONTEST_STATUS_CANCELLED;
             $user->balance = $user->balance + $contest->entryFee * CoinbaseHelper::getExchangeRate();
+            if ((($user->role == "member") && ($contest->credit_applied == true))) {
+                $i = 0;
+                $user_contest_worth = $user->contest_worth;
+                $difference = $user_contest_worth - $contest->entryFee;
+                while($difference < 0){
+                    $i++;
+                    $difference = $user_contest_worth + 10 * $i - $contest->entryFee;
+                }
+                $user->contest_worth = $difference;
+                $user->credit = $user->credit + $i;
+                $user->balance = $user->balance - $i * CoinbaseHelper::getExchangeRate();
+            }
+            $contest->credit_applied = false;
             $user->save();
             $contest->save();
         }

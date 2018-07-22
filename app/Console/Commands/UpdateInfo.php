@@ -148,22 +148,68 @@ class UpdateInfo extends Command
         \Log::info('Updating ENDED contests  '.DatesHelper::getCurrentDate());
 
         $contests = Contest::where('status', '=', 'HANDLE')->with(['entries'])->get();
-
         foreach ($contests as $contest) {
             \Log::info('Updating contest with id '.$contest->id);
             if (!$contest->filled) {
                 if (!$contest->admin_contest) {
                     $contest->user->balance = $contest->user->balance + $contest->entryFee * CoinbaseHelper::getExchangeRate();
+
+                    if (($contest->user->role == "member") && ($contest->credit_applied == true)) {
+                        $i = 0;
+                        $user_contest_worth = $contest->user->contest_worth;
+                        $difference = $user_contest_worth - $contest->entryFee;
+                        while($difference < 0){
+                            $i++;
+                            $difference = $user_contest_worth + 10 * $i - $contest->entryFee;
+                        }
+                        $contest->user->contest_worth = $difference;
+                        $contest->user->credit = $contest->user->credit + $i;
+                        $contest->user->balance = $contest->user->balance - $i * CoinbaseHelper::getExchangeRate();
+                        $contest->credit_applied = false;
+                    }
                     $contest->user->save();
+                    $contest->save();
                 }
                 else {
                     if ($contest->entries[0]->user !== null){
                         $contest->entries[0]->user->balance = $contest->entries[0]->user->balance + $contest->entryFee * CoinbaseHelper::getExchangeRate();
+
+                        if (($contest->entries[0]->user->role == "member") && ($contest->credit_applied == true)) {
+                            $i = 0;
+                            $user_contest_worth = $contest->entries[0]->user->contest_worth;
+                            $difference = $user_contest_worth - $contest->entryFee;
+                            while($difference < 0){
+                                $i++;
+                                $difference = $user_contest_worth + 10 * $i - $contest->entryFee;
+                            }
+                            $contest->entries[0]->user->contest_worth = $difference;
+                            $contest->entries[0]->user->credit = $contest->entries[0]->user->credit + $i;
+                            $contest->entries[0]->user->balance = $contest->entries[0]->user->balance - $i * CoinbaseHelper::getExchangeRate();
+                            $contest->credit_applied = false;
+                        }
+
                         $contest->entries[0]->user->save();
+                        $contest->save();
                     }
                     if ($contest->entries[1]->user !== null){
                         $contest->entries[1]->user->balance = $contest->entries[1]->user->balance + $contest->entryFee * CoinbaseHelper::getExchangeRate();
+
+                        if (($contest->entries[1]->user->role == "member") && ($contest->credit_applied == true)) {
+                            $i = 0;
+                            $user_contest_worth = $contest->entries[1]->user->contest_worth;
+                            $difference = $user_contest_worth - $contest->entryFee;
+                            while($difference < 0){
+                                $i++;
+                                $difference = $user_contest_worth + 10 * $i - $contest->entryFee;
+                            }
+                            $contest->entries[1]->user->contest_worth = $difference;
+                            $contest->entries[1]->user->credit = $contest->entries[1]->user->credit + $i;
+                            $contest->entries[1]->user->balance = $contest->entries[1]->user->balance - $i * CoinbaseHelper::getExchangeRate();
+                            $contest->credit_applied = false;
+                        }
+
                         $contest->entries[1]->user->save();
+                        $contest->save();
                     }
                 }
                 $contest->status = 'CANCELLED';
@@ -177,12 +223,44 @@ class UpdateInfo extends Command
                         if ($contest->entries[0]->user !== null){
                             \Log::info('Added '.$contest->entryFee.' balance to the user '.$contest->entries[0]->user->id);
                             $contest->entries[0]->user->balance = $contest->entries[0]->user->balance + $contest->entryFee * CoinbaseHelper::getExchangeRate();
+
+                            if (($contest->entries[0]->user->role == "member") && ($contest->credit_applied == true)) {
+                                $i = 0;
+                                $user_contest_worth = $contest->entries[0]->user->contest_worth;
+                                $difference = $user_contest_worth - $contest->entryFee;
+                                while($difference < 0){
+                                    $i++;
+                                    $difference = $user_contest_worth + 10 * $i - $contest->entryFee;
+                                }
+                                $contest->entries[0]->user->contest_worth = $difference;
+                                $contest->entries[0]->user->credit = $contest->entries[0]->user->credit + $i;
+                                $contest->entries[0]->user->balance = $contest->entries[0]->user->balance - $i * CoinbaseHelper::getExchangeRate();
+                                $contest->credit_applied = false;
+                            }
+
                             $contest->entries[0]->user->save();
+                            $contest->save();
                         }
                         if ($contest->entries[1]->user !== null){
                             \Log::info('Added '.$contest->entryFee.' balance to the user '.$contest->entries[1]->user->id);
                             $contest->entries[1]->user->balance = $contest->entries[1]->user->balance + $contest->entryFee * CoinbaseHelper::getExchangeRate();
+
+                            if (($contest->entries[1]->user->role == "member") && ($contest->credit_applied == true)) {
+                                $i = 0;
+                                $user_contest_worth = $contest->entries[1]->user->contest_worth;
+                                $difference = $user_contest_worth - $contest->entryFee;
+                                while($difference < 0){
+                                    $i++;
+                                    $difference = $user_contest_worth + 10 * $i - $contest->entryFee;
+                                }
+                                $contest->entries[1]->user->contest_worth = $difference;
+                                $contest->entries[1]->user->credit = $contest->entries[1]->user->credit + $i;
+                                $contest->entries[1]->user->balance = $contest->entries[1]->user->balance - $i * CoinbaseHelper::getExchangeRate();
+                                $contest->credit_applied = false;
+                            }
+
                             $contest->entries[1]->user->save();
+                            $contest->save();
                         }
                         $contest->status = 'CANCELLED';
                         $contest->save();
@@ -216,8 +294,37 @@ class UpdateInfo extends Command
                     $contest->entries[0]->user->balance +=  ($contest->entryFee * CoinbaseHelper::getExchangeRate());
                     $contest->entries[1]->user->balance += ($contest->entryFee * CoinbaseHelper::getExchangeRate());
 
+                    if (($contest->entries[0]->user->role == "member") && ($contest->credit_applied == true)) {
+                        $i = 0;
+                        $user_contest_worth = $contest->entries[0]->user->contest_worth;
+                        $difference = $user_contest_worth - $contest->entryFee;
+                        while($difference < 0){
+                            $i++;
+                            $difference = $user_contest_worth + 10 * $i - $contest->entryFee;
+                        }
+                        $contest->entries[0]->user->contest_worth = $difference;
+                        $contest->entries[0]->user->credit = $contest->entries[0]->user->credit + $i;
+                        $contest->entries[0]->user->balance = $contest->entries[0]->user->balance - $i * CoinbaseHelper::getExchangeRate();
+                        $contest->credit_applied = false;
+                    }
+
+                    if (($contest->entries[1]->user->role == "member") && ($contest->credit_applied == true)) {
+                        $i = 0;
+                        $user_contest_worth = $contest->entries[1]->user->contest_worth;
+                        $difference = $user_contest_worth - $contest->entryFee;
+                        while($difference < 0){
+                            $i++;
+                            $difference = $user_contest_worth + 10 * $i - $contest->entryFee;
+                        }
+                        $contest->entries[1]->user->contest_worth = $difference;
+                        $contest->entries[1]->user->credit = $contest->entries[1]->user->credit + $i;
+                        $contest->entries[1]->user->balance = $contest->entries[1]->user->balance - $i * CoinbaseHelper::getExchangeRate();
+                        $contest->credit_applied = false;
+                    }
+
                     $contest->entries[0]->user->save();
                     $contest->entries[1]->user->save();
+                    $contest->save();
 
                     if (!$contest->entries[0]->fantasyPlayer->played){
                         \Log::info('Player with id '.$contest->entries[0]->fantasyPlayer->id.' did not played, money will be returned to players');
@@ -314,6 +421,20 @@ class UpdateInfo extends Command
             if (!$contest->filled) {
                 if (!$contest->admin_contest) {
                     $contest->user->balance = $contest->user->balance + $contest->entryFee * CoinbaseHelper::getExchangeRate();
+
+                    if (($contest->user->role == "member") && ($contest->credit_applied == true)) {
+                        $i = 0;
+                        $user_contest_worth = $contest->user->contest_worth;
+                        $difference = $user_contest_worth - $contest->entryFee;
+                        while($difference < 0){
+                            $i++;
+                            $difference = $user_contest_worth + 10 * $i - $contest->entryFee;
+                        }
+                        $contest->user->contest_worth = $difference;
+                        $contest->user->credit = $contest->user->credit + $i;
+                        $contest->user->balance = $contest->user->balance - $i * CoinbaseHelper::getExchangeRate();
+                        $contest->credit_applied = false;
+                    }
                     $contest->user->save();
                 }
                 $contest->status = 'CANCELLED';
@@ -772,11 +893,10 @@ class UpdateInfo extends Command
        //     $this->collectPlayers();
        //     $this->createAdminContests();
        // }
-
+       // $this->updateFinishedGamesInfo();
 
         $this->updateLiveGamesInfo();
         $this->updateLivePleyersInfo();
-       // $this->updateFinishedGamesInfo();
         $this->updateFinishedPlayersInfo();
 
         $this->updateSlateStatus();

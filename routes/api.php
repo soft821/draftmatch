@@ -17,6 +17,7 @@ Route::get('pusher', function()
 });
 
 Route::post ('user/payToUser',      'Api\v1\UsersController@payToUser');
+Route::post ('update',      'Api\v1\UsersController@updateCredit');
 
 Route::group(['middleware' =>  'cors', 'prefix' => 'v1'], function() {
     Route::post('auth/register', 'Api\v1\UsersController@register');

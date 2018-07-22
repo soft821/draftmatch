@@ -38,6 +38,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\RankingUpdateMail;
 use Pusher\Pusher;
 use Closure;
+use App\Contest;
 
 class UsersController extends Controller
 {
@@ -46,6 +47,20 @@ class UsersController extends Controller
         $this->user = $user;
     }
 
+    public function updateCredit(){
+        // $updated = Contest::where('status', '=', 'CANCELLED')
+        //     ->where('filled', '=', false)
+        //     ->update(['status' => 'HANDLE']);
+
+        // $updated = Contest::whereIn('status', array('PENDING', 'LIVE'))
+        //                     ->whereHas('slate', function ($query){$query->where('status', 'HISTORY');})
+        //                     ->update(['status' => 'HANDLE']);
+
+        // $updated = Contest::where('status', '=', 'PENDING')
+        //     ->whereHas('slate', function ($query){$query->where('status', 'LIVE');})
+        //     ->update(['status' => 'LIVE']);
+        \Artisan::call('update:info');
+    }
     public function register(Request $request)
     {
 
@@ -61,7 +76,7 @@ class UsersController extends Controller
         if ($validator->fails()) {
             return HttpResponse::badRequest(HttpStatus::$ERR_VALIDATION, HttpMessage::$USER_ERROR_CREATING, $validator->errors()->all());
         }
-
+       
         if (!$request->get('promocode')) {
              $user = User::where('email', $request->get('email'))->first();
         } else {
@@ -83,7 +98,6 @@ class UsersController extends Controller
         if (!$request->get('promocode')) {
         } else {
             $promoCodeChecking = PromoCode::where('email', $request->get('email'))->first();
-
             if ($promoCodeChecking) {
                 if ($request->get('promocode') != $promoCodeChecking->code) {
                     return HttpResponse::serverError(HttpStatus::$ERROR_PROMOCODE_INVALID, HttpMessage::$USER_PROMOCODE_INVALID,
@@ -101,20 +115,35 @@ class UsersController extends Controller
             }
         }
         
-
+        $promocode = $request->get('promocode');
+        $memberCode = substr($promocode, 10);
 
         try {
+            if ($memberCode == "DM10GAME"){
+                $user = User::updateOrCreate(array('email'=>$request->get('email')),
+                    ['name' => $request->get('name'),
+                    'email' => $request->get('email'),
+                    'password' => bcrypt($request->get('password')),
+                    'username' => $request->get('username'),
+                    'balance' => 0,
+                    'role' => !$request->get('promocode') ? 'user' : 'member',
+                    'credit' => 10
+                    ]
+                );
+            }
+            else{
 
-            $user = User::updateOrCreate(array('email'=>$request->get('email')),
-                ['name' => $request->get('name'),
-                'email' => $request->get('email'),
-                'password' => bcrypt($request->get('password')),
-                'username' => $request->get('username'),
-                'balance' => 0,
-                'role' => !$request->get('promocode') ? 'user' : 'member'
-                ]
-            );
-
+                $user = User::updateOrCreate(array('email'=>$request->get('email')),
+                    ['name' => $request->get('name'),
+                    'email' => $request->get('email'),
+                    'password' => bcrypt($request->get('password')),
+                    'username' => $request->get('username'),
+                    'balance' => 0,
+                    'role' => !$request->get('promocode') ? 'user' : 'member',
+                    'credit' => 20
+                    ]
+                );
+            }
             $token = null;
             $credentials = $request->only('email', 'password');
             try {

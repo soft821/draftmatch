@@ -13,6 +13,8 @@ class Contest extends Model
 
     public $incrementing = false;
 
+    protected $fillable = ['credit_applied'];
+
     //
     public function entries()
     {

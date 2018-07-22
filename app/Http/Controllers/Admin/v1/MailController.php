@@ -31,7 +31,8 @@ class MailController extends Controller
     {
 
       $validator = \Validator::make($request->all(), [
-            'email'    => 'required'
+            'email'    => 'required',
+            'invitedLevel' => 'required'
         ]);
 
         if ($validator->fails()) {
@@ -45,14 +46,19 @@ class MailController extends Controller
                 HttpMessage::$USER_EMAIL_EXISTS);
         }
 
-      
+        $invitedLevel = $request->get('invitedLevel');
 
       $chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
       $promocode = "";
       for ($i = 0; $i < 10; $i++) {
           $promocode .= $chars[mt_rand(0, strlen($chars)-1)];
       }
-
+      if ($invitedLevel == "Credit-10"){
+          $promocode .="DM10GAME";
+      }
+      else{
+          $promocode .="DM20PLAY";
+      }
       $date = new \DateTime();
       $expireDate = $date->getTimestamp() + 86400 * 3;
       
