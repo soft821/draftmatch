@@ -53,7 +53,7 @@ class MailController extends Controller
       for ($i = 0; $i < 10; $i++) {
           $promocode .= $chars[mt_rand(0, strlen($chars)-1)];
       }
-      if ($invitedLevel == "Credit-10"){
+      if ($invitedLevel == 10){
           $promocode = $promocode."DM10GAME";
       }
       else{

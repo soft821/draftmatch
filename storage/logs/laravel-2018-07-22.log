@@ -5,3 +5,344 @@
 [2018-07-22 17:03:03] local.INFO: Finished with updating invoices  
 [2018-07-22 17:03:03] local.INFO: Check digital check ...  
 [2018-07-22 17:03:03] local.INFO: Checking checks. Found 22  
+[2018-07-22 17:04:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-22 13:04:01  
+[2018-07-22 17:04:01] local.INFO: Check invoices ...  
+[2018-07-22 17:04:01] local.INFO: No pending invoices  
+[2018-07-22 17:04:01] local.INFO: Checking invoices. Found 0  
+[2018-07-22 17:04:02] local.INFO: Finished with updating invoices  
+[2018-07-22 17:04:02] local.INFO: Check digital check ...  
+[2018-07-22 17:04:02] local.INFO: Checking checks. Found 22  
+[2018-07-22 17:05:02] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-22 13:05:02  
+[2018-07-22 17:05:02] local.INFO: Check invoices ...  
+[2018-07-22 17:05:02] local.INFO: No pending invoices  
+[2018-07-22 17:05:02] local.INFO: Checking invoices. Found 0  
+[2018-07-22 17:05:03] local.INFO: Finished with updating invoices  
+[2018-07-22 17:05:03] local.INFO: Check digital check ...  
+[2018-07-22 17:05:03] local.INFO: Checking checks. Found 22  
+[2018-07-22 17:05:05] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-07-22 17:05:05] local.INFO: Condition is true for update:info everyFiveMinutes  
+[2018-07-22 17:05:06] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-22 13:05:06  
+[2018-07-22 17:05:06] local.INFO: Updating data ...  
+[2018-07-22 17:05:06] local.INFO: Updating live games results => 2018-07-22 13:05:06  
+[2018-07-22 17:05:06] local.INFO: DATE : 2018-07-22 13:05:06  
+[2018-07-22 17:05:06] local.INFO: Updated 0 games to LIVE status  
+[2018-07-22 17:05:06] local.INFO: Updating live players results => 2018-07-22 13:05:06  
+[2018-07-22 17:05:06] local.INFO: Updated  live players  
+[2018-07-22 17:05:06] local.INFO: Update finished players 2018-07-22 13:05:06  
+[2018-07-22 17:05:06] local.INFO: Updated 92 finished players  
+[2018-07-22 17:05:06] local.INFO: Updating slates status => 2018-07-22 13:05:06  
+[2018-07-22 17:05:06] local.INFO: Updated active slates to LIVE status of  0 slates successfully.  
+[2018-07-22 17:05:06] local.INFO: Updated slate to HISTORY status  0 slates successfully.  
+[2018-07-22 17:05:06] local.INFO: Successfully updated 0 slates  
+[2018-07-22 17:05:06] local.INFO: Updating contests  2018-07-22 13:05:06  
+[2018-07-22 17:05:06] local.INFO: Updated 0 to CANCELLED status  
+[2018-07-22 17:05:06] local.INFO: Updated 0 contests to HISTORY status  
+[2018-07-22 17:05:06] local.INFO: Updated 0 contests to LIVE status  
+[2018-07-22 17:05:06] local.INFO: Updating ENDED contests  2018-07-22 13:05:06  
+[2018-07-22 17:05:06] local.INFO: Updated 0 contests results  
+[2018-07-22 17:05:06] local.INFO: Updating LIVE contests  2018-07-22 13:05:06  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532088383.5039_49_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532100578.7436_6_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532100536.1254_6_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532100260.5818_6_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532227328.0735_55_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532227421.2639_55_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532227449.8147_55_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532227380.8201_55_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532227867.5948_55_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532227400.0449_55_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532229817.6511_55_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532227617.8555_55_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532227832.4748_55_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532227931.5708_55_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532227671.4592_55_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532230365.7028_55_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532246886.1793_55_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532246688.2184_55_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532247837.1837_55_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532230152.8338_55_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532230323.4644_55_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532230063.1731_55_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532230435.19_55_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532236547.5549_55_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updating contest with status LIVE and id 1532227539.9836_55_0  
+[2018-07-22 17:05:06] local.INFO: FP1 0  
+[2018-07-22 17:05:06] local.INFO: FP2 0  
+[2018-07-22 17:05:06] local.INFO: Result is tie currently  
+[2018-07-22 17:05:06] local.INFO: Updated 25 contests results  
+[2018-07-22 17:05:06] local.INFO: Updating ENDED contests  2018-07-22 13:05:06  
+[2018-07-22 17:05:06] local.INFO: Updated 0 contests results  
+[2018-07-22 17:05:06] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-07-22 17:05:06] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
+[2018-07-22 17:05:06] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[{"id":"TB_CAR_2018_9_1","year":"2018","seasonType":"1","week":"9","day":"Sun","date":"2018-07-22 13:00:00","time":"2018-07-22T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CAR","awayTeam":"TB","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"KC_CLE_2018_9_1","year":"2018","seasonType":"1","week":"9","day":"Sun","date":"2018-07-22 13:00:00","time":"2018-07-22T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CLE","awayTeam":"KC","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"NYJ_MIA_2018_9_1","year":"2018","seasonType":"1","week":"9","day":"Sun","date":"2018-07-22 13:00:00","time":"2018-07-22T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"MIA","awayTeam":"NYJ","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"DET_MIN_2018_9_1","year":"2018","seasonType":"1","week":"9","day":"Sun","date":"2018-07-22 13:00:00","time":"2018-07-22T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"MIN","awayTeam":"DET","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"ATL_WAS_2018_9_1","year":"2018","seasonType":"1","week":"9","day":"Sun","date":"2018-07-22 13:00:00","time":"2018-07-22T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"WAS","awayTeam":"ATL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""}]  
+[2018-07-22 17:05:06] local.INFO: Condition for games:update everyFiveMinutes for games in progress is true   
+[2018-07-22 17:05:06] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-22 13:05:06  
+[2018-07-22 17:05:06] local.INFO: Pulling scores   
+[2018-07-22 17:05:06] local.INFO: Pulling scores from url https://draftmatch-api.com/api/fake/get_games  
+[2018-07-22 17:05:08] local.INFO: Adding games to slates Sun  
+[2018-07-22 17:05:08] local.INFO: Adding games to slates Sun  
+[2018-07-22 17:05:08] local.INFO: Adding games to slates Sun  
+[2018-07-22 17:05:08] local.INFO: Adding games to slates Sun  
+[2018-07-22 17:05:08] local.INFO: Adding games to slates Sun  
+[2018-07-22 17:05:08] local.INFO: Adding games to slates Sun  
+[2018-07-22 17:05:08] local.INFO: Adding games to slates Sun  
+[2018-07-22 17:05:08] local.INFO: Adding games to slates Sun  
+[2018-07-22 17:05:08] local.INFO: Successfully pulled all updated games scores   
+[2018-07-22 17:06:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-22 13:06:01  
+[2018-07-22 17:06:01] local.INFO: Check invoices ...  
+[2018-07-22 17:06:01] local.INFO: No pending invoices  
+[2018-07-22 17:06:01] local.INFO: Checking invoices. Found 0  
+[2018-07-22 17:06:03] local.INFO: Finished with updating invoices  
+[2018-07-22 17:06:03] local.INFO: Check digital check ...  
+[2018-07-22 17:06:03] local.INFO: Checking checks. Found 22  
+[2018-07-22 17:07:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-22 13:07:01  
+[2018-07-22 17:07:01] local.INFO: Check invoices ...  
+[2018-07-22 17:07:01] local.INFO: No pending invoices  
+[2018-07-22 17:07:01] local.INFO: Checking invoices. Found 0  
+[2018-07-22 17:07:02] local.INFO: Finished with updating invoices  
+[2018-07-22 17:07:02] local.INFO: Check digital check ...  
+[2018-07-22 17:07:02] local.INFO: Checking checks. Found 22  
+[2018-07-22 17:08:02] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-22 13:08:02  
+[2018-07-22 17:08:02] local.INFO: Check invoices ...  
+[2018-07-22 17:08:02] local.INFO: No pending invoices  
+[2018-07-22 17:08:02] local.INFO: Checking invoices. Found 0  
+[2018-07-22 17:08:04] local.INFO: Finished with updating invoices  
+[2018-07-22 17:08:04] local.INFO: Check digital check ...  
+[2018-07-22 17:08:04] local.INFO: Checking checks. Found 22  
+[2018-07-22 17:09:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-22 13:09:01  
+[2018-07-22 17:09:01] local.INFO: Check invoices ...  
+[2018-07-22 17:09:01] local.INFO: No pending invoices  
+[2018-07-22 17:09:01] local.INFO: Checking invoices. Found 0  
+[2018-07-22 17:09:03] local.INFO: Finished with updating invoices  
+[2018-07-22 17:09:03] local.INFO: Check digital check ...  
+[2018-07-22 17:09:03] local.INFO: Checking checks. Found 22  
+[2018-07-22 17:10:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-22 13:10:01  
+[2018-07-22 17:10:01] local.INFO: Update exchange ...  
+[2018-07-22 17:10:03] local.INFO: Check invoices ...  
+[2018-07-22 17:10:03] local.INFO: No pending invoices  
+[2018-07-22 17:10:03] local.INFO: Checking invoices. Found 0  
+[2018-07-22 17:10:04] local.INFO: Finished with updating invoices  
+[2018-07-22 17:10:04] local.INFO: Check digital check ...  
+[2018-07-22 17:10:04] local.INFO: Checking checks. Found 22  
+[2018-07-22 17:10:05] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-07-22 17:10:05] local.INFO: Condition is true for update:info everyFiveMinutes  
+[2018-07-22 17:10:06] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-22 13:10:06  
+[2018-07-22 17:10:06] local.INFO: Updating data ...  
+[2018-07-22 17:10:06] local.INFO: Updating live games results => 2018-07-22 13:10:06  
+[2018-07-22 17:10:06] local.INFO: DATE : 2018-07-22 13:10:06  
+[2018-07-22 17:10:06] local.INFO: Updated 0 games to LIVE status  
+[2018-07-22 17:10:06] local.INFO: Updating live players results => 2018-07-22 13:10:06  
+[2018-07-22 17:10:07] local.INFO: Updated  live players  
+[2018-07-22 17:10:07] local.INFO: Update finished players 2018-07-22 13:10:07  
+[2018-07-22 17:10:07] local.INFO: Updated 0 finished players  
+[2018-07-22 17:10:07] local.INFO: Updating slates status => 2018-07-22 13:10:07  
+[2018-07-22 17:10:07] local.INFO: Updated active slates to LIVE status of  0 slates successfully.  
+[2018-07-22 17:10:07] local.INFO: Updated slate to HISTORY status  0 slates successfully.  
+[2018-07-22 17:10:07] local.INFO: Successfully updated 0 slates  
+[2018-07-22 17:10:07] local.INFO: Updating contests  2018-07-22 13:10:07  
+[2018-07-22 17:10:07] local.INFO: Updated 0 to CANCELLED status  
+[2018-07-22 17:10:07] local.INFO: Updated 0 contests to HISTORY status  
+[2018-07-22 17:10:07] local.INFO: Updated 0 contests to LIVE status  
+[2018-07-22 17:10:07] local.INFO: Updating ENDED contests  2018-07-22 13:10:07  
+[2018-07-22 17:10:07] local.INFO: Updated 0 contests results  
+[2018-07-22 17:10:07] local.INFO: Updating LIVE contests  2018-07-22 13:10:07  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532088383.5039_49_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532100578.7436_6_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532100536.1254_6_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532100260.5818_6_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532227328.0735_55_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532227421.2639_55_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532227449.8147_55_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532227380.8201_55_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532227867.5948_55_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532227400.0449_55_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532229817.6511_55_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532227617.8555_55_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532227832.4748_55_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532227931.5708_55_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532227671.4592_55_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532230365.7028_55_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532246886.1793_55_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532246688.2184_55_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532247837.1837_55_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532230152.8338_55_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532230323.4644_55_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532230063.1731_55_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532230435.19_55_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532236547.5549_55_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updating contest with status LIVE and id 1532227539.9836_55_0  
+[2018-07-22 17:10:07] local.INFO: FP1 0  
+[2018-07-22 17:10:07] local.INFO: FP2 0  
+[2018-07-22 17:10:07] local.INFO: Result is tie currently  
+[2018-07-22 17:10:07] local.INFO: Updated 25 contests results  
+[2018-07-22 17:10:07] local.INFO: Updating ENDED contests  2018-07-22 13:10:07  
+[2018-07-22 17:10:07] local.INFO: Updated 0 contests results  
+[2018-07-22 17:10:07] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-07-22 17:10:07] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
+[2018-07-22 17:10:07] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[{"id":"KC_CLE_2018_9_1","year":"2018","seasonType":"1","week":"9","day":"Sun","date":"2018-07-22 13:00:00","time":"2018-07-22T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CLE","awayTeam":"KC","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"NYJ_MIA_2018_9_1","year":"2018","seasonType":"1","week":"9","day":"Sun","date":"2018-07-22 13:00:00","time":"2018-07-22T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"MIA","awayTeam":"NYJ","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"ATL_WAS_2018_9_1","year":"2018","seasonType":"1","week":"9","day":"Sun","date":"2018-07-22 13:00:00","time":"2018-07-22T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"WAS","awayTeam":"ATL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"DET_MIN_2018_9_1","year":"2018","seasonType":"1","week":"9","day":"Sun","date":"2018-07-22 13:00:00","time":"2018-07-22T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"MIN","awayTeam":"DET","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"TB_CAR_2018_9_1","year":"2018","seasonType":"1","week":"9","day":"Sun","date":"2018-07-22 13:00:00","time":"2018-07-22T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CAR","awayTeam":"TB","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""}]  
+[2018-07-22 17:10:07] local.INFO: Condition for games:update everyFiveMinutes for games in progress is true   
+[2018-07-22 17:10:07] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-22 13:10:07  
+[2018-07-22 17:10:07] local.INFO: Pulling scores   
+[2018-07-22 17:10:07] local.INFO: Pulling scores from url https://draftmatch-api.com/api/fake/get_games  
+[2018-07-22 17:10:10] local.INFO: Adding games to slates Sun  
+[2018-07-22 17:10:10] local.INFO: Adding games to slates Sun  
+[2018-07-22 17:10:10] local.INFO: Adding games to slates Sun  
+[2018-07-22 17:10:10] local.INFO: Adding games to slates Sun  
+[2018-07-22 17:10:10] local.INFO: Adding games to slates Sun  
+[2018-07-22 17:10:10] local.INFO: Adding games to slates Sun  
+[2018-07-22 17:10:10] local.INFO: Adding games to slates Sun  
+[2018-07-22 17:10:10] local.INFO: Adding games to slates Sun  
+[2018-07-22 17:10:10] local.INFO: Successfully pulled all updated games scores   
+[2018-07-22 17:11:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-22 13:11:01  
+[2018-07-22 17:11:01] local.INFO: Check invoices ...  
+[2018-07-22 17:11:01] local.INFO: No pending invoices  
+[2018-07-22 17:11:01] local.INFO: Checking invoices. Found 0  
+[2018-07-22 17:11:02] local.INFO: Finished with updating invoices  
+[2018-07-22 17:11:02] local.INFO: Check digital check ...  
+[2018-07-22 17:11:02] local.INFO: Checking checks. Found 22  
+[2018-07-22 17:11:04] local.INFO: Checking conditions for update::info hourly  
+[2018-07-22 17:11:04] local.INFO: Condition is false for update:info hourly  
