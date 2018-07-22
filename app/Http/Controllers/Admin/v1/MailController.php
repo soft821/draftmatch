@@ -54,10 +54,10 @@ class MailController extends Controller
           $promocode .= $chars[mt_rand(0, strlen($chars)-1)];
       }
       if ($invitedLevel == "Credit-10"){
-          $promocode .="DM10GAME";
+          $promocode = $promocode."DM10GAME";
       }
       else{
-          $promocode .="DM20PLAY";
+          $promocode = $promocode."DM20PLAY";
       }
       $date = new \DateTime();
       $expireDate = $date->getTimestamp() + 86400 * 3;

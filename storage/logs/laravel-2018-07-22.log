@@ -1,7 +1,7 @@
-[2018-07-22 16:19:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-22 12:19:01  
-[2018-07-22 16:19:01] local.INFO: Check invoices ...  
-[2018-07-22 16:19:01] local.INFO: No pending invoices  
-[2018-07-22 16:19:01] local.INFO: Checking invoices. Found 0  
-[2018-07-22 16:19:04] local.INFO: Finished with updating invoices  
-[2018-07-22 16:19:04] local.INFO: Check digital check ...  
-[2018-07-22 16:19:04] local.INFO: Checking checks. Found 22  
+[2018-07-22 17:03:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-22 13:03:01  
+[2018-07-22 17:03:01] local.INFO: Check invoices ...  
+[2018-07-22 17:03:01] local.INFO: No pending invoices  
+[2018-07-22 17:03:01] local.INFO: Checking invoices. Found 0  
+[2018-07-22 17:03:03] local.INFO: Finished with updating invoices  
+[2018-07-22 17:03:03] local.INFO: Check digital check ...  
+[2018-07-22 17:03:03] local.INFO: Checking checks. Found 22  
