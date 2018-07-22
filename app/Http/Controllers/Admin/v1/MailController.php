@@ -53,14 +53,19 @@ class MailController extends Controller
       for ($i = 0; $i < 10; $i++) {
           $promocode .= $chars[mt_rand(0, strlen($chars)-1)];
       }
-      echo $promocode;
-      if ($invitedLevel == 10){
+
+      \Log::info('invitedLevel'.'******************************************');
+      if ($invitedLevel == "Credit-10"){
           $promocode = $promocode."DM10GAME";
+          \Log::info('invitedLevel====10'.'******************************************');
       }
       else{
           $promocode = $promocode."DM20PLAY";
+          \Log::info('invitedLevel====20'.'******************************************');
       }
-      echo $promocode;
+
+      \Log::info($promocode.'******************************************');
+
       $date = new \DateTime();
       $expireDate = $date->getTimestamp() + 86400 * 3;
       
