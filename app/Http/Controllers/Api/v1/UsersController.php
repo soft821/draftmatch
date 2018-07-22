@@ -116,7 +116,9 @@ class UsersController extends Controller
         }
         
         $promocode = $request->get('promocode');
+        \Log::info($promocode.'**************promocode*******************');
         $memberCode = substr($promocode, 10);
+        \Log::info($memberCode.'**************membercode*******************');
 
         try {
             if ($memberCode == "DM10GAME"){
@@ -130,9 +132,9 @@ class UsersController extends Controller
                     'credit' => 10
                     ]
                 );
+                \Log::info('**************credit-10*******************');
             }
-            else{
-
+            else if($promocode = $request->get('promocode')){
                 $user = User::updateOrCreate(array('email'=>$request->get('email')),
                     ['name' => $request->get('name'),
                     'email' => $request->get('email'),
@@ -143,6 +145,21 @@ class UsersController extends Controller
                     'credit' => 20
                     ]
                 );
+                \Log::info('**************credit-20*******************');
+            }
+            else{
+
+                $user = User::updateOrCreate(array('email'=>$request->get('email')),
+                    ['name' => $request->get('name'),
+                    'email' => $request->get('email'),
+                    'password' => bcrypt($request->get('password')),
+                    'username' => $request->get('username'),
+                    'balance' => 0,
+                    'role' => !$request->get('promocode') ? 'user' : 'member',
+                    'credit' => 0
+                    ]
+                );
+                \Log::info('**************credit-0*******************');
             }
             $token = null;
             $credentials = $request->only('email', 'password');
