@@ -1,36 +1,7 @@
-[2018-07-22 14:55:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-22 10:55:01  
-[2018-07-22 14:55:01] local.INFO: Check invoices ...  
-[2018-07-22 14:55:01] local.INFO: No pending invoices  
-[2018-07-22 14:55:01] local.INFO: Checking invoices. Found 0  
-[2018-07-22 14:55:05] local.INFO: Finished with updating invoices  
-[2018-07-22 14:55:05] local.INFO: Check digital check ...  
-[2018-07-22 14:55:05] local.INFO: Checking checks. Found 22  
-[2018-07-22 14:55:08] local.INFO: Checking conditions for update::info everyFiveMinutes  
-[2018-07-22 14:55:08] local.INFO: Condition is true for update:info everyFiveMinutes  
-[2018-07-22 14:55:08] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-22 10:55:08  
-[2018-07-22 14:55:08] local.INFO: Updating data ...  
-[2018-07-22 14:55:08] local.INFO: Updating live games results => 2018-07-22 10:55:08  
-[2018-07-22 14:55:08] local.INFO: DATE : 2018-07-22 10:55:08  
-[2018-07-22 14:55:08] local.INFO: Updated 0 games to LIVE status  
-[2018-07-22 14:55:08] local.INFO: Updating live players results => 2018-07-22 10:55:08  
-[2018-07-22 14:55:08] local.INFO: Updated  live players  
-[2018-07-22 14:55:08] local.INFO: Update finished players 2018-07-22 10:55:08  
-[2018-07-22 14:55:08] local.INFO: Updated 0 finished players  
-[2018-07-22 14:55:08] local.INFO: Updating slates status => 2018-07-22 10:55:08  
-[2018-07-22 14:55:08] local.INFO: Updated active slates to LIVE status of  0 slates successfully.  
-[2018-07-22 14:55:08] local.INFO: Updated slate to HISTORY status  0 slates successfully.  
-[2018-07-22 14:55:08] local.INFO: Successfully updated 0 slates  
-[2018-07-22 14:55:08] local.INFO: Updating contests  2018-07-22 10:55:08  
-[2018-07-22 14:55:08] local.INFO: Updated 0 to CANCELLED status  
-[2018-07-22 14:55:08] local.INFO: Updated 0 contests to HISTORY status  
-[2018-07-22 14:55:08] local.INFO: Updated 0 contests to LIVE status  
-[2018-07-22 14:55:08] local.INFO: Updating ENDED contests  2018-07-22 10:55:08  
-[2018-07-22 14:55:08] local.INFO: Updated 0 contests results  
-[2018-07-22 14:55:08] local.INFO: Updating LIVE contests  2018-07-22 10:55:08  
-[2018-07-22 14:55:08] local.INFO: Updated 0 contests results  
-[2018-07-22 14:55:08] local.INFO: Updating ENDED contests  2018-07-22 10:55:08  
-[2018-07-22 14:55:08] local.INFO: Updated 0 contests results  
-[2018-07-22 14:55:08] local.INFO: Checking conditions for games:update everyFiveMinutes  
-[2018-07-22 14:55:08] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
-[2018-07-22 14:55:08] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[]  
-[2018-07-22 14:55:08] local.INFO: Condition for games:update everyFiveMinutes is false  
+[2018-07-22 16:19:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-07-22 12:19:01  
+[2018-07-22 16:19:01] local.INFO: Check invoices ...  
+[2018-07-22 16:19:01] local.INFO: No pending invoices  
+[2018-07-22 16:19:01] local.INFO: Checking invoices. Found 0  
+[2018-07-22 16:19:04] local.INFO: Finished with updating invoices  
+[2018-07-22 16:19:04] local.INFO: Check digital check ...  
+[2018-07-22 16:19:04] local.INFO: Checking checks. Found 22  
