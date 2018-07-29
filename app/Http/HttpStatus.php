@@ -56,6 +56,14 @@ class HttpStatus
 
     // MailController erros
     public static $ERROR_EMAIL_NOT_PROVIDED =  101;
-    public static $ERROR_PROMOCODE_INVALID = 102;
+    public static $ERROR_PROMOCODE_INVALID  = 102;
+
+    // PostsController errors
+    public static $ERR_CREATE_POST               = 40;
+    public static $ERR_USER_DISABLED_BLOG_ACCESS = 41;
+    public static $ERR_RETRIVE_POST              = 42;
+    public static $ERR_UPDATE_POST               = 43;
+    public static $ERR_DELETE_POST               = 44;
+    public static $ERR_ADD_COMMENT               = 45;
 
 }

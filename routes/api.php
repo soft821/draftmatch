@@ -18,6 +18,8 @@ Route::get('pusher', function()
 
 Route::post ('user/payToUser',      'Api\v1\UsersController@payToUser');
 Route::post ('update',      'Api\v1\UsersController@updateCredit');
+Route::get ('test',      'HomeController@test');
+Route::get ('facebookClient',      'Api\v1\FacebookAdController@createClientBusiness');
 
 Route::group(['middleware' =>  'cors', 'prefix' => 'v1'], function() {
     Route::post('auth/register', 'Api\v1\UsersController@register');
@@ -55,9 +57,17 @@ Route::group(['middleware' => ['cors', 'jwt.auth'], 'prefix' => 'v1'], function 
     Route::post ('contests/enter',      'Api\v1\ContestsController@enter');
     Route::post ('contests/cancel',     'Api\v1\ContestsController@cancelContest');
     Route::patch('contests/entry',      'Api\v1\ContestsController@editEntry');
-    Route::post('auth/checkbook',    'Api\v1\UsersController@hasCheckbook');
+    Route::post ('auth/checkbook',      'Api\v1\UsersController@hasCheckbook');
     Route::get  ('slates'   ,           'Api\v1\SlatesController@getSlates');
     Route::get  ('fantasyPlayers',      'Api\v1\FantasyPlayersController@getFantasyPlayers');
+    Route::get  ('posts/list',               'Api\v1\PostsController@list');
+    Route::get  ('posts/details/{id}',       'Api\v1\PostsController@getDetails');
+    Route::get ('posts/create',         'Api\v1\PostsController@create');
+    Route::post ('posts/store',         'Api\v1\PostsController@store');
+    Route::get  ('posts/edit/{id}',         'Api\v1\PostsController@edit');
+    Route::put  ('posts/update/{id}',         'Api\v1\PostsController@update'); 
+    Route::delete  ('posts/delete/{id}',      'Api\v1\PostsController@delete'); 
+    Route::post ('posts/{id}/comment',      'Api\v1\PostsController@addComment');         
 
 });
 

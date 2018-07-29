@@ -144,4 +144,22 @@ class HttpMessage
     public static $GAMES_SUCCESSFULLY_RETRIEVED              = 'Games successfully retrieved';
     public static $GAMES_ERROR_RETRIEVING                    = 'Error retrieving games';
 
+
+    // PostController
+    public static $BLOG_ERROR_CREAING_POST                   = 'Error creating post';
+    public static $USER_DISABLED_BLOG_ACCESS                 = 'You can not manage blog';
+    public static $BLOG_ERROR_RETRIVE_POST                   = 'Error retriving posts';
+    public static $BLOG_FOUND                                = 'Blog found';
+    public static $BLOG_CREATED                              = 'Blog is created successfully!';
+    public static $BLOG_ERROR_UPDATING_POST                  = 'Error updating post';
+    public static $BLOG_UPDATED                              = 'Blog is updated successfully!';
+    public static $BLOG_ERROR_UPDAING_OWN_POST               = 'You can update only your own post';
+    public static $BLOG_ERROR_DELETING_POST                  = 'Error deleting post';
+    public static $BLOG_ERROR_DELEING_OWN_POST               = 'You can delete only your own post';
+    public static $BLOG_DELETED                              = 'Blog is deleted successfully!';
+    public static $BLOG_ERROR_ADDING_COMMENT                 = 'Error adding comment';
+    public static $BLOG_ERROR_ADDING_COMMENT_OWN_POST        = 'You can not add comments to your posts!';
+    public static $COMMENT_ADDED                             = 'Comment is added successfully!';
+    public static $RETRIEVING_CATEGORIES                     = 'Categories are retrivied.';
+
 }
