@@ -150,6 +150,7 @@ class HttpMessage
     public static $USER_DISABLED_BLOG_ACCESS                 = 'You can not manage blog';
     public static $BLOG_ERROR_RETRIVE_POST                   = 'Error retriving posts';
     public static $BLOG_FOUND                                = 'Blog found';
+    public static $BLOG_NOT_FOUND                            = 'Blog not found';
     public static $BLOG_CREATED                              = 'Blog is created successfully!';
     public static $BLOG_ERROR_UPDATING_POST                  = 'Error updating post';
     public static $BLOG_UPDATED                              = 'Blog is updated successfully!';
@@ -161,5 +162,7 @@ class HttpMessage
     public static $BLOG_ERROR_ADDING_COMMENT_OWN_POST        = 'You can not add comments to your posts!';
     public static $COMMENT_ADDED                             = 'Comment is added successfully!';
     public static $RETRIEVING_CATEGORIES                     = 'Categories are retrivied.';
-
+    public static $BLOG_STATUS_CHANGE_ERROR                  = 'Error occurred while trying to change the blog publish status.';
+    public static $BLOG_PUBLISHED                            = 'Blog is published successfully!';
+    public static $BLOG_ERROR_VALIDATING_POST                = 'Please fill all input field for blog.';
 }

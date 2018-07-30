@@ -45,8 +45,8 @@ class PostsController extends Controller
 	             	// ->where('posts.is_publish', '=', true)
                     ->join('users', 'users.id', '=', 'posts.author')
                     ->join('categories', 'categories.id', '=', 'posts.category')
-                    ->select('posts.id', 'categories.name', 'posts.title', 'posts.description', 'users.name','posts.image', 'posts.color', 'posts.sections','posts.updated_at')
-                    ->orderby('posts.updated_at', 'asc')
+                    ->select('posts.id', 'posts.is_publish as publishStatus', 'categories.name as categoryName', 'posts.title', 'posts.description', 'users.name as blogerName','posts.image', 'posts.color', 'posts.sections','posts.updated_at')
+                    ->orderby('posts.id', 'asc')
                     ->get();
                  foreach ($posts as $post) {
                  	$post_eloquent = Post::find($post->id);
@@ -307,8 +307,11 @@ class PostsController extends Controller
 	            'category' => 'required',
 	            'color' => 'required'
 	        ]);
+	        \Log::info('************************');
+			\Log::info($request->all());
+			\log::info('#########################');
 	        if ($validator->fails()) {
-	            return HttpResponse::badRequest(HttpStatus::$ERR_VALIDATION, HttpMessage::$BLOG_ERROR_CREAING_POST, $validator->errors()->all());
+	            return HttpResponse::badRequest(HttpStatus::$ERR_VALIDATION, HttpMessage::$BLOG_ERROR_VALIDATING_POST, $validator->errors()->all());
 	        }
 
 	        try {
@@ -375,12 +378,12 @@ class PostsController extends Controller
 	        if ($request->get('sections')){
 	        	$sections = $request->get('sections');
 	        }
+	        \Log::info('sections'.$sections);
 	        $sections_array = json_decode($sections);
 	        foreach ($sections_array as $key => $section_array) {
 	        	$section_array->image = $subImagesUrl[$key];
 	        }
 	        $sections = json_encode($sections_array);
-	        \Log::info('sections'.$sections);
 
 	       
 	        // $sections = json_encode(array(['name'=> 'name', 'value'=>'value']));
@@ -462,6 +465,39 @@ class PostsController extends Controller
 
     	}
 
+    	public function adminDelete($post_id, Request $request){
+	    	
+	        $post_id = $post_id;
+
+	        try {
+	            $user = JWTAuth::toUser($request->token);
+	        }
+	        catch (Exception $exception)
+	        {
+	            return HttpResponse::unauthorized(HttpStatus::$ERR_AUTH_INVALID_TOKEN_PROVIDED,HttpMessage::$BLOG_ERROR_DELETING_POST,
+	                $exception->getMessage());
+	        }
+	        $post = Post::find($post_id);
+
+	        // if ($post->author != $user->id)
+	        // {
+	        // 	return HttpResponse::serverError(HttpStatus::$ERR_DELETE_POST, HttpMessage::$BLOG_ERROR_DELEING_OWN_POST,
+	        //         HttpMessage::$BLOG_ERROR_DELEING_OWN_POST);
+	        // }
+
+	        try{
+	        		$deletedComments = $post->comments()->delete();
+	             	$deletedPost = $post->delete();
+	        }
+	        catch(Exception $exception) {
+	            return HttpResponse::serverError(HttpStatus::$ERR_DELETE_POST, HttpMessage::$BLOG_ERROR_DELEING_POST,
+	                $exception->getMessage());
+	        }
+
+	        return HttpResponse::ok(HttpMessage::$BLOG_DELETED, $deletedPost);
+
+    	}
+
     	public function addComment($post_id, Request $request)
     	{
     		$post_id = $post_id;
@@ -504,5 +540,47 @@ class PostsController extends Controller
 	        	['user_id' => $user->id, 'body' => $request->get('body')]); 
 	        return HttpResponse::ok(HttpMessage::$COMMENT_ADDED, $comment);
     	}
+
+    	public function changePublishStatus(Request $request)
+    	{
+    		    $id = null;
+		        if ($request->get('blog_id')) {
+		            $id = $request->get('blog_id');
+		        }
+		        
+		        try {
+		            $post = Post::find($id);
+		            if ($post == null) {
+		                return HttpResponse::serverError(HttpStatus::$ERR_BLOG_NOT_FOUND, HttpMessage::$BLOG_NOT_FOUND,
+		                    HttpMessage::$BLOG_NOT_FOUND);
+		            }
+		        }
+		        catch (QueryException $e) {
+		            return HttpResponse::serverError(HttpStatus::$SQL_ERROR, HttpMessage::$BLOG_NOT_FOUND,$e->getMessage());
+		        }
+		        catch (Exception $e) {
+		            return HttpResponse::serverError(HttpStatus::$ERR_UNKNOWN, HttpMessage::$BLOG_NOT_FOUND, $e->getMessage());
+		        }
+
+		        try {
+		                $blog_publish = $request->get('blog_publish');
+		                if ($blog_publish == 'true'){
+		                	$post->is_publish = true;
+		                }
+		                else{
+		                	$post->is_publish = false;
+		                }
+		                $post->save();
+		            
+		        }
+		        catch (QueryException $e) {
+		            return HttpResponse::serverError(HttpStatus::$SQL_ERROR, HttpMessage::$BLOG_STATUS_CHANGE_ERROR, $e->getMessage());
+		        }
+		        catch (Exception $e) {
+		            return HttpResponse::serverError(HttpStatus::$ERR_UNKNOWN, HttpMessage::$BLOG_STATUS_CHANGE_ERROR, $e->getMessage());
+		        }
+
+		        return HttpResponse::ok(HttpMessage::$BLOG_PUBLISHED, null);
+		}
 
 }

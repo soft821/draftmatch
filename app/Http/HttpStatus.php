@@ -65,5 +65,6 @@ class HttpStatus
     public static $ERR_UPDATE_POST               = 43;
     public static $ERR_DELETE_POST               = 44;
     public static $ERR_ADD_COMMENT               = 45;
+    public static $ERR_BLOG_NOT_FOUND            = 46;
 
 }
