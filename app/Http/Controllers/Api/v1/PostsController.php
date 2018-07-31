@@ -73,20 +73,21 @@ class PostsController extends Controller
 	             	// ->where('posts.is_publish', '=', true)
                     ->join('users', 'users.id', '=', 'posts.author')
                     ->join('categories', 'categories.id', '=', 'posts.category')
-                    ->select('posts.id', 'categories.name', 'posts.title', 'posts.description', 'users.name','posts.image', 'posts.color', 'posts.sections','posts.updated_at')
+                    ->select('posts.id', 'categories.name as categoryName', 'posts.title', 'posts.description', 'users.name','posts.image', 'posts.color', 'posts.sections','posts.updated_at')
                     ->orderby('posts.updated_at', 'asc')
                     ->get();
                  if ($post->count() > 0){
                  	$post_eloquent = Post::find($post_id);
                  	$comments = $post_eloquent->comments;
                  	$post->comments = $comments;
+
+                 	$post[0]->sections= json_decode($post[0]->sections);
                  }
                  else{
                  	 return HttpResponse::serverError(HttpStatus::$ERR_UNKNOWN, HttpMessage::$BLOG_ERROR_RETRIVE_POST,
 	                HttpMessage::$BLOG_ERROR_RETRIVE_POST);
                  }
                  
-                 	
 	        }
 	        catch (QueryException $e) {
 	            return HttpResponse::serverError(HttpStatus::$SQL_ERROR, HttpMessage::$BLOG_ERROR_RETRIVE_POST, $e->getMessage());
@@ -132,6 +133,49 @@ class PostsController extends Controller
                  	$post_eloquent = Post::find($post_id);
                  	$comments = $post_eloquent->comments;
                  	$post->comments = $comments;
+                 	$post[0]->sections= json_decode($post[0]->sections);
+                 }
+                 else{
+                 	 return HttpResponse::serverError(HttpStatus::$ERR_UNKNOWN, HttpMessage::$BLOG_ERROR_RETRIVE_POST,
+	                HttpMessage::$BLOG_ERROR_RETRIVE_POST);
+                 }
+                 
+                 	
+	        }
+	        catch (QueryException $e) {
+	            return HttpResponse::serverError(HttpStatus::$SQL_ERROR, HttpMessage::$BLOG_ERROR_RETRIVE_POST, $e->getMessage());
+	        }
+	        catch (Exception $e) {
+	            return HttpResponse::serverError(HttpStatus::$ERR_UNKNOWN, HttpMessage::$BLOG_ERROR_RETRIVE_POST, $e->getMessage());
+	        }
+	        // dd($posts);
+	        // $section = json_decode($posts[0]->sections);
+	        // dd($section[0]->title);
+	        return HttpResponse::ok(HttpMessage::$BLOG_FOUND, $post);
+
+		}
+
+		public function adminEdit($post_id, Request $request)
+		{
+			try {
+	            $user = JWTAuth::toUser($request->token);
+	        }
+	        catch (Exception $exception)
+	        {
+	            return HttpResponse::unauthorized(HttpStatus::$ERR_AUTH_INVALID_TOKEN_PROVIDED,HttpMessage::$BLOG_ERROR_UPDATING_POST,
+	                $exception->getMessage());
+	        }
+
+			try {
+	             $post = DB::table('posts')
+	                ->where('posts.id', '=', $post_id)
+	             	// ->where('posts.is_publish', '=', true)
+                    ->get();
+                 if ($post->count() > 0){
+                 	$post_eloquent = Post::find($post_id);
+                 	$comments = $post_eloquent->comments;
+                 	$post->comments = $comments;
+                 	$post[0]->sections= json_decode($post[0]->sections);
                  }
                  else{
                  	 return HttpResponse::serverError(HttpStatus::$ERR_UNKNOWN, HttpMessage::$BLOG_ERROR_RETRIVE_POST,
@@ -205,18 +249,24 @@ class PostsController extends Controller
         	if ($request->HasFile('images')){
 	        	try {
 					foreach ($request->images as $file) {
-						\Log::info('************************');
+						\Log::info('*****sectionIMG*******************');
 						\Log::info($file->getClientOriginalName());
-						$sectionId = $file->getClientOriginalName();
+						if ($user->role == "admin"){
+							$sectionId = $file->getClientOriginalName();
+						}
+						else{
+							$sectionId = $file->getClientOriginalName() + 1;
+						}
 						\log::info('#########################');
 						\Log::info($file->getClientOriginalExtension());		
 			        	$subImageFileName = time().'image of section'.$sectionId.'.png';
 			        	\Log::info("Updating live sub player stats ...".$subImageFileName);
 			        	$file->move($destinationPath, $subImageFileName);
 			       	    $subImageUrl = url('/').'/blogImages/'.$subImageFileName;
+			       	    $subImageUrlArray = array('id' => $sectionId, 'url' => $subImageUrl);
 			       	    \log::info('#########################subURL');
 						\Log::info($subImageUrl);
-			       	    array_push($subImagesUrl, $subImageUrl);
+			       	    array_push($subImagesUrl, $subImageUrlArray);
 								       
 					}
 		        	
@@ -224,16 +274,156 @@ class PostsController extends Controller
 	        		\Log::info($e->getMessage());
 	        	}
 	        }
-
+	        \Log::info('subImagesURL'.json_encode($subImagesUrl));
+	        $sections = [];
 	        if ($request->get('sections')){
 	        	$sections = $request->get('sections');
+		        \Log::info('sections'.$sections);
+		        $sections_array = json_decode($sections);
+		        if($sections_array != null){
+			        foreach ($sections_array as $key => $section_array) {
+			        		foreach ($subImagesUrl as $subImageUrl) {
+			        			if ($subImageUrl['id'] == $key + 1){
+					        		$section_array->image = $subImageUrl['url'];
+			        			}
+			        		}
+			        	$section_array->id = $key + 1;
+			        }
+		        }
+		        else {
+		        	 $sections_array = [];
+		        }
+		        $sections = json_encode($sections_array);
 	        }
-	        $sections_array = json_decode($sections);
-	        foreach ($sections_array as $key => $section_array) {
-	        	$section_array->image = $subImagesUrl[$key];
-	        }
-	        $sections = json_encode($sections_array);
 	        \Log::info('sections'.$sections);
+	  //      	$sections = '
+			// 		[
+			// 			{ "title": "section 1 title", "subtitle": "subtitle of a section1", "description": "description of section 1","image_url": "image_url"},
+			// 			{ "title": "section 2 title", "subtitle": "subtitle of a section2", "description": "description of section 2","image_url2": "image_url2"}
+			// 		]
+
+			// ';
+			// $array = json_decode($sections);
+			// // dd($array);
+			// $sections = json_encode($array);
+	        $post = Post::find($post_id);
+
+	        if ($post->author != $user->id)
+	        {
+	        	return HttpResponse::serverError(HttpStatus::$ERR_UPDATE_POST, HttpMessage::$BLOG_ERROR_UPDAING_OWN_POST,
+	                HttpMessage::$BLOG_ERROR_UPDAING_OWN_POST);
+	        }
+
+	        try{
+
+	             	$post = Post::updateOrCreate(array('id' => $post_id),
+	             		['title' => $request->get('title'),
+	             		'description' => $request->get('description'),
+	             		'category' => $request->get('category'),
+	             		'image' => $coverImageUrl,
+	             		'color' => $request->get('color')
+	             		]);
+	             	$post = Post::find($post_id);
+	             	$post->sections = $sections;
+	             	$post->save();
+	        }
+	        catch(Exception $exception) {
+	            return HttpResponse::serverError(HttpStatus::$ERR_UPDATE_POST, HttpMessage::$BLOG_ERROR_UPDAING_POST,
+	                $exception->getMessage());
+	        }
+
+	        return HttpResponse::ok(HttpMessage::$BLOG_UPDATED, $post);
+
+    	}
+
+    	public function adminUpdate($post_id, Request $request)
+        {
+	    	$validator = \Validator::make($request->all(), [
+	            'title' => 'required',
+	            'description' => 'required',
+	            'coverImage' => 'required',
+	            'category' => 'required',
+	            'color' => 'required'
+	        ]);
+	        $post_id = $post_id;
+	        \Log::info('sections***************'.$request->file('coverImage'));
+	        if ($validator->fails()) {
+	            return HttpResponse::badRequest(HttpStatus::$ERR_VALIDATION, HttpMessage::$BLOG_ERROR_UPDATING_POST, $validator->errors()->all());
+	        }
+
+	        try {
+	            $user = JWTAuth::toUser($request->token);
+	        }
+	        catch (Exception $exception)
+	        {
+	            return HttpResponse::unauthorized(HttpStatus::$ERR_AUTH_INVALID_TOKEN_PROVIDED,HttpMessage::$BLOG_ERROR_UPDATING_POST,
+	                $exception->getMessage());
+	        }
+
+	        if ($request->hasFile('coverImage')){
+	        	$coverImage = $request->file('coverImage');
+	        	
+	        }
+	        $imageFileName = time().$coverImage->getClientOriginalName();
+	        // $destinationPath = url('/').'/blogImages';
+	        // dd($destinationPath);
+	        $destinationPath = public_path('/blogImages');
+	        if (!file_exists($destinationPath)) { 
+			    mkdir($destinationPath, 0755, true); 
+			}
+	        $coverImage->move($destinationPath, $imageFileName);
+	        $coverImageUrl = url('/').'/blogImages/'.$imageFileName;
+	        $subImagesUrl = array();
+        	if ($request->HasFile('images')){
+	        	try {
+					foreach ($request->images as $file) {
+						\Log::info('*****sectionIMG*******************');
+						\Log::info($file->getClientOriginalName());
+						if ($user->role == "admin"){
+							$sectionId = $file->getClientOriginalName();
+						}
+						else{
+							$sectionId = $file->getClientOriginalName() + 1;
+						}
+						\log::info('#########################');
+						\Log::info($file->getClientOriginalExtension());		
+			        	$subImageFileName = time().'image of section'.$sectionId.'.png';
+			        	\Log::info("Updating live sub player stats ...".$subImageFileName);
+			        	$file->move($destinationPath, $subImageFileName);
+			       	    $subImageUrl = url('/').'/blogImages/'.$subImageFileName;
+			       	    $subImageUrlArray = array('id' => $sectionId, 'url' => $subImageUrl);
+			       	    \log::info('#########################subURL');
+						\Log::info($subImageUrl);
+			       	    array_push($subImagesUrl, $subImageUrlArray);
+								       
+					}
+		        	
+	        	} catch(\Exception $e){
+	        		\Log::info($e->getMessage());
+	        	}
+	        }
+	        \Log::info('subImagesURL'.json_encode($subImagesUrl));
+	        $sections = [];
+	        if ($request->get('sections')){
+	        	$sections = $request->get('sections');
+		        \Log::info('sections'.$sections);
+		        $sections_array = json_decode($sections);
+		        if($sections_array != null){
+			        foreach ($sections_array as $key => $section_array) {
+			        		foreach ($subImagesUrl as $subImageUrl) {
+			        			if ($subImageUrl['id'] == $key + 1){
+					        		$section_array->image = $subImageUrl['url'];
+			        			}
+			        		}
+			        	$section_array->id = $key + 1;
+			        }
+		        }
+		        else {
+		        	 $sections_array = [];
+		        }
+		        $sections = json_encode($sections_array);
+	        }
+	        \Log::info('sections***************'.$sections);
 	  //      	$sections = '
 			// 		[
 			// 			{ "title": "section 1 title", "subtitle": "subtitle of a section1", "description": "description of section 1","image_url": "image_url"},
@@ -355,18 +545,24 @@ class PostsController extends Controller
         	if ($request->HasFile('images')){
 	        	try {
 					foreach ($request->images as $file) {
-						\Log::info('************************');
+						\Log::info('*****sectionIMG*******************');
 						\Log::info($file->getClientOriginalName());
-						$sectionId = $file->getClientOriginalName();
+						if ($user->role == "admin"){
+							$sectionId = $file->getClientOriginalName();
+						}
+						else{
+							$sectionId = $file->getClientOriginalName() + 1;
+						}
 						\log::info('#########################');
 						\Log::info($file->getClientOriginalExtension());		
 			        	$subImageFileName = time().'image of section'.$sectionId.'.png';
 			        	\Log::info("Updating live sub player stats ...".$subImageFileName);
 			        	$file->move($destinationPath, $subImageFileName);
 			       	    $subImageUrl = url('/').'/blogImages/'.$subImageFileName;
+			       	    $subImageUrlArray = array('id' => $sectionId, 'url' => $subImageUrl);
 			       	    \log::info('#########################subURL');
 						\Log::info($subImageUrl);
-			       	    array_push($subImagesUrl, $subImageUrl);
+			       	    array_push($subImagesUrl, $subImageUrlArray);
 								       
 					}
 		        	
@@ -374,16 +570,27 @@ class PostsController extends Controller
 	        		\Log::info($e->getMessage());
 	        	}
 	        }
-
+	        \Log::info('subImagesURL'.json_encode($subImagesUrl));
+	        $sections = [];
 	        if ($request->get('sections')){
 	        	$sections = $request->get('sections');
+		        \Log::info('sections'.$sections);
+		        $sections_array = json_decode($sections);
+		        if($sections_array != null){
+			        foreach ($sections_array as $key => $section_array) {
+			        		foreach ($subImagesUrl as $subImageUrl) {
+			        			if ($subImageUrl['id'] == $key + 1){
+					        		$section_array->image = $subImageUrl['url'];
+			        			}
+			        		}
+			        	$section_array->id = $key + 1;
+			        }
+		        }
+		        else {
+		        	 $sections_array = [];
+		        }
+		        $sections = json_encode($sections_array);
 	        }
-	        \Log::info('sections'.$sections);
-	        $sections_array = json_decode($sections);
-	        foreach ($sections_array as $key => $section_array) {
-	        	$section_array->image = $subImagesUrl[$key];
-	        }
-	        $sections = json_encode($sections_array);
 
 	       
 	        // $sections = json_encode(array(['name'=> 'name', 'value'=>'value']));

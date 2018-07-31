@@ -65,7 +65,7 @@ Route::group(['middleware' => ['cors', 'jwt.auth'], 'prefix' => 'v1'], function 
     Route::get ('posts/create',         'Api\v1\PostsController@create');
     Route::post ('posts/store',         'Api\v1\PostsController@store');
     Route::get  ('posts/edit/{id}',         'Api\v1\PostsController@edit');
-    Route::put  ('posts/update/{id}',         'Api\v1\PostsController@update'); 
+    Route::post  ('posts/update/{id}',         'Api\v1\PostsController@update'); 
     Route::delete  ('posts/delete/{id}',      'Api\v1\PostsController@delete'); 
     Route::post ('posts/{id}/comment',      'Api\v1\PostsController@addComment'); 
 
@@ -93,6 +93,8 @@ Route::group(['middleware' => ['cors', 'admin.auth'], 'prefix' => 'v1'], functio
     Route::post  ('admin/update/fp_tier',      'Api\v1\FantasyPlayersController@updateFPTier');
     Route::post  ('admin/post/publish-blog',      'Api\v1\PostsController@changePublishStatus');
     Route::delete  ('admin/posts/delete/{id}',      'Api\v1\PostsController@adminDelete');
+    Route::get  ('admin/posts/edit/{id}',         'Api\v1\PostsController@adminEdit');
+    Route::post  ('admin/posts/update/{id}',         'Api\v1\PostsController@adminUpdate'); 
 
 });
 
