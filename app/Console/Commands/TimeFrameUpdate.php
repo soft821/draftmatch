@@ -87,6 +87,7 @@ class TimeFrameUpdate extends Command
         $first_game = $timeframes[0]['FirstGameStart'];
         $last_game = $timeframes[0]['LastGameEnd'];
 
+        \Log::info('last game '.$last_game);
         TimeFrame::create([
             "api_week"         => $api_week,
             "api_season"       => $api_season,

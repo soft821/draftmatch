@@ -67,4 +67,8 @@ class HttpStatus
     public static $ERR_ADD_COMMENT               = 45;
     public static $ERR_BLOG_NOT_FOUND            = 46;
 
+    // Forum errors
+    public static $ERR_USER_DISABLED_THREAD_ACCESS = 60;
+    public static $ERR_DELETE_THREAD               = 61;
+
 }

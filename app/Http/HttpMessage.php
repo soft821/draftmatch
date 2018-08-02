@@ -161,8 +161,25 @@ class HttpMessage
     public static $BLOG_ERROR_ADDING_COMMENT                 = 'Error adding comment';
     public static $BLOG_ERROR_ADDING_COMMENT_OWN_POST        = 'You can not add comments to your posts!';
     public static $COMMENT_ADDED                             = 'Comment is added successfully!';
-    public static $RETRIEVING_CATEGORIES                     = 'Categories are retrivied.';
+    public static $RETRIEVING_CATEGORIES                     = 'Categories successfully retrievied.';
     public static $BLOG_STATUS_CHANGE_ERROR                  = 'Error occurred while trying to change the blog publish status.';
     public static $BLOG_PUBLISHED                            = 'Blog is published successfully!';
     public static $BLOG_ERROR_VALIDATING_POST                = 'Please fill all input field for blog.';
+
+    //forum
+    public static $FORUM_ERROR_VALIDATING_THREAD             = 'Please fill all input field for thread.';
+    public static $FORUM_ERROR_CREAING_THREAD                = 'Error creating thread';
+    public static $USER_DISABLED_THREAD_ACCESS               = 'You can not manage thread';
+    public static $THREAD_CREATED                            = 'Your thread has been published!';
+    public static $THREAD_RETRIVIED                          = 'Threads successfully retrievied!';
+    public static $FORUM_ERROR_DELEING_THREAD                = 'Error deleting thread';
+    public static $FORUM_ERROR_DELETING_OWN_THREAD           = 'You can delete only your own thread';
+    public static $THREAD_DELETED                            = 'Your thread is deleted successfully!';
+    public static $FORUM_ERROR_VALIDATING_REPLY              = 'Please fill all input field for reply.';
+    public static $FORUM_ERROR_CREAING_REPLY                 = 'Error creating reply';
+    public static $REPLY_CREATED                             = 'Reply has been left';
+    public static $REPLY_RETIRIVED                           = 'Relies successfully retrievied!';
+    public static $FORUM_ERROR_UPDAING_REPLY                 = 'Error updating reply';
+    public static $FORUM_ERROR_UPDATING_OWN_REPLY            = 'You can update only your own reply';
+    public static $REPLY_UPDATED                             = 'Your reply successfully updated!';
 }

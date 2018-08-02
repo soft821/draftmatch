@@ -16,6 +16,20 @@ Route::get('pusher', function()
     return View::make('pusher');
 });
 
+// Threads
+
+
+
+// subscribe and unsubscribe
+Route::post('/threads/{channel}/{thread}/subscriptions', 'Api\v1\ThreadSubscriptionsController@store')->middleware('auth');
+Route::delete('/threads/{channel}/{thread}/subscriptions', 'Api\v1\ThreadSubscriptionsController@destroy')->middleware('auth');
+
+// Replies
+Route::delete('/replies/{reply}', 'Api\v1\RepliesController@destroy');
+Route::post('/replies/{reply}/favorites', 'Api\v1\FavoritesController@store');
+Route::delete('/replies/{reply}/favorites', 'Api\v1\FavoritesController@destroy');
+
+
 Route::post ('user/payToUser',      'Api\v1\UsersController@payToUser');
 Route::post ('update',      'Api\v1\UsersController@updateCredit');
 Route::get ('test',      'HomeController@test');
@@ -37,6 +51,11 @@ Route::group(['middleware' =>  'cors', 'prefix' => 'v1'], function() {
     Route::get('responseFormat', 'Api\v1\ApiDescriptionController@responseMessageFormat');
     Route::get('help',           'Api\v1\ApiDescriptionController@help');
     Route::get('test',           'Api\v1\ApiDescriptionController@test');
+    //Forum
+    Route::get('threads/index', 'Api\v1\ThreadController@index');
+    // Route::get('threads/{channel}', 'Api\v1\ThreadController@index');
+    Route::get('threads/{threadId}', 'Api\v1\ThreadController@show');
+    Route::get('/threads/{id}/replies', 'Api\v1\RepliesController@index');
     
 });
 
@@ -60,6 +79,7 @@ Route::group(['middleware' => ['cors', 'jwt.auth'], 'prefix' => 'v1'], function 
     Route::post ('auth/checkbook',      'Api\v1\UsersController@hasCheckbook');
     Route::get  ('slates'   ,           'Api\v1\SlatesController@getSlates');
     Route::get  ('fantasyPlayers',      'Api\v1\FantasyPlayersController@getFantasyPlayers');
+    //Blog
     Route::get  ('posts/list',               'Api\v1\PostsController@list');
     Route::get  ('posts/details/{id}',       'Api\v1\PostsController@getDetails');
     Route::get ('posts/create',         'Api\v1\PostsController@create');
@@ -68,6 +88,13 @@ Route::group(['middleware' => ['cors', 'jwt.auth'], 'prefix' => 'v1'], function 
     Route::post  ('posts/update/{id}',         'Api\v1\PostsController@update'); 
     Route::delete  ('posts/delete/{id}',      'Api\v1\PostsController@delete'); 
     Route::post ('posts/{id}/comment',      'Api\v1\PostsController@addComment'); 
+    // forum thread
+    Route::post('threads/store', 'Api\v1\ThreadController@store');
+    Route::delete('threads/delete/{id}', 'Api\v1\ThreadController@destroy');
+    Route::post('/threads/{id}/replies', 'Api\v1\RepliesController@store');
+    Route::patch('/replies/{reply}', 'Api\v1\RepliesController@update');
+    Route::delete('/replies/{reply}', 'Api\v1\RepliesController@destroy');
+ 
 
 });
 
