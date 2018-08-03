@@ -535,7 +535,9 @@ class PostsController extends Controller
 	        $imageFileName = time().$coverImage->getClientOriginalName();
 	        // $destinationPath = url('/').'/blogImages';
 	        // dd($destinationPath);
+	        \Log::info('**********************$imageFileName '.$imageFileName);
 	        $destinationPath = public_path('/blogImages');
+	        \Log::info('**********************destinationPath '.$destinationPath);
 	        if (!file_exists($destinationPath)) { 
 			    mkdir($destinationPath, 0755, true); 
 			}
