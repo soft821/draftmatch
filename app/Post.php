@@ -17,7 +17,7 @@ class Post extends Model
         'image',
         'is_publish'
     ];
-
+    protected $with = ['creator', 'comments', 'category'];
     protected static function boot()
     {
         parent::boot();
@@ -35,12 +35,12 @@ class Post extends Model
 
     public function category()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Category::class, 'category');
     }
 
-    public function user()
+    public function creator()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'author');
     }
 
     public function comments()

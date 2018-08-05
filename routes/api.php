@@ -25,7 +25,6 @@ Route::post('/threads/{channel}/{thread}/subscriptions', 'Api\v1\ThreadSubscript
 Route::delete('/threads/{channel}/{thread}/subscriptions', 'Api\v1\ThreadSubscriptionsController@destroy')->middleware('auth');
 
 // Replies
-Route::delete('/replies/{reply}', 'Api\v1\RepliesController@destroy');
 Route::post('/replies/{reply}/favorites', 'Api\v1\FavoritesController@store');
 Route::delete('/replies/{reply}/favorites', 'Api\v1\FavoritesController@destroy');
 
@@ -89,6 +88,7 @@ Route::group(['middleware' => ['cors', 'jwt.auth'], 'prefix' => 'v1'], function 
     Route::delete  ('posts/delete/{id}',      'Api\v1\PostsController@delete'); 
     Route::post ('posts/{id}/comment',      'Api\v1\PostsController@addComment'); 
     // forum thread
+    Route::get('topics/create', 'Api\v1\ThreadController@create');
     Route::post('threads/store', 'Api\v1\ThreadController@store');
     Route::delete('threads/delete/{id}', 'Api\v1\ThreadController@destroy');
     Route::post('/threads/{id}/replies', 'Api\v1\RepliesController@store');
@@ -118,10 +118,30 @@ Route::group(['middleware' => ['cors', 'admin.auth'], 'prefix' => 'v1'], functio
     Route::post ('admin/user/access-blog',    'Api\v1\UsersController@changeAccessPermission');
     Route::get  ('admin/fantasyPlayers',      'Api\v1\FantasyPlayersController@getFPlayers');
     Route::post  ('admin/update/fp_tier',      'Api\v1\FantasyPlayersController@updateFPTier');
-    Route::post  ('admin/post/publish-blog',      'Api\v1\PostsController@changePublishStatus');
-    Route::delete  ('admin/posts/delete/{id}',      'Api\v1\PostsController@adminDelete');
-    Route::get  ('admin/posts/edit/{id}',         'Api\v1\PostsController@adminEdit');
-    Route::post  ('admin/posts/update/{id}',         'Api\v1\PostsController@adminUpdate'); 
+    //blog
+    Route::get  ('admin/posts/list',               'Admin\v1\PostsController@list');
+    Route::get  ('admin/posts/details/{id}',       'Admin\v1\PostsController@getDetails');
+    Route::get ('admin/posts/create',         'Admin\v1\PostsController@create');
+    Route::post ('admin/posts/store',         'Admin\v1\PostsController@store');
+    Route::post  ('admin/post/publish-blog',      'Admin\v1\PostsController@changePublishStatus');
+    Route::delete  ('admin/posts/delete/{id}',      'Admin\v1\PostsController@adminDelete');
+    Route::get  ('admin/posts/edit/{id}',         'Admin\v1\PostsController@adminEdit');
+    Route::post  ('admin/posts/update/{id}',         'Admin\v1\PostsController@adminUpdate'); 
+
+    // forum thread
+    Route::post('admin/channels/create', 'Admin\v1\ThreadController@createChannel');
+    Route::get('admin/channels/list', 'Admin\v1\ThreadController@indexChannel');
+    Route::get('admin/channels/{id}/edit', 'Admin\v1\ThreadController@editChannel');
+    Route::put('admin/channels/{id}/update', 'Admin\v1\ThreadController@updateChannel');
+    Route::delete('admin/channels/{id}/delete', 'Admin\v1\ThreadController@deleteChannel');
+
+
+    Route::get('topics/create', 'Api\v1\ThreadController@create');
+    Route::post('admin/threads/store', 'Admin\v1\ThreadController@store');
+    Route::delete('admin/threads/delete/{id}', 'Admin\v1\ThreadController@destroy');
+    Route::post('admin/threads/{id}/replies', 'Admin\v1\RepliesController@store');
+    Route::patch('admin/replies/{reply}', 'Admin\v1\RepliesController@update');
+    Route::delete('ccc{reply}', 'Admin\v1\RepliesController@destroy');
 
 });
 

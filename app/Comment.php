@@ -12,6 +12,7 @@ class Comment extends Model
         'user_id',
         'post_id'
     ];
+    protected $with = ['commentor'];
 
     protected static function boot()
     {
@@ -29,8 +30,8 @@ class Comment extends Model
         return $this->belongsTo(Post::class);
     }
 
-    public function user()
+    public function commentor()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

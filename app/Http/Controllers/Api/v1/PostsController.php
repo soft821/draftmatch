@@ -41,18 +41,7 @@ class PostsController extends Controller
 	        }
 	 
 	        try {
-	             $posts = DB::table('posts')
-	             	// ->where('posts.is_publish', '=', true)
-                    ->join('users', 'users.id', '=', 'posts.author')
-                    ->join('categories', 'categories.id', '=', 'posts.category')
-                    ->select('posts.id', 'posts.is_publish as publishStatus', 'categories.name as categoryName', 'posts.title', 'posts.description', 'users.name as blogerName','posts.image', 'posts.color', 'posts.sections','posts.updated_at')
-                    ->orderby('posts.id', 'asc')
-                    ->get();
-                 foreach ($posts as $post) {
-                 	$post_eloquent = Post::find($post->id);
-                 	$comments = $post_eloquent->comments;
-                 	$post->comments = $comments;
-                 }
+	             $posts = Post::orderBy('id','asc')->paginate(10);
 	        }
 	        catch (QueryException $e) {
 	            return HttpResponse::serverError(HttpStatus::$SQL_ERROR, HttpMessage::$BLOG_ERROR_RETRIVE_POST, $e->getMessage());
@@ -60,6 +49,7 @@ class PostsController extends Controller
 	        catch (Exception $e) {
 	            return HttpResponse::serverError(HttpStatus::$ERR_UNKNOWN, HttpMessage::$BLOG_ERROR_RETRIVE_POST, $e->getMessage());
 	        }
+	        $posts = $posts;
 	        // dd($posts);
 	        // $section = json_decode($posts[0]->sections);
 	        // dd($section[0]->image);
@@ -68,20 +58,8 @@ class PostsController extends Controller
 		public function getDetails($post_id, Request $request)
 		{
 	        try {
-	             $post = DB::table('posts')
-	                ->where('posts.id', '=', $post_id)
-	             	// ->where('posts.is_publish', '=', true)
-                    ->join('users', 'users.id', '=', 'posts.author')
-                    ->join('categories', 'categories.id', '=', 'posts.category')
-                    ->select('posts.id', 'categories.name as categoryName', 'posts.title', 'posts.description', 'users.name','posts.image', 'posts.color', 'posts.sections','posts.updated_at')
-                    ->orderby('posts.updated_at', 'asc')
-                    ->get();
+	             $post = Post::find($post_id);
                  if ($post->count() > 0){
-                 	$post_eloquent = Post::find($post_id);
-                 	$comments = $post_eloquent->comments;
-                 	$post->comments = $comments;
-
-                 	$post[0]->sections= json_decode($post[0]->sections);
                  }
                  else{
                  	 return HttpResponse::serverError(HttpStatus::$ERR_UNKNOWN, HttpMessage::$BLOG_ERROR_RETRIVE_POST,
@@ -95,7 +73,7 @@ class PostsController extends Controller
 	        catch (Exception $e) {
 	            return HttpResponse::serverError(HttpStatus::$ERR_UNKNOWN, HttpMessage::$BLOG_ERROR_RETRIVE_POST, $e->getMessage());
 	        }
-	        // dd($posts);
+	        // dd($post);
 	        // $section = json_decode($posts[0]->sections);
 	        // dd($section[0]->title);
 	        return HttpResponse::ok(HttpMessage::$BLOG_FOUND, $post);
@@ -536,7 +514,7 @@ class PostsController extends Controller
 	        // $destinationPath = url('/').'/blogImages';
 	        // dd($destinationPath);
 	        \Log::info('**********************$imageFileName '.$imageFileName);
-	        $destinationPath = public_path('/blogImages');
+	        $destinationPath = public_path('storage/blogImages');
 	        \Log::info('**********************destinationPath '.$destinationPath);
 	        if (!file_exists($destinationPath)) { 
 			    mkdir($destinationPath, 0755, true); 

@@ -182,4 +182,5 @@ class HttpMessage
     public static $FORUM_ERROR_UPDAING_REPLY                 = 'Error updating reply';
     public static $FORUM_ERROR_UPDATING_OWN_REPLY            = 'You can update only your own reply';
     public static $REPLY_UPDATED                             = 'Your reply successfully updated!';
+    public static $RETRIEVING_CHANNELS                       = 'Retriving channels';
 }

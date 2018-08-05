@@ -48,9 +48,10 @@ class ThreadController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view('threads.create');
+            $channels = Channel::get();
+            return HttpResponse::ok(HttpMessage::$RETRIEVING_CHANNELS, $channels);
     }
 
     /**
@@ -61,7 +62,7 @@ class ThreadController extends Controller
         $validator = \Validator::make($request->all(), [
             'title' => 'required',
             'body' => 'required',
-            'channel_id' => 'required' // laravel validation helpers
+            'channel' => 'required' // laravel validation helpers
             ]);
 
         if ($validator->fails()) {
@@ -91,9 +92,10 @@ class ThreadController extends Controller
 
         $thread = Thread::UpdateOrCreate([
             'user_id' => $user->id,
-            'channel_id' => $request->get('channel_id'),
+            'channel_id' => $request->get('channel'),
             'title' => $request->get('title'),
-            'body' => $request->get('body')
+            'body' => $request->get('body'),
+            'lock_status' => false
         ]);
 
         return HttpResponse::ok(HttpMessage::$THREAD_CREATED, $thread);

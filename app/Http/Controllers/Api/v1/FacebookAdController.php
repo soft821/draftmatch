@@ -135,7 +135,7 @@ class FacebookAdController extends Controller
         // AdSetFields::END_TIME => $end_time,
       );
       $ad_set = $account->createAdSet($fields, $params);
-      dd($ad_set);
+      dd(json_decode($ad_set->data));
       $ad_set_id = $ad_set->id;
       dd($ad_set_id);
 

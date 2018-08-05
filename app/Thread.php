@@ -16,7 +16,8 @@ class Thread extends Model
         'title',
         'body',
         'user_id',
-        'channel_id'
+        'channel_id',
+        'lock_status'
     ];
 
     protected $with = ['creator', 'channel', 'replies'];
