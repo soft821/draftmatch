@@ -1,0 +1,168 @@
+[2018-08-05 18:43:02] local.INFO: SCHEDULING for day Sunday DATE : 2018-08-05 14:43:02  
+[2018-08-05 18:43:02] local.INFO: Check invoices ...  
+[2018-08-05 18:43:02] local.INFO: No pending invoices  
+[2018-08-05 18:43:02] local.INFO: Checking invoices. Found 0  
+[2018-08-05 18:43:03] local.INFO: Finished with updating invoices  
+[2018-08-05 18:43:03] local.INFO: Check digital check ...  
+[2018-08-05 18:43:03] local.INFO: Checking checks. Found 22  
+[2018-08-05 18:44:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-08-05 14:44:01  
+[2018-08-05 18:44:01] local.INFO: Check invoices ...  
+[2018-08-05 18:44:01] local.INFO: No pending invoices  
+[2018-08-05 18:44:01] local.INFO: Checking invoices. Found 0  
+[2018-08-05 18:44:02] local.INFO: Finished with updating invoices  
+[2018-08-05 18:44:02] local.INFO: Check digital check ...  
+[2018-08-05 18:44:02] local.INFO: Checking checks. Found 22  
+[2018-08-05 18:45:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-08-05 14:45:01  
+[2018-08-05 18:45:01] local.INFO: Check invoices ...  
+[2018-08-05 18:45:01] local.INFO: No pending invoices  
+[2018-08-05 18:45:01] local.INFO: Checking invoices. Found 0  
+[2018-08-05 18:45:02] local.INFO: Finished with updating invoices  
+[2018-08-05 18:45:02] local.INFO: Check digital check ...  
+[2018-08-05 18:45:02] local.INFO: Checking checks. Found 22  
+[2018-08-05 18:45:04] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-08-05 18:45:04] local.INFO: Condition is true for update:info everyFiveMinutes  
+[2018-08-05 18:45:04] local.INFO: SCHEDULING for day Sunday DATE : 2018-08-05 14:45:04  
+[2018-08-05 18:45:04] local.INFO: Updating data ...  
+[2018-08-05 18:45:04] local.INFO: Updating live games results => 2018-08-05 14:45:04  
+[2018-08-05 18:45:04] local.INFO: DATE : 2018-08-05 14:45:04  
+[2018-08-05 18:45:04] local.INFO: Updated 0 games to LIVE status  
+[2018-08-05 18:45:04] local.INFO: Updating live players results => 2018-08-05 14:45:04  
+[2018-08-05 18:45:04] local.INFO: Updated  live players  
+[2018-08-05 18:45:04] local.INFO: Update finished players 2018-08-05 14:45:04  
+[2018-08-05 18:45:04] local.INFO: Updated 0 finished players  
+[2018-08-05 18:45:04] local.INFO: Updating slates status => 2018-08-05 14:45:04  
+[2018-08-05 18:45:04] local.INFO: Updated active slates to LIVE status of  0 slates successfully.  
+[2018-08-05 18:45:04] local.INFO: Updated slate to HISTORY status  0 slates successfully.  
+[2018-08-05 18:45:04] local.INFO: Successfully updated 0 slates  
+[2018-08-05 18:45:04] local.INFO: Updating contests  2018-08-05 14:45:04  
+[2018-08-05 18:45:04] local.INFO: Updated 0 to CANCELLED status  
+[2018-08-05 18:45:04] local.INFO: Updated 0 contests to HISTORY status  
+[2018-08-05 18:45:04] local.INFO: Updated 0 contests to LIVE status  
+[2018-08-05 18:45:04] local.INFO: Updating ENDED contests  2018-08-05 14:45:04  
+[2018-08-05 18:45:04] local.INFO: Updated 0 contests results  
+[2018-08-05 18:45:04] local.INFO: Updating LIVE contests  2018-08-05 14:45:04  
+[2018-08-05 18:45:04] local.INFO: Updated 0 contests results  
+[2018-08-05 18:45:04] local.INFO: Updating ENDED contests  2018-08-05 14:45:04  
+[2018-08-05 18:45:04] local.INFO: Updated 0 contests results  
+[2018-08-05 18:45:04] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-08-05 18:45:04] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
+[2018-08-05 18:45:04] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[{"id":"TEN_IND_2018_11_1","year":"2018","seasonType":"1","week":"11","day":"Sun","date":"2018-08-05 13:00:00","time":"2018-08-05T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"IND","awayTeam":"TEN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"CIN_BAL_2018_11_1","year":"2018","seasonType":"1","week":"11","day":"Sun","date":"2018-08-05 13:00:00","time":"2018-08-05T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"BAL","awayTeam":"CIN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"DAL_ATL_2018_11_1","year":"2018","seasonType":"1","week":"11","day":"Sun","date":"2018-08-05 13:00:00","time":"2018-08-05T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"ATL","awayTeam":"DAL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"MIN_CHI_2018_11_1","year":"2018","seasonType":"1","week":"11","day":"Sun","date":"2018-08-05 13:00:00","time":"2018-08-05T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CHI","awayTeam":"MIN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"CAR_DET_2018_11_1","year":"2018","seasonType":"1","week":"11","day":"Sun","date":"2018-08-05 13:00:00","time":"2018-08-05T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"DET","awayTeam":"CAR","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""}]  
+[2018-08-05 18:45:04] local.INFO: Condition for games:update everyFiveMinutes for games in progress is true   
+[2018-08-05 18:45:04] local.INFO: SCHEDULING for day Sunday DATE : 2018-08-05 14:45:04  
+[2018-08-05 18:45:04] local.INFO: Pulling scores   
+[2018-08-05 18:45:05] local.INFO: Pulling scores from url https://draftmatch-api.com/api/fake/get_games  
+[2018-08-05 18:45:06] local.INFO: Adding games to slates Sun  
+[2018-08-05 18:45:06] local.INFO: Adding games to slates Sun  
+[2018-08-05 18:45:06] local.INFO: Adding games to slates Sun  
+[2018-08-05 18:45:06] local.INFO: Adding games to slates Sun  
+[2018-08-05 18:45:06] local.INFO: Adding games to slates Sun  
+[2018-08-05 18:45:06] local.INFO: Adding games to slates Sun  
+[2018-08-05 18:45:06] local.INFO: Successfully pulled all updated games scores   
+[2018-08-05 18:46:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-08-05 14:46:01  
+[2018-08-05 18:46:01] local.INFO: Check invoices ...  
+[2018-08-05 18:46:01] local.INFO: No pending invoices  
+[2018-08-05 18:46:01] local.INFO: Checking invoices. Found 0  
+[2018-08-05 18:46:02] local.INFO: Finished with updating invoices  
+[2018-08-05 18:46:02] local.INFO: Check digital check ...  
+[2018-08-05 18:46:02] local.INFO: Checking checks. Found 22  
+[2018-08-05 18:47:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-08-05 14:47:01  
+[2018-08-05 18:47:01] local.INFO: Check invoices ...  
+[2018-08-05 18:47:01] local.INFO: No pending invoices  
+[2018-08-05 18:47:01] local.INFO: Checking invoices. Found 0  
+[2018-08-05 18:47:02] local.INFO: Finished with updating invoices  
+[2018-08-05 18:47:02] local.INFO: Check digital check ...  
+[2018-08-05 18:47:02] local.INFO: Checking checks. Found 22  
+[2018-08-05 18:48:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-08-05 14:48:01  
+[2018-08-05 18:48:01] local.INFO: Check invoices ...  
+[2018-08-05 18:48:01] local.INFO: No pending invoices  
+[2018-08-05 18:48:01] local.INFO: Checking invoices. Found 0  
+[2018-08-05 18:48:04] local.INFO: Finished with updating invoices  
+[2018-08-05 18:48:04] local.INFO: Check digital check ...  
+[2018-08-05 18:48:04] local.INFO: Checking checks. Found 22  
+[2018-08-05 18:49:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-08-05 14:49:01  
+[2018-08-05 18:49:01] local.INFO: Check invoices ...  
+[2018-08-05 18:49:01] local.INFO: No pending invoices  
+[2018-08-05 18:49:01] local.INFO: Checking invoices. Found 0  
+[2018-08-05 18:49:02] local.INFO: Finished with updating invoices  
+[2018-08-05 18:49:02] local.INFO: Check digital check ...  
+[2018-08-05 18:49:02] local.INFO: Checking checks. Found 22  
+[2018-08-05 18:50:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-08-05 14:50:01  
+[2018-08-05 18:50:01] local.INFO: Update exchange ...  
+[2018-08-05 18:50:02] local.INFO: Check invoices ...  
+[2018-08-05 18:50:02] local.INFO: No pending invoices  
+[2018-08-05 18:50:02] local.INFO: Checking invoices. Found 0  
+[2018-08-05 18:50:03] local.INFO: Finished with updating invoices  
+[2018-08-05 18:50:03] local.INFO: Check digital check ...  
+[2018-08-05 18:50:03] local.INFO: Checking checks. Found 22  
+[2018-08-05 18:50:05] local.INFO: Checking conditions for update::info everyFiveMinutes  
+[2018-08-05 18:50:05] local.INFO: Condition is true for update:info everyFiveMinutes  
+[2018-08-05 18:50:05] local.INFO: SCHEDULING for day Sunday DATE : 2018-08-05 14:50:05  
+[2018-08-05 18:50:05] local.INFO: Updating data ...  
+[2018-08-05 18:50:05] local.INFO: Updating live games results => 2018-08-05 14:50:05  
+[2018-08-05 18:50:05] local.INFO: DATE : 2018-08-05 14:50:05  
+[2018-08-05 18:50:05] local.INFO: Updated 0 games to LIVE status  
+[2018-08-05 18:50:05] local.INFO: Updating live players results => 2018-08-05 14:50:05  
+[2018-08-05 18:50:05] local.INFO: Updated  live players  
+[2018-08-05 18:50:05] local.INFO: Update finished players 2018-08-05 14:50:05  
+[2018-08-05 18:50:05] local.INFO: Updated 0 finished players  
+[2018-08-05 18:50:05] local.INFO: Updating slates status => 2018-08-05 14:50:05  
+[2018-08-05 18:50:05] local.INFO: Updated active slates to LIVE status of  0 slates successfully.  
+[2018-08-05 18:50:05] local.INFO: Updated slate to HISTORY status  0 slates successfully.  
+[2018-08-05 18:50:05] local.INFO: Successfully updated 0 slates  
+[2018-08-05 18:50:05] local.INFO: Updating contests  2018-08-05 14:50:05  
+[2018-08-05 18:50:05] local.INFO: Updated 0 to CANCELLED status  
+[2018-08-05 18:50:05] local.INFO: Updated 0 contests to HISTORY status  
+[2018-08-05 18:50:05] local.INFO: Updated 0 contests to LIVE status  
+[2018-08-05 18:50:05] local.INFO: Updating ENDED contests  2018-08-05 14:50:05  
+[2018-08-05 18:50:05] local.INFO: Updated 0 contests results  
+[2018-08-05 18:50:05] local.INFO: Updating LIVE contests  2018-08-05 14:50:05  
+[2018-08-05 18:50:05] local.INFO: Updated 0 contests results  
+[2018-08-05 18:50:05] local.INFO: Updating ENDED contests  2018-08-05 14:50:05  
+[2018-08-05 18:50:05] local.INFO: Updated 0 contests results  
+[2018-08-05 18:50:05] local.INFO: Checking conditions for games:update everyFiveMinutes  
+[2018-08-05 18:50:05] local.INFO: Retrieving games in progress for games:update command everyFiveMinutes  
+[2018-08-05 18:50:05] local.INFO: Retrieved games in progress for games:update command everyFiveMinutes[{"id":"TEN_IND_2018_11_1","year":"2018","seasonType":"1","week":"11","day":"Sun","date":"2018-08-05 13:00:00","time":"2018-08-05T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"IND","awayTeam":"TEN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"CIN_BAL_2018_11_1","year":"2018","seasonType":"1","week":"11","day":"Sun","date":"2018-08-05 13:00:00","time":"2018-08-05T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"BAL","awayTeam":"CIN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"DAL_ATL_2018_11_1","year":"2018","seasonType":"1","week":"11","day":"Sun","date":"2018-08-05 13:00:00","time":"2018-08-05T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"ATL","awayTeam":"DAL","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"MIN_CHI_2018_11_1","year":"2018","seasonType":"1","week":"11","day":"Sun","date":"2018-08-05 13:00:00","time":"2018-08-05T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"CHI","awayTeam":"MIN","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""},{"id":"CAR_DET_2018_11_1","year":"2018","seasonType":"1","week":"11","day":"Sun","date":"2018-08-05 13:00:00","time":"2018-08-05T13:00:00","homeScore":0,"awayScore":0,"homeTeam":"DET","awayTeam":"CAR","status":"LIVE","quarter":"P","overtime":false,"time_remaining":null,"game_key":""}]  
+[2018-08-05 18:50:05] local.INFO: Condition for games:update everyFiveMinutes for games in progress is true   
+[2018-08-05 18:50:05] local.INFO: SCHEDULING for day Sunday DATE : 2018-08-05 14:50:05  
+[2018-08-05 18:50:05] local.INFO: Pulling scores   
+[2018-08-05 18:50:05] local.INFO: Pulling scores from url https://draftmatch-api.com/api/fake/get_games  
+[2018-08-05 18:50:07] local.INFO: Adding games to slates Sun  
+[2018-08-05 18:50:07] local.INFO: Adding games to slates Sun  
+[2018-08-05 18:50:07] local.INFO: Adding games to slates Sun  
+[2018-08-05 18:50:07] local.INFO: Adding games to slates Sun  
+[2018-08-05 18:50:07] local.INFO: Adding games to slates Sun  
+[2018-08-05 18:50:07] local.INFO: Adding games to slates Sun  
+[2018-08-05 18:50:07] local.INFO: Successfully pulled all updated games scores   
+[2018-08-05 18:51:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-08-05 14:51:01  
+[2018-08-05 18:51:01] local.INFO: Check invoices ...  
+[2018-08-05 18:51:01] local.INFO: No pending invoices  
+[2018-08-05 18:51:01] local.INFO: Checking invoices. Found 0  
+[2018-08-05 18:51:02] local.INFO: Finished with updating invoices  
+[2018-08-05 18:51:02] local.INFO: Check digital check ...  
+[2018-08-05 18:51:02] local.INFO: Checking checks. Found 22  
+[2018-08-05 18:52:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-08-05 14:52:01  
+[2018-08-05 18:52:01] local.INFO: Check invoices ...  
+[2018-08-05 18:52:01] local.INFO: No pending invoices  
+[2018-08-05 18:52:01] local.INFO: Checking invoices. Found 0  
+[2018-08-05 18:52:02] local.INFO: Finished with updating invoices  
+[2018-08-05 18:52:02] local.INFO: Check digital check ...  
+[2018-08-05 18:52:02] local.INFO: Checking checks. Found 22  
+[2018-08-05 18:53:02] local.INFO: SCHEDULING for day Sunday DATE : 2018-08-05 14:53:02  
+[2018-08-05 18:53:02] local.INFO: Check invoices ...  
+[2018-08-05 18:53:02] local.INFO: No pending invoices  
+[2018-08-05 18:53:02] local.INFO: Checking invoices. Found 0  
+[2018-08-05 18:53:03] local.INFO: Finished with updating invoices  
+[2018-08-05 18:53:03] local.INFO: Check digital check ...  
+[2018-08-05 18:53:03] local.INFO: Checking checks. Found 22  
+[2018-08-05 18:53:31] local.INFO: Rate {"id":"1","rate":"0.000143","key":null}  
+[2018-08-05 18:54:01] local.INFO: SCHEDULING for day Sunday DATE : 2018-08-05 14:54:01  
+[2018-08-05 18:54:01] local.INFO: Check invoices ...  
+[2018-08-05 18:54:01] local.INFO: No pending invoices  
+[2018-08-05 18:54:01] local.INFO: Checking invoices. Found 0  
+[2018-08-05 18:54:02] local.INFO: Finished with updating invoices  
+[2018-08-05 18:54:02] local.INFO: Check digital check ...  
+[2018-08-05 18:54:02] local.INFO: Checking checks. Found 22  
+[2018-08-05 18:55:03] local.INFO: SCHEDULING for day Sunday DATE : 2018-08-05 14:55:03  
+[2018-08-05 18:55:03] local.INFO: Check invoices ...  
+[2018-08-05 18:55:03] local.INFO: No pending invoices  
+[2018-08-05 18:55:03] local.INFO: Checking invoices. Found 0  
